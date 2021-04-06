@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Запрос</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РольСервера</dataPath>
+			<field>РольСервера</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Роль сервера</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Описание</dataPath>
+			<field>Описание</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сервер</dataPath>
+			<field>Сервер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭкземплярПродукта</dataPath>
+			<field>ЭкземплярПродукта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Экземпляр продукта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Используется</dataPath>
+			<field>Используется</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используется</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<inputParameters>
+				<dcscor:item>
+					<dcscor:parameter>ФорматРедактирования</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=; ЧН=Ноль</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</inputParameters>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УслЕд</dataPath>
+			<field>УслЕд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Усл ед</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийПродуктТипПродукта</dataPath>
+			<field>ТекущийПродуктТипПродукта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТекущийПродуктКоличество</dataPath>
+			<field>ТекущийПродуктКоличество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Продукт</dataPath>
+			<field>Продукт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продукт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	Серверы_ат.Ссылка КАК Сервер,
+	ЕСТЬNULL(РолиСерверов_ат.Ссылка, ЗНАЧЕНИЕ(Справочник.РолиСерверов_ат.ПустаяСсылка)) КАК РольСервера,
+	ЭкземплярыПродуктов_ат.ТекущийПродукт КАК Продукт,
+	ЭкземплярыПродуктов_ат.Ссылка КАК ЭкземплярПродукта,
+	ВЫБОР
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Конфигурация1С)
+			ТОГДА ОбъёмИБ_атСрезПоследних.Объём
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверMSWindows)
+			ТОГДА ВЫБОР
+					КОГДА СведенияОСерверахПоZabbix_atСрезПоследних.Параметр = ЗНАЧЕНИЕ(Перечисление.ТипыРесурсовZabbix_at.TotalDiskSpaceOn)
+						ТОГДА (ВЫРАЗИТЬ(СведенияОСерверахПоZabbix_atСрезПоследних.Значение КАК ЧИСЛО)) / 1024 / 1024
+					КОГДА СведенияОСерверахПоZabbix_atСрезПоследних.Параметр = ЗНАЧЕНИЕ(Перечисление.ТипыРесурсовZabbix_at.TotalMemory)
+						ТОГДА (ВЫРАЗИТЬ(СведенияОСерверахПоZabbix_atСрезПоследних.Значение КАК ЧИСЛО)) / 1024 / 1024
+				КОНЕЦ
+		ИНАЧЕ ЭкземплярыПродуктов_ат.Ссылка.Количество
+	КОНЕЦ КАК Используется,
+	ВЫБОР
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Конфигурация1С)
+			ТОГДА ВЫБОР
+					КОГДА НЕ ОбъёмФайловыхКаталогов_атСрезПоследних.СетевойКаталог ЕСТЬ NULL 
+						ТОГДА СпецификацияЭП_Конфигурация1С_ат.ИмяИБВСписке + " (" + ОбъёмФайловыхКаталогов_атСрезПоследних.СетевойКаталог.Наименование + ", " + ЭкземплярыПродуктов_ат.ТекущаяВерсия.Наименование + ")"
+					ИНАЧЕ СпецификацияЭП_Конфигурация1С_ат.ИмяИБВСписке + " (" + СпецификацияЭП_Конфигурация1С_ат.ИмяИБНа1С + ", " + ЭкземплярыПродуктов_ат.ТекущаяВерсия.Наименование + ")"
+				КОНЕЦ
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверMSWindows)
+			ТОГДА ВЫБОР
+					КОГДА СведенияОСерверахПоZabbix_atСрезПоследних.Параметр = ЗНАЧЕНИЕ(Перечисление.ТипыРесурсовZabbix_at.TotalDiskSpaceOn)
+						ТОГДА "зарезервированно дискового пространства " + СведенияОСерверахПоZabbix_atСрезПоследних.Ключ
+					КОГДА СведенияОСерверахПоZabbix_atСрезПоследних.Параметр = ЗНАЧЕНИЕ(Перечисление.ТипыРесурсовZabbix_at.TotalMemory)
+						ТОГДА "Заразервированно памяти "
+				КОНЕЦ
+		ИНАЧЕ ЭкземплярыПродуктов_ат.Ссылка.Количество
+	КОНЕЦ КАК Описание,
+	ВЫБОР
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Документация)
+			ТОГДА "шт."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.КлиентскаяЛицензия1С)
+			ТОГДА "лиц."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.КлиентскийДоступMSSQLServer)
+			ТОГДА "лиц."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.КлючUSB1С)
+			ТОГДА "кл."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Книга)
+			ТОГДА "экз."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Конфигурация1С)
+			ТОГДА "Мб."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Отчетность)
+			ТОГДА "шт."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Платформа1С)
+			ТОГДА "экз."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.ПрочийПП)
+			ТОГДА "шт."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.ПрочийППMS)
+			ТОГДА "шт."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Сервер_nix)
+			ТОГДА "шт."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Сервер1С)
+			ТОГДА "лиц."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверIBMDB2)
+			ТОГДА "лиц."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверMSSQL)
+			ТОГДА "лиц."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверMSWindows)
+			ТОГДА ВЫБОР
+					КОГДА СведенияОСерверахПоZabbix_atСрезПоследних.Параметр = ЗНАЧЕНИЕ(Перечисление.ТипыРесурсовZabbix_at.TotalDiskSpaceOn)
+							ИЛИ СведенияОСерверахПоZabbix_atСрезПоследних.Параметр = ЗНАЧЕНИЕ(Перечисление.ТипыРесурсовZabbix_at.TotalMemory)
+						ТОГДА "Мб."
+					ИНАЧЕ "экз."
+				КОНЕЦ
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверOracle)
+			ТОГДА "Мб."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверPostgreSQL)
+			ТОГДА "Мб."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.УдаленныйДоступMSServer)
+			ТОГДА "соед."
+		ИНАЧЕ NULL
+	КОНЕЦ КАК УслЕд,
+	ЭкземплярыПродуктов_ат.Владелец.КонтрагентВладелец КАК Контрагент,
+	ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта,
+	ЭкземплярыПродуктов_ат.ТекущийПродукт.Количество
+ИЗ
+	РегистрСведений.СведенияОСерверахПоZabbix_at.СрезПоследних КАК СведенияОСерверахПоZabbix_atСрезПоследних
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Серверы_ат КАК Серверы_ат
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.РолиСерверов_ат КАК РолиСерверов_ат
+			ПО Серверы_ат.Ссылка = РолиСерверов_ат.Владелец
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ЭкземплярыПродуктов_ат КАК ЭкземплярыПродуктов_ат
+			ПО (ЭкземплярыПродуктов_ат.РольСервераРазмещения = РолиСерверов_ат.Ссылка)
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СпецификацияЭП_Конфигурация1С_ат КАК СпецификацияЭП_Конфигурация1С_ат
+			ПО (ЭкземплярыПродуктов_ат.Ссылка = СпецификацияЭП_Конфигурация1С_ат.ЭкземплярПродукта)
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОбъёмИБ_ат.СрезПоследних КАК ОбъёмИБ_атСрезПоследних
+			ПО (ЭкземплярыПродуктов_ат.РольСервераРазмещения.ВидРолиСервера.ТипРолиСервера = ЗНАЧЕНИЕ(перечисление.типыролейсерверов_ат.сервер1с))
+				И (ЭкземплярыПродуктов_ат.Ссылка = ОбъёмИБ_атСрезПоследних.ЭкземплярПродукта)
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОбъёмФайловыхКаталогов_ат.СрезПоследних КАК ОбъёмФайловыхКаталогов_атСрезПоследних
+			ПО (ЭкземплярыПродуктов_ат.РольСервераРазмещения.ВидРолиСервера.ТипРолиСервера = ЗНАЧЕНИЕ(перечисление.типыролейсерверов_ат.серверфайловый))
+				И (СпецификацияЭП_Конфигурация1С_ат.ФайловыйКаталог = ОбъёмФайловыхКаталогов_атСрезПоследних.СетевойКаталог)
+		ПО СведенияОСерверахПоZabbix_atСрезПоследних.Сервер = Серверы_ат.Ссылка
+ГДЕ
+	НЕ ЭкземплярыПродуктов_ат.ПометкаУдаления
+{ГДЕ
+	(ЭкземплярыПродуктов_ат.Владелец.КонтрагентВладелец = &amp;Контрагент)}
+
+СГРУППИРОВАТЬ ПО
+	Серверы_ат.Ссылка,
+	ЭкземплярыПродуктов_ат.Владелец.КонтрагентВладелец,
+	ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта,
+	ЭкземплярыПродуктов_ат.ТекущийПродукт.Количество,
+	ЭкземплярыПродуктов_ат.Ссылка,
+	ЭкземплярыПродуктов_ат.ТекущийПродукт,
+	ЕСТЬNULL(РолиСерверов_ат.Ссылка, ЗНАЧЕНИЕ(Справочник.РолиСерверов_ат.ПустаяСсылка)),
+	ВЫБОР
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Документация)
+			ТОГДА "шт."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.КлиентскаяЛицензия1С)
+			ТОГДА "лиц."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.КлиентскийДоступMSSQLServer)
+			ТОГДА "лиц."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.КлючUSB1С)
+			ТОГДА "кл."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Книга)
+			ТОГДА "экз."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Конфигурация1С)
+			ТОГДА "Мб."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Отчетность)
+			ТОГДА "шт."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Платформа1С)
+			ТОГДА "экз."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.ПрочийПП)
+			ТОГДА "шт."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.ПрочийППMS)
+			ТОГДА "шт."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Сервер_nix)
+			ТОГДА "шт."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Сервер1С)
+			ТОГДА "лиц."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверIBMDB2)
+			ТОГДА "лиц."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверMSSQL)
+			ТОГДА "лиц."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверMSWindows)
+			ТОГДА ВЫБОР
+					КОГДА СведенияОСерверахПоZabbix_atСрезПоследних.Параметр = ЗНАЧЕНИЕ(Перечисление.ТипыРесурсовZabbix_at.TotalDiskSpaceOn)
+							ИЛИ СведенияОСерверахПоZabbix_atСрезПоследних.Параметр = ЗНАЧЕНИЕ(Перечисление.ТипыРесурсовZabbix_at.TotalMemory)
+						ТОГДА "Мб."
+					ИНАЧЕ "экз."
+				КОНЕЦ
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверOracle)
+			ТОГДА "Мб."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверPostgreSQL)
+			ТОГДА "Мб."
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.УдаленныйДоступMSServer)
+			ТОГДА "соед."
+		ИНАЧЕ NULL
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Конфигурация1С)
+			ТОГДА ОбъёмИБ_атСрезПоследних.Объём
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверMSWindows)
+			ТОГДА ВЫБОР
+					КОГДА СведенияОСерверахПоZabbix_atСрезПоследних.Параметр = ЗНАЧЕНИЕ(Перечисление.ТипыРесурсовZabbix_at.TotalDiskSpaceOn)
+						ТОГДА (ВЫРАЗИТЬ(СведенияОСерверахПоZabbix_atСрезПоследних.Значение КАК ЧИСЛО)) / 1024 / 1024
+					КОГДА СведенияОСерверахПоZabbix_atСрезПоследних.Параметр = ЗНАЧЕНИЕ(Перечисление.ТипыРесурсовZabbix_at.TotalMemory)
+						ТОГДА (ВЫРАЗИТЬ(СведенияОСерверахПоZabbix_atСрезПоследних.Значение КАК ЧИСЛО)) / 1024 / 1024
+				КОНЕЦ
+		ИНАЧЕ ЭкземплярыПродуктов_ат.Ссылка.Количество
+	КОНЕЦ,
+	ВЫБОР
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.Конфигурация1С)
+			ТОГДА ВЫБОР
+					КОГДА НЕ ОбъёмФайловыхКаталогов_атСрезПоследних.СетевойКаталог ЕСТЬ NULL 
+						ТОГДА СпецификацияЭП_Конфигурация1С_ат.ИмяИБВСписке + " (" + ОбъёмФайловыхКаталогов_атСрезПоследних.СетевойКаталог.Наименование + ", " + ЭкземплярыПродуктов_ат.ТекущаяВерсия.Наименование + ")"
+					ИНАЧЕ СпецификацияЭП_Конфигурация1С_ат.ИмяИБВСписке + " (" + СпецификацияЭП_Конфигурация1С_ат.ИмяИБНа1С + ", " + ЭкземплярыПродуктов_ат.ТекущаяВерсия.Наименование + ")"
+				КОНЕЦ
+		КОГДА ЭкземплярыПродуктов_ат.ТекущийПродукт.ТипПродукта = ЗНАЧЕНИЕ(Перечисление.ТипыПродуктов_ат.СерверMSWindows)
+			ТОГДА ВЫБОР
+					КОГДА СведенияОСерверахПоZabbix_atСрезПоследних.Параметр = ЗНАЧЕНИЕ(Перечисление.ТипыРесурсовZabbix_at.TotalDiskSpaceOn)
+						ТОГДА "зарезервированно дискового пространства " + СведенияОСерверахПоZabbix_atСрезПоследних.Ключ
+					КОГДА СведенияОСерверахПоZabbix_atСрезПоследних.Параметр = ЗНАЧЕНИЕ(Перечисление.ТипыРесурсовZabbix_at.TotalMemory)
+						ТОГДА "Заразервированно памяти "
+				КОНЕЦ
+		ИНАЧЕ ЭкземплярыПродуктов_ат.Ссылка.Количество
+	КОНЕЦ</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Используется</dataPath>
+		<expression>Сумма(Используется)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>УслЕд</dataPath>
+		<expression>Количество(УслЕд)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Контрагент</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Контрагент</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Контрагенты_ат</v8:Type>
+		</valueType>
+		<useRestriction>false</useRestriction>
+		<valueListAllowed>true</valueListAllowed>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Используется</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Описание</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>УслЕд</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>РольСервера</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>РольСервера</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">РольСервера</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.РолиСерверов_ат.ПустаяСсылка</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Не заполнено!</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:use>false</dcsset:use>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Сервер</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Сервер</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>РольСервера</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>РольСервера</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemField">
+								<dcsset:field>Сервер</dcsset:field>
+								<dcsset:orderType>Asc</dcsset:orderType>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:OrderItemField">
+								<dcsset:field>ЭкземплярПродукта</dcsset:field>
+								<dcsset:orderType>Asc</dcsset:orderType>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:OrderItemField">
+								<dcsset:field>Контрагент</dcsset:field>
+								<dcsset:orderType>Asc</dcsset:orderType>
+							</dcsset:item>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ЭкземплярПродукта</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Используется</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Контрагент</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>УслЕд</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Описание</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+									<dcsset:use>false</dcsset:use>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ЭкземплярПродукта</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Используется</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Контрагент</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

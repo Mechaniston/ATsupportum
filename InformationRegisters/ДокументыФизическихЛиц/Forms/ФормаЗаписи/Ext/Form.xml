@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Физлицо" id="18">
+			<DataPath>Запись.Физлицо</DataPath>
+			<Wrap>false</Wrap>
+			<ContextMenu name="ФизлицоКонтекстноеМеню" id="19"/>
+			<ExtendedTooltip name="ФизлицоExtendedTooltip" id="27"/>
+		</InputField>
+		<InputField name="ВидДокумента" id="5">
+			<DataPath>Запись.ВидДокумента</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<Wrap>false</Wrap>
+			<OpenButton>false</OpenButton>
+			<ContextMenu name="ВидДокументаКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ВидДокументаExtendedTooltip" id="28"/>
+			<Events>
+				<Event name="OnChange">ВидДокументаПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаСерияИНомер" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия и номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Серия и номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСерияИНомерExtendedTooltip" id="29"/>
+			<ChildItems>
+				<InputField name="Серия" id="7">
+					<DataPath>Запись.Серия</DataPath>
+					<Wrap>false</Wrap>
+					<ContextMenu name="СерияКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="СерияExtendedTooltip" id="30"/>
+				</InputField>
+				<InputField name="Номер" id="9">
+					<DataPath>Запись.Номер</DataPath>
+					<Wrap>false</Wrap>
+					<ContextMenu name="НомерКонтекстноеМеню" id="10"/>
+					<ExtendedTooltip name="НомерExtendedTooltip" id="31"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаДатаВыдачиИСрокДействия" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выдачи и срок действия</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выдачи и срок действия</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаВыдачиИСрокДействияExtendedTooltip" id="32"/>
+			<ChildItems>
+				<InputField name="ДатаВыдачи" id="21">
+					<DataPath>Запись.ДатаВыдачи</DataPath>
+					<ContextMenu name="ДатаВыдачиКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ДатаВыдачиExtendedTooltip" id="33"/>
+				</InputField>
+				<InputField name="СрокДействия" id="23">
+					<DataPath>Запись.СрокДействия</DataPath>
+					<ContextMenu name="СрокДействияКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="СрокДействияExtendedTooltip" id="34"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="КемВыдан" id="11">
+			<DataPath>Запись.КемВыдан</DataPath>
+			<Width>35</Width>
+			<Wrap>false</Wrap>
+			<ContextMenu name="КемВыданКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="КемВыданExtendedTooltip" id="35"/>
+		</InputField>
+		<InputField name="КодПодразделения" id="13">
+			<DataPath>Запись.КодПодразделения</DataPath>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Wrap>false</Wrap>
+			<ContextMenu name="КодПодразделенияКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КодПодразделенияExtendedTooltip" id="36"/>
+		</InputField>
+		<CheckBoxField name="ЯвляетсяДокументомУдостоверяющимЛичность" id="25">
+			<DataPath>Запись.ЯвляетсяДокументомУдостоверяющимЛичность</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ЯвляетсяДокументомУдостоверяющимЛичностьКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ЯвляетсяДокументомУдостоверяющимЛичностьExtendedTooltip" id="37"/>
+		</CheckBoxField>
+		<InputField name="Период" id="1">
+			<DataPath>Запись.Period</DataPath>
+			<Wrap>false</Wrap>
+			<ContextMenu name="ПериодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПериодExtendedTooltip" id="38"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ДокументыФизическихЛиц</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

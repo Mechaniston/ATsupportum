@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаОтправить" id="15">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Отправить</CommandName>
+				<ExtendedTooltip name="ФормаОтправитьРасширеннаяПодсказка" id="16"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаявка" id="78">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заявка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа заявка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаявкаРасширеннаяПодсказка" id="79"/>
+			<ChildItems>
+				<InputField name="Заявка" id="4">
+					<DataPath>Заявка</DataPath>
+					<ContextMenu name="ЗаявкаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ЗаявкаРасширеннаяПодсказка" id="6"/>
+					<Events>
+						<Event name="OnChange">ЗаявкаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="ОбычноеПисьмо" id="75">
+					<DataPath>ОбычноеПисьмо</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<ContextMenu name="ОбычноеПисьмоКонтекстноеМеню" id="76"/>
+					<ExtendedTooltip name="ОбычноеПисьмоРасширеннаяПодсказка" id="77"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<CheckBoxField name="ОжидатьОтвета" id="48">
+			<DataPath>ОжидатьОтвета</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОжидатьОтветаКонтекстноеМеню" id="49"/>
+			<ExtendedTooltip name="ОжидатьОтветаРасширеннаяПодсказка" id="50"/>
+		</CheckBoxField>
+		<InputField name="Задание" id="1">
+			<DataPath>Задание</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="ЗаданиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ЗаданиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Получатель" id="17">
+			<DataPath>Получатель</DataPath>
+			<ContextMenu name="ПолучательКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="ПолучательРасширеннаяПодсказка" id="19"/>
+		</InputField>
+		<Pages name="ГруппаСтраницы" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="21"/>
+			<ChildItems>
+				<Page name="ГруппаСодержание" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Содержание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа содержание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСодержаниеРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<HTMLDocumentField name="Содержание" id="7">
+							<DataPath>Содержание</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="СодержаниеКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="СодержаниеРасширеннаяПодсказка" id="9"/>
+							<Events>
+								<Event name="DocumentComplete">СодержаниеДокументСформирован</Event>
+								<Event name="OnClick">СодержаниеПриНажатии</Event>
+							</Events>
+						</HTMLDocumentField>
+						<UsualGroup name="КомманднаяПанельКнопокРедактированияHTML" id="13">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Коммандная панель кнопок редактирования HTML</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Коммандная панель кнопок редактирования HTML</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="КомманднаяПанельКнопокРедактированияHTMLРасширеннаяПодсказка" id="14"/>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаФайлы" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файлы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа файлы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаФайлыРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<Table name="Файлы" id="26">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Файлы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ФайлыКонтекстноеМеню" id="27"/>
+							<AutoCommandBar name="ФайлыКоманднаяПанель" id="28"/>
+							<ExtendedTooltip name="ФайлыРасширеннаяПодсказка" id="29"/>
+							<SearchStringAddition name="ФайлыСтрокаПоиска" id="30">
+								<AdditionSource>
+									<Item>Файлы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФайлыСтрокаПоискаКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="ФайлыСтрокаПоискаРасширеннаяПодсказка" id="32"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ФайлыСостояниеПросмотра" id="33">
+								<AdditionSource>
+									<Item>Файлы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ФайлыСостояниеПросмотраКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="ФайлыСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ФайлыУправлениеПоиском" id="36">
+								<AdditionSource>
+									<Item>Файлы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ФайлыУправлениеПоискомКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="ФайлыУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<CheckBoxField name="ФайлыОтправлять" id="54">
+									<DataPath>Файлы.Отправлять</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ФайлыОтправлятьКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="ФайлыОтправлятьРасширеннаяПодсказка" id="56"/>
+								</CheckBoxField>
+								<CheckBoxField name="ФайлыДобавлятьВЗаявку" id="45">
+									<DataPath>Файлы.ДобавлятьВЗаявку</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ФайлыДобавлятьВЗаявкуКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="ФайлыДобавлятьВЗаявкуРасширеннаяПодсказка" id="47"/>
+									<Events>
+										<Event name="OnChange">ФайлыДобавлятьВЗаявкуПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ФайлыФайл" id="51">
+									<DataPath>Файлы.Файл</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ФайлыФайлКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="ФайлыФайлРасширеннаяПодсказка" id="53"/>
+								</InputField>
+								<InputField name="ФайлыИмяФайла" id="39">
+									<DataPath>Файлы.ИмяФайла</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="ФайлыИмяФайлаКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="ФайлыИмяФайлаРасширеннаяПодсказка" id="41"/>
+									<Events>
+										<Event name="StartChoice">ФайлыПутьКФайлуНачалоВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ФайлыПутьКФайлу" id="42">
+									<DataPath>Файлы.ПутьКФайлу</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>true</ChoiceButton>
+									<ContextMenu name="ФайлыПутьКФайлуКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="ФайлыПутьКФайлуРасширеннаяПодсказка" id="44"/>
+									<Events>
+										<Event name="StartChoice">ФайлыПутьКФайлуНачалоВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПолучателиКопий" id="57">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получатели копий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа получатели копий</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПолучателиКопийРасширеннаяПодсказка" id="58"/>
+					<ChildItems>
+						<Table name="ПолучателиКопий" id="59">
+							<Representation>List</Representation>
+							<Header>false</Header>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ПолучателиКопий</DataPath>
+							<RowPictureDataPath>ПолучателиКопий.Picture</RowPictureDataPath>
+							<ContextMenu name="ПолучателиКопийКонтекстноеМеню" id="60"/>
+							<AutoCommandBar name="ПолучателиКопийКоманднаяПанель" id="61"/>
+							<ExtendedTooltip name="ПолучателиКопийРасширеннаяПодсказка" id="62"/>
+							<SearchStringAddition name="ПолучателиКопийСтрокаПоиска" id="63">
+								<AdditionSource>
+									<Item>ПолучателиКопий</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПолучателиКопийСтрокаПоискаКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="ПолучателиКопийСтрокаПоискаРасширеннаяПодсказка" id="65"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПолучателиКопийСостояниеПросмотра" id="66">
+								<AdditionSource>
+									<Item>ПолучателиКопий</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПолучателиКопийСостояниеПросмотраКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="ПолучателиКопийСостояниеПросмотраРасширеннаяПодсказка" id="68"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПолучателиКопийУправлениеПоиском" id="69">
+								<AdditionSource>
+									<Item>ПолучателиКопий</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПолучателиКопийУправлениеПоискомКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="ПолучателиКопийУправлениеПоискомРасширеннаяПодсказка" id="71"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ПолучателиКопийЗначение" id="72">
+									<DataPath>ПолучателиКопий.Value</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПолучателиКопийЗначениеКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ПолучателиКопийЗначениеРасширеннаяПодсказка" id="74"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Заявка" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.Заявка_ат</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Задание" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.Задание_ат</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Содержание" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Содержание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторыКартинок" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идентификаторы картинок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Получатель" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получатель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Основание" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.Заявка_ат</v8:Type>
+				<v8:Type>cfg:DocumentRef.ЭлектронноеПисьмоВходящее</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Файлы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяФайла" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя файла</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПутьКФайлу" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путь к файлу</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДобавлятьВЗаявку" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавлять в заявку</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Файл" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файл</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Заявка_атПрисоединенныеФайлы</v8:Type>
+						<v8:Type>cfg:CatalogRef.Задание_атПрисоединенныеФайлы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отправлять" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отправлять</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="АдресВоВременномХранилище" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адрес во временном хранилище</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОжидатьОтвета" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ожидать ответа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолучателиКопий" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получатели копий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОбычноеПисьмо" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обычное письмо</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Отправить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Отправить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Основание">
+			<Type>
+				<v8:Type>cfg:DocumentRef.Заявка_ат</v8:Type>
+				<v8:Type>cfg:DocumentRef.ЭлектронноеПисьмоВходящее</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

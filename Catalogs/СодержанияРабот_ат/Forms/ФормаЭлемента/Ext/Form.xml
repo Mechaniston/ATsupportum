@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Номенклатура" id="7">
+			<DataPath>Объект.Номенклатура</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НоменклатураКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<CheckBoxField name="НеобходимЭкземплярПродукта" id="16">
+			<DataPath>Объект.НеобходимЭкземплярПродукта</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НеобходимЭкземплярПродуктаКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="НеобходимЭкземплярПродуктаРасширеннаяПодсказка" id="18"/>
+		</CheckBoxField>
+		<CheckBoxField name="ТребуетсяСогласование" id="74">
+			<DataPath>Объект.ТребуетсяСогласование</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ТребуетсяСогласованиеКонтекстноеМеню" id="75"/>
+			<ExtendedTooltip name="ТребуетсяСогласованиеРасширеннаяПодсказка" id="76"/>
+		</CheckBoxField>
+		<CheckBoxField name="КраткосрочныеРаботы" id="10">
+			<DataPath>Объект.КраткосрочныеРаботы</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="КраткосрочныеРаботыКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="КраткосрочныеРаботыРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<CheckBoxField name="Обновление" id="80">
+			<DataPath>Объект.Обновление</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОбновлениеКонтекстноеМеню" id="81"/>
+			<ExtendedTooltip name="ОбновлениеРасширеннаяПодсказка" id="82"/>
+		</CheckBoxField>
+		<CheckBoxField name="Исправление" id="13">
+			<DataPath>Объект.Исправление</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИсправлениеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИсправлениеРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<CheckBoxField name="ИТС_временное" id="77">
+			<DataPath>Объект.ИТС_временное</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИТС_временноеКонтекстноеМеню" id="78"/>
+			<ExtendedTooltip name="ИТС_временноеРасширеннаяПодсказка" id="79"/>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаОтборов" id="72">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отборы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отборов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ГруппаОтборовРасширеннаяПодсказка" id="73"/>
+			<ChildItems>
+				<Pages name="Страницы" id="19">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="20"/>
+					<ChildItems>
+						<Page name="ГруппаВидыДоговоров" id="21">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Виды договоров</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаВидыДоговоровРасширеннаяПодсказка" id="22"/>
+							<ChildItems>
+								<Table name="ВидыДоговоров" id="23">
+									<Representation>List</Representation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.ВидыДоговоров</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ВидыДоговоровКонтекстноеМеню" id="24"/>
+									<AutoCommandBar name="ВидыДоговоровКоманднаяПанель" id="25"/>
+									<ExtendedTooltip name="ВидыДоговоровРасширеннаяПодсказка" id="26"/>
+									<SearchStringAddition name="ВидыДоговоровСтрокаПоиска" id="27">
+										<AdditionSource>
+											<Item>ВидыДоговоров</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВидыДоговоровСтрокаПоискаКонтекстноеМеню" id="28"/>
+										<ExtendedTooltip name="ВидыДоговоровСтрокаПоискаРасширеннаяПодсказка" id="29"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ВидыДоговоровСостояниеПросмотра" id="30">
+										<AdditionSource>
+											<Item>ВидыДоговоров</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ВидыДоговоровСостояниеПросмотраКонтекстноеМеню" id="31"/>
+										<ExtendedTooltip name="ВидыДоговоровСостояниеПросмотраРасширеннаяПодсказка" id="32"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ВидыДоговоровУправлениеПоиском" id="33">
+										<AdditionSource>
+											<Item>ВидыДоговоров</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ВидыДоговоровУправлениеПоискомКонтекстноеМеню" id="34"/>
+										<ExtendedTooltip name="ВидыДоговоровУправлениеПоискомРасширеннаяПодсказка" id="35"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<LabelField name="ВидыДоговоровНомерСтроки" id="36">
+											<DataPath>Объект.ВидыДоговоров.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ВидыДоговоровНомерСтрокиКонтекстноеМеню" id="37"/>
+											<ExtendedTooltip name="ВидыДоговоровНомерСтрокиРасширеннаяПодсказка" id="38"/>
+										</LabelField>
+										<InputField name="ВидыДоговоровВидДоговора" id="39">
+											<DataPath>Объект.ВидыДоговоров.ВидДоговора</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>При пустом значении данное содержание работ будет доступно только при отсутствии договора в проекте по заявке</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="ВидыДоговоровВидДоговораКонтекстноеМеню" id="40"/>
+											<ExtendedTooltip name="ВидыДоговоровВидДоговораРасширеннаяПодсказка" id="41"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаСвойстваЭкземпляровПродуктов" id="42">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Свойства экземпляров продуктов</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаСвойстваЭкземпляровПродуктовРасширеннаяПодсказка" id="43"/>
+							<ChildItems>
+								<Table name="СвойстваЭкземпляровПродуктов" id="44">
+									<Representation>List</Representation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.СвойстваЭкземпляровПродуктов</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="СвойстваЭкземпляровПродуктовКонтекстноеМеню" id="45"/>
+									<AutoCommandBar name="СвойстваЭкземпляровПродуктовКоманднаяПанель" id="46"/>
+									<ExtendedTooltip name="СвойстваЭкземпляровПродуктовРасширеннаяПодсказка" id="47"/>
+									<SearchStringAddition name="СвойстваЭкземпляровПродуктовСтрокаПоиска" id="48">
+										<AdditionSource>
+											<Item>СвойстваЭкземпляровПродуктов</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СвойстваЭкземпляровПродуктовСтрокаПоискаКонтекстноеМеню" id="49"/>
+										<ExtendedTooltip name="СвойстваЭкземпляровПродуктовСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СвойстваЭкземпляровПродуктовСостояниеПросмотра" id="51">
+										<AdditionSource>
+											<Item>СвойстваЭкземпляровПродуктов</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СвойстваЭкземпляровПродуктовСостояниеПросмотраКонтекстноеМеню" id="52"/>
+										<ExtendedTooltip name="СвойстваЭкземпляровПродуктовСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СвойстваЭкземпляровПродуктовУправлениеПоиском" id="54">
+										<AdditionSource>
+											<Item>СвойстваЭкземпляровПродуктов</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СвойстваЭкземпляровПродуктовУправлениеПоискомКонтекстноеМеню" id="55"/>
+										<ExtendedTooltip name="СвойстваЭкземпляровПродуктовУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateCell">СвойстваЭкземпляровПродуктовПриАктивизацииЯчейки</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СвойстваЭкземпляровПродуктовНомерСтроки" id="57">
+											<DataPath>Объект.СвойстваЭкземпляровПродуктов.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СвойстваЭкземпляровПродуктовНомерСтрокиКонтекстноеМеню" id="58"/>
+											<ExtendedTooltip name="СвойстваЭкземпляровПродуктовНомерСтрокиРасширеннаяПодсказка" id="59"/>
+										</LabelField>
+										<InputField name="СвойстваЭкземпляровПродуктовТипПродукта" id="60">
+											<DataPath>Объект.СвойстваЭкземпляровПродуктов.ТипПродукта</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="СвойстваЭкземпляровПродуктовТипПродуктаКонтекстноеМеню" id="61"/>
+											<ExtendedTooltip name="СвойстваЭкземпляровПродуктовТипПродуктаРасширеннаяПодсказка" id="62"/>
+											<Events>
+												<Event name="OnChange">СвойстваЭкземпляровПродуктовТипПродуктаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="СвойстваЭкземпляровПродуктовПродукт" id="63">
+											<DataPath>Объект.СвойстваЭкземпляровПродуктов.Продукт</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ChoiceParameterLinks>
+												<xr:Link>
+													<xr:Name>Отбор.ТипПродукта</xr:Name>
+													<xr:DataPath xsi:type="xs:string">Items.СвойстваЭкземпляровПродуктов.CurrentData.ТипПродукта</xr:DataPath>
+													<xr:ValueChange>Clear</xr:ValueChange>
+												</xr:Link>
+											</ChoiceParameterLinks>
+											<ContextMenu name="СвойстваЭкземпляровПродуктовПродуктКонтекстноеМеню" id="64"/>
+											<ExtendedTooltip name="СвойстваЭкземпляровПродуктовПродуктРасширеннаяПодсказка" id="65"/>
+										</InputField>
+										<InputField name="СвойстваЭкземпляровПродуктовСвойство" id="66">
+											<DataPath>Объект.СвойстваЭкземпляровПродуктов.Свойство</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>20</Width>
+											<MaxWidth>20</MaxWidth>
+											<ChoiceButton>true</ChoiceButton>
+											<QuickChoice>true</QuickChoice>
+											<ContextMenu name="СвойстваЭкземпляровПродуктовСвойствоКонтекстноеМеню" id="67"/>
+											<ExtendedTooltip name="СвойстваЭкземпляровПродуктовСвойствоРасширеннаяПодсказка" id="68"/>
+											<Events>
+												<Event name="StartChoice">СвойстваЭкземпляровПродуктовСвойствоНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="СвойстваЭкземпляровПродуктовЗначениеСвойства" id="69">
+											<DataPath>Объект.СвойстваЭкземпляровПродуктов.ЗначениеСвойства</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ChoiceButton>true</ChoiceButton>
+											<ChooseType>false</ChooseType>
+											<ContextMenu name="СвойстваЭкземпляровПродуктовЗначениеСвойстваКонтекстноеМеню" id="70"/>
+											<ExtendedTooltip name="СвойстваЭкземпляровПродуктовЗначениеСвойстваРасширеннаяПодсказка" id="71"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СодержанияРабот_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ВидыДоговоровВидДоговора</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ВидыДоговоров.ВидДоговора</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>При пустом значении данное содержание работ будет доступно только при отсутствии договора в проекте по заявке</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

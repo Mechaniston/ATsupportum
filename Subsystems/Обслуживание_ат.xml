@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Subsystem uuid="fed129fc-eb47-4629-99a9-ca654a851b7c">
+		<Properties>
+			<Name>Обслуживание_ат</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обслуживание</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.Планирование_ат</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПродолжительностьПроцессов_Сервер_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПланированиеЗаданий_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыЗаявок_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыЗаданий_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПланированиеЗаданий_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Проекты_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПродолжительностьПроцессов_КлиентСервер_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Планирование_Сервер_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Планирование_Клиент_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.СвязанныеОбъекты_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПоказатьПотомков_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ДобавлениеСвязейОбъектов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.СоздатьПодчиненноеЗадание_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.УдалениеСвязейОбъектов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПриоритетЗаявок_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ЗаявкиИЗадания_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Заявка_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Задание_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Планирование_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.МинимальныйИнтервалВремени_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ШаблоныЗаявок_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВыборПользователя_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ГруппыШаблоновЗаявок_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СоставыГруппШаблоновЗаявок_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СвойстваЗаявок_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТипыЗаявок_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ДлительностьСпринта_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ДлительностьСпринта_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СвойстваЗаданий_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СодержанияРабот_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИсторияСтатусовЗаявок_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИсторияСтатусовЗаданий_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ВводДокументовПрошлыхПериодов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ФинализацияЗиЗ_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыСтатусов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаФормированияРезультата_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СтруктураРезультатаЗаявки_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.КосвенныеСвязиЗаданий_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.КоличественноСуммовойУчетРабот_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиСогласованногоВремени_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЭлектронныеПисьмаПоКлиентам_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ШаблонТемыУведомленияПоЗаявкеДляВнутреннихПользователей_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Согласование_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФиксацияРабот_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗаявкиНаДату_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ЗаданияНаДату_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СтатусыЗаявокЗаПериод_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОбработкаЗаявок_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.АвтоматическоеЗакрытиеЗаявок_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.УдалениеУстаревшихУведомлений_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УведомлятьИСогласовывать_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДоступноеВремя_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Доступы_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ТекстАвтоответаНаNoReplayУчетнуюЗапись_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ПросмотрИстории_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СвойстваЗаявокПоИсполнителям_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ВременаРабот_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИсторияПроектовДоговоров_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Консультация_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.РегистрацияОшибок_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтроковыеОснованияЗаявок_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыОснованияЗаявок_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.АвтоотчетОбОшибке_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">3704dae7-d8b0-48f6-a71e-b00e1c1f170d</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">4489de16-f227-4d40-869e-a9c50345c896</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

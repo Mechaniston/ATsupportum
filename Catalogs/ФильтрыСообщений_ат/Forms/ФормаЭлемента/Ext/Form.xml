@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Владелец" id="69">
+			<DataPath>Объект.Owner</DataPath>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="70"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="71"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ГруппаСообщений" id="66">
+			<DataPath>Объект.ГруппаСообщений</DataPath>
+			<ContextMenu name="ГруппаСообщенийКонтекстноеМеню" id="67"/>
+			<ExtendedTooltip name="ГруппаСообщенийРасширеннаяПодсказка" id="68"/>
+		</InputField>
+		<CheckBoxField name="ВходящиеПисьма" id="10">
+			<DataPath>Объект.ВходящиеПисьма</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВходящиеПисьмаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ВходящиеПисьмаРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<CheckBoxField name="ИсходящиеПисьма" id="13">
+			<DataPath>Объект.ИсходящиеПисьма</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИсходящиеПисьмаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИсходящиеПисьмаРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<Pages name="Страницы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<Page name="ГруппаУчетныеЗаписи" id="18">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учетные записи</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаУчетныеЗаписиРасширеннаяПодсказка" id="19"/>
+					<ChildItems>
+						<Table name="УчетныеЗаписи" id="20">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.УчетныеЗаписи</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="УчетныеЗаписиКонтекстноеМеню" id="21"/>
+							<AutoCommandBar name="УчетныеЗаписиКоманднаяПанель" id="22"/>
+							<ExtendedTooltip name="УчетныеЗаписиРасширеннаяПодсказка" id="23"/>
+							<SearchStringAddition name="УчетныеЗаписиСтрокаПоиска" id="72">
+								<AdditionSource>
+									<Item>УчетныеЗаписи</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УчетныеЗаписиСтрокаПоискаКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="УчетныеЗаписиСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="УчетныеЗаписиСостояниеПросмотра" id="75">
+								<AdditionSource>
+									<Item>УчетныеЗаписи</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УчетныеЗаписиСостояниеПросмотраКонтекстноеМеню" id="76"/>
+								<ExtendedTooltip name="УчетныеЗаписиСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="УчетныеЗаписиУправлениеПоиском" id="78">
+								<AdditionSource>
+									<Item>УчетныеЗаписи</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="УчетныеЗаписиУправлениеПоискомКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="УчетныеЗаписиУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="УчетныеЗаписиНомерСтроки" id="24">
+									<DataPath>Объект.УчетныеЗаписи.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УчетныеЗаписиНомерСтрокиКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="УчетныеЗаписиНомерСтрокиРасширеннаяПодсказка" id="26"/>
+								</LabelField>
+								<InputField name="УчетныеЗаписиУчетныеЗаписи" id="27">
+									<DataPath>Объект.УчетныеЗаписи.УчетныеЗаписи</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УчетныеЗаписиУчетныеЗаписиКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="УчетныеЗаписиУчетныеЗаписиРасширеннаяПодсказка" id="29"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаАдресаОтправителейВходящихПисем" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Адреса отправителей входящих писем</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаАдресаОтправителейВходящихПисемРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<Table name="АдресаОтправителейВходящихПисем" id="32">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.АдресаОтправителейВходящихПисем</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="АдресаОтправителейВходящихПисемКонтекстноеМеню" id="33"/>
+							<AutoCommandBar name="АдресаОтправителейВходящихПисемКоманднаяПанель" id="34"/>
+							<ExtendedTooltip name="АдресаОтправителейВходящихПисемРасширеннаяПодсказка" id="35"/>
+							<SearchStringAddition name="АдресаОтправителейВходящихПисемСтрокаПоиска" id="81">
+								<AdditionSource>
+									<Item>АдресаОтправителейВходящихПисем</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АдресаОтправителейВходящихПисемСтрокаПоискаКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="АдресаОтправителейВходящихПисемСтрокаПоискаРасширеннаяПодсказка" id="83"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="АдресаОтправителейВходящихПисемСостояниеПросмотра" id="84">
+								<AdditionSource>
+									<Item>АдресаОтправителейВходящихПисем</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АдресаОтправителейВходящихПисемСостояниеПросмотраКонтекстноеМеню" id="85"/>
+								<ExtendedTooltip name="АдресаОтправителейВходящихПисемСостояниеПросмотраРасширеннаяПодсказка" id="86"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="АдресаОтправителейВходящихПисемУправлениеПоиском" id="87">
+								<AdditionSource>
+									<Item>АдресаОтправителейВходящихПисем</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="АдресаОтправителейВходящихПисемУправлениеПоискомКонтекстноеМеню" id="88"/>
+								<ExtendedTooltip name="АдресаОтправителейВходящихПисемУправлениеПоискомРасширеннаяПодсказка" id="89"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="АдресаОтправителейВходящихПисемНомерСтроки" id="36">
+									<DataPath>Объект.АдресаОтправителейВходящихПисем.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АдресаОтправителейВходящихПисемНомерСтрокиКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="АдресаОтправителейВходящихПисемНомерСтрокиРасширеннаяПодсказка" id="38"/>
+								</LabelField>
+								<InputField name="АдресаОтправителейВходящихПисемАдресОтправителяВходящегоПисьма" id="39">
+									<DataPath>Объект.АдресаОтправителейВходящихПисем.АдресОтправителяВходящегоПисьма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АдресаОтправителейВходящихПисемАдресОтправителяВходящегоПисьмаКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="АдресаОтправителейВходящихПисемАдресОтправителяВходящегоПисьмаРасширеннаяПодсказка" id="41"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаАвторыИсходящихПисем" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Авторы исходящих писем</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаАвторыИсходящихПисемРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<Table name="АвторыИсходящихПисем" id="44">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.АвторыИсходящихПисем</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="АвторыИсходящихПисемКонтекстноеМеню" id="45"/>
+							<AutoCommandBar name="АвторыИсходящихПисемКоманднаяПанель" id="46"/>
+							<ExtendedTooltip name="АвторыИсходящихПисемРасширеннаяПодсказка" id="47"/>
+							<SearchStringAddition name="АвторыИсходящихПисемСтрокаПоиска" id="90">
+								<AdditionSource>
+									<Item>АвторыИсходящихПисем</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АвторыИсходящихПисемСтрокаПоискаКонтекстноеМеню" id="91"/>
+								<ExtendedTooltip name="АвторыИсходящихПисемСтрокаПоискаРасширеннаяПодсказка" id="92"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="АвторыИсходящихПисемСостояниеПросмотра" id="93">
+								<AdditionSource>
+									<Item>АвторыИсходящихПисем</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="АвторыИсходящихПисемСостояниеПросмотраКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="АвторыИсходящихПисемСостояниеПросмотраРасширеннаяПодсказка" id="95"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="АвторыИсходящихПисемУправлениеПоиском" id="96">
+								<AdditionSource>
+									<Item>АвторыИсходящихПисем</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="АвторыИсходящихПисемУправлениеПоискомКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="АвторыИсходящихПисемУправлениеПоискомРасширеннаяПодсказка" id="98"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="АвторыИсходящихПисемНомерСтроки" id="48">
+									<DataPath>Объект.АвторыИсходящихПисем.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АвторыИсходящихПисемНомерСтрокиКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="АвторыИсходящихПисемНомерСтрокиРасширеннаяПодсказка" id="50"/>
+								</LabelField>
+								<InputField name="АвторыИсходящихПисемАвторИсходящегоПисьма" id="51">
+									<DataPath>Объект.АвторыИсходящихПисем.АвторИсходящегоПисьма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="АвторыИсходящихПисемАвторИсходящегоПисьмаКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="АвторыИсходящихПисемАвторИсходящегоПисьмаРасширеннаяПодсказка" id="53"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаГрупппыПисемЭлектроннойПочты" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Групппы писем электронной почты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаГрупппыПисемЭлектроннойПочтыРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<Table name="ГрупппыПисемЭлектроннойПочты" id="56">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ГрупппыПисемЭлектроннойПочты</DataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ГрупппыПисемЭлектроннойПочтыКонтекстноеМеню" id="57"/>
+							<AutoCommandBar name="ГрупппыПисемЭлектроннойПочтыКоманднаяПанель" id="58"/>
+							<ExtendedTooltip name="ГрупппыПисемЭлектроннойПочтыРасширеннаяПодсказка" id="59"/>
+							<SearchStringAddition name="ГрупппыПисемЭлектроннойПочтыСтрокаПоиска" id="99">
+								<AdditionSource>
+									<Item>ГрупппыПисемЭлектроннойПочты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГрупппыПисемЭлектроннойПочтыСтрокаПоискаКонтекстноеМеню" id="100"/>
+								<ExtendedTooltip name="ГрупппыПисемЭлектроннойПочтыСтрокаПоискаРасширеннаяПодсказка" id="101"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ГрупппыПисемЭлектроннойПочтыСостояниеПросмотра" id="102">
+								<AdditionSource>
+									<Item>ГрупппыПисемЭлектроннойПочты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГрупппыПисемЭлектроннойПочтыСостояниеПросмотраКонтекстноеМеню" id="103"/>
+								<ExtendedTooltip name="ГрупппыПисемЭлектроннойПочтыСостояниеПросмотраРасширеннаяПодсказка" id="104"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ГрупппыПисемЭлектроннойПочтыУправлениеПоиском" id="105">
+								<AdditionSource>
+									<Item>ГрупппыПисемЭлектроннойПочты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ГрупппыПисемЭлектроннойПочтыУправлениеПоискомКонтекстноеМеню" id="106"/>
+								<ExtendedTooltip name="ГрупппыПисемЭлектроннойПочтыУправлениеПоискомРасширеннаяПодсказка" id="107"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ГрупппыПисемЭлектроннойПочтыНомерСтроки" id="60">
+									<DataPath>Объект.ГрупппыПисемЭлектроннойПочты.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГрупппыПисемЭлектроннойПочтыНомерСтрокиКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ГрупппыПисемЭлектроннойПочтыНомерСтрокиРасширеннаяПодсказка" id="62"/>
+								</LabelField>
+								<InputField name="ГрупппыПисемЭлектроннойПочтыГруппа" id="63">
+									<DataPath>Объект.ГрупппыПисемЭлектроннойПочты.Группа</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГрупппыПисемЭлектроннойПочтыГруппаКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ГрупппыПисемЭлектроннойПочтыГруппаРасширеннаяПодсказка" id="65"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ФильтрыСообщений_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

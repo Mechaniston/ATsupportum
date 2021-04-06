@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Subsystem uuid="1514eaff-faea-4d82-9465-d0d5292bb31d">
+		<Properties>
+			<Name>УправлениеДоступом</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление доступом</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ВидыДоступаЕдинственныеДляТипаЗначенияДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ВидыДоступаБезГруппЗначенияДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОграничиватьДоступПоВиду</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ИзменениеУчастниковГруппДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеДоступомПереопределяемый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеДоступом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ОбновитьГруппыЗначенийДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ЗаписатьНаборыЗначенийДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ОграничиватьДоступНаУровнеЗаписей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПрофилиГруппДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ГруппыДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НаборыЗначенийДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗначенияГруппДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfCharacteristicTypes.ВидыДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОграничиватьДоступПоВидуПользователи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеДоступомСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ЗаполнениеДанныхДляОграниченияДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УдалитьПраваПоЗначениямДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ВидыДоступаЧерезПраваПоЗначениямДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.РаспространяетсяВИерархии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ЗаписатьЗависимыеНаборыЗначенийДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОграничиватьДоступПоВидуПравоЧтения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОграничиватьДоступПоВидуУсловие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОграничиватьДоступПоВидуОбъект</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.УправлениеДоступомСлужебныйПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОграничиватьДоступПоВидуПравоДобавления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОграничиватьДоступПоВидуПравоИзменения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОграничиватьДоступПоВидуВнешниеПользователи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ВидыДоступаБезОграничения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОграничиватьДоступПоВидуДополнительныеСведения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОграничиватьДоступПоВидуУчетныеЗаписиЭлектроннойПочты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ПраваДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЗапрещенноеПравоДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПраваПоЗначениямДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ПраваПоЗначениямДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">FunctionalOption.ОграничиватьДоступНаУровнеЗаписей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ПраваДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ПраваДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ПраваДоступаУпрощенно</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОграничиватьДоступПоВидуОрганизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">SessionParameter.ОграничиватьДоступПоВидуПапкиФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ТаблицыГруппДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПраваРолей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПраваПоЗначениямДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗависимостиПравДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПараметрыОграниченияДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ГруппыЗначенийДоступа</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">edab297c-0f89-4617-bc26-af508fe089c1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">4beb5ca1-221c-469a-9849-f1a7297ab2e4</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">88406d5d-9e59-482d-b68e-b991efdac153</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

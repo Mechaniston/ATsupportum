@@ -1,0 +1,1010 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа4" id="28">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа5" id="33">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>style:ПользовательВыбранный</BackColor>
+			<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<CheckBoxField name="Подсеть" id="30">
+					<DataPath>Объект.Подсеть</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПодсетьКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ПодсетьРасширеннаяПодсказка" id="32"/>
+					<Events>
+						<Event name="OnChange">ПодсетьПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ОписаниеПодсети" id="90">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание подсети</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание подсети</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>StrongSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ОписаниеПодсетиРасширеннаяПодсказка" id="91"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация9" id="104">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Начальный IP сети</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация9КонтекстноеМеню" id="105"/>
+							<ExtendedTooltip name="Декорация9РасширеннаяПодсказка" id="106"/>
+						</LabelDecoration>
+						<InputField name="A3" id="92">
+							<DataPath>A3</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<MinValue xsi:type="xs:decimal">0</MinValue>
+							<MaxValue xsi:type="xs:decimal">255</MaxValue>
+							<ContextMenu name="A3КонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="A3РасширеннаяПодсказка" id="94"/>
+							<Events>
+								<Event name="OnChange">ПодсетьПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="Декорация10" id="107">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация10КонтекстноеМеню" id="108"/>
+							<ExtendedTooltip name="Декорация10РасширеннаяПодсказка" id="109"/>
+						</LabelDecoration>
+						<InputField name="B3" id="95">
+							<DataPath>B3</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<MinValue xsi:type="xs:decimal">0</MinValue>
+							<MaxValue xsi:type="xs:decimal">255</MaxValue>
+							<ContextMenu name="B3КонтекстноеМеню" id="96"/>
+							<ExtendedTooltip name="B3РасширеннаяПодсказка" id="97"/>
+							<Events>
+								<Event name="OnChange">ПодсетьПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="Декорация11" id="110">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация11КонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="Декорация11РасширеннаяПодсказка" id="112"/>
+						</LabelDecoration>
+						<InputField name="C3" id="98">
+							<DataPath>C3</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<MinValue xsi:type="xs:decimal">0</MinValue>
+							<MaxValue xsi:type="xs:decimal">255</MaxValue>
+							<ContextMenu name="C3КонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="C3РасширеннаяПодсказка" id="100"/>
+							<Events>
+								<Event name="OnChange">ПодсетьПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="Декорация12" id="113">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация12КонтекстноеМеню" id="114"/>
+							<ExtendedTooltip name="Декорация12РасширеннаяПодсказка" id="115"/>
+						</LabelDecoration>
+						<InputField name="D3" id="101">
+							<DataPath>D3</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<MinValue xsi:type="xs:decimal">0</MinValue>
+							<MaxValue xsi:type="xs:decimal">255</MaxValue>
+							<ContextMenu name="D3КонтекстноеМеню" id="102"/>
+							<ExtendedTooltip name="D3РасширеннаяПодсказка" id="103"/>
+							<Events>
+								<Event name="OnChange">ПодсетьПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="Декорация13" id="116">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>/</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация13КонтекстноеМеню" id="117"/>
+							<ExtendedTooltip name="Декорация13РасширеннаяПодсказка" id="118"/>
+						</LabelDecoration>
+						<InputField name="МаскаСети" id="119">
+							<DataPath>Объект.МаскаСети</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ListChoiceMode>true</ListChoiceMode>
+							<MinValue xsi:type="xs:decimal">0</MinValue>
+							<MaxValue xsi:type="xs:decimal">32</MaxValue>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>32     255.255.255.255 - 1</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">32</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>31     255.255.255.254 - 2</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">31</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>30     255.255.255.252 - 4</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">30</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>29     255.255.255.248 - 8</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">29</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>28     255.255.255.240 - 16</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">28</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>27     255.255.255.224 - 32</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">27</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>26     255.255.255.192 - 64</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">26</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>25     255.255.255.128 - 128</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">25</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>24     255.255.255.000 - 256</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">24</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>23     255.255.254.000 - 512</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">23</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>22     255.255.252.000 - 1024</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">22</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>21     255.255.248.000 - 2048</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">21</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>20     255.255.240.000 - 4096</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">20</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>19     255.255.224.000 - 8192</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">19</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>18     255.255.192.000 - 16384</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">18</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>17     255.255.128.000 - 32768</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">17</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>16     255.255.000.000 - 65536</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">16</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>15     255.254.000.000 - 131072</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">15</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>14     255.252.000.000 - 262144</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">14</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>13     255.248.000.000 - 524288</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">13</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>12     255.240.000.000 - 1048576</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">12</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>11     255.224.000.000 - 2097152</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">11</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>10     255.192.000.000 - 4194304</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">10</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>9       255.128.000.000 - 8388608</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">9</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>8       255.000.000.000 - 16777216</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">8</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>7       254.000.000.000 - 33554432</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">7</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>6       252.000.000.000 - 67108864</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">6</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>5       248.000.000.000 - 134217728</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">5</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>4       240.000.000.000 - 268435456</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">4</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>3       224.000.000.000 - 536870912</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">3</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>2       192.000.000.000 - 1073741824</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>1       128.000.000.000 - 2147483648</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>0        без ограничений(0)</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="МаскаСетиКонтекстноеМеню" id="120"/>
+							<ExtendedTooltip name="МаскаСетиРасширеннаяПодсказка" id="121"/>
+							<Events>
+								<Event name="OnChange">ПодсетьПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="26">
+			<Group>Horizontal</Group>
+			<Representation>StrongSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<UsualGroup name="Группа2" id="24">
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<UsualGroup name="ОписаниеНачальногоИП" id="38">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание начального ИП</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание начального ИП</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ОписаниеНачальногоИПРасширеннаяПодсказка" id="39"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация1" id="52">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начальный IP</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="54"/>
+								</LabelDecoration>
+								<InputField name="A1" id="40">
+									<DataPath>A1</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<MaxValue xsi:type="xs:decimal">255</MaxValue>
+									<ContextMenu name="A1КонтекстноеМеню" id="41"/>
+									<ExtendedTooltip name="A1РасширеннаяПодсказка" id="42"/>
+									<Events>
+										<Event name="OnChange">НачальныйIPПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="Декорация2" id="55">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="57"/>
+								</LabelDecoration>
+								<InputField name="B1" id="43">
+									<DataPath>B1</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<MaxValue xsi:type="xs:decimal">255</MaxValue>
+									<ContextMenu name="B1КонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="B1РасширеннаяПодсказка" id="45"/>
+									<Events>
+										<Event name="OnChange">НачальныйIPПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="Декорация4" id="61">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация4КонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="63"/>
+								</LabelDecoration>
+								<InputField name="C1" id="46">
+									<DataPath>C1</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<MaxValue xsi:type="xs:decimal">255</MaxValue>
+									<ContextMenu name="C1КонтекстноеМеню" id="47"/>
+									<ExtendedTooltip name="C1РасширеннаяПодсказка" id="48"/>
+									<Events>
+										<Event name="OnChange">НачальныйIPПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="Декорация3" id="58">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация3КонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="60"/>
+								</LabelDecoration>
+								<InputField name="D1" id="49">
+									<DataPath>D1</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<MaxValue xsi:type="xs:decimal">255</MaxValue>
+									<ContextMenu name="D1КонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="D1РасширеннаяПодсказка" id="51"/>
+									<Events>
+										<Event name="OnChange">НачальныйIPПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ВсегоАдресов" id="18">
+							<DataPath>ВсегоАдресов</DataPath>
+							<Enabled>false</Enabled>
+							<ReadOnly>true</ReadOnly>
+							<BorderColor>style:NegativeTextColor</BorderColor>
+							<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ContextMenu name="ВсегоАдресовКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="ВсегоАдресовРасширеннаяПодсказка" id="20"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа1" id="16">
+					<Group>Vertical</Group>
+					<Representation>StrongSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="17"/>
+					<ChildItems>
+						<UsualGroup name="ОписаниеКонечногоИП" id="67">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание конечного ИП</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Описание конечного ИП</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ОписаниеКонечногоИПРасширеннаяПодсказка" id="68"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация5" id="64">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Конечный IP</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация5КонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="66"/>
+								</LabelDecoration>
+								<InputField name="A2" id="69">
+									<DataPath>A2</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<MaxValue xsi:type="xs:decimal">255</MaxValue>
+									<ContextMenu name="A2КонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="A2РасширеннаяПодсказка" id="71"/>
+									<Events>
+										<Event name="OnChange">КонечныйIPПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="Декорация6" id="81">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация6КонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="Декорация6РасширеннаяПодсказка" id="83"/>
+								</LabelDecoration>
+								<InputField name="B2" id="72">
+									<DataPath>B2</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<MaxValue xsi:type="xs:decimal">255</MaxValue>
+									<ContextMenu name="B2КонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="B2РасширеннаяПодсказка" id="74"/>
+									<Events>
+										<Event name="OnChange">КонечныйIPПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="Декорация7" id="84">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация7КонтекстноеМеню" id="85"/>
+									<ExtendedTooltip name="Декорация7РасширеннаяПодсказка" id="86"/>
+								</LabelDecoration>
+								<InputField name="C2" id="75">
+									<DataPath>C2</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<MaxValue xsi:type="xs:decimal">255</MaxValue>
+									<ContextMenu name="C2КонтекстноеМеню" id="76"/>
+									<ExtendedTooltip name="C2РасширеннаяПодсказка" id="77"/>
+									<Events>
+										<Event name="OnChange">КонечныйIPПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="Декорация8" id="87">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация8КонтекстноеМеню" id="88"/>
+									<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="89"/>
+								</LabelDecoration>
+								<InputField name="D2" id="78">
+									<DataPath>D2</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<MaxValue xsi:type="xs:decimal">255</MaxValue>
+									<ContextMenu name="D2КонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="D2РасширеннаяПодсказка" id="80"/>
+									<Events>
+										<Event name="OnChange">КонечныйIPПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ВиртуальнаяСеть" id="21">
+							<DataPath>Объект.ВиртуальнаяСеть</DataPath>
+							<ContextMenu name="ВиртуальнаяСетьКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ВиртуальнаяСетьРасширеннаяПодсказка" id="23"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Описание" id="13">
+			<DataPath>Объект.Описание</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="15"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ДиапазоныСетевыхАдресов_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВсегоАдресов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего адресов в диапазоне</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="A1" id="4">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="B1" id="5">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="A2" id="6">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="B2" id="7">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="C1" id="8">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="D1" id="9">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="C2" id="10">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="D2" id="11">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="A3" id="12">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="B3" id="13">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="C3" id="14">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="D3" id="15">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

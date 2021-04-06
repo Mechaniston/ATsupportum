@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<ChildItems>
+			<Button name="ФормаОК" id="13">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКExtendedTooltip" id="26"/>
+			</Button>
+			<Button name="ФормаОтмена" id="14">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаExtendedTooltip" id="27"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ПровайдерЭЦП" id="1">
+			<DataPath>ПровайдерЭЦП</DataPath>
+			<Width>50</Width>
+			<ClearButton>true</ClearButton>
+			<ChoiceListButton>true</ChoiceListButton>
+			<BackColor>style:ФонУправляющегоПоля</BackColor>
+			<ContextMenu name="ПровайдерЭЦПКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПровайдерЭЦПExtendedTooltip" id="28"/>
+			<Events>
+				<Event name="OnChange">ПровайдерЭЦППриИзменении</Event>
+				<Event name="ChoiceProcessing">ПровайдерЭЦПОбработкаВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="ТипПровайдераЭЦП" id="3">
+			<DataPath>ТипПровайдераЭЦП</DataPath>
+			<BackColor>style:ФонУправляющегоПоля</BackColor>
+			<ContextMenu name="ТипПровайдераЭЦПКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ТипПровайдераЭЦПExtendedTooltip" id="29"/>
+			<Events>
+				<Event name="OnChange">ТипПровайдераЭЦППриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="АлгоритмПодписи" id="7">
+			<DataPath>АлгоритмПодписи</DataPath>
+			<ListChoiceMode>true</ListChoiceMode>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="АлгоритмПодписиКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="АлгоритмПодписиExtendedTooltip" id="30"/>
+		</InputField>
+		<InputField name="АлгоритмХеширования" id="9">
+			<DataPath>АлгоритмХеширования</DataPath>
+			<ListChoiceMode>true</ListChoiceMode>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="АлгоритмХешированияКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="АлгоритмХешированияExtendedTooltip" id="31"/>
+		</InputField>
+		<InputField name="АлгоритмШифрования" id="15">
+			<DataPath>АлгоритмШифрования</DataPath>
+			<ListChoiceMode>true</ListChoiceMode>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="АлгоритмШифрованияКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="АлгоритмШифрованияExtendedTooltip" id="32"/>
+		</InputField>
+		<CheckBoxField name="ВыполнятьПроверкуЭЦПНаСервере" id="11">
+			<DataPath>ВыполнятьПроверкуЭЦПНаСервере</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВыполнятьПроверкуЭЦПНаСервереКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="ВыполнятьПроверкуЭЦПНаСервереExtendedTooltip" id="33"/>
+			<Events>
+				<Event name="OnChange">ВыполнятьПроверкуЭЦПНаСервереПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<Table name="ПутиМодулейКриптографииСерверовLinux" id="17">
+			<Representation>List</Representation>
+			<TitleLocation>Top</TitleLocation>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>ПутиМодулейКриптографииСерверовLinux</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пути модулей криптографии для серверов 1С:Предприятия под управлением ОС Linux</v8:content>
+				</v8:item>
+			</Title>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПутиМодулейКриптографииСерверовLinuxКонтекстноеМеню" id="18"/>
+			<AutoCommandBar name="ПутиМодулейКриптографииСерверовLinuxКоманднаяПанель" id="19"/>
+			<ExtendedTooltip name="ПутиМодулейКриптографииСерверовLinuxExtendedTooltip" id="34"/>
+			<SearchStringAddition name="ПутиМодулейКриптографииСерверовLinuxСтрокаПоиска" id="38">
+				<AdditionSource>
+					<Item>ПутиМодулейКриптографииСерверовLinux</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПутиМодулейКриптографииСерверовLinuxСтрокаПоискаКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="ПутиМодулейКриптографииСерверовLinuxСтрокаПоискаРасширеннаяПодсказка" id="40"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПутиМодулейКриптографииСерверовLinuxСостояниеПросмотра" id="41">
+				<AdditionSource>
+					<Item>ПутиМодулейКриптографииСерверовLinux</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПутиМодулейКриптографииСерверовLinuxСостояниеПросмотраКонтекстноеМеню" id="42"/>
+				<ExtendedTooltip name="ПутиМодулейКриптографииСерверовLinuxСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПутиМодулейКриптографииСерверовLinuxУправлениеПоиском" id="44">
+				<AdditionSource>
+					<Item>ПутиМодулейКриптографииСерверовLinux</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПутиМодулейКриптографииСерверовLinuxУправлениеПоискомКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="ПутиМодулейКриптографииСерверовLinuxУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ПутиМодулейКриптографииСерверовLinuxИмяКомпьютера" id="20">
+					<DataPath>ПутиМодулейКриптографииСерверовLinux.ИмяКомпьютера</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПутиМодулейКриптографииСерверовLinuxИмяКомпьютераКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ПутиМодулейКриптографииСерверовLinuxИмяКомпьютераExtendedTooltip" id="35"/>
+				</InputField>
+				<InputField name="ПутиМодулейКриптографииСерверовLinuxПутьМодуляКриптографии" id="22">
+					<DataPath>ПутиМодулейКриптографииСерверовLinux.ПутьМодуляКриптографии</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПутиМодулейКриптографииСерверовLinuxПутьМодуляКриптографииКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ПутиМодулейКриптографииСерверовLinuxПутьМодуляКриптографииExtendedTooltip" id="36"/>
+				</InputField>
+				<InputField name="ПутиМодулейКриптографииСерверовLinuxКомментарий" id="24">
+					<DataPath>ПутиМодулейКриптографииСерверовLinux.Комментарий</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПутиМодулейКриптографииСерверовLinuxКомментарийКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ПутиМодулейКриптографииСерверовLinuxКомментарийExtendedTooltip" id="37"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПровайдерЭЦП" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провайдер ЭЦП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипПровайдераЭЦП" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип провайдера ЭЦП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АлгоритмПодписи" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Алгоритм подписи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="АлгоритмХеширования" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Алгоритм хеширования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ВыполнятьПроверкуЭЦПНаСервере" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнять проверку ЭЦП на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="АлгоритмШифрования" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Алгоритм шифрования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПутиМодулейКриптографииСерверовLinux" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пути модулей криптографии серверов Linux</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяКомпьютера" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя компьютера</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПутьМодуляКриптографии" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путь модуля криптографии</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СпискиАлгоритмовУспешноЗаполнены" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Списки алгоритмов успешно заполнены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПутьМодуляКриптографии" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь модуля криптографии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоПодчиненныйУзел" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это подчиненный узел</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<View>
+				<xr:Common>false</xr:Common>
+			</View>
+			<Edit>
+				<xr:Common>false</xr:Common>
+			</Edit>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+		</Command>
+	</Commands>
+</Form>

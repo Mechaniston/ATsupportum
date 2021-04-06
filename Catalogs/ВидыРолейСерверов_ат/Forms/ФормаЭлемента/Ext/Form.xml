@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ТипРолиСервера" id="7">
+			<DataPath>Объект.ТипРолиСервера</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипРолиСервераКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ТипРолиСервераРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">ТипРолиСервераПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Номенклатура" id="10">
+			<DataPath>Объект.Номенклатура</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НоменклатураКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<Table name="МинимальныеРесурсы" id="13">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.МинимальныеРесурсы</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="МинимальныеРесурсыКонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="МинимальныеРесурсыКоманднаяПанель" id="15"/>
+			<ExtendedTooltip name="МинимальныеРесурсыРасширеннаяПодсказка" id="16"/>
+			<SearchStringAddition name="МинимальныеРесурсыСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>МинимальныеРесурсы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МинимальныеРесурсыСтрокаПоискаКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="МинимальныеРесурсыСтрокаПоискаРасширеннаяПодсказка" id="21"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="МинимальныеРесурсыСостояниеПросмотра" id="22">
+				<AdditionSource>
+					<Item>МинимальныеРесурсы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="МинимальныеРесурсыСостояниеПросмотраКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="МинимальныеРесурсыСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="МинимальныеРесурсыУправлениеПоиском" id="27">
+				<AdditionSource>
+					<Item>МинимальныеРесурсы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="МинимальныеРесурсыУправлениеПоискомКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="МинимальныеРесурсыУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="МинимальныеРесурсыНомерСтроки" id="32">
+					<DataPath>Объект.МинимальныеРесурсы.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="МинимальныеРесурсыНомерСтрокиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="МинимальныеРесурсыНомерСтрокиРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВидыРолейСерверов_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

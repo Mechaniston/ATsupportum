@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="69">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="70"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Организация" id="7">
+			<DataPath>Объект.Организация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Комментарий" id="10">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<Table name="ПоставкиПродуктовДляАренды" id="13">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ТаблицаПоставокДляАренды</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПоставкиПродуктовДляАрендыКонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="ПоставкиПродуктовДляАрендыКоманднаяПанель" id="15"/>
+			<ExtendedTooltip name="ПоставкиПродуктовДляАрендыРасширеннаяПодсказка" id="16"/>
+			<SearchStringAddition name="ПоставкиПродуктовДляАрендыСтрокаПоиска" id="17">
+				<AdditionSource>
+					<Item>ПоставкиПродуктовДляАренды</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоставкиПродуктовДляАрендыСтрокаПоискаКонтекстноеМеню" id="20"/>
+				<ExtendedTooltip name="ПоставкиПродуктовДляАрендыСтрокаПоискаРасширеннаяПодсказка" id="21"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПоставкиПродуктовДляАрендыСостояниеПросмотра" id="22">
+				<AdditionSource>
+					<Item>ПоставкиПродуктовДляАренды</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоставкиПродуктовДляАрендыСостояниеПросмотраКонтекстноеМеню" id="25"/>
+				<ExtendedTooltip name="ПоставкиПродуктовДляАрендыСостояниеПросмотраРасширеннаяПодсказка" id="26"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПоставкиПродуктовДляАрендыУправлениеПоиском" id="27">
+				<AdditionSource>
+					<Item>ПоставкиПродуктовДляАренды</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПоставкиПродуктовДляАрендыУправлениеПоискомКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="ПоставкиПродуктовДляАрендыУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ПоставкиПродуктовДляАрендыНомерСтроки" id="32">
+					<DataPath>Объект.ТаблицаПоставокДляАренды.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоставкиПродуктовДляАрендыНомерСтрокиКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ПоставкиПродуктовДляАрендыНомерСтрокиРасширеннаяПодсказка" id="34"/>
+				</LabelField>
+				<InputField name="ПоставкиПродуктовДляАрендыПоставкаПродутов" id="35">
+					<DataPath>Объект.ТаблицаПоставокДляАренды.Поставка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<DropListButton>true</DropListButton>
+					<ChoiceButton>true</ChoiceButton>
+					<ChoiceButtonRepresentation>ShowInDropListAndInInputField</ChoiceButtonRepresentation>
+					<ClearButton>true</ClearButton>
+					<SpinButton>false</SpinButton>
+					<OpenButton>false</OpenButton>
+					<CreateButton>false</CreateButton>
+					<ContextMenu name="ПоставкиПродуктовДляАрендыПоставкаПродутовКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ПоставкиПродуктовДляАрендыПоставкаПродутовРасширеннаяПодсказка" id="37"/>
+					<Events>
+						<Event name="StartChoice">ПоставкаПродутовНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ПоставкиПродуктовДляАрендыКоличество" id="38">
+					<DataPath>1/0:2a84e66e-09c8-47fe-9158-e59563138f18/0:616d0819-b012-487a-8c89-beef476ae8ef</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПоставкиПродуктовДляАрендыКоличествоКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ПоставкиПродуктовДляАрендыКоличествоРасширеннаяПодсказка" id="40"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ИспользованиеПоставкиДляАренды_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

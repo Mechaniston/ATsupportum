@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПолучитьАктуальныеВерсии" id="25">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПолучитьАктуальныеВерсии</CommandName>
+				<ExtendedTooltip name="ФормаПолучитьАктуальныеВерсииРасширеннаяПодсказка" id="26"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>Tree</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>false</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="42">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="44"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="45">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="47"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="48">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="49"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="50"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Код" id="57">
+					<DataPath>Список.Code</DataPath>
+					<ContextMenu name="КодКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="59"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="54">
+					<DataPath>Список.Ref</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продукт</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="56"/>
+				</LabelField>
+				<LabelField name="ТипПродукта" id="33">
+					<DataPath>Список.ТипПродукта</DataPath>
+					<ContextMenu name="ТипПродуктаКонтекстноеМеню" id="34"/>
+					<ExtendedTooltip name="ТипПродуктаРасширеннаяПодсказка" id="35"/>
+				</LabelField>
+				<LabelField name="Поставщик" id="27">
+					<DataPath>Список.Поставщик</DataPath>
+					<ContextMenu name="ПоставщикКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ПоставщикРасширеннаяПодсказка" id="29"/>
+				</LabelField>
+				<LabelField name="ПоследняяВерсия" id="36">
+					<DataPath>Список.ПоследняяВерсия</DataPath>
+					<ContextMenu name="ПоследняяВерсияКонтекстноеМеню" id="37"/>
+					<ExtendedTooltip name="ПоследняяВерсияРасширеннаяПодсказка" id="38"/>
+				</LabelField>
+				<LabelField name="ДатаВыхода" id="39">
+					<DataPath>Список.ДатаВыхода</DataPath>
+					<ContextMenu name="ДатаВыходаКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ДатаВыходаРасширеннаяПодсказка" id="41"/>
+				</LabelField>
+				<LabelField name="Артикул" id="51">
+					<DataPath>Список.Артикул</DataPath>
+					<ContextMenu name="АртикулКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="АртикулРасширеннаяПодсказка" id="53"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ РАЗРЕШЕННЫЕ
+	Продукты_ат.Ссылка,
+	Продукты_ат.Код,
+	Продукты_ат.Наименование,
+	Продукты_ат.Поставщик,
+	Продукты_ат.ТипПродукта,
+	Продукты_ат.Артикул,
+	ВерсииПродуктов_ат.Наименование +
+		ВЫБОР
+			КОГДА ВерсииПродуктов_ат.Описание &lt;&gt; "" ТОГДА
+				" - " + ВерсииПродуктов_ат.Описание
+			ИНАЧЕ ""
+		КОНЕЦ КАК ПоследняяВерсия,
+	ВерсииПродуктов_ат.ДатаВыхода
+ИЗ
+	Справочник.Продукты_ат КАК Продукты_ат
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ВерсииПродуктов_ат.Владелец КАК Владелец,
+			МАКСИМУМ(ВерсииПродуктов_ат.ВерсияЧислом) КАК ВерсияЧислом
+		ИЗ
+			Справочник.ВерсииПродуктов_ат КАК ВерсииПродуктов_ат
+		ГДЕ
+			НЕ ВерсииПродуктов_ат.ПометкаУдаления
+			И НЕ ВерсииПродуктов_ат.ВРазработке
+		
+		СГРУППИРОВАТЬ ПО
+			ВерсииПродуктов_ат.Владелец) КАК ВложенныйЗапрос
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ВерсииПродуктов_ат КАК ВерсииПродуктов_ат
+			ПО ВложенныйЗапрос.Владелец = ВерсииПродуктов_ат.Владелец
+				И ВложенныйЗапрос.ВерсияЧислом = ВерсииПродуктов_ат.ВерсияЧислом
+		ПО (ВложенныйЗапрос.Владелец = Продукты_ат.Ссылка)</QueryText>
+				<MainTable>Catalog.Продукты_ат</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Поставщик</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПолучитьАктуальныеВерсии" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить актуальные версии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить актуальные версии</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Use>
+				<xr:Common>false</xr:Common>
+				<xr:Value name="Role.ОрганизацияСотрудник_ат">true</xr:Value>
+				<xr:Value name="Role.ПолныеПрава">true</xr:Value>
+			</Use>
+			<Action>ПолучитьАктуальныеВерсии</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ИсключитьДочерниеПродуктыИКонфигурации">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,14 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://v8.1c.ru/SessionManagement">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<objectType name="Session">
+		<property name="SessionID" type="xs:string"/>
+		<property name="UserID" type="xs:string"/>
+		<property name="UserName" type="xs:string"/>
+		<property name="AppID" type="xs:string"/>
+		<property name="Zone" type="xs:string"/>
+		<property name="LanguageCode" type="xs:string"/>
+	</objectType>
+	<objectType name="Sessions">
+		<property xmlns:d3p1="http://v8.1c.ru/SessionManagement" name="Content" type="d3p1:Session" lowerBound="0" upperBound="-1"/>
+	</objectType>
+</package>

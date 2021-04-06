@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<Page name="СтраницаОсновное" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница основное</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаОсновноеРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<InputField name="Код" id="1">
+							<DataPath>Объект.Code</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<InputField name="ТипДоговора" id="7">
+							<DataPath>Объект.ТипДоговора</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТипДоговораКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ТипДоговораРасширеннаяПодсказка" id="9"/>
+							<Events>
+								<Event name="OnChange">ТипДоговораПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="Наименование" id="4">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<InputField name="ПрефиксНомера" id="53">
+							<DataPath>Объект.ПрефиксНомера</DataPath>
+							<ContextMenu name="ПрефиксНомераКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ПрефиксНомераРасширеннаяПодсказка" id="55"/>
+						</InputField>
+						<InputField name="ПостфиксНомера" id="16">
+							<DataPath>Объект.ПостфиксНомера</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПостфиксНомераКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ПостфиксНомераРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="СрокОплатыВДнях" id="19">
+							<DataPath>Объект.СрокОплатыВДнях</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СрокОплатыВДняхКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="СрокОплатыВДняхРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="ПериодДанныхДляОпределенияТарифногоПлана" id="59">
+							<DataPath>Объект.ПериодДанныхДляОпределенияТарифногоПлана</DataPath>
+							<ContextMenu name="ПериодДанныхДляОпределенияТарифногоПланаКонтекстноеМеню" id="60"/>
+							<ExtendedTooltip name="ПериодДанныхДляОпределенияТарифногоПланаРасширеннаяПодсказка" id="61"/>
+						</InputField>
+						<InputField name="ФормулаРасчетаТарифногоПлана" id="56">
+							<DataPath>Объект.ФормулаРасчетаТарифногоПлана</DataPath>
+							<ContextMenu name="ФормулаРасчетаТарифногоПланаКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="ФормулаРасчетаТарифногоПланаРасширеннаяПодсказка" id="58"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаПериодическоеВыставление" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Периодическое выставление</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница периодическое выставление</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаПериодическоеВыставлениеРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<InputField name="ПериодичностьСчетов" id="13">
+							<DataPath>Объект.ПериодичностьСчетов</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПериодичностьСчетовКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ПериодичностьСчетовРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="ПериодичностьРеализаций" id="10">
+							<DataPath>Объект.ПериодичностьРеализаций</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПериодичностьРеализацийКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ПериодичностьРеализацийРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<Table name="Услуги" id="22">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Услуги</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="УслугиКонтекстноеМеню" id="23"/>
+							<AutoCommandBar name="УслугиКоманднаяПанель" id="24"/>
+							<ExtendedTooltip name="УслугиРасширеннаяПодсказка" id="25"/>
+							<SearchStringAddition name="УслугиСтрокаПоиска" id="26">
+								<AdditionSource>
+									<Item>Услуги</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УслугиСтрокаПоискаКонтекстноеМеню" id="29"/>
+								<ExtendedTooltip name="УслугиСтрокаПоискаРасширеннаяПодсказка" id="30"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="УслугиСостояниеПросмотра" id="31">
+								<AdditionSource>
+									<Item>Услуги</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УслугиСостояниеПросмотраКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="УслугиСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="УслугиУправлениеПоиском" id="36">
+								<AdditionSource>
+									<Item>Услуги</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="УслугиУправлениеПоискомКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="УслугиУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="УслугиНомерСтроки" id="41">
+									<DataPath>Объект.Услуги.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УслугиНомерСтрокиКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="УслугиНомерСтрокиРасширеннаяПодсказка" id="43"/>
+								</LabelField>
+								<InputField name="УслугиНоменклатура" id="44">
+									<DataPath>Объект.Услуги.Номенклатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="УслугиНоменклатураКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="УслугиНоменклатураРасширеннаяПодсказка" id="46"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ВидыДоговоров_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="страницы" id="44">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="страницыРасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<Page name="Общее" id="46">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общее</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общее</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбщееРасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<UsualGroup name="Группа1" id="48">
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="49"/>
+							<ChildItems>
+								<InputField name="Код" id="1">
+									<DataPath>Объект.Code</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+								</InputField>
+								<InputField name="Наименование" id="4">
+									<DataPath>Объект.Description</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+								</InputField>
+								<InputField name="Владелец" id="7">
+									<DataPath>Объект.Owner</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сервер</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Ссылка</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Объект.Ref</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="ТипСетевогоАдаптера" id="83">
+							<DataPath>Объект.ТипСетевогоАдаптера</DataPath>
+							<ContextMenu name="ТипСетевогоАдаптераКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="ТипСетевогоАдаптераРасширеннаяПодсказка" id="85"/>
+						</InputField>
+						<InputField name="АдресMAC" id="16">
+							<DataPath>Объект.АдресMAC</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="АдресMACКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="АдресMACРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="ВиртуальнаяСеть" id="13">
+							<DataPath>Объект.ВиртуальнаяСеть</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВиртуальнаяСетьКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ВиртуальнаяСетьРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="MTU" id="86">
+							<DataPath>Объект.MTU</DataPath>
+							<ContextMenu name="MTUКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="MTUРасширеннаяПодсказка" id="88"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="УстановкаIP" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установка IP</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Установка IP</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="УстановкаIPРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<CheckBoxField name="НеУстанавливатьIP" id="19">
+							<DataPath>Объект.НеУстанавливатьIP</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="НеУстанавливатьIPКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="НеУстанавливатьIPРасширеннаяПодсказка" id="21"/>
+							<Events>
+								<Event name="OnChange">DoNoAssignIPПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<RadioButtonField name="AssignmentMethodIP" id="22">
+							<DataPath>Объект.МетодНазначенияIP</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Obtain IP address via DHCP</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">0</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Get IP address from pool</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Enter IP addresses manually</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="AssignmentMethodIPКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="AssignmentMethodIPРасширеннаяПодсказка" id="24"/>
+							<Events>
+								<Event name="OnChange">AssignmentMethodIPПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<Table name="IPaddress" id="55">
+							<HeightInTableRows>5</HeightInTableRows>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<VerticalStretch>false</VerticalStretch>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>IPaddress</DataPath>
+							<RowPictureDataPath>IPaddress.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="IPaddressКонтекстноеМеню" id="56"/>
+							<AutoCommandBar name="IPaddressКоманднаяПанель" id="57"/>
+							<ExtendedTooltip name="IPaddressРасширеннаяПодсказка" id="58"/>
+							<SearchStringAddition name="IPaddressСтрокаПоиска" id="59">
+								<AdditionSource>
+									<Item>IPaddress</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="IPaddressСтрокаПоискаКонтекстноеМеню" id="60"/>
+								<ExtendedTooltip name="IPaddressСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="IPaddressСостояниеПросмотра" id="62">
+								<Enabled>false</Enabled>
+								<AdditionSource>
+									<Item>IPaddress</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="IPaddressСостояниеПросмотраКонтекстноеМеню" id="63"/>
+								<ExtendedTooltip name="IPaddressСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="IPaddressУправлениеПоиском" id="65">
+								<AdditionSource>
+									<Item>IPaddress</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="IPaddressУправлениеПоискомКонтекстноеМеню" id="66"/>
+								<ExtendedTooltip name="IPaddressУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">IPaddressПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="IPaddressСсылка" id="71">
+									<DataPath>IPaddress.Ref</DataPath>
+									<ContextMenu name="IPaddressСсылкаКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="IPaddressСсылкаРасширеннаяПодсказка" id="73"/>
+								</LabelField>
+								<LabelField name="IPaddressВиртуальнаяСеть" id="74">
+									<DataPath>IPaddress.ВиртуальнаяСеть</DataPath>
+									<ContextMenu name="IPaddressВиртуальнаяСетьКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="IPaddressВиртуальнаяСетьРасширеннаяПодсказка" id="76"/>
+								</LabelField>
+								<CheckBoxField name="IPaddressБелый" id="77">
+									<DataPath>IPaddress.Белый</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="IPaddressБелыйКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="IPaddressБелыйРасширеннаяПодсказка" id="79"/>
+								</CheckBoxField>
+								<CheckBoxField name="IPaddressЧужой" id="80">
+									<DataPath>IPaddress.Чужой</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="IPaddressЧужойКонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="IPaddressЧужойРасширеннаяПодсказка" id="82"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СетевыеИнтерфейсы_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="IPaddress" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>IP address</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ВыделенныеIP_ат.Ссылка,
+	ВыделенныеIP_ат.Владелец,
+	ВыделенныеIP_ат.ВиртуальнаяСеть,
+	ВыделенныеIP_ат.Белый,
+	ВыделенныеIP_ат.Чужой
+ИЗ
+	Справочник.ВыделенныеIP_ат КАК ВыделенныеIP_ат
+</QueryText>
+				<MainTable>Catalog.ВыделенныеIP_ат</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СделатьОсновным" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать основным</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать основным</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СделатьОсновным</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

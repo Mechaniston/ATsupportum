@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выберите улицу и населенный пункт</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelField name="НадписьОРегионеИРайоне" id="13">
+			<DataPath>НадписьОРегионеИРайоне</DataPath>
+			<TitleFont kind="AutoFont"/>
+			<TitleLocation>None</TitleLocation>
+			<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ContextMenu name="НадписьОРегионеИРайонеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="НадписьОРегионеИРайонеExtendedTooltip" id="32"/>
+		</LabelField>
+		<Table name="НайденныеЗаписиПоИндексу" id="1">
+			<Representation>List</Representation>
+			<ReadOnly>true</ReadOnly>
+			<SkipOnInput>false</SkipOnInput>
+			<DefaultItem>true</DefaultItem>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<ChoiceMode>true</ChoiceMode>
+			<SelectionMode>SingleRow</SelectionMode>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<AutoAddIncomplete>false</AutoAddIncomplete>
+			<SearchOnInput>Use</SearchOnInput>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>НайденныеЗаписиПоИндексу</DataPath>
+			<BorderColor>style:BorderColor</BorderColor>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НайденныеЗаписиПоИндексуКонтекстноеМеню" id="2">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="НайденныеЗаписиПоИндексуМенюВыбрать" id="24">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.Command.КомандаВыбрать</CommandName>
+						<ExtendedTooltip name="НайденныеЗаписиПоИндексуМенюВыбратьExtendedTooltip" id="33"/>
+					</Button>
+					<Button name="НайденныеЗаписиПоИндексуМенюКопироватьВБуферОбмена" id="25">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.НайденныеЗаписиПоИндексу.StandardCommand.CopyToClipboard</CommandName>
+						<ExtendedTooltip name="НайденныеЗаписиПоИндексуМенюКопироватьВБуферОбменаExtendedTooltip" id="34"/>
+					</Button>
+					<ButtonGroup name="НайденныеЗаписиПоИндексуМенюПоиск" id="26">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Найденные записи по индексу поиск</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Найденные записи по индексу поиск</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="НайденныеЗаписиПоИндексуМенюПоискExtendedTooltip" id="35"/>
+						<ChildItems>
+							<Button name="НайденныеЗаписиПоИндексуМенюНайти" id="27">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.НайденныеЗаписиПоИндексу.StandardCommand.Find</CommandName>
+								<ExtendedTooltip name="НайденныеЗаписиПоИндексуМенюНайтиExtendedTooltip" id="36"/>
+							</Button>
+							<Button name="НайденныеЗаписиПоИндексуМенюОтменитьПоиск" id="28">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.НайденныеЗаписиПоИндексу.StandardCommand.CancelSearch</CommandName>
+								<ExtendedTooltip name="НайденныеЗаписиПоИндексуМенюОтменитьПоискExtendedTooltip" id="37"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="НайденныеЗаписиПоИндексуКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="НайденныеЗаписиПоИндексуКомандаВыбрать" id="15">
+						<Type>CommandBarButton</Type>
+						<DefaultButton>true</DefaultButton>
+						<CommandName>Form.Command.КомандаВыбрать</CommandName>
+						<ExtendedTooltip name="НайденныеЗаписиПоИндексуКомандаВыбратьExtendedTooltip" id="38"/>
+					</Button>
+					<ButtonGroup name="НайденныеЗаписиПоИндексуПоиск" id="23">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Найденные записи по индексу поиск</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Найденные записи по индексу поиск</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="НайденныеЗаписиПоИндексуПоискExtendedTooltip" id="39"/>
+						<ChildItems>
+							<Button name="НайденныеЗаписиПоИндексуНайти" id="18">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.НайденныеЗаписиПоИндексу.StandardCommand.Find</CommandName>
+								<ExtendedTooltip name="НайденныеЗаписиПоИндексуНайтиExtendedTooltip" id="40"/>
+							</Button>
+							<Button name="НайденныеЗаписиПоИндексуОтменитьПоиск" id="19">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.НайденныеЗаписиПоИндексу.StandardCommand.CancelSearch</CommandName>
+								<ExtendedTooltip name="НайденныеЗаписиПоИндексуОтменитьПоискExtendedTooltip" id="41"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="СкрыватьНеактуальныеАдреса" id="31">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СкрыватьНеактуальныеАдреса</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СкрыватьНеактуальныеАдресаExtendedTooltip" id="42"/>
+					</Button>
+					<ButtonGroup name="НайденныеЗаписиПоИндексуНастройка" id="22">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Найденные записи по индексу настройка</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Найденные записи по индексу настройка</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="НайденныеЗаписиПоИндексуНастройкаExtendedTooltip" id="43"/>
+						<ChildItems>
+							<Button name="НайденныеЗаписиПоИндексуВывестиСписок" id="20">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Item.НайденныеЗаписиПоИндексу.StandardCommand.OutputList</CommandName>
+								<ExtendedTooltip name="НайденныеЗаписиПоИндексуВывестиСписокExtendedTooltip" id="44"/>
+							</Button>
+							<Button name="НайденныеЗаписиПоИндексуИзменитьФорму" id="16">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+								<ExtendedTooltip name="НайденныеЗаписиПоИндексуИзменитьФормуExtendedTooltip" id="45"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="НайденныеЗаписиПоИндексуСправка" id="17">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.Help</CommandName>
+						<ExtendedTooltip name="НайденныеЗаписиПоИндексуСправкаExtendedTooltip" id="46"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="НайденныеЗаписиПоИндексуExtendedTooltip" id="47"/>
+			<SearchStringAddition name="НайденныеЗаписиПоИндексуСтрокаПоиска" id="51">
+				<AdditionSource>
+					<Item>НайденныеЗаписиПоИндексу</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НайденныеЗаписиПоИндексуСтрокаПоискаКонтекстноеМеню" id="52"/>
+				<ExtendedTooltip name="НайденныеЗаписиПоИндексуСтрокаПоискаРасширеннаяПодсказка" id="53"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НайденныеЗаписиПоИндексуСостояниеПросмотра" id="54">
+				<AdditionSource>
+					<Item>НайденныеЗаписиПоИндексу</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НайденныеЗаписиПоИндексуСостояниеПросмотраКонтекстноеМеню" id="55"/>
+				<ExtendedTooltip name="НайденныеЗаписиПоИндексуСостояниеПросмотраРасширеннаяПодсказка" id="56"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НайденныеЗаписиПоИндексуУправлениеПоиском" id="57">
+				<AdditionSource>
+					<Item>НайденныеЗаписиПоИндексу</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НайденныеЗаписиПоИндексуУправлениеПоискомКонтекстноеМеню" id="58"/>
+				<ExtendedTooltip name="НайденныеЗаписиПоИндексуУправлениеПоискомРасширеннаяПодсказка" id="59"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">НайденныеЗаписиПоИндексуВыбор</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="Улица" id="4">
+					<DataPath>НайденныеЗаписиПоИндексу.Улица</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="УлицаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="УлицаExtendedTooltip" id="48"/>
+				</InputField>
+				<InputField name="Описание" id="6">
+					<DataPath>НайденныеЗаписиПоИндексу.Описание</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Населенный пункт</v8:content>
+						</v8:item>
+					</Title>
+					<Wrap>false</Wrap>
+					<BorderColor>style:BorderColor</BorderColor>
+					<ContextMenu name="ОписаниеКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="ОписаниеExtendedTooltip" id="49"/>
+				</InputField>
+				<InputField name="ПризнакАктуальности" id="29">
+					<DataPath>НайденныеЗаписиПоИндексу.ПризнакАктуальности</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПризнакАктуальностиКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПризнакАктуальностиExtendedTooltip" id="50"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НайденныеЗаписиПоИндексу" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найденные записи по индексу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Улица" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Улица</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Описание" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Код" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>21</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПризнакАктуальности" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Признак актуальности</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НадписьОРегионеИРайоне" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Надпись о регионе и районе</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьОписание" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть описание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СкрыватьНеактуальныеАдреса" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрывать неактуальные адреса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВсеНайденныеЗаписиПоИндексу" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все найденные записи по индексу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Улица" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Улица</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Описание" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Код" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>21</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПризнакАктуальности" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Признак актуальности</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Индекс" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индекс</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>6</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>Улица</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>Описание</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">НайденныеЗаписиПоИндексу.ПризнакАктуальности</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:НедоступныеДанныеЦвет</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаВыбрать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ChooseValue</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаВыбратьВыполнить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СкрыватьНеактуальныеАдреса" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрывать неактуальные адреса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрывать неактуальные адреса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкрыватьНеактуальныеАдреса</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="НайденныйРегион">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="НайденныйРайон">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="АдресВХранилище">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="Индекс">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>6</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ПризнакАктуальности">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="СкрыватьНеактуальныеАдреса">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

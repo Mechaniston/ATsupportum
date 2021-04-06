@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаГоризонтальногоРазделения" id="58">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтального разделения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа горизонтального разделения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГоризонтальногоРазделенияРасширеннаяПодсказка" id="59"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛевая" id="112">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="113"/>
+					<ChildItems>
+						<InputField name="АнализируемаяДата" id="3">
+							<DataPath>АнализируемаяДата</DataPath>
+							<ContextMenu name="АнализируемаяДатаКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="АнализируемаяДатаРасширеннаяПодсказка" id="5"/>
+							<Events>
+								<Event name="OnChange">АнализируемаяДатаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<Table name="Договоры" id="8">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<ReadOnly>true</ReadOnly>
+							<DefaultItem>true</DefaultItem>
+							<SelectionMode>SingleRow</SelectionMode>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Договоры</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДоговорыКонтекстноеМеню" id="9">
+								<Autofill>false</Autofill>
+							</ContextMenu>
+							<AutoCommandBar name="ДоговорыКоманднаяПанель" id="10"/>
+							<ExtendedTooltip name="ДоговорыРасширеннаяПодсказка" id="11"/>
+							<SearchStringAddition name="ДоговорыСтрокаПоиска" id="12">
+								<AdditionSource>
+									<Item>Договоры</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыСтрокаПоискаКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="ДоговорыСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДоговорыСостояниеПросмотра" id="17">
+								<AdditionSource>
+									<Item>Договоры</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыСостояниеПросмотраКонтекстноеМеню" id="20"/>
+								<ExtendedTooltip name="ДоговорыСостояниеПросмотраРасширеннаяПодсказка" id="21"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДоговорыУправлениеПоиском" id="22">
+								<AdditionSource>
+									<Item>Договоры</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыУправлениеПоискомКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="ДоговорыУправлениеПоискомРасширеннаяПодсказка" id="26"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ДоговорыВыбор</Event>
+								<Event name="OnActivateRow">ДоговорыПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ДоговорыДоговор" id="27">
+									<DataPath>Договоры.Договор</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоговорыДоговорКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ДоговорыДоговорРасширеннаяПодсказка" id="29"/>
+								</InputField>
+								<InputField name="ПериодСчета" id="120">
+									<DataPath>Договоры.МесяцСчета</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период Счёта</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='ММММ гггг'</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='ММММ гггг'</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ПериодСчетаКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="ПериодСчетаРасширеннаяПодсказка" id="122"/>
+								</InputField>
+								<InputField name="ПериодРеализации" id="123">
+									<DataPath>Договоры.ДатаРеализации</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период Реализации</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='ММММ гггг'</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='ММММ гггг'</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ПериодРеализацииКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="ПериодРеализацииРасширеннаяПодсказка" id="125"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПравая" id="85">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="86"/>
+					<ChildItems>
+						<Table name="СписокСчетов" id="60">
+							<Height>5</Height>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СписокСчетов</DataPath>
+							<RowPictureDataPath>СписокСчетов.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>true</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокСчетовКонтекстноеМеню" id="61"/>
+							<AutoCommandBar name="СписокСчетовКоманднаяПанель" id="62"/>
+							<ExtendedTooltip name="СписокСчетовРасширеннаяПодсказка" id="63"/>
+							<SearchStringAddition name="СписокСчетовСтрокаПоиска" id="64">
+								<AdditionSource>
+									<Item>СписокСчетов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСчетовСтрокаПоискаКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="СписокСчетовСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСчетовСостояниеПросмотра" id="69">
+								<AdditionSource>
+									<Item>СписокСчетов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСчетовСостояниеПросмотраКонтекстноеМеню" id="72"/>
+								<ExtendedTooltip name="СписокСчетовСостояниеПросмотраРасширеннаяПодсказка" id="73"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокСчетовУправлениеПоиском" id="74">
+								<AdditionSource>
+									<Item>СписокСчетов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСчетовУправлениеПоискомКонтекстноеМеню" id="77"/>
+								<ExtendedTooltip name="СписокСчетовУправлениеПоискомРасширеннаяПодсказка" id="78"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">СписокСчетовПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СписокСчетовНомерСчета" id="129">
+									<DataPath>СписокСчетов.НомерСчета</DataPath>
+									<ContextMenu name="СписокСчетовНомерСчетаКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="СписокСчетовНомерСчетаРасширеннаяПодсказка" id="131"/>
+								</LabelField>
+								<LabelField name="СписокСчетовДата" id="126">
+									<DataPath>СписокСчетов.Date</DataPath>
+									<ContextMenu name="СписокСчетовДатаКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="СписокСчетовДатаРасширеннаяПодсказка" id="128"/>
+								</LabelField>
+								<LabelField name="СписокСчетовСуммаДокумента" id="141">
+									<DataPath>СписокСчетов.СуммаДокумента</DataPath>
+									<ContextMenu name="СписокСчетовСуммаДокументаКонтекстноеМеню" id="142"/>
+									<ExtendedTooltip name="СписокСчетовСуммаДокументаРасширеннаяПодсказка" id="143"/>
+								</LabelField>
+								<LabelField name="СписокСчетовПериод" id="156">
+									<DataPath>СписокСчетов.Период</DataPath>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='ММММ гггг'</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СписокСчетовПериодКонтекстноеМеню" id="157"/>
+									<ExtendedTooltip name="СписокСчетовПериодРасширеннаяПодсказка" id="158"/>
+								</LabelField>
+								<LabelField name="СписокСчетовДоговор" id="147">
+									<DataPath>СписокСчетов.Договор</DataPath>
+									<ContextMenu name="СписокСчетовДоговорКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="СписокСчетовДоговорРасширеннаяПодсказка" id="149"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<Table name="СписокРеализаций" id="87">
+							<Height>5</Height>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СписокРеализаций</DataPath>
+							<RowPictureDataPath>СписокРеализаций.DefaultPicture</RowPictureDataPath>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>true</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СписокРеализацийКонтекстноеМеню" id="88"/>
+							<AutoCommandBar name="СписокРеализацийКоманднаяПанель" id="89"/>
+							<ExtendedTooltip name="СписокРеализацийРасширеннаяПодсказка" id="90"/>
+							<SearchStringAddition name="СписокРеализацийСтрокаПоиска" id="91">
+								<AdditionSource>
+									<Item>СписокРеализаций</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокРеализацийСтрокаПоискаКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="СписокРеализацийСтрокаПоискаРасширеннаяПодсказка" id="95"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокРеализацийСостояниеПросмотра" id="96">
+								<AdditionSource>
+									<Item>СписокРеализаций</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокРеализацийСостояниеПросмотраКонтекстноеМеню" id="99"/>
+								<ExtendedTooltip name="СписокРеализацийСостояниеПросмотраРасширеннаяПодсказка" id="100"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокРеализацийУправлениеПоиском" id="101">
+								<AdditionSource>
+									<Item>СписокРеализаций</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокРеализацийУправлениеПоискомКонтекстноеМеню" id="104"/>
+								<ExtendedTooltip name="СписокРеализацийУправлениеПоискомРасширеннаяПодсказка" id="105"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">СписокРеализацийПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="СписокРеализацийНомерРеализации" id="132">
+									<DataPath>СписокРеализаций.НомерРеализации</DataPath>
+									<ContextMenu name="СписокРеализацийНомерРеализацииКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="СписокРеализацийНомерРеализацииРасширеннаяПодсказка" id="134"/>
+								</LabelField>
+								<LabelField name="СписокРеализацийДата" id="135">
+									<DataPath>СписокРеализаций.Date</DataPath>
+									<ContextMenu name="СписокРеализацийДатаКонтекстноеМеню" id="136"/>
+									<ExtendedTooltip name="СписокРеализацийДатаРасширеннаяПодсказка" id="137"/>
+								</LabelField>
+								<LabelField name="СписокРеализацийСуммаДокумента" id="144">
+									<DataPath>СписокРеализаций.СуммаДокумента</DataPath>
+									<ContextMenu name="СписокРеализацийСуммаДокументаКонтекстноеМеню" id="145"/>
+									<ExtendedTooltip name="СписокРеализацийСуммаДокументаРасширеннаяПодсказка" id="146"/>
+								</LabelField>
+								<LabelField name="СписокРеализацийПериод" id="153">
+									<DataPath>СписокРеализаций.Период</DataPath>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ='ММММ гггг'</v8:content>
+										</v8:item>
+									</Format>
+									<ContextMenu name="СписокРеализацийПериодКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="СписокРеализацийПериодРасширеннаяПодсказка" id="155"/>
+								</LabelField>
+								<LabelField name="СписокРеализацийДоговор" id="150">
+									<DataPath>СписокРеализаций.Договор</DataPath>
+									<ContextMenu name="СписокРеализацийДоговорКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="СписокРеализацийДоговорРасширеннаяПодсказка" id="152"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="АнализируемаяДата" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Анализируемая дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Договоры" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договоры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Договор" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Договоры_ат</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаСчета" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата счета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаРеализации" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата реализации</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="МесяцСчета" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяц счета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокСчетов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список счетов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СчетНаОплату_ат.Ссылка,
+	СчетНаОплату_ат.Договор,
+	ВЫБОР
+		КОГДА СчетНаОплату_ат.Договор.Родитель = ЗНАЧЕНИЕ(Справочник.Договоры_ат.ПустаяСсылка)
+			ТОГДА СчетНаОплату_ат.Договор
+		ИНАЧЕ СчетНаОплату_ат.Договор.Родитель
+	КОНЕЦ КАК ДоговорДляОтбора,
+	СчетНаОплату_ат.Дата,
+	СчетНаОплату_ат.СуммаДокумента,
+	ВЫБОР
+		КОГДА СинхронизацияСчетовНаОплату_ат.НомерСчета ЕСТЬ NULL 
+			ТОГДА "Не синхронизирован"
+		ИНАЧЕ СинхронизацияСчетовНаОплату_ат.НомерСчета
+	КОНЕЦ КАК НомерСчета,
+	СчетНаОплату_ат.Период
+ИЗ
+	Документ.СчетНаОплату_ат КАК СчетНаОплату_ат
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СинхронизацияСчетовНаОплату_ат КАК СинхронизацияСчетовНаОплату_ат
+		ПО СчетНаОплату_ат.Ссылка = СинхронизацияСчетовНаОплату_ат.Ссылка
+ГДЕ
+	НЕ СчетНаОплату_ат.ПометкаУдаления
+</QueryText>
+				<MainTable>Document.СчетНаОплату_ат</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДоговорДляОтбора</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Договоры_ат.ПустаяСсылка</dcsset:right>
+							<dcsset:presentation xsi:type="xs:string">ОтборПоДоговору</dcsset:presentation>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СписокРеализаций" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список реализаций</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Реализация_ат.Ссылка,
+	Реализация_ат.Договор,
+	ВЫБОР
+		КОГДА Реализация_ат.Договор.Родитель = ЗНАЧЕНИЕ(Справочник.Договоры_ат.ПустаяСсылка)
+			ТОГДА Реализация_ат.Договор
+		ИНАЧЕ Реализация_ат.Договор.Родитель
+	КОНЕЦ КАК ДоговорДляОтбора,
+	Реализация_ат.Дата,
+	Реализация_ат.СуммаДокумента,
+	ВЫБОР
+		КОГДА СинхронизацияРеализаций_ат.НомерРеализации ЕСТЬ NULL 
+			ТОГДА "Не синхронизирован"
+		ИНАЧЕ СинхронизацияРеализаций_ат.НомерРеализации
+	КОНЕЦ КАК НомерРеализации,
+	Реализация_ат.Период
+ИЗ
+	Документ.Реализация_ат КАК Реализация_ат
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СинхронизацияРеализаций_ат КАК СинхронизацияРеализаций_ат
+		ПО Реализация_ат.Ссылка = СинхронизацияРеализаций_ат.Ссылка
+ГДЕ
+	НЕ Реализация_ат.ПометкаУдаления
+</QueryText>
+				<MainTable>Document.Реализация_ат</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДоговорДляОтбора</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Договоры_ат.ПустаяСсылка</dcsset:right>
+							<dcsset:presentation xsi:type="xs:string">ОтборПоДоговору</dcsset:presentation>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Desc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

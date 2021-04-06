@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="IPv4" id="7">
+			<DataPath>Объект.IPv4</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="IPv4КонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="IPv4РасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<Table name="ДисковаяСистема" id="10">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ДисковаяСистема</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДисковаяСистемаКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ДисковаяСистемаКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="ДисковаяСистемаРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ДисковаяСистемаСтрокаПоиска" id="32">
+				<AdditionSource>
+					<Item>ДисковаяСистема</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДисковаяСистемаСтрокаПоискаКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ДисковаяСистемаСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДисковаяСистемаСостояниеПросмотра" id="35">
+				<AdditionSource>
+					<Item>ДисковаяСистема</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДисковаяСистемаСостояниеПросмотраКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ДисковаяСистемаСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДисковаяСистемаУправлениеПоиском" id="38">
+				<AdditionSource>
+					<Item>ДисковаяСистема</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДисковаяСистемаУправлениеПоискомКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="ДисковаяСистемаУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnEditEnd">ДисковаяСистемаПриОкончанииРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ДисковаяСистемаНомерСтроки" id="14">
+					<DataPath>Объект.ДисковаяСистема.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДисковаяСистемаНомерСтрокиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДисковаяСистемаНомерСтрокиРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<InputField name="ДисковаяСистемаRaid" id="17">
+					<DataPath>Объект.ДисковаяСистема.Raid</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДисковаяСистемаRaidКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ДисковаяСистемаRaidРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ДисковаяСистемаHDD" id="20">
+					<DataPath>Объект.ДисковаяСистема.HDD_ат</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>HDD</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДисковаяСистемаHDDКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДисковаяСистемаHDDРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ДисковаяСистемаКоличество" id="23">
+					<DataPath>Объект.ДисковаяСистема.Количество</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДисковаяСистемаКоличествоКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ДисковаяСистемаКоличествоРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ДисковаяСистемаОбъем" id="26">
+					<DataPath>Объект.ДисковаяСистема.Объем</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДисковаяСистемаОбъемКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДисковаяСистемаОбъемРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelField name="ДисковаяСистемаИтогОбъем" id="29">
+			<DataPath>Объект.ДисковаяСистема.TotalОбъем</DataPath>
+			<TitleTextColor>style:SpecialTextColor</TitleTextColor>
+			<TitleFont ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<Border width="1">
+				<v8ui:style xsi:type="v8ui:ControlBorderType">Indented</v8ui:style>
+			</Border>
+			<BorderColor>style:FieldTextColor</BorderColor>
+			<TextColor>#0000FF</TextColor>
+			<BackColor>style:ReportHeaderBackColor</BackColor>
+			<Font ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			<ContextMenu name="ДисковаяСистемаИтогОбъемКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ДисковаяСистемаИтогОбъемРасширеннаяПодсказка" id="31"/>
+		</LabelField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СХД_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

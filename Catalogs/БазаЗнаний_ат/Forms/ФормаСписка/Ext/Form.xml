@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаНастроитьДоступКБазеЗнаний" id="85">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.НастроитьДоступКБазеЗнаний</CommandName>
+				<ExtendedTooltip name="ФормаНастроитьДоступКБазеЗнанийРасширеннаяПодсказка" id="86"/>
+			</Button>
+			<Button name="ОтборПоПроектам" id="87">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОтборПоПроектам</CommandName>
+				<ExtendedTooltip name="ОтборПоПроектамРасширеннаяПодсказка" id="88"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="NewWriteProcessing">ОбработкаЗаписиНового</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnReopen">ПриПовторномОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="ActivationProcessing">ОбработкаАктивизации</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСписков" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа списков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа списков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСписковРасширеннаяПодсказка" id="32"/>
+			<ChildItems>
+				<Table name="ОбластиЗнаний" id="33">
+					<Representation>Tree</Representation>
+					<SelectionMode>SingleRow</SelectionMode>
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<InitialTreeView>ExpandAllLevels</InitialTreeView>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ОбластиЗнаний</DataPath>
+					<RowPictureDataPath>ОбластиЗнаний.DefaultPicture</RowPictureDataPath>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="ОбластиЗнанийКонтекстноеМеню" id="34"/>
+					<AutoCommandBar name="ОбластиЗнанийКоманднаяПанель" id="35">
+						<Autofill>false</Autofill>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ОбластиЗнанийРасширеннаяПодсказка" id="36"/>
+					<SearchStringAddition name="ОбластиЗнанийСтрокаПоиска" id="37">
+						<AdditionSource>
+							<Item>ОбластиЗнаний</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОбластиЗнанийСтрокаПоискаКонтекстноеМеню" id="38"/>
+						<ExtendedTooltip name="ОбластиЗнанийСтрокаПоискаРасширеннаяПодсказка" id="39"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ОбластиЗнанийСостояниеПросмотра" id="40">
+						<AdditionSource>
+							<Item>ОбластиЗнаний</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ОбластиЗнанийСостояниеПросмотраКонтекстноеМеню" id="41"/>
+						<ExtendedTooltip name="ОбластиЗнанийСостояниеПросмотраРасширеннаяПодсказка" id="42"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ОбластиЗнанийУправлениеПоиском" id="43">
+						<AdditionSource>
+							<Item>ОбластиЗнаний</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ОбластиЗнанийУправлениеПоискомКонтекстноеМеню" id="44"/>
+						<ExtendedTooltip name="ОбластиЗнанийУправлениеПоискомРасширеннаяПодсказка" id="45"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">ОбластиЗнанийПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="ОбластиЗнанийНаименование" id="46">
+							<DataPath>ОбластиЗнаний.Ref</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Область знаний</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ОбластиЗнанийНаименованиеКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="ОбластиЗнанийНаименованиеРасширеннаяПодсказка" id="48"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="ГруппаВопросОтвет" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вопрос ответ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вопрос ответ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВопросОтветРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<Table name="Список" id="3">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<DefaultItem>true</DefaultItem>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+							<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+							<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
+								<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="Наименование" id="16">
+									<DataPath>Список.Description</DataPath>
+									<DefaultItem>true</DefaultItem>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вопрос</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
+								</LabelField>
+								<LabelField name="Код" id="19">
+									<DataPath>Список.Code</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="КодКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="КодРасширеннаяПодсказка" id="21"/>
+								</LabelField>
+								<LabelField name="ОсновноеРешение" id="25">
+									<DataPath>Список.ОсновноеРешение</DataPath>
+									<ContextMenu name="ОсновноеРешениеКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="ОсновноеРешениеРасширеннаяПодсказка" id="27"/>
+								</LabelField>
+								<LabelField name="Автор" id="28">
+									<DataPath>Список.Автор</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="АвторКонтекстноеМеню" id="29"/>
+									<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="30"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+						<Table name="Решения" id="51">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Решения</DataPath>
+							<RowPictureDataPath>Решения.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="РешенияКонтекстноеМеню" id="52"/>
+							<AutoCommandBar name="РешенияКоманднаяПанель" id="53"/>
+							<ExtendedTooltip name="РешенияРасширеннаяПодсказка" id="54"/>
+							<SearchStringAddition name="РешенияСтрокаПоиска" id="55">
+								<AdditionSource>
+									<Item>Решения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РешенияСтрокаПоискаКонтекстноеМеню" id="56"/>
+								<ExtendedTooltip name="РешенияСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="РешенияСостояниеПросмотра" id="58">
+								<AdditionSource>
+									<Item>Решения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="РешенияСостояниеПросмотраКонтекстноеМеню" id="59"/>
+								<ExtendedTooltip name="РешенияСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="РешенияУправлениеПоиском" id="61">
+								<AdditionSource>
+									<Item>Решения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="РешенияУправлениеПоискомКонтекстноеМеню" id="62"/>
+								<ExtendedTooltip name="РешенияУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="РешенияНаименование" id="64">
+									<DataPath>Решения.Description</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Решение</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="РешенияНаименованиеКонтекстноеМеню" id="65"/>
+									<ExtendedTooltip name="РешенияНаименованиеРасширеннаяПодсказка" id="66"/>
+								</LabelField>
+								<LabelField name="РешенияСостояние" id="82">
+									<DataPath>Решения.Состояние</DataPath>
+									<ContextMenu name="РешенияСостояниеКонтекстноеМеню" id="83"/>
+									<ExtendedTooltip name="РешенияСостояниеРасширеннаяПодсказка" id="84"/>
+								</LabelField>
+								<LabelField name="РешенияПриоретет" id="76">
+									<DataPath>~Решения.Приоретет</DataPath>
+									<ContextMenu name="РешенияПриорететКонтекстноеМеню" id="77"/>
+									<ExtendedTooltip name="РешенияПриорететРасширеннаяПодсказка" id="78"/>
+								</LabelField>
+								<LabelField name="РешенияОтветственный" id="73">
+									<DataPath>~Решения.Ответственный</DataPath>
+									<ContextMenu name="РешенияОтветственныйКонтекстноеМеню" id="74"/>
+									<ExtendedTooltip name="РешенияОтветственныйРасширеннаяПодсказка" id="75"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.БазаЗнаний_ат</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОбластиЗнаний" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Области знаний</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ОбластиЗнаний_ат.Ссылка,
+	ОбластиЗнаний_ат.ПометкаУдаления,
+	ОбластиЗнаний_ат.Родитель,
+	ОбластиЗнаний_ат.Код,
+	ОбластиЗнаний_ат.Наименование,
+	ОбластиЗнаний_ат.Автор,
+	ОбластиЗнаний_ат.ДатаСоздания,
+	ОбластиЗнаний_ат.Предопределенный,
+	ОбластиЗнаний_ат.ИмяПредопределенныхДанных
+ИЗ
+	Справочник.ОбластиЗнаний_ат КАК ОбластиЗнаний_ат
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ РАЗЛИЧНЫЕ
+			НастройкаДоступаКБазеЗнаний_ат.ОбластьЗнаний КАК ОбластьЗнаний,
+			НастройкаДоступаКБазеЗнаний_ат.Проект КАК Проект
+		ИЗ
+			РегистрСведений.НастройкаДоступаКБазеЗнаний_ат КАК НастройкаДоступаКБазеЗнаний_ат
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СпецификацияПользователей_ат КАК СпецификацияПользователей_ат
+				ПО НастройкаДоступаКБазеЗнаний_ат.Клиент = СпецификацияПользователей_ат.Контрагент
+		ГДЕ
+			СпецификацияПользователей_ат.Пользователь = &amp;Пользователь
+			И НастройкаДоступаКБазеЗнаний_ат.Подразделение = ЗНАЧЕНИЕ(Справочник.ПодразделенияКлиентов_ат.ПустаяСсылка)
+			И НастройкаДоступаКБазеЗнаний_ат.Пользователь = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)
+		
+		ОБЪЕДИНИТЬ ВСЕ
+		
+		ВЫБРАТЬ РАЗЛИЧНЫЕ
+			НастройкаДоступаКБазеЗнаний_ат.ОбластьЗнаний,
+			НастройкаДоступаКБазеЗнаний_ат.Проект
+		ИЗ
+			РегистрСведений.НастройкаДоступаКБазеЗнаний_ат КАК НастройкаДоступаКБазеЗнаний_ат
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СпецификацияПользователей_ат КАК СпецификацияПользователей_ат
+				ПО НастройкаДоступаКБазеЗнаний_ат.Пользователь = СпецификацияПользователей_ат.Пользователь
+		ГДЕ
+			СпецификацияПользователей_ат.Пользователь = &amp;Пользователь
+		
+		ОБЪЕДИНИТЬ ВСЕ
+		
+		ВЫБРАТЬ РАЗЛИЧНЫЕ
+			НастройкаДоступаКБазеЗнаний_ат.ОбластьЗнаний,
+			НастройкаДоступаКБазеЗнаний_ат.Проект
+		ИЗ
+			РегистрСведений.НастройкаДоступаКБазеЗнаний_ат КАК НастройкаДоступаКБазеЗнаний_ат
+				ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.СпецификацияПользователей_ат КАК СпецификацияПользователей_ат
+				ПО НастройкаДоступаКБазеЗнаний_ат.Подразделение = СпецификацияПользователей_ат.Подразделение
+		ГДЕ
+			СпецификацияПользователей_ат.Пользователь = &amp;Пользователь
+			И НастройкаДоступаКБазеЗнаний_ат.Пользователь = ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)) КАК ВложенныйЗапрос
+		ПО ОбластиЗнаний_ат.Ссылка = ВложенныйЗапрос.ОбластьЗнаний
+ГДЕ
+	(&amp;ДоступныВсе
+			ИЛИ НЕ ВложенныйЗапрос.ОбластьЗнаний ЕСТЬ NULL 
+				И ВЫБОР
+					КОГДА НЕ ВложенныйЗапрос.Проект ЕСТЬ NULL 
+							И НЕ ВложенныйЗапрос.Проект = ЗНАЧЕНИЕ(Справочник.Проекты_ат.ПустаяСсылка)
+						ТОГДА ВложенныйЗапрос.Проект В ИЕРАРХИИ (&amp;Проекты)
+					ИНАЧЕ ИСТИНА
+				КОНЕЦ)
+{ГДЕ
+	(ВЫБОР
+			КОГДА &amp;ОтбиратьПоПроектам
+				ТОГДА ОбластиЗнаний_ат.Ссылка В
+						(ВЫБРАТЬ
+							Проекты_атОбластиЗнаний.ОбластьЗнаний
+						ИЗ
+							Справочник.Проекты_ат.ОбластиЗнаний КАК Проекты_атОбластиЗнаний
+						ГДЕ
+							Проекты_атОбластиЗнаний.Ссылка В ИЕРАРХИИ (&amp;Проекты))
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ)}</QueryText>
+				<MainTable>Catalog.ОбластиЗнаний_ат</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Решения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Решения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Решения_ат</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Приоритет</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТаблицаЗначенийОтбора" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица значений отбора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИспользоватьИ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать И</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьИЛИ" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать ИЛИ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ИспользоватьНЕ" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать НЕ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Значение" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:CatalogRef.Метки_ат</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОтображатьПустые" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать пустые</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДоступноИспользованиеБазыЗнаний" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доступно использование базы знаний</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастроитьДоступКБазеЗнаний" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить доступ к базе знаний</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить доступ к базе знаний</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастроитьДоступКБазеЗнаний</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтборПоПроектам" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по проектам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по проектам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьОтборПоПроектам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 8.00.7601.18126"></meta></head><body>
+<p>В форме выполняется настройка параметров для использования средств криптографии: электронной цифровой подписи (ЭЦП) и шифрования. <br>Для работы с криптографией вам потребуется установить стороннюю программу - криптопровайдер.</p>
+<p>В случае распределенной информационной базы эти настройки могут быть изменены только в главном узле. </p>
+<p></p>
+<table border="0" cellpadding="8" width="90%"><tbody><tr><td><strong>Настройка</strong></td>
+<td><strong>Описание</strong></td></tr><tr><td valign="top">Провайдер ЭЦП</td>
+<td valign="top">
+<p>Строка, идентифицирующая провайдера ЭЦП, например: "Crypto-Pro GOST R 34.10-2001 Cryptographic Service Provider".</p>
+<p>Ниже перечислены некоторые наиболее распространенные криптопровайдеры (название, имя и тип криптопровайдера для указания в диалоге настроек криптографии): </p>
+<ul><li>КриптоПро CSP:   "Crypto-Pro GOST R 34.10-2001 Cryptographic Service Provider"  (тип 75)<span lang="ru">,</span> 
+</li><li>Signal-COM CSP:  "Signal-COM CPGOST Cryptographic Provider" (тип 75)<span lang="ru">,</span> 
+</li><li>ViPNet CSP:    "Infotecs Cryptographic Service Provider" (тип 2)<span lang="ru">,</span> 
+</li><li>Microsoft CSP: "Microsoft Enhanced Cryptographic Provider v1.0" (тип 1)<span lang="ru">.</span> </li></ul><p>Если вашего криптопровайдера нет в этом списке, вам надо связаться с фирмой-производителем криптопровайдера и получить <span lang="ru">необходимую</span> информацию.</p></td></tr><tr><td valign="top">Тип провайдера ЭЦП</td>
+<td valign="top">Число, указывающее тип провайдера ЭЦП. Например, для криптопровайдеров, поддерживающих ГОСТ Р 34.10-2001 - 75.</td></tr><tr><td valign="top">Выполнять проверку ЭЦП на сервере</td>
+<td valign="top">Если настройка установлена, то проверка ЭЦП выполняется на сервере, иначе - на клиенте.</td></tr><tr><td valign="top">Путь модуля криптографии (для сервера 1С:Предприятия под управлением Linux)<span lang="RU"></span></td>
+<td valign="top">Путь к модулю криптографии. Имеет смысл, если установлена настройка "<strong>Выполнять проверку ЭЦП на сервере</strong>".</td></tr><tr><td valign="top">Алгоритм подписи</td>
+<td>Указывается алгоритм подписи. Выбирается из списка выбора, предоставляемого провайдером ЭЦП.</td></tr><tr><td valign="top">Алгоритм хеширования</td>
+<td>Указывается алгоритм хеширования. Выбирается из списка выбора, предоставляемого провайдером ЭЦП.</td></tr><tr><td valign="top"><span lang="RU">Алгоритм шифрования</span></td>
+<td valign="top">Указывается алгоритм шифрования. Выбирается из списка выбора, предоставляемого провайдером ЭЦП.</td></tr></tbody></table><p> </p>
+<p> </p></body></html>

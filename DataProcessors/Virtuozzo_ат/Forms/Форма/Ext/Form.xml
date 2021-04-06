@@ -1,0 +1,1406 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Группа2" id="13">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="14"/>
+			<Events>
+				<Event name="OnCurrentPageChange">Группа2ПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="Статус" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.Отчеты_ат</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<InputField name="Сервер" id="1">
+							<DataPath>Сервер</DataPath>
+							<ContextMenu name="СерверКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="СерверРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="StartChoice">СерверНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<Pages name="СтраницыСтатистики" id="129">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы статистики</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы статистики</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницыСтатистикиРасширеннаяПодсказка" id="130"/>
+							<Events>
+								<Event name="OnCurrentPageChange">Группа10ПриСменеСтраницы</Event>
+							</Events>
+							<ChildItems>
+								<Page name="WinServersReal" id="121">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Win servers real</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Win servers real</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="WinServersRealРасширеннаяПодсказка" id="122"/>
+									<ChildItems>
+										<CheckBoxField name="ВсеСервера1" id="133">
+											<DataPath>ВсеСервера</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВсеСервера1КонтекстноеМеню" id="134"/>
+											<ExtendedTooltip name="ВсеСервера1РасширеннаяПодсказка" id="135"/>
+										</CheckBoxField>
+										<Button name="Кнопка1" id="131">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.ЗапросСтатистикиWMI</CommandName>
+											<BackColor>#FFCC00</BackColor>
+											<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Picture>
+												<xr:Ref>CommonPicture.НастройкаВыполненияРегламентныхЗаданий</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="Кнопка1РасширеннаяПодсказка" id="132"/>
+										</Button>
+									</ChildItems>
+								</Page>
+								<Page name="Virtuozzo" id="6">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Virtuozzo</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Virtuozzo</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="VirtuozzoРасширеннаяПодсказка" id="7"/>
+									<ChildItems>
+										<CheckBoxField name="ВсеСервера" id="10">
+											<DataPath>ВсеСервера</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВсеСервераКонтекстноеМеню" id="11"/>
+											<ExtendedTooltip name="ВсеСервераРасширеннаяПодсказка" id="12"/>
+										</CheckBoxField>
+										<Button name="Статистика" id="8">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.ЗапросСтатистики</CommandName>
+											<TextColor>#FF0000</TextColor>
+											<BackColor>#FFCC00</BackColor>
+											<BorderColor>#00FF00</BorderColor>
+											<Font ref="sys:DefaultGUIFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+											<Picture>
+												<xr:Ref>CommonPicture.ВыполнитьРегламентноеЗаданиеВручную</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Статистика</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтатистикаРасширеннаяПодсказка" id="9"/>
+										</Button>
+									</ChildItems>
+								</Page>
+								<Page name="Zabbix" id="172">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Zabbix</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Zabbix</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ZabbixРасширеннаяПодсказка" id="173"/>
+									<ChildItems>
+										<Button name="ЗапросСтатистикиZabbix" id="196">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.ЗапросСтатистикиZabbix</CommandName>
+											<BackColor>#FFCC00</BackColor>
+											<Picture>
+												<xr:Ref>CommonPicture.ОбновитьДанныеОПоступлениях_ат</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ЗапросСтатистикиZabbixРасширеннаяПодсказка" id="197"/>
+										</Button>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="Управление" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управление</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управление</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="УправлениеРасширеннаяПодсказка" id="18"/>
+					<ChildItems>
+						<Pages name="Группа3" id="27">
+							<TitleTextColor>style:SpecialTextColor</TitleTextColor>
+							<TitleFont ref="sys:DefaultGUIFont" faceName="GothicRus" height="14" bold="true" italic="true" underline="false" strikeout="false" kind="WindowsFont"/>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="28"/>
+							<Events>
+								<Event name="OnCurrentPageChange">Группа3ПриСменеСтраницы</Event>
+							</Events>
+							<ChildItems>
+								<Page name="Создание" id="29">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Создание</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Создание</v8:content>
+										</v8:item>
+									</ToolTip>
+									<BackColor>style:ИзмененноеЗначениеРеквизитаФон</BackColor>
+									<ExtendedTooltip name="СозданиеРасширеннаяПодсказка" id="30"/>
+									<ChildItems>
+										<UsualGroup name="Ресурсы" id="31">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ресурсы</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ресурсы</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="РесурсыРасширеннаяПодсказка" id="32"/>
+											<ChildItems>
+												<InputField name="Заявка" id="142">
+													<DataPath>Заявка</DataPath>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="ЗаявкаКонтекстноеМеню" id="143"/>
+													<ExtendedTooltip name="ЗаявкаРасширеннаяПодсказка" id="144"/>
+													<Events>
+														<Event name="OnChange">ЗаявкаПриИзменении</Event>
+														<Event name="StartChoice">ЗаявкаНачалоВыбора</Event>
+													</Events>
+												</InputField>
+												<InputField name="ФизическийСервер" id="36">
+													<DataPath>Сервер</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Физический Сервер</v8:content>
+														</v8:item>
+													</Title>
+													<ChoiceButton>true</ChoiceButton>
+													<QuickChoice>false</QuickChoice>
+													<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+													<ContextMenu name="ФизическийСерверКонтекстноеМеню" id="37"/>
+													<ExtendedTooltip name="ФизическийСерверРасширеннаяПодсказка" id="38"/>
+													<Events>
+														<Event name="OnChange">ФизическийСерверПриИзменении</Event>
+														<Event name="StartChoice">ФизическийСерверНачалоВыбора</Event>
+													</Events>
+												</InputField>
+												<InputField name="VEID" id="33">
+													<DataPath>4/0:6d79756e-49d9-429f-8d6c-a3e06dec2113</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>VEID = HostName</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="VEIDКонтекстноеМеню" id="34"/>
+													<ExtendedTooltip name="VEIDРасширеннаяПодсказка" id="35"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<Button name="СОЗДАТЬ" id="48">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.СоздатьСервер</CommandName>
+											<BackColor>web:Gold</BackColor>
+											<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
+											<Picture>
+												<xr:Ref>CommonPicture.СинхронизацияДанныхДлительнаяОперация48</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="СОЗДАТЬРасширеннаяПодсказка" id="49"/>
+										</Button>
+									</ChildItems>
+								</Page>
+								<Page name="Настройка" id="71">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<BackColor>#CCFFCC</BackColor>
+									<ExtendedTooltip name="НастройкаРасширеннаяПодсказка" id="72"/>
+									<ChildItems>
+										<InputField name="Сервер1" id="136">
+											<DataPath>Сервер</DataPath>
+											<ContextMenu name="Сервер1КонтекстноеМеню" id="137"/>
+											<ExtendedTooltip name="Сервер1РасширеннаяПодсказка" id="138"/>
+											<Events>
+												<Event name="OnChange">Сервер1ПриИзменении</Event>
+												<Event name="StartChoice">Сервер1НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<CheckBoxField name="изменить" id="109">
+											<DataPath>изменить</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="изменитьКонтекстноеМеню" id="110"/>
+											<ExtendedTooltip name="изменитьРасширеннаяПодсказка" id="111"/>
+											<Events>
+												<Event name="OnChange">изменитьПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<Pages name="СтраницыНастройки" id="114">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страницы настройки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страницы настройки</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницыНастройкиРасширеннаяПодсказка" id="115"/>
+											<ChildItems>
+												<Page name="ГруппаСеть" id="112">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки Сети</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа сеть</v8:content>
+														</v8:item>
+													</ToolTip>
+													<BackColor>style:ToolTipBackColor</BackColor>
+													<ExtendedTooltip name="ГруппаСетьРасширеннаяПодсказка" id="113"/>
+													<ChildItems>
+														<UsualGroup name="Группа6" id="93">
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="94"/>
+															<ChildItems>
+																<InputField name="dns" id="85">
+																	<DataPath>dns</DataPath>
+																	<Mask>999.999.999.999</Mask>
+																	<ContextMenu name="dnsКонтекстноеМеню" id="86"/>
+																	<ExtendedTooltip name="dnsРасширеннаяПодсказка" id="87"/>
+																</InputField>
+																<InputField name="dns2" id="88">
+																	<DataPath>dns2</DataPath>
+																	<Mask>999.999.999.999</Mask>
+																	<ContextMenu name="dns2КонтекстноеМеню" id="89"/>
+																	<ExtendedTooltip name="dns2РасширеннаяПодсказка" id="90"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="Группа5" id="91">
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="92"/>
+															<ChildItems>
+																<InputField name="IPv4" id="76">
+																	<DataPath>IPv4</DataPath>
+																	<Mask>999.999.999.999</Mask>
+																	<ContextMenu name="IPv4КонтекстноеМеню" id="77"/>
+																	<ExtendedTooltip name="IPv4РасширеннаяПодсказка" id="78"/>
+																</InputField>
+																<InputField name="mask" id="79">
+																	<DataPath>mask</DataPath>
+																	<Mask>999.999.999.999</Mask>
+																	<ContextMenu name="maskКонтекстноеМеню" id="80"/>
+																	<ExtendedTooltip name="maskРасширеннаяПодсказка" id="81"/>
+																</InputField>
+																<InputField name="gate" id="82">
+																	<DataPath>gate</DataPath>
+																	<Mask>999.999.999.999</Mask>
+																	<ContextMenu name="gateКонтекстноеМеню" id="83"/>
+																	<ExtendedTooltip name="gateРасширеннаяПодсказка" id="84"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаРесурсы" id="107">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ресурсы</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа ресурсы</v8:content>
+														</v8:item>
+													</ToolTip>
+													<BackColor>#CCFFFF</BackColor>
+													<ExtendedTooltip name="ГруппаРесурсыРасширеннаяПодсказка" id="108"/>
+													<ChildItems>
+														<UsualGroup name="Группа7" id="103">
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="104"/>
+															<ChildItems>
+																<InputField name="Core" id="39">
+																	<DataPath>Core</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Кол-во Ядер CPU</v8:content>
+																		</v8:item>
+																	</Title>
+																	<MultiLine>false</MultiLine>
+																	<OpenButton>false</OpenButton>
+																	<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+																	<ContextMenu name="CoreКонтекстноеМеню" id="40"/>
+																	<ExtendedTooltip name="CoreРасширеннаяПодсказка" id="41"/>
+																</InputField>
+																<InputField name="numproc" id="98">
+																	<DataPath>numproc</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>кол-во процессов</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="numprocКонтекстноеМеню" id="99"/>
+																	<ExtendedTooltip name="numprocРасширеннаяПодсказка" id="100"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="Группа8" id="105">
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="106"/>
+															<ChildItems>
+																<InputField name="HDD" id="45">
+																	<DataPath>HDD</DataPath>
+																	<ContextMenu name="HDDКонтекстноеМеню" id="46"/>
+																	<ExtendedTooltip name="HDDРасширеннаяПодсказка" id="47"/>
+																</InputField>
+																<InputField name="RAM" id="42">
+																	<DataPath>RAM</DataPath>
+																	<ContextMenu name="RAMКонтекстноеМеню" id="43"/>
+																	<ExtendedTooltip name="RAMРасширеннаяПодсказка" id="44"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<CheckBoxField name="АвтоЗапуск" id="95">
+															<DataPath>АвтоЗапуск</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Автозапуск при старте системы</v8:content>
+																</v8:item>
+															</Title>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="АвтоЗапускКонтекстноеМеню" id="96"/>
+															<ExtendedTooltip name="АвтоЗапускРасширеннаяПодсказка" id="97"/>
+														</CheckBoxField>
+													</ChildItems>
+												</Page>
+												<Page name="ГруппаДоп" id="116">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Дополнительно</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа доп</v8:content>
+														</v8:item>
+													</ToolTip>
+													<BackColor>style:ОшибкаПолнотекстовыйПоискФон</BackColor>
+													<ExtendedTooltip name="ГруппаДопРасширеннаяПодсказка" id="117"/>
+													<ChildItems>
+														<InputField name="Password" id="118">
+															<DataPath>Password</DataPath>
+															<PasswordMode>true</PasswordMode>
+															<MultiLine>false</MultiLine>
+															<ContextMenu name="PasswordКонтекстноеМеню" id="119"/>
+															<ExtendedTooltip name="PasswordРасширеннаяПодсказка" id="120"/>
+														</InputField>
+													</ChildItems>
+												</Page>
+											</ChildItems>
+										</Pages>
+										<Button name="Настроить" id="101">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.Настроить</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.СинхронизацияДанныхКоллизия</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="НастроитьРасширеннаяПодсказка" id="102"/>
+										</Button>
+									</ChildItems>
+								</Page>
+								<Page name="ПультУправления" id="58">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пульт управления</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пульт управления</v8:content>
+										</v8:item>
+									</ToolTip>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ExtendedTooltip name="ПультУправленияРасширеннаяПодсказка" id="59"/>
+									<ChildItems>
+										<InputField name="Сервер2" id="139">
+											<DataPath>Сервер</DataPath>
+											<ContextMenu name="Сервер2КонтекстноеМеню" id="140"/>
+											<ExtendedTooltip name="Сервер2РасширеннаяПодсказка" id="141"/>
+										</InputField>
+										<UsualGroup name="Группа4" id="69">
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="70"/>
+											<ChildItems>
+												<Button name="Старт" id="65">
+													<Type>UsualButton</Type>
+													<Representation>PictureAndText</Representation>
+													<CommandName>Form.Command.СтартСервера</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.ПолнотекстовыйПоискДалее</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="СтартРасширеннаяПодсказка" id="66"/>
+												</Button>
+												<Button name="СТОР" id="63">
+													<Type>UsualButton</Type>
+													<Representation>PictureAndText</Representation>
+													<CommandName>Form.Command.СтопСервера</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.ЗнакСтоп</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="СТОРРасширеннаяПодсказка" id="64"/>
+												</Button>
+												<Button name="РеСтарт" id="67">
+													<Type>UsualButton</Type>
+													<Representation>PictureAndText</Representation>
+													<CommandName>Form.Command.РестартСервера</CommandName>
+													<Picture>
+														<xr:Ref>CommonPicture.СинхронизацияДанных</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ExtendedTooltip name="РеСтартРасширеннаяПодсказка" id="68"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="Служебная" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Служебная</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Служебная</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.ПрочиеПользовательскиеНастройки</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="СлужебнаяРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<InputField name="Символ" id="52">
+							<DataPath>Сим</DataPath>
+							<ContextMenu name="СимволКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="СимволРасширеннаяПодсказка" id="54"/>
+							<Events>
+								<Event name="OnChange">СимволПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="КодСимвола" id="55">
+							<DataPath>Код</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="КодСимволаКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="КодСимволаРасширеннаяПодсказка" id="57"/>
+						</InputField>
+						<UsualGroup name="ПреобразованиеIP" id="145">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>IPv4 to Int</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Преобразование IP</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ПреобразованиеIPРасширеннаяПодсказка" id="146"/>
+							<ChildItems>
+								<InputField name="IPText" id="147">
+									<DataPath>IPText</DataPath>
+									<ContextMenu name="IPTextКонтекстноеМеню" id="148"/>
+									<ExtendedTooltip name="IPTextРасширеннаяПодсказка" id="149"/>
+									<Events>
+										<Event name="OnChange">IPTextПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="IPInt" id="150">
+									<DataPath>IPInt</DataPath>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧГ=0</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="IPIntКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="IPIntРасширеннаяПодсказка" id="152"/>
+									<Events>
+										<Event name="OnChange">IPIntПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ЧислоВБиты" id="153">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Число в биты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Число в биты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ЧислоВБитыРасширеннаяПодсказка" id="154"/>
+							<ChildItems>
+								<InputField name="Число" id="155">
+									<DataPath>Число</DataPath>
+									<ContextMenu name="ЧислоКонтекстноеМеню" id="156"/>
+									<ExtendedTooltip name="ЧислоРасширеннаяПодсказка" id="157"/>
+									<Events>
+										<Event name="OnChange">ЧислоПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="Биты" id="158">
+									<DataPath>Биты</DataPath>
+									<ContextMenu name="БитыКонтекстноеМеню" id="159"/>
+									<ExtendedTooltip name="БитыРасширеннаяПодсказка" id="160"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ОпределениеСетиПоАдресуИМаске" id="161">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Определение сети по адресу и маске</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Определение сети по адресу и маске</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ОпределениеСетиПоАдресуИМаскеРасширеннаяПодсказка" id="162"/>
+							<ChildItems>
+								<InputField name="IP" id="163">
+									<DataPath>IP</DataPath>
+									<Mask>999.999.999.999</Mask>
+									<ContextMenu name="IPКонтекстноеМеню" id="164"/>
+									<ExtendedTooltip name="IPРасширеннаяПодсказка" id="165"/>
+									<Events>
+										<Event name="OnChange">IPПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="МаскаСети" id="166">
+									<DataPath>МаскаСети</DataPath>
+									<Mask>999.999.999.999</Mask>
+									<ContextMenu name="МаскаСетиКонтекстноеМеню" id="167"/>
+									<ExtendedTooltip name="МаскаСетиРасширеннаяПодсказка" id="168"/>
+									<Events>
+										<Event name="OnChange">МаскаСетиПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="АдресСети" id="169">
+									<DataPath>АдресСети</DataPath>
+									<ContextMenu name="АдресСетиКонтекстноеМеню" id="170"/>
+									<ExtendedTooltip name="АдресСетиРасширеннаяПодсказка" id="171"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ПереводВремениВUnixTime" id="177">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перевод времени в UnixTime</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перевод времени в unix time</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ПереводВремениВUnixTimeРасширеннаяПодсказка" id="178"/>
+							<ChildItems>
+								<InputField name="ДатаИВремя" id="182">
+									<DataPath>ДатаИВремя</DataPath>
+									<ContextMenu name="ДатаИВремяКонтекстноеМеню" id="183"/>
+									<ExtendedTooltip name="ДатаИВремяРасширеннаяПодсказка" id="184"/>
+									<Events>
+										<Event name="OnChange">ДатаИВремяПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ЧасовойПояс" id="191">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Часовой пояс</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Часовой пояс</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ЧасовойПоясРасширеннаяПодсказка" id="192"/>
+									<ChildItems>
+										<LabelField name="ОтрицательноеВремя" id="193">
+											<DataPath>ОтрицательноеВремя</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Часовой пояс</v8:content>
+												</v8:item>
+											</Title>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>БЛ=+; БИ=-</v8:content>
+												</v8:item>
+											</Format>
+											<ContextMenu name="ОтрицательноеВремяКонтекстноеМеню" id="194"/>
+											<ExtendedTooltip name="ОтрицательноеВремяРасширеннаяПодсказка" id="195"/>
+											<Events>
+												<Event name="OnChange">ОтрицательноеВремяПриИзменении</Event>
+											</Events>
+										</LabelField>
+										<InputField name="Час" id="185">
+											<DataPath>ЧасовойПояcЧас</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> Час</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ЧасКонтекстноеМеню" id="186"/>
+											<ExtendedTooltip name="ЧасРасширеннаяПодсказка" id="187"/>
+											<Events>
+												<Event name="OnChange">ЧасПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="Минуты" id="188">
+											<DataPath>ЧасовойПоясМинуты</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> </v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="МинутыКонтекстноеМеню" id="189"/>
+											<ExtendedTooltip name="МинутыРасширеннаяПодсказка" id="190"/>
+											<Events>
+												<Event name="OnChange">МинутыПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="UnixTime" id="179">
+									<DataPath>UnixTime</DataPath>
+									<ContextMenu name="UnixTimeКонтекстноеМеню" id="180"/>
+									<ExtendedTooltip name="UnixTimeРасширеннаяПодсказка" id="181"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.Virtuozzo_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Сервер" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Серверы_ат</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВсеСервера" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все сервера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Core" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Core</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="RAM" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объем оперативной памяти (GB)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="HDD" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объем дискового пространства (GB)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Сим" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Символ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>1</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Код" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код Символа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="IPv4" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>IPv4</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="mask" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>mask</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="gate" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>gate</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="dns" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>dns</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="dns2" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>dns 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтоЗапуск" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Авто запуск</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="numproc" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Numproc</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="изменить" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Password" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль Администратора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>35</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыОтбораСервера" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры отбора сервера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Заявка" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.ЗаявкаНаАрендуОборудования_ат</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="IPText" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>IP</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="IPInt" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>IPInt</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>20</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Число" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Число</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>20</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Биты" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Биты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>32</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="IP" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>IP</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>15</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МаскаСети" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маска сети</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресСети" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес сети</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаИВремя" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата и время</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="UnixTime" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Unix time</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЧасовойПояcЧас" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часовой пояc час</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЧасовойПоясМинуты" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часовой пояс минуты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтрицательноеВремя" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отрицательное время</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗапросСтатистики" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос статистики</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос статистики</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапросСтатистики</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СоздатьСервер" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать сервер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать сервер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьСервер</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СтопСервера" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоп сервера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стоп сервера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СтопСервера</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СтартСервера" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старт сервера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Старт сервера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СтартСервера</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РестартСервера" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рестарт сервера</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рестарт сервера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РестартСервера</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Настроить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Настроить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗапросСтатистикиWMI" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос статистики WMI</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос статистики WMI</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапросСтатистикиСРеальныхWindowsСерверов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗапросСтатистикиZabbix" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос статистики zabbix</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрос статистики zabbix</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапросСтатистикиZabbix</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

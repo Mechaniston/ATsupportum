@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВключитьВозможностьРедактирования" id="36">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаВключитьВозможностьРедактированияExtendedTooltip" id="37"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<SkipOnInput>false</SkipOnInput>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="38"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="55">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="56"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="58">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="59"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="61">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="62"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Объект" id="4">
+					<DataPath>Список.Объект</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="ОбъектКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ОбъектExtendedTooltip" id="39"/>
+				</LabelField>
+				<LabelField name="НомерНабора" id="6">
+					<DataPath>Список.НомерНабора</DataPath>
+					<ContextMenu name="НомерНабораКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="НомерНабораExtendedTooltip" id="40"/>
+				</LabelField>
+				<LabelField name="ВидДоступа" id="8">
+					<DataPath>Список.ВидДоступа</DataPath>
+					<ContextMenu name="ВидДоступаКонтекстноеМеню" id="9"/>
+					<ExtendedTooltip name="ВидДоступаExtendedTooltip" id="41"/>
+				</LabelField>
+				<LabelField name="ЗначениеДоступа" id="10">
+					<DataPath>Список.ЗначениеДоступа</DataPath>
+					<ContextMenu name="ЗначениеДоступаКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ЗначениеДоступаExtendedTooltip" id="42"/>
+				</LabelField>
+				<CheckBoxField name="Чтение" id="12">
+					<DataPath>Список.Чтение</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чт</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЧтениеКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ЧтениеExtendedTooltip" id="43"/>
+				</CheckBoxField>
+				<CheckBoxField name="Добавление" id="14">
+					<DataPath>Список.Добавление</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доб</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДобавлениеКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДобавлениеExtendedTooltip" id="44"/>
+				</CheckBoxField>
+				<CheckBoxField name="Изменение" id="16">
+					<DataPath>Список.Изменение</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Изм</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИзменениеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ИзменениеExtendedTooltip" id="45"/>
+				</CheckBoxField>
+				<CheckBoxField name="Удаление" id="18">
+					<DataPath>Список.Удаление</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уд</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УдалениеКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="УдалениеExtendedTooltip" id="46"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВидДоступаБезГруппЗначенияДоступа" id="20">
+					<DataPath>Список.ВидДоступаБезГруппЗначенияДоступа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ВД без групп</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВидДоступаБезГруппЗначенияДоступаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ВидДоступаБезГруппЗначенияДоступаExtendedTooltip" id="47"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВидДоступаЕдинственныйДляТипаЗначенияДоступа" id="22">
+					<DataPath>Список.ВидДоступаЕдинственныйДляТипаЗначенияДоступа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ВД ед. для типа</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВидДоступаЕдинственныйДляТипаЗначенияДоступаКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ВидДоступаЕдинственныйДляТипаЗначенияДоступаExtendedTooltip" id="48"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВидДоступаЧерезПраваПоЗначениямДоступа" id="24">
+					<DataPath>Список.ВидДоступаЧерезПраваПоЗначениямДоступа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ВД через права</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВидДоступаЧерезПраваПоЗначениямДоступаКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ВидДоступаЧерезПраваПоЗначениямДоступаExtendedTooltip" id="49"/>
+				</CheckBoxField>
+				<LabelField name="ВидДоступаПравоЧтения" id="28">
+					<DataPath>Список.ВидДоступаПравоЧтения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ВД право Чт</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВидДоступаПравоЧтенияКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ВидДоступаПравоЧтенияExtendedTooltip" id="50"/>
+				</LabelField>
+				<LabelField name="ВидДоступаПравоДобавления" id="30">
+					<DataPath>Список.ВидДоступаПравоДобавления</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ВД право Доб</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВидДоступаПравоДобавленияКонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="ВидДоступаПравоДобавленияExtendedTooltip" id="51"/>
+				</LabelField>
+				<LabelField name="ВидДоступаПравоИзменения" id="32">
+					<DataPath>Список.ВидДоступаПравоИзменения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ВД право Изм</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ВидДоступаПравоИзмененияКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ВидДоступаПравоИзмененияExtendedTooltip" id="52"/>
+				</LabelField>
+				<LabelField name="ИдентификаторОбъекта" id="34">
+					<DataPath>Список.ИдентификаторОбъекта</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип объекта</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Одна запись среди всех наборов содержит тип объекта.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="ИдентификаторОбъектаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ИдентификаторОбъектаExtendedTooltip" id="53"/>
+				</LabelField>
+				<LabelField name="ИдентификаторЗначенияДоступа" id="26">
+					<DataPath>Список.ИдентификаторЗначенияДоступа</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип значения доступа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Когда вид доступа ПравоЧтения или ПравоДобавления или ПравоИзменения,
+тогда содержит тип значения доступа.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>15</Width>
+					<ContextMenu name="ИдентификаторЗначенияДоступаКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ИдентификаторЗначенияДоступаExtendedTooltip" id="54"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	НаборыЗначенийДоступа.Объект,
+	НаборыЗначенийДоступа.НомерНабора,
+	НаборыЗначенийДоступа.ВидДоступа,
+	НаборыЗначенийДоступа.ЗначениеДоступа,
+	НаборыЗначенийДоступа.Чтение,
+	НаборыЗначенийДоступа.Добавление,
+	НаборыЗначенийДоступа.Изменение,
+	НаборыЗначенийДоступа.Удаление,
+	НаборыЗначенийДоступа.ВидДоступаБезГруппЗначенияДоступа,
+	НаборыЗначенийДоступа.ВидДоступаЕдинственныйДляТипаЗначенияДоступа,
+	НаборыЗначенийДоступа.ВидДоступаЧерезПраваПоЗначениямДоступа,
+	НаборыЗначенийДоступа.ТипЗначенияДоступа,
+	НаборыЗначенийДоступа.ВидДоступаПравоЧтения,
+	НаборыЗначенийДоступа.ВидДоступаПравоДобавления,
+	НаборыЗначенийДоступа.ВидДоступаПравоИзменения,
+	ТипыСсылокОбъекта.Ссылка КАК ИдентификаторОбъекта,
+	ТипыСсылокЗначенияДоступа.Ссылка КАК ИдентификаторЗначенияДоступа
+ИЗ
+	РегистрСведений.НаборыЗначенийДоступа КАК НаборыЗначенийДоступа
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыОбъектовМетаданных КАК ТипыСсылокЗначенияДоступа
+		ПО (НаборыЗначенийДоступа.ТипЗначенияДоступа &lt;&gt; НЕОПРЕДЕЛЕНО)
+			И НаборыЗначенийДоступа.ТипЗначенияДоступа = ТипыСсылокЗначенияДоступа.ЗначениеПустойСсылки
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ИдентификаторыОбъектовМетаданных КАК ТипыСсылокОбъекта
+		ПО (НаборыЗначенийДоступа.ТипОбъекта &lt;&gt; НЕОПРЕДЕЛЕНО)
+			И НаборыЗначенийДоступа.ТипОбъекта = ТипыСсылокОбъекта.ЗначениеПустойСсылки</QueryText>
+				<MainTable>InformationRegister.НаборыЗначенийДоступа</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВключитьВозможностьРедактирования" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность редактирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность редактирования только для целей поиска неисправности (требуется углубленное понимание работы механизма)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьВозможностьРедактирования</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<ButtonGroup name="ГруппаКнопок" id="22">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа кнопок</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа кнопок</v8:content>
+					</v8:item>
+				</ToolTip>
+				<CommandSource>Item.Список</CommandSource>
+				<ExtendedTooltip name="ГруппаКнопокExtendedTooltip" id="55"/>
+				<ChildItems>
+					<Button name="ФормаИзменитьФорму" id="49">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+						<ExtendedTooltip name="ФормаИзменитьФормуExtendedTooltip" id="56"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<Button name="ВыполнитьСейчас" id="23">
+				<Type>CommandBarButton</Type>
+				<CommandName>Catalog.РассылкиОтчетов.Command.ВыполнитьСейчас</CommandName>
+				<DataPath>Items.Список.CurrentData.Ref</DataPath>
+				<ExtendedTooltip name="ВыполнитьСейчасExtendedTooltip" id="57"/>
+			</Button>
+			<Button name="СобытияРассылки" id="30">
+				<Type>CommandBarButton</Type>
+				<CommandName>Catalog.РассылкиОтчетов.Command.СобытияРассылки</CommandName>
+				<DataPath>Items.Список.CurrentData.Ref</DataPath>
+				<ExtendedTooltip name="СобытияРассылкиExtendedTooltip" id="58"/>
+			</Button>
+			<Button name="ФормаСправка" id="37">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаExtendedTooltip" id="59"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2">
+				<ChildItems>
+					<Button name="СписокКонтекстноеМенюСправочникРассылкиОтчетовВыполнитьСейчас" id="53">
+						<Type>CommandBarButton</Type>
+						<CommandName>Catalog.РассылкиОтчетов.Command.ВыполнитьСейчас</CommandName>
+						<DataPath>Items.Список.CurrentData.Ref</DataPath>
+						<ExtendedTooltip name="СписокКонтекстноеМенюСправочникРассылкиОтчетовВыполнитьСейчасExtendedTooltip" id="60"/>
+					</Button>
+					<Button name="СписокКонтекстноеМенюСправочникРассылкиОтчетовСобытияРассылки" id="54">
+						<Type>CommandBarButton</Type>
+						<CommandName>Catalog.РассылкиОтчетов.Command.СобытияРассылки</CommandName>
+						<DataPath>Items.Список.CurrentData.Ref</DataPath>
+						<ExtendedTooltip name="СписокКонтекстноеМенюСправочникРассылкиОтчетовСобытияРассылкиExtendedTooltip" id="61"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокExtendedTooltip" id="62"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="76">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="77"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="78"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="79">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="80"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="81"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="82">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="83"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="84"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Наименование" id="6">
+					<DataPath>Список.Description</DataPath>
+					<Width>35</Width>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="7"/>
+					<ExtendedTooltip name="НаименованиеExtendedTooltip" id="63"/>
+				</LabelField>
+				<ColumnGroup name="ПоследнийЗапускСКартинкой" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Последний запуск с картинкой</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Последний запуск с картинкой</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ПоследнийЗапускСКартинкойExtendedTooltip" id="64"/>
+					<ChildItems>
+						<PictureField name="Картинка" id="32">
+							<DataPath>Список.ИндексКартинкиПоследнегоЗапуска</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>6</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.СостояниеРассылкиОтчетов</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="КартинкаКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="КартинкаExtendedTooltip" id="65"/>
+						</PictureField>
+						<LabelField name="ПоследнийЗапуск" id="24">
+							<DataPath>Список.ПоследнийЗапуск</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выполнена</v8:content>
+								</v8:item>
+							</Title>
+							<Width>10</Width>
+							<ContextMenu name="ПоследнийЗапускКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ПоследнийЗапускExtendedTooltip" id="66"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="РасписаниеСКартинкой" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расписание с картинкой</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расписание с картинкой</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="РасписаниеСКартинкойExtendedTooltip" id="67"/>
+					<ChildItems>
+						<PictureField name="Расписание" id="18">
+							<DataPath>Список.ИндексКартинкиРасписания</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расписание</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ValuesPicture>
+								<xr:Ref>StdPicture.SetTime</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ValuesPicture>
+							<FileDragMode>AsFile</FileDragMode>
+							<ContextMenu name="РасписаниеКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="РасписаниеExtendedTooltip" id="68"/>
+						</PictureField>
+						<LabelField name="ПериодичностьРасписания" id="51">
+							<DataPath>Список.ПериодичностьРасписания</DataPath>
+							<ShowInHeader>false</ShowInHeader>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>2</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ПериодичностьРасписанияКонтекстноеМеню" id="52"/>
+							<ExtendedTooltip name="ПериодичностьРасписанияExtendedTooltip" id="69"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="Автор" id="12">
+					<DataPath>Список.Автор</DataPath>
+					<ContextMenu name="АвторКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="АвторExtendedTooltip" id="70"/>
+				</LabelField>
+				<CheckBoxField name="Подготовлена" id="14">
+					<DataPath>Список.Подготовлена</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПодготовленаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ПодготовленаExtendedTooltip" id="71"/>
+				</CheckBoxField>
+				<LabelField name="Состояние" id="26">
+					<DataPath>Список.Состояние</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Width>15</Width>
+					<ContextMenu name="СостояниеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="СостояниеExtendedTooltip" id="72"/>
+				</LabelField>
+				<CheckBoxField name="Архивировать" id="39">
+					<DataPath>Список.Архивировать</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АрхивироватьКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="АрхивироватьExtendedTooltip" id="73"/>
+				</CheckBoxField>
+				<LabelField name="ТипПолучателейРассылки" id="43">
+					<DataPath>Список.ТипПолучателейРассылки</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Width>5</Width>
+					<ContextMenu name="ТипПолучателейРассылкиКонтекстноеМеню" id="44"/>
+					<ExtendedTooltip name="ТипПолучателейРассылкиExtendedTooltip" id="74"/>
+				</LabelField>
+				<LabelField name="ВидПочтовогоАдресаПолучателей" id="41">
+					<DataPath>Список.ВидПочтовогоАдресаПолучателей</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Width>5</Width>
+					<ContextMenu name="ВидПочтовогоАдресаПолучателейКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ВидПочтовогоАдресаПолучателейExtendedTooltip" id="75"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Рассылки.Ссылка,
+	Рассылки.ВерсияДанных,
+	Рассылки.ПометкаУдаления,
+	Рассылки.Предопределенный,
+	Рассылки.Родитель,
+	Рассылки.ЭтоГруппа,
+	Рассылки.Наименование,
+	Рассылки.Автор,
+	Рассылки.Подготовлена,
+	Рассылки.Личная,
+	Рассылки.Персонализирована,
+	Рассылки.ВыполнятьПоРасписанию,
+	ВЫБОР
+		КОГДА Рассылки.ВыполнятьПоРасписанию = ИСТИНА
+				И Рассылки.Подготовлена = ИСТИНА
+			ТОГДА Рассылки.ПериодичностьРасписания
+		ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.ПериодичностиРасписанийРассылокОтчетов.ПустаяСсылка)
+	КОНЕЦ КАК ПериодичностьРасписания,
+	Рассылки.РегламентноеЗадание,
+	ВЫБОР
+		КОГДА Рассылки.ВыполнятьПоРасписанию = ИСТИНА
+				И Рассылки.Подготовлена = ИСТИНА
+			ТОГДА 0
+		ИНАЧЕ 1
+	КОНЕЦ КАК ИндексКартинкиРасписания,
+	Рассылки.ИспользоватьПапку,
+	Рассылки.Папка,
+	Рассылки.ИспользоватьСетевойКаталог,
+	Рассылки.СетевойКаталогWindows,
+	Рассылки.СетевойКаталогLinux,
+	Рассылки.ИспользоватьFTPРесурс,
+	Рассылки.FTPСервер,
+	Рассылки.FTPКаталог,
+	Рассылки.FTPПорт,
+	Рассылки.FTPПассивноеСоединение,
+	Рассылки.ИспользоватьЭлектроннуюПочту,
+	Рассылки.ТолькоУведомить,
+	Рассылки.УчетнаяЗапись,
+	Рассылки.ПисьмоВФорматеHTML,
+	Рассылки.ТекстПисьмаВФорматеHTML,
+	Рассылки.КартинкиПисьмаВФорматеHTML,
+	Рассылки.ТекстПисьма,
+	Рассылки.ТемаПисьма,
+	Рассылки.ТипПолучателейРассылки,
+	Рассылки.ВидПочтовогоАдресаПолучателей,
+	Рассылки.СкрытыеКопии,
+	Рассылки.АдресОтвета,
+	Рассылки.Архивировать,
+	Рассылки.ИмяАрхива,
+	ВЫБОР
+		КОГДА Рассылки.Подготовлена = ЛОЖЬ
+			ТОГДА ДАТАВРЕМЯ(1, 1, 1)
+		ИНАЧЕ Состояние.ПоследнийЗапуск
+	КОНЕЦ КАК ПоследнийЗапуск,
+	ВЫБОР
+		КОГДА Состояние.ПоследнийЗапуск ЕСТЬ NULL 
+				ИЛИ Рассылки.Подготовлена = ЛОЖЬ
+			ТОГДА -1
+		КОГДА Состояние.ПоследнийЗапуск = &amp;ПустаяДата
+			ТОГДА 0
+		КОГДА НЕ Состояние.Выполнена
+			ТОГДА 1
+		КОГДА Состояние.СОшибками
+			ТОГДА 1
+		ИНАЧЕ 2
+	КОНЕЦ КАК ИндексКартинкиПоследнегоЗапуска,
+	ВЫБОР
+		КОГДА Состояние.ПоследнийЗапуск ЕСТЬ NULL 
+				ИЛИ Рассылки.Подготовлена = ЛОЖЬ
+			ТОГДА ""
+		КОГДА Состояние.ПоследнийЗапуск = &amp;ПустаяДата
+			ТОГДА "Новая"
+		КОГДА НЕ Состояние.Выполнена
+			ТОГДА "Не выполнена"
+		КОГДА Состояние.СОшибками
+			ТОГДА "Выполнена с ошибками"
+		ИНАЧЕ "Выполнена"
+	КОНЕЦ КАК Состояние
+ИЗ
+	Справочник.РассылкиОтчетов КАК Рассылки
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияРассылокОтчетов КАК Состояние
+		ПО (Состояние.Рассылка = Рассылки.Ссылка)</QueryText>
+				<MainTable>Catalog.РассылкиОтчетов</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПараметрыФоновогоЗадания" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры фонового задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Subsystem uuid="94c648ea-c80c-4651-a5c0-966f40587b50">
+		<Properties>
+			<Name>Финблок_ат</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Финблок</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.Финансы_ат</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Контрагенты_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Договоры_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыОплатыПоДоговорам_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ПоступлениеНаСчетКлиента_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Согласование_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ДоступноеВремя_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Номенклатура_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СчетНаОплату_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтавкиНДС_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СтатусыСчетовНаОплату_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыОплатыСчетов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Организации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТарифыИТС_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ДлительностиПодписокИТС_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыИТС_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СпецификацияДоговоров_ИТС_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыДоговоров_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПериодичностиСчетов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СчетРеализация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыДоговоров_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СпецификацияДоговоров_АрендаПрограммныхПродуктов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СпецификацияДоговоров_АрендаСерверов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СпецификацияДоговоров_Интернет_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СпецификацияДоговоров_Обслуживание_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.СпецификацияДоговоров_Телефония_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПериодичностиРеализаций_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.КонтрольСозданияПериодическихФинансовыхДокументов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.Реализация_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.СписаниеСоСчетаКлиента_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИсторияСтатусовОтправкиФинДокументов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ВводТарифов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СтатусыОтправкиФинансовыхДокументовПоЭлектроннойПочте_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ОплатаПоставщику_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.РасходыПоПоставщикам_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.РодыДоговоров_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.РегистрацияЦенПоставщика_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.УведомлятьИСогласовывать_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПодразделенияКлиентов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Уведомления_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПодборСписаний_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПолучателиФинансовыхДокументов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.НастройкиСодержанийНоменклатур_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ФинансовыеПотоки_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ДвиженияПоСчетамКлиентов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.СвязиСчетовИРеализаций_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.ОстаткиСредствСДетализациейПоРаботам_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccountingRegister.Клиентский_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Финансы_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Финансы_КлиентСервер_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.УстановитьФинансовыйСтатусЗаявки_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.АвтоматическиеСписанияПоРеализациям_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ОбновитьДанныеОПоступлениях_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.КонтрольПросрочкиАктовВДнях_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ТочностьСтоимости_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПериодДанныхДляОпределенияТарифногоПлана_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.СпособыИзмененияЦены_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfCharacteristicTypes.ВидыСубконто_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfAccounts.Клиентский_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ДанныеДоговоров_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЦеныПоставщиков_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Тарифы_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ПроверитьОкончаниеДоговоров_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ПроверкаОплатыСчетов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.КлассификаторЕдиницИзмерения_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтатьиЗатрат_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ВидыНоменклатуры_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.КоличественноСуммовойУчетРабот_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ИсторияПроектовДоговоров_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НоменклатураДеятельностиПоДоговорам_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ФиксацияРабот_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ФормулаРасчетаТарифногоПланаПоУмолчанию_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.КалькуляторЦенКлиента_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПериодДанныхДляОпределенияТарифногоПланаПоУмолчанию_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СтатусНачалаОтсчетаДоСрокаПодписанияФинДокумента_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СтатусОтправкиФинДокументаЧерезЭДО_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СтатусОтправкиФинДокумента_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.СтатусПечатиФинДокумента_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.СтатусыОтправкиФинДокументов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ТипыСтатусовОтправкиФинДокументов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">bc060b2b-b780-490b-a0d3-475077a6ab8e</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.МетодикаПолученияВнешнегоНомера_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">9305d363-c4cf-46ba-b36f-8f1c8f63087d</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">a4cd43d5-a1d9-4fbf-9112-57b371d16ca1</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">c68b7625-47bc-475b-9fab-95d05b5563f2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">4cfc27fa-194c-49fe-9622-d2a6cb455708</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>ФинансовыеУведомления_ат</Subsystem>
+			<Subsystem>СинхронизацияСБП_ат</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

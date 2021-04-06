@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Subsystem uuid="585cc554-fd05-46ab-ab0b-1d059749f7de">
+		<Properties>
+			<Name>АТкомм</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>@comm</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.Почта_ат</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПраваПользователейГруппСообщений_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.КоличествоСообщений_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ГруппыСообщений_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.НастройкиГС_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfCharacteristicTypes.НастройкиПользователей_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПодписиЭлектронныхПисем_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ФильтрыСообщений_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ОбработкаВосстановленияПисемИзФайла_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.МенеджерКонтактов_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЭлектронноеПисьмоВходящееПрисоединенныеФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ТомаХраненияФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ПереносФайловВТома</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.ИмпортФайловВБазуДанных_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ХранимыеФайлы_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПрисоединенныеФайлы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПодписиПользователейДляУчетнойЗаписи_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭлектронноеПисьмоВходящее</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.ЭлектронноеПисьмоИсходящее</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ОбластиЗнаний_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.БазаЗнаний_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Метки_ат</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПрисоединенныеФайлыСлужебный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПрисоединенныеФайлы</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Почта_ат</Subsystem>
+			<Subsystem>ТГ_ат</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

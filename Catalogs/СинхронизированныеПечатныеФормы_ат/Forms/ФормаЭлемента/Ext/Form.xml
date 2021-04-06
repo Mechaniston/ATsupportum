@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ИмяМакета" id="10">
+			<DataPath>Объект.ИмяМакета</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИмяМакетаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ИмяМакетаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="РегистрСинхронизации" id="16">
+			<DataPath>Объект.РегистрСинхронизации</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РегистрСинхронизацииКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="РегистрСинхронизацииРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<CheckBoxField name="ВнешняяПечатнаяФорма" id="7">
+			<DataPath>Объект.ВнешняяПечатнаяФорма</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВнешняяПечатнаяФормаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВнешняяПечатнаяФормаРасширеннаяПодсказка" id="9"/>
+		</CheckBoxField>
+		<InputField name="Порядок" id="13">
+			<DataPath>Объект.Порядок</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПорядокКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПорядокРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<CheckBoxField name="ИспользоватьДляОтправки" id="19">
+			<DataPath>Объект.ИспользоватьДляОтправки</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользоватьДляОтправкиКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ИспользоватьДляОтправкиРасширеннаяПодсказка" id="21"/>
+		</CheckBoxField>
+		<CheckBoxField name="ОсновнойПоДокументу" id="28">
+			<DataPath>Объект.ОсновнойПоДокументу</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОсновнойПоДокументуКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ОсновнойПоДокументуРасширеннаяПодсказка" id="30"/>
+		</CheckBoxField>
+		<InputField name="ТипФайлаПоУмолчаниюСтрокой" id="22">
+			<DataPath>Объект.ТипФайлаПоУмолчаниюСтрокой</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип файла</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<DropListButton>true</DropListButton>
+			<ClearButton>true</ClearButton>
+			<ListChoiceMode>true</ListChoiceMode>
+			<QuickChoice>true</QuickChoice>
+			<ChooseType>false</ChooseType>
+			<TextEdit>false</TextEdit>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:string">mxl</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:string">xls</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:string">xlsx</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:string">html</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:string">pdf</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation/>
+						<Value xsi:type="xs:string">ods</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ТипФайлаПоУмолчаниюСтрокойКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ТипФайлаПоУмолчаниюСтрокойРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ШаблонТекстаПисьма" id="25">
+			<DataPath>Объект.ШаблонТекстаПисьма</DataPath>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>С амперсантом (&amp;) указывается параметр для подстановки (&amp;Договор). Определение параметров происходит в модуле менеджера.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ContextMenu name="ШаблонТекстаПисьмаКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ШаблонТекстаПисьмаРасширеннаяПодсказка" id="27"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СинхронизированныеПечатныеФормы_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Ссылка" id="1">
+			<DataPath>Запись.Ссылка</DataPath>
+			<ContextMenu name="СсылкаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ОтчетнаяДатаНачала" id="4">
+			<DataPath>Запись.ОтчетнаяДатаНачала</DataPath>
+			<ContextMenu name="ОтчетнаяДатаНачалаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОтчетнаяДатаНачалаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ОтчетнаяДатаОкончания" id="7">
+			<DataPath>Запись.ОтчетнаяДатаОкончания</DataPath>
+			<ContextMenu name="ОтчетнаяДатаОкончанияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОтчетнаяДатаОкончанияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ОтчетнаяДлительность" id="10">
+			<DataPath>Запись.ОтчетнаяДлительность</DataPath>
+			<ContextMenu name="ОтчетнаяДлительностьКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ОтчетнаяДлительностьРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ОтчетноеВремяВыполнения" id="13">
+			<ContextMenu name="ОтчетноеВремяВыполненияКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ОтчетноеВремяВыполненияРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ПланируемаяДатаНачала" id="16">
+			<DataPath>Запись.ПланируемаяДатаНачала</DataPath>
+			<ContextMenu name="ПланируемаяДатаНачалаКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ПланируемаяДатаНачалаРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ПланируемаяДатаОкончания" id="19">
+			<DataPath>Запись.ПланируемаяДатаОкончания</DataPath>
+			<ContextMenu name="ПланируемаяДатаОкончанияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ПланируемаяДатаОкончанияРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ПланируемаяДлительность" id="22">
+			<DataPath>Запись.ПланируемаяДлительность</DataPath>
+			<ContextMenu name="ПланируемаяДлительностьКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ПланируемаяДлительностьРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ПланируемоеВремяВыполнения" id="25">
+			<ContextMenu name="ПланируемоеВремяВыполненияКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ПланируемоеВремяВыполненияРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ПланируемоеНачалоРабот" id="70">
+			<ContextMenu name="ПланируемоеНачалоРаботКонтекстноеМеню" id="71"/>
+			<ExtendedTooltip name="ПланируемоеНачалоРаботРасширеннаяПодсказка" id="72"/>
+		</InputField>
+		<InputField name="РазницаДлительностей" id="28">
+			<DataPath>Запись.РазницаДлительностей</DataPath>
+			<ContextMenu name="РазницаДлительностейКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="РазницаДлительностейРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="РезультатВыполнения" id="31">
+			<DataPath>Запись.РезультатВыполнения</DataPath>
+			<ContextMenu name="РезультатВыполненияКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="РезультатВыполненияРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="РезультатВыполненияВHTML" id="34">
+			<DataPath>Запись.РезультатВыполненияВHTML</DataPath>
+			<ContextMenu name="РезультатВыполненияВHTMLКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="РезультатВыполненияВHTMLРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="СмещениеДатыНачала" id="37">
+			<DataPath>Запись.СмещениеДатыНачала</DataPath>
+			<ContextMenu name="СмещениеДатыНачалаКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="СмещениеДатыНачалаРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<InputField name="СмещениеДатыОкончания" id="40">
+			<DataPath>Запись.СмещениеДатыОкончания</DataPath>
+			<ContextMenu name="СмещениеДатыОкончанияКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="СмещениеДатыОкончанияРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<InputField name="ФактическаяДатаНачала" id="43">
+			<DataPath>Запись.ФактическаяДатаНачала</DataPath>
+			<ContextMenu name="ФактическаяДатаНачалаКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="ФактическаяДатаНачалаРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<InputField name="ФактическаяДатаОкончания" id="46">
+			<DataPath>Запись.ФактическаяДатаОкончания</DataPath>
+			<ContextMenu name="ФактическаяДатаОкончанияКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="ФактическаяДатаОкончанияРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="ФактическаяДлительность" id="49">
+			<DataPath>Запись.ФактическаяДлительность</DataPath>
+			<ContextMenu name="ФактическаяДлительностьКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="ФактическаяДлительностьРасширеннаяПодсказка" id="51"/>
+		</InputField>
+		<InputField name="ФактическоеВремяВыполнения" id="52">
+			<ContextMenu name="ФактическоеВремяВыполненияКонтекстноеМеню" id="53"/>
+			<ExtendedTooltip name="ФактическоеВремяВыполненияРасширеннаяПодсказка" id="54"/>
+		</InputField>
+		<InputField name="СогласованноеВремяВыполнения" id="55">
+			<DataPath>Запись.Удалить_СогласованноеВремяВыполнения</DataPath>
+			<ContextMenu name="СогласованноеВремяВыполненияКонтекстноеМеню" id="56"/>
+			<ExtendedTooltip name="СогласованноеВремяВыполненияРасширеннаяПодсказка" id="57"/>
+		</InputField>
+		<InputField name="СтоимостьТарифКлиента" id="58">
+			<DataPath>Запись.СтоимостьТарифКлиента</DataPath>
+			<ContextMenu name="СтоимостьТарифКлиентаКонтекстноеМеню" id="59"/>
+			<ExtendedTooltip name="СтоимостьТарифКлиентаРасширеннаяПодсказка" id="60"/>
+		</InputField>
+		<InputField name="СтоимостьТарифОбщий" id="61">
+			<DataPath>Запись.СтоимостьТарифОбщий</DataPath>
+			<ContextMenu name="СтоимостьТарифОбщийКонтекстноеМеню" id="62"/>
+			<ExtendedTooltip name="СтоимостьТарифОбщийРасширеннаяПодсказка" id="63"/>
+		</InputField>
+		<InputField name="СкидкаСумма" id="64">
+			<DataPath>Запись.СкидкаСумма</DataPath>
+			<ContextMenu name="СкидкаСуммаКонтекстноеМеню" id="65"/>
+			<ExtendedTooltip name="СкидкаСуммаРасширеннаяПодсказка" id="66"/>
+		</InputField>
+		<InputField name="СкидкаПроцент" id="67">
+			<DataPath>Запись.СкидкаПроцент</DataPath>
+			<ContextMenu name="СкидкаПроцентКонтекстноеМеню" id="68"/>
+			<ExtendedTooltip name="СкидкаПроцентРасширеннаяПодсказка" id="69"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.СвойстваЗаявок_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ОткрыватьФормуЗаявки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открывать форму заявки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

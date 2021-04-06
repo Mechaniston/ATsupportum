@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа4" id="43">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Производитель" id="40">
+					<DataPath>Объект.Производитель</DataPath>
+					<ContextMenu name="ПроизводительКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ПроизводительРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ФормФактор" id="7">
+			<DataPath>Объект.ФормФактор</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ФормФакторКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ФормФакторРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<UsualGroup name="Группа1" id="34">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<InputField name="ТипПамяти" id="13">
+					<DataPath>Объект.ТипПамяти</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТипПамятиКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ТипПамятиРасширеннаяПодсказка" id="15"/>
+					<Events>
+						<Event name="StartChoice">ТипПамятиНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="КоличествоСлотовПамяти" id="16">
+					<DataPath>Объект.КоличествоСлотовПамяти</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КоличествоСлотовПамятиКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="КоличествоСлотовПамятиРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<CheckBoxField name="ПоддержкаECC" id="10">
+					<DataPath>Объект.ПоддержкаECC</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПоддержкаECCКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПоддержкаECCРасширеннаяПодсказка" id="12"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="36">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="37"/>
+			<ChildItems>
+				<InputField name="СокетПодПроцессор" id="19">
+					<DataPath>Объект.СокетПодПроцессор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СокетПодПроцессорКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="СокетПодПроцессорРасширеннаяПодсказка" id="21"/>
+					<Events>
+						<Event name="StartChoice">СокетПодПроцессорНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="КоличествоПроцессоров" id="22">
+					<DataPath>Объект.КоличествоПроцессоров</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КоличествоПроцессоровКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="КоличествоПроцессоровРасширеннаяПодсказка" id="24"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="38">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<InputField name="ТипСетевойКарты" id="25">
+					<DataPath>Объект.ТипСетевойКарты</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТипСетевойКартыКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ТипСетевойКартыРасширеннаяПодсказка" id="27"/>
+				</InputField>
+				<InputField name="КоличествоСетевыхРазъемов" id="28">
+					<DataPath>Объект.КоличествоСетевыхРазъемов</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КоличествоСетевыхРазъемовКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="КоличествоСетевыхРазъемовРасширеннаяПодсказка" id="30"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Мощность" id="31">
+			<DataPath>Объект.Мощность</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="МощностьКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="МощностьРасширеннаяПодсказка" id="33"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.МатеринскиеПлаты_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

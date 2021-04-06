@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Pages name="Страницы" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<Page name="ПочтовыеПапкиУЗ" id="24">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Почтовые папки УЗ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Почтовые папки УЗ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПочтовыеПапкиУЗРасширеннаяПодсказка" id="25"/>
+					<ChildItems>
+						<Table name="ГруппыЭлектронныхПисем" id="7">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ГруппыЭлектронныхПисемКонтекстноеМеню" id="8"/>
+							<AutoCommandBar name="ГруппыЭлектронныхПисемКоманднаяПанель" id="9"/>
+							<ExtendedTooltip name="ГруппыЭлектронныхПисемРасширеннаяПодсказка" id="10"/>
+							<SearchStringAddition name="ГруппыЭлектронныхПисемСтрокаПоиска" id="28">
+								<AdditionSource>
+									<Item>ГруппыЭлектронныхПисем</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыЭлектронныхПисемСтрокаПоискаКонтекстноеМеню" id="29"/>
+								<ExtendedTooltip name="ГруппыЭлектронныхПисемСтрокаПоискаРасширеннаяПодсказка" id="30"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ГруппыЭлектронныхПисемСостояниеПросмотра" id="31">
+								<AdditionSource>
+									<Item>ГруппыЭлектронныхПисем</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыЭлектронныхПисемСостояниеПросмотраКонтекстноеМеню" id="32"/>
+								<ExtendedTooltip name="ГруппыЭлектронныхПисемСостояниеПросмотраРасширеннаяПодсказка" id="33"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ГруппыЭлектронныхПисемУправлениеПоиском" id="34">
+								<AdditionSource>
+									<Item>ГруппыЭлектронныхПисем</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ГруппыЭлектронныхПисемУправлениеПоискомКонтекстноеМеню" id="35"/>
+								<ExtendedTooltip name="ГруппыЭлектронныхПисемУправлениеПоискомРасширеннаяПодсказка" id="36"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ГруппыЭлектронныхПисемНомерСтроки" id="11">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГруппыЭлектронныхПисемНомерСтрокиКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="ГруппыЭлектронныхПисемНомерСтрокиРасширеннаяПодсказка" id="13"/>
+								</LabelField>
+								<LabelField name="ГруппыЭлектронныхПисемГруппаЭлектроногоПисьмаВладелец" id="17">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГруппыЭлектронныхПисемГруппаЭлектроногоПисьмаВладелецКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ГруппыЭлектронныхПисемГруппаЭлектроногоПисьмаВладелецРасширеннаяПодсказка" id="19"/>
+								</LabelField>
+								<InputField name="ГруппыЭлектронныхПисемГруппаЭлектроногоПисьма" id="14">
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ГруппыЭлектронныхПисемГруппаЭлектроногоПисьмаКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="ГруппыЭлектронныхПисемГруппаЭлектроногоПисьмаРасширеннаяПодсказка" id="16"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Настройки" id="26">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="НастройкиРасширеннаяПодсказка" id="27"/>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ГруппыСообщений_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

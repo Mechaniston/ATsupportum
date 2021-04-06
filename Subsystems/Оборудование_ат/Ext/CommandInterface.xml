@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<CommandsVisibility>
+		<Command name="InformationRegister.ОбъёмИБ_ат.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.КлиентАрендатор_ат">false</xr:Value>
+				<xr:Value name="Role.КлиентРуководительПроектов_ат">false</xr:Value>
+				<xr:Value name="Role.КлиентСотрудник_ат">false</xr:Value>
+				<xr:Value name="Role.КлиентФинансы_ат">false</xr:Value>
+			</Visibility>
+		</Command>
+		<Command name="Catalog.ПараметрыОборудования_ат.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.АдминистраторСистемы">true</xr:Value>
+				<xr:Value name="Role.ИзменениеТекущегоПользователя">true</xr:Value>
+				<xr:Value name="Role.ОрганизацияАдминистраторСерверов_ат">true</xr:Value>
+				<xr:Value name="Role.ИзменениеУчастниковГруппДоступа">true</xr:Value>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+</CommandInterface>

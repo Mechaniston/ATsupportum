@@ -1,0 +1,901 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Width>88</Width>
+	<Customizable>false</Customizable>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Write</ExcludedCommand>
+		<ExcludedCommand>WriteAndClose</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗаголовок" id="2015">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗаголовокExtendedTooltip" id="2044"/>
+			<ChildItems>
+				<LabelDecoration name="ОписаниеРаздела" id="2016">
+					<Width>78</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройка параметров загрузки, хранения и обработки файлов.</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalAlign>Top</VerticalAlign>
+					<ContextMenu name="ОписаниеРазделаКонтекстноеМеню" id="2017"/>
+					<ExtendedTooltip name="ОписаниеРазделаExtendedTooltip" id="2045"/>
+				</LabelDecoration>
+				<LabelDecoration name="Декорация1" id="2042">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="2043"/>
+					<ExtendedTooltip name="Декорация1ExtendedTooltip" id="2046"/>
+				</LabelDecoration>
+				<CommandBar name="ГруппаСправка" id="2018">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content> </v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<ExtendedTooltip name="ГруппаСправкаExtendedTooltip" id="2047"/>
+					<ChildItems>
+						<Button name="Справка" id="2019">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.StandardCommand.Help</CommandName>
+							<ExtendedTooltip name="СправкаExtendedTooltip" id="2048"/>
+						</Button>
+					</ChildItems>
+				</CommandBar>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУправлениеТомамиФайлов" id="1403">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа управление томами файлов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа управление томами файлов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>86</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУправлениеТомамиФайловExtendedTooltip" id="2049"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаХранитьФайлыВТомахНаДиске" id="1406">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа хранить файлы в томах на диске</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа хранить файлы в томах на диске</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаХранитьФайлыВТомахНаДискеExtendedTooltip" id="2050"/>
+					<ChildItems>
+						<CheckBoxField name="ХранитьФайлыВТомахНаДиске" id="719">
+							<DataPath>НаборКонстант.ХранитьФайлыВТомахНаДиске</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ХранитьФайлыВТомахНаДискеКонтекстноеМеню" id="720"/>
+							<ExtendedTooltip name="ХранитьФайлыВТомахНаДискеExtendedTooltip" id="2051"/>
+							<Events>
+								<Event name="OnChange">ХранитьФайлыВТомахНаДискеПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<LabelDecoration name="ПояснениеХранитьФайлыВТомахНаДиске" id="1407">
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выбор между хранением файлов в информационной базе или в томах на диске.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеХранитьФайлыВТомахНаДискеКонтекстноеМеню" id="1408"/>
+							<ExtendedTooltip name="ПояснениеХранитьФайлыВТомахНаДискеExtendedTooltip" id="2052"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСправочникТомаХраненияФайлов" id="1274">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справочник тома хранения файлов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа справочник тома хранения файлов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСправочникТомаХраненияФайловExtendedTooltip" id="2053"/>
+					<ChildItems>
+						<Button name="СправочникТомаХраненияФайлов" id="1273">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.СправочникТомаХраненияФайлов</CommandName>
+							<ExtendedTooltip name="СправочникТомаХраненияФайловExtendedTooltip" id="2054"/>
+						</Button>
+						<LabelDecoration name="ПояснениеСправочникТомаХраненияФайлов" id="1275">
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка подключения к томам (папкам) хранения файлов на файловом сервере.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеСправочникТомаХраненияФайловКонтекстноеМеню" id="1276"/>
+							<ExtendedTooltip name="ПояснениеСправочникТомаХраненияФайловExtendedTooltip" id="2055"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУправлениеЗагрузкойФайлов" id="1409">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа управление загрузкой файлов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа управление загрузкой файлов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>86</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУправлениеЗагрузкойФайловExtendedTooltip" id="2056"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРасширение" id="722">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа расширение</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРасширениеExtendedTooltip" id="2057"/>
+					<ChildItems>
+						<CheckBoxField name="ЗапрещатьЗагрузкуФайловПоРасширению" id="723">
+							<DataPath>НаборКонстант.ЗапрещатьЗагрузкуФайловПоРасширению</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запретить загрузку файлов с расширениями:</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ЗапрещатьЗагрузкуФайловПоРасширениюКонтекстноеМеню" id="724"/>
+							<ExtendedTooltip name="ЗапрещатьЗагрузкуФайловПоРасширениюExtendedTooltip" id="2058"/>
+							<Events>
+								<Event name="OnChange">ЗапрещатьЗагрузкуФайловПоРасширениюПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="СписокЗапрещенныхРасширенийОбластиДанных" id="725">
+							<DataPath>НаборКонстант.СписокЗапрещенныхРасширенийОбластиДанных</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="СписокЗапрещенныхРасширенийОбластиДанныхКонтекстноеМеню" id="726"/>
+							<ExtendedTooltip name="СписокЗапрещенныхРасширенийОбластиДанныхExtendedTooltip" id="2059"/>
+							<Events>
+								<Event name="OnChange">СписокЗапрещенныхРасширенийОбластиДанныхПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="ПояснениеЗапретЗагрузкиФайловПоРасширению" id="1410">
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расширения файлов, для которых будет запрещена загрузка в папки программы.
+Указываются через "пробел".</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПояснениеЗапретЗагрузкиФайловПоРасширениюКонтекстноеМеню" id="1411"/>
+					<ExtendedTooltip name="ПояснениеЗапретЗагрузкиФайловПоРасширениюExtendedTooltip" id="2060"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаМаксимальныйРазмерФайлаОбластиДанных" id="1412">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа максимальный размер файла области данных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа максимальный размер файла области данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>43</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаМаксимальныйРазмерФайлаОбластиДанныхExtendedTooltip" id="2061"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаРазмер" id="713">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа размер</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа размер</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРазмерExtendedTooltip" id="2062"/>
+					<ChildItems>
+						<InputField name="МаксимальныйРазмерФайлаОбластиДанных" id="714">
+							<DataPath>МаксимальныйРазмерФайлаОбластиДанных</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>5</Width>
+							<Wrap>false</Wrap>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="МаксимальныйРазмерФайлаОбластиДанныхКонтекстноеМеню" id="715"/>
+							<ExtendedTooltip name="МаксимальныйРазмерФайлаОбластиДанныхExtendedTooltip" id="2063"/>
+							<Events>
+								<Event name="OnChange">МаксимальныйРазмерФайлаОбластиДанныхПриИзменении</Event>
+							</Events>
+						</InputField>
+						<LabelDecoration name="ДекорацияМб" id="716">
+							<SkipOnInput>false</SkipOnInput>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Мбайт</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ДекорацияМбКонтекстноеМеню" id="717"/>
+							<ExtendedTooltip name="ДекорацияМбExtendedTooltip" id="2064"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="ПояснениеМаксимальныйРазмерФайлаОбластиДанных" id="1413">
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ограничение загрузки файлов, превышающих указанный размер.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПояснениеМаксимальныйРазмерФайлаОбластиДанныхКонтекстноеМеню" id="1414"/>
+					<ExtendedTooltip name="ПояснениеМаксимальныйРазмерФайлаОбластиДанныхExtendedTooltip" id="2065"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСписокРасширенийФайловOpenDocumentОбластиДанных" id="1415">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список расширений файлов open document области данных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа список расширений файлов open document области данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>86</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСписокРасширенийФайловOpenDocumentОбластиДанныхExtendedTooltip" id="2066"/>
+			<ChildItems>
+				<InputField name="СписокРасширенийФайловOpenDocumentОбластиДанных" id="729">
+					<DataPath>НаборКонстант.СписокРасширенийФайловOpenDocumentОбластиДанных</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расширения файлов ODF</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="СписокРасширенийФайловOpenDocumentОбластиДанныхКонтекстноеМеню" id="730"/>
+					<ExtendedTooltip name="СписокРасширенийФайловOpenDocumentОбластиДанныхExtendedTooltip" id="2067"/>
+					<Events>
+						<Event name="OnChange">СписокРасширенийФайловOpenDocumentОбластиДанныхПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="ПояснениеСписокРасширенийФайловOpenDocumentОбластиДанных" id="1417">
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расширения файлов открытого формата документов для офисных приложений.
+Указываются через "пробел".</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПояснениеСписокРасширенийФайловOpenDocumentОбластиДанныхКонтекстноеМеню" id="1418"/>
+					<ExtendedTooltip name="ПояснениеСписокРасширенийФайловOpenDocumentОбластиДанныхExtendedTooltip" id="2068"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСписокРасширенийТекстовыхФайлов" id="2041">
+			<Width>86</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСписокРасширенийТекстовыхФайловExtendedTooltip" id="2069"/>
+			<ChildItems>
+				<InputField name="СписокРасширенийТекстовыхФайлов" id="1974">
+					<DataPath>НаборКонстант.СписокРасширенийТекстовыхФайлов</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расширения текстовых файлов</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="СписокРасширенийТекстовыхФайловКонтекстноеМеню" id="1975"/>
+					<ExtendedTooltip name="СписокРасширенийТекстовыхФайловExtendedTooltip" id="2070"/>
+					<Events>
+						<Event name="OnChange">СписокРасширенийТекстовыхФайловПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelDecoration name="ПояснениеСписокРасширенийТекстовыхФайлов" id="1976">
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расширения файлов, содержащих текстовые данные.
+Указываются через "пробел".</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПояснениеСписокРасширенийТекстовыхФайловКонтекстноеМеню" id="1977"/>
+					<ExtendedTooltip name="ПояснениеСписокРасширенийТекстовыхФайловExtendedTooltip" id="2071"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа4" id="1978">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>86</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Representation>NormalSeparation</Representation>
+			<ChildItemsWidth>Equal</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4ExtendedTooltip" id="2072"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИспользоватьЭЦП" id="1980">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИспользоватьЭЦПExtendedTooltip" id="2073"/>
+					<ChildItems>
+						<CheckBoxField name="ИспользоватьЭлектронныеЦифровыеПодписи" id="1981">
+							<DataPath>НаборКонстант.ИспользоватьЭлектронныеЦифровыеПодписи</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Электронные цифровые подписи</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ИспользоватьЭлектронныеЦифровыеПодписиКонтекстноеМеню" id="1982"/>
+							<ExtendedTooltip name="ИспользоватьЭлектронныеЦифровыеПодписиExtendedTooltip" id="2074"/>
+							<Events>
+								<Event name="OnChange">ИспользоватьЭлектронныеЦифровыеПодписиПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<LabelDecoration name="ПояснениеИспользоватьЭлектронныеЦифровыеПодписи" id="1983">
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Разрешить возможность проверять отсутствие изменений файла с момента формирования электронной цифровой подписи.</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Top</VerticalAlign>
+							<ContextMenu name="ПояснениеИспользоватьЭлектронныеЦифровыеПодписиКонтекстноеМеню" id="1984"/>
+							<ExtendedTooltip name="ПояснениеИспользоватьЭлектронныеЦифровыеПодписиExtendedTooltip" id="2075"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаОбщаяФормаНастройкиЭЦП" id="1985">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа общая форма настройки ЭЦП</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа общая форма настройки ЭЦП</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОбщаяФормаНастройкиЭЦПExtendedTooltip" id="2076"/>
+					<ChildItems>
+						<Button name="ОбщаяФормаНастройкиЭЦП" id="1986">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ОбщаяФормаНастройкиЭЦП</CommandName>
+							<ExtendedTooltip name="ОбщаяФормаНастройкиЭЦПExtendedTooltip" id="2077"/>
+						</Button>
+						<LabelDecoration name="ПояснениеОбщаяФормаНастройкиЭЦП" id="1987">
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка параметров для использования средств криптографии: электронной цифровой подписи и шифрования.</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalAlign>Top</VerticalAlign>
+							<ContextMenu name="ПояснениеОбщаяФормаНастройкиЭЦПКонтекстноеМеню" id="1988"/>
+							<ExtendedTooltip name="ПояснениеОбщаяФормаНастройкиЭЦПExtendedTooltip" id="2078"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОткрытьНомераОтсканированныхФайлов" id="1427">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа открыть номера отсканированных файлов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа открыть номера отсканированных файлов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Width>43</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОткрытьНомераОтсканированныхФайловExtendedTooltip" id="2079"/>
+			<ChildItems>
+				<Button name="ОткрытьНомераОтсканированныхФайлов" id="748">
+					<Type>Hyperlink</Type>
+					<CommandName>InformationRegister.НомераОтсканированныхФайлов.Command.НомераОтсканированныхФайлов</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номера сканированных документов</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ОткрытьНомераОтсканированныхФайловExtendedTooltip" id="2080"/>
+				</Button>
+				<LabelDecoration name="ПояснениеОткрытьНомераОтсканированныхФайлов" id="1428">
+					<TextColor>style:ПоясняющийТекст</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Просмотр нумерации отсканированных документов и их владельцев.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПояснениеОткрытьНомераОтсканированныхФайловКонтекстноеМеню" id="1429"/>
+					<ExtendedTooltip name="ПояснениеОткрытьНомераОтсканированныхФайловExtendedTooltip" id="2081"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОтступ1" id="2023">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content> </v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтступ1ExtendedTooltip" id="2082"/>
+			<ChildItems>
+				<UsualGroup name="ОбщиеПараметрыДляВсехОбластейДанных" id="2022">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие параметры для всех областей данных</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="sys:DefaultGUIFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие параметры для всех областей данных</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ExtendedTooltip name="ОбщиеПараметрыДляВсехОбластейДанныхExtendedTooltip" id="2083"/>
+					<ChildItems>
+						<LabelDecoration name="ПояснениеОбщиеПараметрыДляВсехОбластейДанных" id="2020">
+							<Width>86</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<TextColor>style:ПоясняющийТекст</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ограничения, которое применяются для всех областей данных и имеют приоритет над настройками администраторов.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПояснениеОбщиеПараметрыДляВсехОбластейДанныхКонтекстноеМеню" id="2021"/>
+							<ExtendedTooltip name="ПояснениеОбщиеПараметрыДляВсехОбластейДанныхExtendedTooltip" id="2084"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаМаксимальныйРазмерФайла" id="2033">
+							<Width>86</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаМаксимальныйРазмерФайлаExtendedTooltip" id="2085"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаРазмер1" id="2034">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа размер</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа размер</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаРазмер1ExtendedTooltip" id="2086"/>
+									<ChildItems>
+										<InputField name="МаксимальныйРазмерФайла" id="2035">
+											<DataPath>МаксимальныйРазмерФайла</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<Wrap>false</Wrap>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="МаксимальныйРазмерФайлаКонтекстноеМеню" id="2036"/>
+											<ExtendedTooltip name="МаксимальныйРазмерФайлаExtendedTooltip" id="2087"/>
+											<Events>
+												<Event name="OnChange">МаксимальныйРазмерФайлаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<LabelDecoration name="ДекорацияМб1" id="2037">
+											<SkipOnInput>false</SkipOnInput>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Мбайт</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияМб1КонтекстноеМеню" id="2038"/>
+											<ExtendedTooltip name="ДекорацияМб1ExtendedTooltip" id="2088"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="ПояснениеМаксимальныйРазмерФайла" id="2039">
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ограничение загрузки файлов, превышающих указанный размер.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеМаксимальныйРазмерФайлаКонтекстноеМеню" id="2040"/>
+									<ExtendedTooltip name="ПояснениеМаксимальныйРазмерФайлаExtendedTooltip" id="2089"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСписокЗапрещенныхРасширений" id="2028">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа список запрещенных расширений</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа список запрещенных расширений</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>86</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСписокЗапрещенныхРасширенийExtendedTooltip" id="2090"/>
+							<ChildItems>
+								<InputField name="СписокЗапрещенныхРасширений" id="2013">
+									<DataPath>НаборКонстант.СписокЗапрещенныхРасширений</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расширения, запрещенные для загрузки</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="СписокЗапрещенныхРасширенийКонтекстноеМеню" id="2014"/>
+									<ExtendedTooltip name="СписокЗапрещенныхРасширенийExtendedTooltip" id="2091"/>
+									<Events>
+										<Event name="OnChange">СписокЗапрещенныхРасширенийПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="ПояснениеЗапретЗагрузкиФайловПоРасширению2" id="2026">
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расширения файлов, для которых будет запрещена загрузка в папки программы.
+Указываются через "пробел".</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеЗапретЗагрузкиФайловПоРасширению2КонтекстноеМеню" id="2027"/>
+									<ExtendedTooltip name="ПояснениеЗапретЗагрузкиФайловПоРасширению2ExtendedTooltip" id="2092"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСписокРасширенийФайловOpenDocument" id="2029">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content> </v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content> </v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>86</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСписокРасширенийФайловOpenDocumentExtendedTooltip" id="2093"/>
+							<ChildItems>
+								<InputField name="СписокРасширенийФайловOpenDocument" id="2024">
+									<DataPath>НаборКонстант.СписокРасширенийФайловOpenDocument</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расширения файлов ODF</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СписокРасширенийФайловOpenDocumentКонтекстноеМеню" id="2025"/>
+									<ExtendedTooltip name="СписокРасширенийФайловOpenDocumentExtendedTooltip" id="2094"/>
+									<Events>
+										<Event name="OnChange">СписокРасширенийФайловOpenDocumentПриИзменении</Event>
+									</Events>
+								</InputField>
+								<LabelDecoration name="ПояснениеСписокРасширенийФайловOpenDocument" id="2030">
+									<TextColor>style:ПоясняющийТекст</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расширения файлов открытого формата документов для офисных приложений.
+Указываются через "пробел".</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПояснениеСписокРасширенийФайловOpenDocumentКонтекстноеМеню" id="2031"/>
+									<ExtendedTooltip name="ПояснениеСписокРасширенийФайловOpenDocumentExtendedTooltip" id="2095"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>НаборКонстант.ДатаУведомленияОНовыхЗадачах</Field>
+				<Field>НаборКонстант.ЗаголовокСистемы</Field>
+				<Field>НаборКонстант.ЗапрещатьЗагрузкуФайловПоРасширению</Field>
+				<Field>НаборКонстант.ИзменятьЗаданияЗаднимЧислом</Field>
+				<Field>НаборКонстант.ИспользоватьБизнесПроцессыИЗадачи</Field>
+				<Field>НаборКонстант.ИспользоватьВерсионированиеОбъектов</Field>
+				<Field>НаборКонстант.ИспользоватьВнешнихПользователей</Field>
+				<Field>НаборКонстант.ИспользоватьГруппыПользователей</Field>
+				<Field>НаборКонстант.ИспользоватьДатуИВремяВСрокахЗадач</Field>
+				<Field>НаборКонстант.ИспользоватьДатуНачалаЗадач</Field>
+				<Field>НаборКонстант.ИспользоватьДополнительныеРеквизитыИСведения</Field>
+				<Field>НаборКонстант.ИспользоватьНапоминанияПользователя</Field>
+				<Field>НаборКонстант.ИспользоватьПочтовыйКлиент</Field>
+				<Field>НаборКонстант.ИспользоватьПризнакРассмотрено</Field>
+				<Field>НаборКонстант.ИспользоватьПрочиеВзаимодействия</Field>
+				<Field>НаборКонстант.ИспользоватьСинхронизациюДанных</Field>
+				<Field>НаборКонстант.ИспользоватьЭлектронныеЦифровыеПодписи</Field>
+				<Field>НаборКонстант.КаталогВременныхФайловДляLinux</Field>
+				<Field>НаборКонстант.КаталогВременныхФайловДляWindows</Field>
+				<Field>НаборКонстант.МаксимальныйРазмерФайла</Field>
+				<Field>НаборКонстант.МаксимальныйРазмерФайлаОбластиДанных</Field>
+				<Field>НаборКонстант.ОграничиватьДоступНаУровнеЗаписей</Field>
+				<Field>НаборКонстант.ОтправлятьПисьмаВФорматеHTML</Field>
+				<Field>НаборКонстант.ПрефиксУзлаРаспределеннойИнформационнойБазы</Field>
+				<Field>НаборКонстант.СписокЗапрещенныхРасширенийОбластиДанных</Field>
+				<Field>НаборКонстант.СписокРасширенийТекстовыхФайлов</Field>
+				<Field>НаборКонстант.СписокРасширенийФайловOpenDocumentОбластиДанных</Field>
+				<Field>НаборКонстант.ХранитьФайлыВТомахНаДиске</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="МаксимальныйРазмерФайлаОбластиДанных" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальный размер файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="МаксимальныйРазмерФайла" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Максимальный размер файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СправочникТомаХраненияФайлов" id="37">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тома хранения файлов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник тома хранения файлов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СправочникТомаХраненияФайлов</Action>
+		</Command>
+		<Command name="ОбщаяФормаНастройкиЭЦП" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки криптографии</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОбщаяФормаНастройкиЭЦП</Action>
+		</Command>
+	</Commands>
+</Form>

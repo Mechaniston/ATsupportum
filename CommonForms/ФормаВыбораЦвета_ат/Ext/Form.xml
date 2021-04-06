@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОК" id="27">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОК</CommandName>
+				<ExtendedTooltip name="ФормаОКExtendedTooltip" id="31"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="28">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьExtendedTooltip" id="32"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="RGB" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>RGB</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>RGB</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="RGBExtendedTooltip" id="33"/>
+			<ChildItems>
+				<UsualGroup name="Красный" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Красный</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Красный</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="КрасныйExtendedTooltip" id="34"/>
+					<ChildItems>
+						<InputField name="ПолеВводаКрасный" id="4">
+							<DataPath>Красный</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Красный</v8:content>
+								</v8:item>
+							</Title>
+							<SpinButton>true</SpinButton>
+							<MinValue xsi:type="xs:decimal">0</MinValue>
+							<MaxValue xsi:type="xs:decimal">255</MaxValue>
+							<ContextMenu name="ПолеВводаКрасныйКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ПолеВводаКрасныйExtendedTooltip" id="35"/>
+							<Events>
+								<Event name="OnChange">ПолеВводаЦветаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<TrackBarField name="ПолосаРегулированияКрасный" id="2">
+							<DataPath>Красный</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Красный</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Height>1</Height>
+							<MaxValue>255</MaxValue>
+							<MarkingAppearance>DontShow</MarkingAppearance>
+							<ContextMenu name="ПолосаРегулированияКрасныйКонтекстноеМеню" id="3"/>
+							<ExtendedTooltip name="ПолосаРегулированияКрасныйExtendedTooltip" id="36"/>
+							<Events>
+								<Event name="OnChange">ПолеВводаЦветаПриИзменении</Event>
+							</Events>
+						</TrackBarField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Зеленый" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зеленый</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Красный</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ЗеленыйExtendedTooltip" id="37"/>
+					<ChildItems>
+						<InputField name="ПолеВводаЗеленый" id="8">
+							<DataPath>Зеленый</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Зеленый</v8:content>
+								</v8:item>
+							</Title>
+							<SpinButton>true</SpinButton>
+							<MinValue xsi:type="xs:decimal">0</MinValue>
+							<MaxValue xsi:type="xs:decimal">255</MaxValue>
+							<ContextMenu name="ПолеВводаЗеленыйКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ПолеВводаЗеленыйExtendedTooltip" id="38"/>
+							<Events>
+								<Event name="OnChange">ПолеВводаЦветаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<TrackBarField name="ПолосаРегулированияЗеленый" id="10">
+							<DataPath>Зеленый</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Зеленый</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Height>1</Height>
+							<MaxValue>255</MaxValue>
+							<MarkingAppearance>DontShow</MarkingAppearance>
+							<ContextMenu name="ПолосаРегулированияЗеленыйКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ПолосаРегулированияЗеленыйExtendedTooltip" id="39"/>
+							<Events>
+								<Event name="OnChange">ПолеВводаЦветаПриИзменении</Event>
+							</Events>
+						</TrackBarField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Синий" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синий</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Красный</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СинийExtendedTooltip" id="40"/>
+					<ChildItems>
+						<InputField name="ПолеВводаСиний" id="13">
+							<DataPath>Синий</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Синий</v8:content>
+								</v8:item>
+							</Title>
+							<SpinButton>true</SpinButton>
+							<MinValue xsi:type="xs:decimal">0</MinValue>
+							<MaxValue xsi:type="xs:decimal">255</MaxValue>
+							<ContextMenu name="ПолеВводаСинийКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="ПолеВводаСинийExtendedTooltip" id="41"/>
+							<Events>
+								<Event name="OnChange">ПолеВводаЦветаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<TrackBarField name="ПолосаРегулированияСиний" id="15">
+							<DataPath>Синий</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Синий</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<Height>1</Height>
+							<MaxValue>255</MaxValue>
+							<MarkingAppearance>DontShow</MarkingAppearance>
+							<ContextMenu name="ПолосаРегулированияСинийКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="ПолосаРегулированияСинийExtendedTooltip" id="42"/>
+							<Events>
+								<Event name="OnChange">ПолеВводаЦветаПриИзменении</Event>
+							</Events>
+						</TrackBarField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ТаблицаЦветов" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стандартные цвета</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Стандартные цвета</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="ТаблицаЦветовExtendedTooltip" id="43"/>
+			<ChildItems>
+				<Table name="ТабличноеПолеОтображения" id="18">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<RowSelectionMode>Row</RowSelectionMode>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>ТабличноеПоле</DataPath>
+					<SearchStringLocation>None</SearchStringLocation>
+					<ViewStatusLocation>None</ViewStatusLocation>
+					<SearchControlLocation>None</SearchControlLocation>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТабличноеПолеОтображенияКонтекстноеМеню" id="19"/>
+					<AutoCommandBar name="ТабличноеПолеОтображенияКоманднаяПанель" id="20"/>
+					<ExtendedTooltip name="ТабличноеПолеОтображенияExtendedTooltip" id="44"/>
+					<SearchStringAddition name="ТабличноеПолеОтображенияСтрокаПоиска" id="49">
+						<AdditionSource>
+							<Item>ТабличноеПолеОтображения</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТабличноеПолеОтображенияСтрокаПоискаКонтекстноеМеню" id="50"/>
+						<ExtendedTooltip name="ТабличноеПолеОтображенияСтрокаПоискаРасширеннаяПодсказка" id="51"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТабличноеПолеОтображенияСостояниеПросмотра" id="52">
+						<AdditionSource>
+							<Item>ТабличноеПолеОтображения</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТабличноеПолеОтображенияСостояниеПросмотраКонтекстноеМеню" id="53"/>
+						<ExtendedTooltip name="ТабличноеПолеОтображенияСостояниеПросмотраРасширеннаяПодсказка" id="54"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТабличноеПолеОтображенияУправлениеПоиском" id="55">
+						<AdditionSource>
+							<Item>ТабличноеПолеОтображения</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТабличноеПолеОтображенияУправлениеПоискомКонтекстноеМеню" id="56"/>
+						<ExtendedTooltip name="ТабличноеПолеОтображенияУправлениеПоискомРасширеннаяПодсказка" id="57"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ТабличноеПолеВыбор</Event>
+						<Event name="OnActivateRow">ТабличноеПолеПриАктивизацииСтроки</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="ТабличноеПолеКартинкаЦвета" id="21">
+							<DataPath>ТабличноеПоле.КартинкаЦвета</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабличноеПолеКартинкаЦветаКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="ТабличноеПолеКартинкаЦветаExtendedTooltip" id="45"/>
+						</InputField>
+						<InputField name="ТабличноеПолеНазваниеЦвета" id="23">
+							<DataPath>ТабличноеПоле.НазваниеЦвета</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабличноеПолеНазваниеЦветаКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="ТабличноеПолеНазваниеЦветаExtendedTooltip" id="46"/>
+						</InputField>
+						<InputField name="ТабличноеПолеЗначениеЦвета" id="25">
+							<DataPath>ТабличноеПоле.ЗначениеЦвета</DataPath>
+							<Visible>false</Visible>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабличноеПолеЗначениеЦветаКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ТабличноеПолеЗначениеЦветаExtendedTooltip" id="47"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<InputField name="ПолеКартинкиЦвета" id="29">
+					<DataPath>ПолеКартинкиЦвета</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пример</v8:content>
+						</v8:item>
+					</Title>
+					<TitleLocation>Top</TitleLocation>
+					<Width>5</Width>
+					<Height>2</Height>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>false</VerticalStretch>
+					<BackColor>#FF1AB9</BackColor>
+					<ContextMenu name="ПолеКартинкиЦветаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПолеКартинкиЦветаExtendedTooltip" id="48"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Красный" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Красный</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Зеленый" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зеленый</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Синий" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТабличноеПоле" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табличное поле</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КартинкаЦвета" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка цвета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Color</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НазваниеЦвета" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название цвета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗначениеЦвета" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение цвета</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПолеКартинкиЦвета" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле картинки цвета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>12</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОК</Action>
+		</Command>
+	</Commands>
+</Form>

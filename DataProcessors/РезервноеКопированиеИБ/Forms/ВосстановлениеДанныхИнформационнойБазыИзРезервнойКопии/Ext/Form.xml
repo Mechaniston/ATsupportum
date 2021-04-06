@@ -1,0 +1,856 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Восстановление данных информационной базы из резервной копии</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<ChildItems>
+			<Button name="Назад" id="82">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.Command.ФормаНазад</CommandName>
+				<ExtendedTooltip name="НазадExtendedTooltip" id="92"/>
+			</Button>
+			<Button name="Готово" id="23">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ФормаГотово</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Далее &gt;&gt;</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ГотовоExtendedTooltip" id="93"/>
+			</Button>
+			<Button name="Закрыть" id="24">
+				<Type>CommandBarButton</Type>
+				<Representation>Text</Representation>
+				<CommandName>Form.Command.ФормаОтмена</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Отмена</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ЗакрытьExtendedTooltip" id="94"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="СтраницыЗагрузкиДанных" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы загрузки данных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы загрузки данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыЗагрузкиДанныхExtendedTooltip" id="95"/>
+			<ChildItems>
+				<Page name="СтраницаНастройкиЗагрузки" id="30">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница настройки загрузки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница настройки загрузки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаНастройкиЗагрузкиExtendedTooltip" id="96"/>
+					<ChildItems>
+						<UsualGroup name="СтраницаЗагрузкиДанных" id="1">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница загрузки данных</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница загрузки данных</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СтраницаЗагрузкиДанныхExtendedTooltip" id="97"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЗаведенияПутиКопирования2" id="7">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Шаг 1. Выбор каталога</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Шаг 1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗаведенияПутиКопирования2ExtendedTooltip" id="98"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьПутьКопирования2" id="8">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> Укажите путь к файлу с резервной копией:</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьПутьКопирования2КонтекстноеМеню" id="9"/>
+											<ExtendedTooltip name="НадписьПутьКопирования2ExtendedTooltip" id="99"/>
+										</LabelDecoration>
+										<InputField name="ПутьККаталогуАрхивов2" id="10">
+											<DataPath>Объект.ФайлЗагрузкиРезервнойКопии</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Каталог</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ChoiceButton>true</ChoiceButton>
+											<ChooseType>false</ChooseType>
+											<ContextMenu name="ПутьККаталогуАрхивов2КонтекстноеМеню" id="11"/>
+											<ExtendedTooltip name="ПутьККаталогуАрхивов2ExtendedTooltip" id="100"/>
+											<Events>
+												<Event name="StartChoice">ПутьККаталогуАрхивов2НачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<CheckBoxField name="ПроводитьРезервноеКопированиеПриВосстановленииДанных" id="25">
+											<DataPath>Объект.ПроводитьРезервноеКопированиеПриВосстановленииДанных</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПроводитьРезервноеКопированиеПриВосстановленииДанныхКонтекстноеМеню" id="26"/>
+											<ExtendedTooltip name="ПроводитьРезервноеКопированиеПриВосстановленииДанныхExtendedTooltip" id="101"/>
+											<Events>
+												<Event name="OnChange">ПроводитьРезервноеКопированиеПриВосстановленииДанныхПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<UsualGroup name="ГруппаРезервнойКопииПриВосстановлении" id="85">
+											<Enabled>false</Enabled>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа резервной копии при восстановлении</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа резервной копии при восстановлении</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРезервнойКопииПриВосстановленииExtendedTooltip" id="102"/>
+											<ChildItems>
+												<InputField name="ПутьККаталогуАрхивов" id="27">
+													<DataPath>Объект.КаталогСРезервнымиКопиями</DataPath>
+													<ChoiceButton>true</ChoiceButton>
+													<ContextMenu name="ПутьККаталогуАрхивовКонтекстноеМеню" id="28"/>
+													<ExtendedTooltip name="ПутьККаталогуАрхивовExtendedTooltip" id="103"/>
+													<Events>
+														<Event name="StartChoice">ПутьККаталогуАрхивовНачалоВыбора</Event>
+													</Events>
+												</InputField>
+												<LabelDecoration name="НадписьРекомендацииПоВыборуПути" id="83">
+													<HorizontalStretch>true</HorizontalStretch>
+													<TextColor>style:ПоясняющийТекст</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Рекомендуется выполнять резервное копирование на другой компьютер или внешний носитель.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Top</VerticalAlign>
+													<ContextMenu name="НадписьРекомендацииПоВыборуПутиКонтекстноеМеню" id="84"/>
+													<ExtendedTooltip name="НадписьРекомендацииПоВыборуПутиExtendedTooltip" id="104"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаАвторизации" id="86">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Введите пароль администратора информационной базы (если задан)</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа авторизации</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Representation>NormalSeparation</Representation>
+											<ExtendedTooltip name="ГруппаАвторизацииExtendedTooltip" id="105"/>
+											<ChildItems>
+												<InputField name="АдминистраторИБ" id="87">
+													<DataPath>АдминистраторИБ</DataPath>
+													<Enabled>false</Enabled>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="АдминистраторИБКонтекстноеМеню" id="88"/>
+													<ExtendedTooltip name="АдминистраторИБExtendedTooltip" id="106"/>
+												</InputField>
+												<InputField name="ПарольАдминистратораИБ" id="89">
+													<DataPath>ПарольАдминистратораИБ</DataPath>
+													<HorizontalStretch>false</HorizontalStretch>
+													<PasswordMode>true</PasswordMode>
+													<ContextMenu name="ПарольАдминистратораИБКонтекстноеМеню" id="90"/>
+													<ExtendedTooltip name="ПарольАдминистратораИБExtendedTooltip" id="107"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="АктивныеПользователи1" id="12">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Активные пользователи</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Активные пользователи</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>NormalSeparation</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="АктивныеПользователи1ExtendedTooltip" id="108"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаКартинки1" id="13">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа картинки</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа картинки</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаКартинки1ExtendedTooltip" id="109"/>
+													<ChildItems>
+														<PictureDecoration name="КартинкаПредупреждение1" id="14">
+															<Width>6</Width>
+															<Height>2</Height>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Картинка предупреждение</v8:content>
+																</v8:item>
+															</Title>
+															<Picture>
+																<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="КартинкаПредупреждение1КонтекстноеМеню" id="15"/>
+															<ExtendedTooltip name="КартинкаПредупреждение1ExtendedTooltip" id="110"/>
+														</PictureDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаНадписей1" id="16">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа надписей</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа надписей</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНадписей1ExtendedTooltip" id="111"/>
+													<ChildItems>
+														<LabelDecoration name="Надпись44" id="17">
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>С информационной базой сейчас работают другие пользователи. Их работа будет завершена автоматически.</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="Надпись44КонтекстноеМеню" id="18"/>
+															<ExtendedTooltip name="Надпись44ExtendedTooltip" id="112"/>
+														</LabelDecoration>
+														<LabelDecoration name="НадписьСписокДействий1" id="19">
+															<HorizontalStretch>true</HorizontalStretch>
+															<SkipOnInput>false</SkipOnInput>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Посмотреть список активных пользователей</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<ContextMenu name="НадписьСписокДействий1КонтекстноеМеню" id="20"/>
+															<ExtendedTooltip name="НадписьСписокДействий1ExtendedTooltip" id="113"/>
+															<Events>
+																<Event name="Click">НадписьСписокДействий1Нажатие</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="Декорация1" id="80">
+									<VerticalStretch>true</VerticalStretch>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="Декорация1ExtendedTooltip" id="114"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьПояснениеКнопкиДалее2" id="21">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Нажмите "Далее" для начала восстановления данных.</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Bottom</VerticalAlign>
+									<ContextMenu name="НадписьПояснениеКнопкиДалее2КонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="НадписьПояснениеКнопкиДалее2ExtendedTooltip" id="115"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаИнформацииИВыполненияРезервногоКопирования" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница информации и выполнения резервного копирования</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница информации и выполнения резервного копирования</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаИнформацииИВыполненияРезервногоКопированияExtendedTooltip" id="116"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПояснения" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пояснения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа пояснения</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПоясненияExtendedTooltip" id="117"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьПояснения" id="33">
+									<Height>2</Height>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Font ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проводится подготовка к восстановлению данных информационной базы. Пожалуйста, не выключайте компьютер.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьПоясненияКонтекстноеМеню" id="34"/>
+									<ExtendedTooltip name="НадписьПоясненияExtendedTooltip" id="118"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаАктивныхПользователей" id="35">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа активных пользователей</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа активных пользователей</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаАктивныхПользователейExtendedTooltip" id="119"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКартинкиАктивныхПользователей" id="36">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа картинки активных пользователей</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа картинки активных пользователей</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКартинкиАктивныхПользователейExtendedTooltip" id="120"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация5" id="37">
+											<Width>4</Width>
+											<Height>2</Height>
+											<Picture>
+												<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="Декорация5КонтекстноеМеню" id="38"/>
+											<ExtendedTooltip name="Декорация5ExtendedTooltip" id="121"/>
+										</PictureDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаНадписиАктивныхПользователей" id="39">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа надписи активных пользователей</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа надписи активных пользователей</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНадписиАктивныхПользователейExtendedTooltip" id="122"/>
+									<ChildItems>
+										<LabelDecoration name="СписокПользователей" id="40">
+											<Height>2</Height>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Активные пользователи</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="СписокПользователейКонтекстноеМеню" id="41"/>
+											<ExtendedTooltip name="СписокПользователейExtendedTooltip" id="123"/>
+											<Events>
+												<Event name="Click">СписокПользователейНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<LabelDecoration name="КоличествоАктивныхПользователей" id="42">
+											<Height>2</Height>
+											<ContextMenu name="КоличествоАктивныхПользователейКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="КоличествоАктивныхПользователейExtendedTooltip" id="124"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<LabelDecoration name="НадписьОтключениеПользователей" id="44">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Проводится отключение активных пользователей...</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьОтключениеПользователейКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="НадписьОтключениеПользователейExtendedTooltip" id="125"/>
+						</LabelDecoration>
+						<LabelDecoration name="НадписьВремяОжиданияРезервногоКопирования" id="46">
+							<Height>3</Height>
+							<VerticalAlign>Bottom</VerticalAlign>
+							<ContextMenu name="НадписьВремяОжиданияРезервногоКопированияКонтекстноеМеню" id="47"/>
+							<ExtendedTooltip name="НадписьВремяОжиданияРезервногоКопированияExtendedTooltip" id="126"/>
+						</LabelDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="ДополнительныеНастройки" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДополнительныеНастройкиExtendedTooltip" id="127"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьШапкаДополнительныеНастройки" id="49">
+							<Height>2</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<SkipOnInput>false</SkipOnInput>
+							<Font ref="sys:DefaultGUIFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка не завершена</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьШапкаДополнительныеНастройкиКонтекстноеМеню" id="50"/>
+							<ExtendedTooltip name="НадписьШапкаДополнительныеНастройкиExtendedTooltip" id="128"/>
+						</LabelDecoration>
+						<UsualGroup name="ГоризонтальнаяГруппаОшибкаПодключения" id="51">
+							<VerticalStretch>false</VerticalStretch>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГоризонтальнаяГруппаОшибкаПодключенияExtendedTooltip" id="129"/>
+							<ChildItems>
+								<PictureDecoration name="Картинка12" id="52">
+									<Width>6</Width>
+									<Height>2</Height>
+									<SkipOnInput>false</SkipOnInput>
+									<Picture>
+										<xr:Ref>CommonPicture.Предупреждение32</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="Картинка12КонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="Картинка12ExtendedTooltip" id="130"/>
+								</PictureDecoration>
+								<UsualGroup name="ГруппаОшибки" id="91">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ошибки</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОшибкиExtendedTooltip" id="131"/>
+									<ChildItems>
+										<InputField name="ОбнаруженнаяОшибкаПодключения1" id="54">
+											<DataPath>ОбнаруженнаяОшибкаПодключения</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ошибка проверки подключения</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>None</TitleLocation>
+											<VerticalAlign>Center</VerticalAlign>
+											<Height>3</Height>
+											<MultiLine>true</MultiLine>
+											<BorderColor>style:FormBackColor</BorderColor>
+											<ContextMenu name="ОбнаруженнаяОшибкаПодключения1КонтекстноеМеню" id="55"/>
+											<ExtendedTooltip name="ОбнаруженнаяОшибкаПодключения1ExtendedTooltip" id="132"/>
+										</InputField>
+										<LabelDecoration name="НадписьПерейтиВЖурналРегистрации1" id="78">
+											<HorizontalStretch>true</HorizontalStretch>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>#808080</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Техническая информация об ошибке</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="НадписьПерейтиВЖурналРегистрации1КонтекстноеМеню" id="79"/>
+											<ExtendedTooltip name="НадписьПерейтиВЖурналРегистрации1ExtendedTooltip" id="133"/>
+											<Events>
+												<Event name="Click">НадписьПерейтиВЖурналРегистрации1Нажатие</Event>
+											</Events>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ПанельАвторизацияИБ1" id="60">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>1. Если задан неправильный пароль, то введите его еще раз</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель авторизация ИБ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ПанельАвторизацияИБ1ExtendedTooltip" id="134"/>
+							<ChildItems>
+								<InputField name="ИмяАдминистратораИБ1" id="61">
+									<DataPath>АдминистраторИБ</DataPath>
+									<Enabled>false</Enabled>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Имя</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ИмяАдминистратораИБ1КонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="ИмяАдминистратораИБ1ExtendedTooltip" id="135"/>
+								</InputField>
+								<UsualGroup name="Группа37" id="63">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа37ExtendedTooltip" id="136"/>
+									<ChildItems>
+										<UsualGroup name="Группа38" id="64">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа38ExtendedTooltip" id="137"/>
+											<ChildItems>
+												<InputField name="ПолеПарольАдминистратораИБ1" id="65">
+													<DataPath>ПарольАдминистратораИБ</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Пароль</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>false</HorizontalStretch>
+													<PasswordMode>true</PasswordMode>
+													<ContextMenu name="ПолеПарольАдминистратораИБ1КонтекстноеМеню" id="66"/>
+													<ExtendedTooltip name="ПолеПарольАдминистратораИБ1ExtendedTooltip" id="138"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаComcntrФайловыйРежим" id="56">
+							<Group>Horizontal</Group>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаComcntrФайловыйРежимExtendedTooltip" id="139"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьОбновитьВерсиюКомпоненты1" id="57">
+									<SkipOnInput>false</SkipOnInput>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>2. При ошибке версии компоненты "comcntr", рекомендуется выполнить ее перерегистрацию (потребуется перезапуск сеанса).</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Возможно необходимо обновить версию компоненты "comcntr". При этом потребуется перезапустить сеанс 1С. Для этого нажмите здесь</v8:content>
+										</v8:item>
+									</ToolTip>
+									<TitleHeight>2</TitleHeight>
+									<ContextMenu name="НадписьОбновитьВерсиюКомпоненты1КонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="НадписьОбновитьВерсиюКомпоненты1ExtendedTooltip" id="140"/>
+								</LabelDecoration>
+								<Button name="КнопкаОбновитьВерсиюКомпоненты1" id="59">
+									<Type>UsualButton</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.ОбновитьВерсиюКомпоненты</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исправить</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаОбновитьВерсиюКомпоненты1ExtendedTooltip" id="141"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РезервноеКопированиеИБ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="АдминистраторИБ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбнаруженнаяОшибкаПодключения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обнаруженная ошибка подключения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольАдминистратораИБ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяФайлаЗапускаПриложенияВРежимеПредприятия" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла запуска приложения в режиме предприятия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ФормаГотово" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее &gt;&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Готово</Action>
+		</Command>
+		<Command name="ОбновитьВерсиюКомпоненты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить версию компоненты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить версию компоненты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьВерсиюКомпоненты</Action>
+		</Command>
+		<Command name="ФормаНазад" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;&lt; Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Назад</Action>
+		</Command>
+		<Command name="ФормаОтмена" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ФормаОтмена</Action>
+		</Command>
+	</Commands>
+</Form>

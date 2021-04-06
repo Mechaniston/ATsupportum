@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Автоматическая проверка обновления в Интернете</v8:content>
+		</v8:item>
+	</Title>
+	<Width>60</Width>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<ChildItems>
+			<Button name="ОК" id="1">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<SkipOnInput>false</SkipOnInput>
+				<CommandName>Form.Command.КомандаОК</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>ОК</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ОКExtendedTooltip" id="11"/>
+			</Button>
+			<Button name="ФормаОтмена" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Cancel</CommandName>
+				<ExtendedTooltip name="ФормаОтменаExtendedTooltip" id="12"/>
+			</Button>
+			<Button name="ФормаСправка" id="10">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="ФормаСправкаExtendedTooltip" id="13"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<RadioButtonField name="ПроверятьНаличиеОбновленияПриЗапуске" id="2">
+			<DataPath>Объект.ПроверятьНаличиеОбновленияПриЗапуске</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверять наличие обновления в Интернете автоматически</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>None</TitleLocation>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ColumnsCount>1</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отключена</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>При каждом запуске программы</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">2</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>По расписанию</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ПроверятьНаличиеОбновленияПриЗапускеКонтекстноеМеню" id="3"/>
+			<ExtendedTooltip name="ПроверятьНаличиеОбновленияПриЗапускеExtendedTooltip" id="14"/>
+			<Events>
+				<Event name="OnChange">ПроверятьНаличиеОбновленияПриЗапускеПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<LabelDecoration name="НадписьОткрытьРасписание" id="7">
+			<VerticalStretch>true</VerticalStretch>
+			<SkipOnInput>false</SkipOnInput>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Расписание</v8:content>
+				</v8:item>
+			</Title>
+			<Hyperlink>true</Hyperlink>
+			<VerticalAlign>Center</VerticalAlign>
+			<ContextMenu name="НадписьОткрытьРасписаниеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="НадписьОткрытьРасписаниеExtendedTooltip" id="15"/>
+			<Events>
+				<Event name="Click">НадписьОткрытьРасписаниеНажатие</Event>
+			</Events>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ОбновлениеКонфигурации</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Объект.АдресЭлектроннойПочты</Field>
+				<Field>Объект.ВосстанавливатьИнформационнуюБазу</Field>
+				<Field>Объект.ВыслатьОтчетНаПочту</Field>
+				<Field>Объект.ДатаВремяОбновления</Field>
+				<Field>Объект.ДоступныеОбновления</Field>
+				<Field>Объект.ЗапомнитьПарольСервераОбновлений</Field>
+				<Field>Объект.ИмяАдминистратораИБ</Field>
+				<Field>Объект.ИмяАдминистратораКластера</Field>
+				<Field>Объект.ИмяКаталогаРезервнойКопииИБ</Field>
+				<Field>Объект.ИмяФайлаОбновления</Field>
+				<Field>Объект.ИспользоватьРасписаниеДляПроверкиОбновления</Field>
+				<Field>Объект.ИсточникДискаИТС</Field>
+				<Field>Объект.ИсточникОбновления</Field>
+				<Field>Объект.КластерТребуетАутентификации</Field>
+				<Field>Объект.КодЗадачиПланировщика</Field>
+				<Field>Объект.КодПользователяСервераОбновлений</Field>
+				<Field>Объект.НестандартныеПортыСервера</Field>
+				<Field>Объект.НуженФайлОбновления</Field>
+				<Field>Объект.ПарольАдминистратораИБ</Field>
+				<Field>Объект.ПарольАдминистратораКластера</Field>
+				<Field>Объект.ПарольСервераОбновлений</Field>
+				<Field>Объект.ПовторныйЗапуск</Field>
+				<Field>Объект.ПортАгентаСервера</Field>
+				<Field>Объект.ПортКластераСерверов</Field>
+				<Field>Объект.РежимОбновления</Field>
+				<Field>Объект.РезультатОбновления</Field>
+				<Field>Объект.СоздаватьРезервнуюКопию</Field>
+				<Field>Объект.ТехническаяИнформацияОбОшибке</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ПроверятьНаличиеОбновленияПриЗапуске">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="РасписаниеПроверкиНаличияОбновления">
+			<Type/>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

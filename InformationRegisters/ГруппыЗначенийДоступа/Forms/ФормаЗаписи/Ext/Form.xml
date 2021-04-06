@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВключитьВозможностьРедактирования" id="15">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВключитьВозможностьРедактирования</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаВключитьВозможностьРедактированияExtendedTooltip" id="18"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ВидДоступа" id="1">
+			<DataPath>Запись.ВидДоступа</DataPath>
+			<ContextMenu name="ВидДоступаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ВидДоступаExtendedTooltip" id="19"/>
+		</InputField>
+		<InputField name="ЗначениеДоступа" id="3">
+			<DataPath>Запись.ЗначениеДоступа</DataPath>
+			<ContextMenu name="ЗначениеДоступаКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="ЗначениеДоступаExtendedTooltip" id="20"/>
+		</InputField>
+		<InputField name="ТолькоВидДоступа" id="5">
+			<DataPath>Запись.ТолькоВидДоступа</DataPath>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="ТолькоВидДоступаКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="ТолькоВидДоступаExtendedTooltip" id="21"/>
+		</InputField>
+		<InputField name="ГруппаДоступа" id="7">
+			<DataPath>Запись.ГруппаЗначенийДоступа</DataPath>
+			<ContextMenu name="ГруппаДоступаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ГруппаДоступаExtendedTooltip" id="22"/>
+		</InputField>
+		<CheckBoxField name="НаследоватьПраваРодителей" id="9">
+			<DataPath>Запись.НаследоватьПраваРодителей</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="НаследоватьПраваРодителейКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="НаследоватьПраваРодителейExtendedTooltip" id="23"/>
+		</CheckBoxField>
+		<CheckBoxField name="СвязьСРодителем" id="11">
+			<DataPath>Запись.СвязьСРодителем</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СвязьСРодителемКонтекстноеМеню" id="12"/>
+			<ExtendedTooltip name="СвязьСРодителемExtendedTooltip" id="24"/>
+		</CheckBoxField>
+		<CheckBoxField name="ИспользоватьПраваСсылки" id="13">
+			<DataPath>Запись.ИспользоватьПраваСсылки</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользоватьПраваСсылкиКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИспользоватьПраваСсылкиExtendedTooltip" id="25"/>
+		</CheckBoxField>
+		<InputField name="ГруппаОбновляемыхДанных" id="16">
+			<DataPath>Запись.ГруппаОбновляемыхДанных</DataPath>
+			<UserVisible>
+				<xr:Common>false</xr:Common>
+			</UserVisible>
+			<ContextMenu name="ГруппаОбновляемыхДанныхКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ГруппаОбновляемыхДанныхExtendedTooltip" id="26"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ГруппыЗначенийДоступа</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВключитьВозможностьРедактирования" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность редактирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить возможность редактирования только для целей поиска неисправности (требуется углубленное понимание работы механизма)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьВозможностьРедактирования</Action>
+		</Command>
+	</Commands>
+</Form>

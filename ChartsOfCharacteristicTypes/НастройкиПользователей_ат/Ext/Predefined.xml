@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.12">
+	<Item id="1756743c-bd07-4fea-b7cb-a3b1e63dfb33">
+		<Name>НастройкиПочты</Name>
+		<Code>000000001</Code>
+		<Description>Настройки почты</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="1973e4fc-1dc2-4b0c-a856-5e663c53f02c">
+				<Name>КодировкаИсходящих</Name>
+				<Code>000000006</Code>
+				<Description>Кодировка исходящих</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ФизическиеЛица</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ТипыТекстовЭлектронныхПисем</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ГруппыДоступа</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ПодписиЭлектронныхПисем_ат</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.СпособыРедактированияЭлектронныхПисем</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ГруппыПользователей</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ФильтрыСообщений_ат</v8:Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Пользователи</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>30</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="63d7e8b9-2c23-489d-b294-5d1dece87526">
+				<Name>Подпись</Name>
+				<Code>000000003</Code>
+				<Description>Подпись</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ПодписиЭлектронныхПисем_ат</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0154f6ca-9e3f-4a14-9128-33594fb6ba3b">
+				<Name>ТипТекстаЭлектронныхПисем</Name>
+				<Code>000000004</Code>
+				<Description>Тип текста электрописем</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ТипыТекстовЭлектронныхПисем</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e8e745f0-265a-4862-900d-c4bcbc675c62">
+				<Name>УчетнаяЗапись</Name>
+				<Code>000000005</Code>
+				<Description>Учетная запись ЭП</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0b10cfe4-4dea-4477-8b10-0d8638663681">
+				<Name>EMailДляУведомлений</Name>
+				<Code>000000002</Code>
+				<Description>ЭП для уведомлений</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>90</v8:Length>
+						<v8:AllowedLength>Fixed</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>

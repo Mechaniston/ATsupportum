@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список компоновщик настроек пользовательские настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="53"/>
+		</UsualGroup>
+		<CommandBar name="УправлениеФильтрами" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление фильтрами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление фильтрами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="УправлениеФильтрамиРасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<Button name="СкрытьАрхивные" id="18">
+					<Type>CommandBarButton</Type>
+					<Check>true</Check>
+					<CommandName>Form.Command.СкрытьАрхивные</CommandName>
+					<ExtendedTooltip name="СкрытьАрхивныеРасширеннаяПодсказка" id="19"/>
+				</Button>
+				<Button name="СкрытьБудущие" id="26">
+					<Type>CommandBarButton</Type>
+					<Check>true</Check>
+					<CommandName>Form.Command.СкрытьБудущие</CommandName>
+					<ExtendedTooltip name="СкрытьБудущиеРасширеннаяПодсказка" id="27"/>
+				</Button>
+				<Button name="ОтборПоКлиентам" id="16">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ОтборПоКлиентам</CommandName>
+					<ExtendedTooltip name="ОтборПоКлиентамРасширеннаяПодсказка" id="17"/>
+				</Button>
+			</ChildItems>
+		</CommandBar>
+		<CommandBar name="ГруппаКоманднаяПанель" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CommandSource>Form</CommandSource>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="55"/>
+		</CommandBar>
+		<Table name="Список" id="1">
+			<Representation>Tree</Representation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandAllLevels</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>false</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="40">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="41"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="42"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="43">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="44"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="45"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="46">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="47"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="48"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокВыбор</Event>
+				<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="Код" id="56">
+					<DataPath>Список.Code</DataPath>
+					<ContextMenu name="КодКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="58"/>
+				</LabelField>
+				<LabelField name="ИмяПроекта" id="34">
+					<DataPath>Список.ИмяПроекта</DataPath>
+					<ContextMenu name="ИмяПроектаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ИмяПроектаРасширеннаяПодсказка" id="36"/>
+				</LabelField>
+				<CheckBoxField name="Архивный" id="28">
+					<DataPath>Список.Архивный</DataPath>
+					<EditMode>Directly</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="АрхивныйКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="АрхивныйРасширеннаяПодсказка" id="30"/>
+				</CheckBoxField>
+				<CheckBoxField name="БудущихПериодов" id="31">
+					<DataPath>Список.БудущихПериодов</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="БудущихПериодовКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="БудущихПериодовРасширеннаяПодсказка" id="33"/>
+				</CheckBoxField>
+				<CheckBoxField name="НаследоватьПараметры" id="37">
+					<DataPath>Список.НаследоватьПараметры</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="НаследоватьПараметрыКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="НаследоватьПараметрыРасширеннаяПодсказка" id="39"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+		<LabelDecoration name="НадписьПроектКомментарий" id="49">
+			<ContextMenu name="НадписьПроектКомментарийКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="НадписьПроектКомментарийРасширеннаяПодсказка" id="51"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ЕстьДочерние</Field>
+				<Field>Список.Комментарий</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	Проекты.Ссылка КАК Ссылка,
+	Проекты.Код,
+	Проекты.Клиент,
+	Проекты.ИмяПроекта КАК ИмяПроекта,
+	Проекты.ПометкаУдаления КАК ПометкаУдаления,
+	Проекты.Архивный КАК Архивный,
+	Проекты.БудущихПериодов КАК БудущихПериодов,
+	Проекты.НаследоватьПараметры КАК НаследоватьПараметры,
+	ВЫБОР
+		КОГДА ДочерниеПроекты.Родитель ЕСТЬ NULL 
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК ЕстьДочерние,
+	ВЫРАЗИТЬ(ИсторияКомментариев_атСрезПоследних.Комментарий КАК СТРОКА(1000)) КАК Комментарий
+ИЗ
+	Справочник.Проекты_ат КАК Проекты
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Проекты_ат КАК ДочерниеПроекты
+		ПО Проекты.Ссылка = ДочерниеПроекты.Родитель
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИсторияКомментариев_ат.СрезПоследних КАК ИсторияКомментариев_атСрезПоследних
+		ПО (ИсторияКомментариев_атСрезПоследних.Ссылка = Проекты.Ссылка)
+{ГДЕ
+	(Проекты.Ссылка В ИЕРАРХИИ
+			(ВЫБРАТЬ
+				Проекты.Ссылка КАК Ссылка
+			ИЗ
+				Справочник.Проекты_ат КАК Проекты
+			ГДЕ
+				Проекты.Родитель = ЗНАЧЕНИЕ(Справочник.Проекты_ат.ПустаяСсылка)
+				И (Проекты.Клиент В (&amp;Клиенты)
+					ИЛИ Проекты.Клиент = ЗНАЧЕНИЕ(Справочник.Контрагенты_ат.ПустаяСсылка))))}</QueryText>
+				<MainTable>Catalog.Проекты_ат</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Архивный</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+							<dcsset:presentation xsi:type="xs:string">Скрыть архивные</dcsset:presentation>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">БудущихПериодов</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+							<dcsset:presentation xsi:type="xs:string">Скрыть будущие</dcsset:presentation>
+							<dcsset:viewMode>Inaccessible</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:item>
+							<dcsset:selection/>
+							<dcsset:filter>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">Архивный</dcsset:left>
+									<dcsset:comparisonType>Equal</dcsset:comparisonType>
+									<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+								</dcsset:item>
+							</dcsset:filter>
+							<dcsset:appearance>
+								<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+									<dcscor:parameter>ЦветТекста</dcscor:parameter>
+									<dcscor:value xsi:type="v8ui:Color">win:DisabledText</dcscor:value>
+								</dcscor:item>
+							</dcsset:appearance>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОтборПоКлиентам" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по клиентам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить отбор по клиентам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтборПоКлиентам</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СкрытьАрхивные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрыть архивные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрыть архивные проекты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкрытьАрхивные</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СкрытьБудущие" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрыть будущие</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрыть проекты будущих периодов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкрытьБудущие</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Ссылка">
+			<Type>
+				<v8:Type>cfg:DocumentRef.Задание_ат</v8:Type>
+				<v8:Type>cfg:DocumentRef.Заявка_ат</v8:Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты_ат</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ЗапретВыбораДочерних">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>

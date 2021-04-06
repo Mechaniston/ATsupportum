@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Pages name="Страницы" id="92">
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="93"/>
+			<ChildItems>
+				<Page name="Синхронизация" id="94">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синхронизация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Синхронизация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СинхронизацияРасширеннаяПодсказка" id="95"/>
+					<ChildItems>
+						<InputField name="ИсточникСинхронизацииПользователей_ат" id="7">
+							<DataPath>НаборКонстант.ИсточникСинхронизацииПользователей_ат</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ИсточникСинхронизацииПользователей_атКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ИсточникСинхронизацииПользователей_атРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<UsualGroup name="ГруппаНастройкиСинхронизацииСБухгалтерией" id="25">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки синхронизации с бухгалтерией:</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки синхронизации с бухгалтерией</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаНастройкиСинхронизацииСБухгалтериейРасширеннаяПодсказка" id="26"/>
+							<ChildItems>
+								<InputField name="БухгалтерияДляСинхронизации_ат" id="19">
+									<DataPath>НаборКонстант.БухгалтерияДляСинхронизации_ат</DataPath>
+									<ContextMenu name="БухгалтерияДляСинхронизации_атКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="БухгалтерияДляСинхронизации_атРасширеннаяПодсказка" id="21"/>
+								</InputField>
+								<InputField name="КаталогДляОбменаСБухгалтерией_ат" id="22">
+									<DataPath>НаборКонстант.КаталогДляОбменаСБухгалтерией_ат</DataPath>
+									<ContextMenu name="КаталогДляОбменаСБухгалтерией_атКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="КаталогДляОбменаСБухгалтерией_атРасширеннаяПодсказка" id="24"/>
+								</InputField>
+								<CheckBoxField name="СоздаватьДоговорДляКаждогоСчета_ат" id="27">
+									<DataPath>НаборКонстант.СоздаватьДоговорДляКаждогоСчета_ат</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СоздаватьДоговорДляКаждогоСчета_атКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="СоздаватьДоговорДляКаждогоСчета_атРасширеннаяПодсказка" id="29"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Планирование" id="98">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Планирование</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Планирование</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПланированиеРасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройкиПланирования" id="30">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки планирования:</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройки планирования</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаНастройкиПланированияРасширеннаяПодсказка" id="31"/>
+							<ChildItems>
+								<InputField name="ОсновнойКалендарь_ат" id="13">
+									<DataPath>НаборКонстант.ОсновнойКалендарь_ат</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОсновнойКалендарь_атКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ОсновнойКалендарь_атРасширеннаяПодсказка" id="15"/>
+								</InputField>
+								<InputField name="ДлительностьСпринта_ат" id="16">
+									<DataPath>НаборКонстант.ДлительностьСпринта_ат</DataPath>
+									<ContextMenu name="ДлительностьСпринта_атКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ДлительностьСпринта_атРасширеннаяПодсказка" id="18"/>
+								</InputField>
+								<InputField name="МинимальныйИнтервалВремени_ат" id="10">
+									<DataPath>НаборКонстант.МинимальныйИнтервалВремени_ат</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МинимальныйИнтервалВремени_атКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="МинимальныйИнтервалВремени_атРасширеннаяПодсказка" id="12"/>
+								</InputField>
+								<InputField name="МинимальныйИнтервалЗадания_ат" id="38">
+									<DataPath>НаборКонстант.МинимальныйИнтервалДеятельности_ат</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Минимальный интервал задания (мин)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="МинимальныйИнтервалЗадания_атКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="МинимальныйИнтервалЗадания_атРасширеннаяПодсказка" id="40"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Согласования" id="104">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Согласования</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Согласования</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="СогласованияРасширеннаяПодсказка" id="105"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьСогласования_ат" id="35">
+									<DataPath>НаборКонстант.ИспользоватьСогласования_ат</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьСогласования_атКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ИспользоватьСогласования_атРасширеннаяПодсказка" id="37"/>
+								</CheckBoxField>
+								<InputField name="СпособПроверкиФинансовогоСогласования_ат" id="44">
+									<DataPath>НаборКонстант.СпособПроверкиФинансовогоСогласования_ат</DataPath>
+									<ContextMenu name="СпособПроверкиФинансовогоСогласования_атКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="СпособПроверкиФинансовогоСогласования_атРасширеннаяПодсказка" id="46"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Финансы" id="102">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Финансы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Финансы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ФинансыРасширеннаяПодсказка" id="103"/>
+					<ChildItems>
+						<InputField name="ТочностьСтоимости_ат" id="32">
+							<DataPath>НаборКонстант.ТочностьСтоимости_ат</DataPath>
+							<ContextMenu name="ТочностьСтоимости_атКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ТочностьСтоимости_атРасширеннаяПодсказка" id="34"/>
+						</InputField>
+						<InputField name="СтатусНачалаОтсчетаДоСрокаПодписания_ат" id="67">
+							<DataPath>НаборКонстант.СтатусНачалаОтсчетаДоСрокаПодписанияФинДокумента_ат</DataPath>
+							<ContextMenu name="СтатусНачалаОтсчетаДоСрокаПодписания_атКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="СтатусНачалаОтсчетаДоСрокаПодписания_атРасширеннаяПодсказка" id="69"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="Уведомления" id="96">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уведомления</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уведомления</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="УведомленияРасширеннаяПодсказка" id="97"/>
+					<ChildItems>
+						<Pages name="СтраницыУведомлений" id="109">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы уведомлений</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы уведомлений</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницыУведомленийРасширеннаяПодсказка" id="110"/>
+							<ChildItems>
+								<Page name="Общее" id="113">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Общее</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Общее</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОбщееРасширеннаяПодсказка" id="114"/>
+									<ChildItems>
+										<InputField name="УчетнаяЗаписьДляПолученияАвтоматическихОтветов_ат" id="79">
+											<DataPath>НаборКонстант.УчетнаяЗаписьДляПолученияАвтоматическихОтветов_ат</DataPath>
+											<ContextMenu name="УчетнаяЗаписьДляПолученияАвтоматическихОтветов_атКонтекстноеМеню" id="80"/>
+											<ExtendedTooltip name="УчетнаяЗаписьДляПолученияАвтоматическихОтветов_атРасширеннаяПодсказка" id="81"/>
+										</InputField>
+										<InputField name="ИнтервалПроверкиНапоминаний_ат" id="47">
+											<DataPath>НаборКонстант.ИнтервалПроверкиНапоминаний_ат</DataPath>
+											<ContextMenu name="ИнтервалПроверкиНапоминаний_атКонтекстноеМеню" id="48"/>
+											<ExtendedTooltip name="ИнтервалПроверкиНапоминаний_атРасширеннаяПодсказка" id="49"/>
+										</InputField>
+										<InputField name="СрокХраненияУведомлений_ат" id="50">
+											<DataPath>НаборКонстант.СрокХраненияУведомлений_ат</DataPath>
+											<ContextMenu name="СрокХраненияУведомлений_атКонтекстноеМеню" id="51"/>
+											<ExtendedTooltip name="СрокХраненияУведомлений_атРасширеннаяПодсказка" id="52"/>
+										</InputField>
+										<CheckBoxField name="ИспользоватьТемуПисьмаОснованияПриФормированииТемыОтвета_ат" id="76">
+											<DataPath>НаборКонстант.ИспользоватьТемуПисьмаОснованияПриФормированииТемыОтвета_ат</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьТемуПисьмаОснованияПриФормированииТемыОтвета_атКонтекстноеМеню" id="77"/>
+											<ExtendedTooltip name="ИспользоватьТемуПисьмаОснованияПриФормированииТемыОтвета_атРасширеннаяПодсказка" id="78"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаФинУведомления" id="62">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Фин. уведомления</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа фин уведомления</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаФинУведомленияРасширеннаяПодсказка" id="63"/>
+									<ChildItems>
+										<InputField name="УчетнаяЗаписьДляОтправкиФинансовыхДокументов_ат" id="53">
+											<DataPath>НаборКонстант.УчетнаяЗаписьДляОтправкиФинансовыхДокументов_ат</DataPath>
+											<ContextMenu name="УчетнаяЗаписьДляОтправкиФинансовыхДокументов_атКонтекстноеМеню" id="54"/>
+											<ExtendedTooltip name="УчетнаяЗаписьДляОтправкиФинансовыхДокументов_атРасширеннаяПодсказка" id="55"/>
+										</InputField>
+										<CheckBoxField name="УведомлятьОПоступленииСписанииДенежныхСредств_ат" id="56">
+											<DataPath>НаборКонстант.УведомлятьОПоступленииСписанииДенежныхСредств_ат</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="УведомлятьОПоступленииСписанииДенежныхСредств_атКонтекстноеМеню" id="57"/>
+											<ExtendedTooltip name="УведомлятьОПоступленииСписанииДенежныхСредств_атРасширеннаяПодсказка" id="58"/>
+										</CheckBoxField>
+										<CheckBoxField name="ОтправлятьУведомленияОЗадолженностяхКлиентам_ат" id="64">
+											<DataPath>НаборКонстант.ОтправлятьУведомленияОЗадолженностяхКлиентам_ат</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ОтправлятьУведомленияОЗадолженностяхКлиентам_атКонтекстноеМеню" id="65"/>
+											<ExtendedTooltip name="ОтправлятьУведомленияОЗадолженностяхКлиентам_атРасширеннаяПодсказка" id="66"/>
+										</CheckBoxField>
+										<InputField name="КонтрольПросрочкиАктовВДнях_ат" id="70">
+											<DataPath>НаборКонстант.КонтрольПросрочкиАктовВДнях_ат</DataPath>
+											<ContextMenu name="КонтрольПросрочкиАктовВДнях_атКонтекстноеМеню" id="71"/>
+											<ExtendedTooltip name="КонтрольПросрочкиАктовВДнях_атРасширеннаяПодсказка" id="72"/>
+										</InputField>
+										<InputField name="СрокУведомленийОбОкончанииДействияДоговоров_ат" id="82">
+											<DataPath>НаборКонстант.СрокУведомленийОбОкончанииДействияДоговоров_ат</DataPath>
+											<ContextMenu name="СрокУведомленийОбОкончанииДействияДоговоров_атКонтекстноеМеню" id="83"/>
+											<ExtendedTooltip name="СрокУведомленийОбОкончанииДействияДоговоров_атРасширеннаяПодсказка" id="84"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+								<Page name="Шаблоны" id="111">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Шаблоны</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Шаблоны</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ШаблоныРасширеннаяПодсказка" id="112"/>
+									<ChildItems>
+										<InputField name="ШаблонТемыУведомленияПоЗаявкеДляВнутреннихПользователей_ат" id="73">
+											<DataPath>НаборКонстант.ШаблонТемыУведомленияПоЗаявкеДляВнутреннихПользователей_ат</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ШаблонТемыУведомленияПоЗаявкеДляВнутреннихПользователей_атКонтекстноеМеню" id="74"/>
+											<ExtendedTooltip name="ШаблонТемыУведомленияПоЗаявкеДляВнутреннихПользователей_атРасширеннаяПодсказка" id="75"/>
+										</InputField>
+										<InputField name="ТемаПисемОЗадолженностяхКлиента_ат" id="59">
+											<DataPath>НаборКонстант.ТемаПисемОЗадолженностяхКлиента_ат</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ТемаПисемОЗадолженностяхКлиента_атКонтекстноеМеню" id="60"/>
+											<ExtendedTooltip name="ТемаПисемОЗадолженностяхКлиента_атРасширеннаяПодсказка" id="61"/>
+										</InputField>
+										<InputField name="ТекстАвтоответаНаNoReplayУчетнуюЗапись_ат" id="106">
+											<DataPath>НаборКонстант.ТекстАвтоответаНаNoReplayУчетнуюЗапись_ат</DataPath>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ТекстАвтоответаНаNoReplayУчетнуюЗапись_атКонтекстноеМеню" id="107"/>
+											<ExtendedTooltip name="ТекстАвтоответаНаNoReplayУчетнуюЗапись_атРасширеннаяПодсказка" id="108"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+				<Page name="ПрочиеНастройки" id="100">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочие настройки</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПрочиеНастройкиРасширеннаяПодсказка" id="101"/>
+					<ChildItems>
+						<InputField name="АдресПубликацииИнформационнойБазыВИнтернете" id="41">
+							<DataPath>НаборКонстант.АдресПубликацииИнформационнойБазыВИнтернете</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Адрес публикации ИБ в интернете</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="АдресПубликацииИнформационнойБазыВИнтернетеКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="АдресПубликацииИнформационнойБазыВИнтернетеРасширеннаяПодсказка" id="43"/>
+						</InputField>
+						<UsualGroup name="ГруппаНастройкаПечати" id="87">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка печати</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа настройка печати</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>NormalSeparation</Representation>
+							<ExtendedTooltip name="ГруппаНастройкаПечатиРасширеннаяПодсказка" id="88"/>
+							<ChildItems>
+								<CheckBoxField name="ЗапретРедактированияПечатныхФорм" id="89">
+									<DataPath>НаборКонстант.ЗапретРедактированияПечатныхФорм_ат</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗапретРедактированияПечатныхФормКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="ЗапретРедактированияПечатныхФормРасширеннаяПодсказка" id="91"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

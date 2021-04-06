@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="http://mcommunicator.ru/M2M"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="http://mcommunicator.ru/M2M"
+		targetNamespace="http://mcommunicator.ru/M2M">
+	<types>
+		<s:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+				xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+				xmlns:s="http://www.w3.org/2001/XMLSchema"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+				xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+				xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+				xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/"
+				xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				elementFormDefault="qualified"
+				targetNamespace="http://mcommunicator.ru/M2M">
+			<s:element name="SendMessage">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="msid"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="message"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="naming"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="SendMessageResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="SendMessageResult"
+								type="s:long"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetMessageStatus">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="messageID"
+								type="s:long"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="login"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="password"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="GetMessageStatusResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="GetMessageStatusResult"
+								type="xsd1:ArrayOfDeliveryInfo"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="ArrayOfDeliveryInfo">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="unbounded"
+							name="DeliveryInfo"
+							nillable="true"
+							type="xsd1:DeliveryInfo"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="DeliveryInfo">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Msid"
+							type="s:string"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="DeliveryStatus"
+							type="xsd1:DeliveryStatus"/>
+					<s:element minOccurs="1"
+							maxOccurs="1"
+							name="DeliveryDate"
+							type="s:dateTime"/>
+				</s:sequence>
+			</s:complexType>
+			<s:simpleType name="DeliveryStatus">
+				<s:restriction base="s:string">
+					<s:enumeration value="Pending"/>
+					<s:enumeration value="Sending"/>
+					<s:enumeration value="Sent"/>
+					<s:enumeration value="NotSent"/>
+					<s:enumeration value="Delivered"/>
+					<s:enumeration value="NotDelivered"/>
+				</s:restriction>
+			</s:simpleType>
+			<s:element name="long"
+					type="s:long"/>
+			<s:element name="ArrayOfDeliveryInfo"
+					nillable="true"
+					type="xsd1:ArrayOfDeliveryInfo"/>
+		</s:schema>
+	</types>
+	<message name="SendMessageSoapIn">
+		<part name="parameters"
+				element="tns:SendMessage"/>
+	</message>
+	<message name="SendMessageSoapOut">
+		<part name="parameters"
+				element="tns:SendMessageResponse"/>
+	</message>
+	<message name="GetMessageStatusSoapIn">
+		<part name="parameters"
+				element="tns:GetMessageStatus"/>
+	</message>
+	<message name="GetMessageStatusSoapOut">
+		<part name="parameters"
+				element="tns:GetMessageStatusResponse"/>
+	</message>
+	<message name="SendMessageHttpGetIn">
+		<part name="msid"
+				type="xsd:string"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessageHttpGetOut">
+		<part name="Body"
+				element="tns:long"/>
+	</message>
+	<message name="GetMessageStatusHttpGetIn">
+		<part name="messageID"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMessageStatusHttpGetOut">
+		<part name="Body"
+				element="tns:ArrayOfDeliveryInfo"/>
+	</message>
+	<message name="SendMessageHttpPostIn">
+		<part name="msid"
+				type="xsd:string"/>
+		<part name="message"
+				type="xsd:string"/>
+		<part name="naming"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="SendMessageHttpPostOut">
+		<part name="Body"
+				element="tns:long"/>
+	</message>
+	<message name="GetMessageStatusHttpPostIn">
+		<part name="messageID"
+				type="xsd:string"/>
+		<part name="login"
+				type="xsd:string"/>
+		<part name="password"
+				type="xsd:string"/>
+	</message>
+	<message name="GetMessageStatusHttpPostOut">
+		<part name="Body"
+				element="tns:ArrayOfDeliveryInfo"/>
+	</message>
+	<portType name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap">
+		<operation name="SendMessage">
+			<input name="SendMessageRequest"
+					message="tns:SendMessageSoapIn"/>
+			<output name="SendMessageResponse"
+					message="tns:SendMessageSoapOut"/>
+		</operation>
+		<operation name="GetMessageStatus">
+			<input name="GetMessageStatusRequest"
+					message="tns:GetMessageStatusSoapIn"/>
+			<output name="GetMessageStatusResponse"
+					message="tns:GetMessageStatusSoapOut"/>
+		</operation>
+	</portType>
+	<portType name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpGet">
+		<operation name="SendMessage">
+			<input name="SendMessageRequest"
+					message="tns:SendMessageHttpGetIn"/>
+			<output name="SendMessageResponse"
+					message="tns:SendMessageHttpGetOut"/>
+		</operation>
+		<operation name="GetMessageStatus">
+			<input name="GetMessageStatusRequest"
+					message="tns:GetMessageStatusHttpGetIn"/>
+			<output name="GetMessageStatusResponse"
+					message="tns:GetMessageStatusHttpGetOut"/>
+		</operation>
+	</portType>
+	<portType name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpPost">
+		<operation name="SendMessage">
+			<input name="SendMessageRequest"
+					message="tns:SendMessageHttpPostIn"/>
+			<output name="SendMessageResponse"
+					message="tns:SendMessageHttpPostOut"/>
+		</operation>
+		<operation name="GetMessageStatus">
+			<input name="GetMessageStatusRequest"
+					message="tns:GetMessageStatusHttpPostIn"/>
+			<output name="GetMessageStatusResponse"
+					message="tns:GetMessageStatusHttpPostOut"/>
+		</operation>
+	</portType>
+	<binding name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap"
+			type="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="SendMessage">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessage"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMessageStatus">
+			<soapbind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMessageStatus"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap12"
+			type="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="SendMessage">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/SendMessage"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="GetMessageStatus">
+			<soap12bind:operation style="document"
+					soapAction="http://mcommunicator.ru/M2M/GetMessageStatus"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpGet"
+			type="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpGet">
+		<operation name="SendMessage">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMessageStatus">
+			<input/>
+			<output/>
+		</operation>
+	</binding>
+	<binding name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpPost"
+			type="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpPost">
+		<operation name="SendMessage">
+			<input/>
+			<output/>
+		</operation>
+		<operation name="GetMessageStatus">
+			<input/>
+			<output/>
+		</operation>
+	</binding>
+	<service name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_API">
+		<port name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap"
+				binding="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap">
+			<soapbind:address location="http://www.mcommunicator.ru/m2m/m2m_api.asmx"/>
+		</port>
+		<port name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap12"
+				binding="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APISoap12">
+			<soap12bind:address location="http://www.mcommunicator.ru/m2m/m2m_api.asmx"/>
+		</port>
+		<port name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpGet"
+				binding="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpGet"/>
+		<port name="MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpPost"
+				binding="tns:MTS_x0020_Communicator_x0020_M2M_x0020_XML_x0020_APIHttpPost"/>
+	</service>
+</definitions>

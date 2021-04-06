@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.12">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Клиент" id="1">
+			<DataPath>Запись.Клиент</DataPath>
+			<ContextMenu name="КлиентКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КлиентРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Подразделение" id="7">
+			<DataPath>Запись.Подразделение</DataPath>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Договор" id="10">
+			<DataPath>Запись.Проект</DataPath>
+			<ContextMenu name="ДоговорКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Сотрудник" id="4">
+			<DataPath>Запись.Сотрудник</DataPath>
+			<ChoiceForm>CommonForm.ВыборПользователя_ат</ChoiceForm>
+			<ChoiceParameterLinks>
+				<xr:Link>
+					<xr:Name>Контрагенты</xr:Name>
+					<xr:DataPath xsi:type="xs:string">Запись.Клиент</xr:DataPath>
+					<xr:ValueChange>Clear</xr:ValueChange>
+				</xr:Link>
+			</ChoiceParameterLinks>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+			<ContextMenu name="СотрудникКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="СотрудникРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<UsualGroup name="ГруппаУведомления" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа уведомления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа уведомления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУведомленияРасширеннаяПодсказка" id="23"/>
+			<ChildItems>
+				<CheckBoxField name="Уведомления" id="13">
+					<DataPath>Запись.Уведомления</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="УведомленияКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="УведомленияРасширеннаяПодсказка" id="15"/>
+				</CheckBoxField>
+				<CheckBoxField name="ФинансовыеУведомления" id="24">
+					<DataPath>Запись.ФинансовыеУведомления</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФинансовыеУведомленияКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="ФинансовыеУведомленияРасширеннаяПодсказка" id="26"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСогласования" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа согласования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа согласования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСогласованияРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<CheckBoxField name="Согласования" id="16">
+					<DataPath>Запись.Согласования</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СогласованияКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="СогласованияРасширеннаяПодсказка" id="18"/>
+				</CheckBoxField>
+				<CheckBoxField name="ФинансовыеСогласования" id="19">
+					<DataPath>Запись.ФинансовыеСогласования</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФинансовыеСогласованияКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ФинансовыеСогласованияРасширеннаяПодсказка" id="21"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.УведомлятьИСогласовывать_ат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Хранилище" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хранилище</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>
