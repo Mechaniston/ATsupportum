@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfCharacteristicTypes xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7a1dacfe-5573-40a4-8da9-465303fb96e3">
+  <producedTypes>
+    <objectType typeId="7eed1119-8db8-485b-a7ae-a6e0a8747085" valueTypeId="e67de81f-f754-4ea2-ba07-be535c1f1447"/>
+    <refType typeId="1ff36a05-8bec-4bca-a138-d3892859f0fb" valueTypeId="c10e5803-7ecd-45a0-89e6-2c9a63fe5ada"/>
+    <selectionType typeId="93bc09f5-6a05-4e25-8cbd-ff1cd9dcf0e9" valueTypeId="f4d3db4f-9769-4438-ae7d-ea8e434e30ee"/>
+    <listType typeId="96e9764e-e621-43f7-8114-017d8f0d55f2" valueTypeId="04bd9c17-3e39-4321-82e5-f493f3155f27"/>
+    <managerType typeId="011411d4-450a-4ef3-93e3-2a73aec251d9" valueTypeId="06b9df58-1f78-4abb-8cdd-fb040ea35b9c"/>
+    <containerType typeId="02dd7c5c-18e9-497d-89ff-e05f516586c2" valueTypeId="bef8c5dd-16c4-42a2-b0ec-9b40cf992bd6"/>
+  </producedTypes>
+  <name>ВидыСубконто_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды субконто</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ChartOfCharacteristicTypes.ВидыСубконто_ат.StandardAttribute.Description</inputByString>
+  <inputByString>ChartOfCharacteristicTypes.ВидыСубконто_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <type>
+    <types>DocumentRef.СчетНаОплату_ат</types>
+    <types>CatalogRef.Договоры_ат</types>
+    <types>DocumentRef.Задание_ат</types>
+    <types>DocumentRef.Согласование_ат</types>
+    <types>DocumentRef.ФиксацияРабот_ат</types>
+    <types>CatalogRef.СодержанияРабот_ат</types>
+    <types>DocumentRef.Реализация_ат</types>
+  </type>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <descriptionLength>25</descriptionLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="9642d597-f6ca-4feb-9a51-f550ee40823e">
+      <name>Договор</name>
+      <description>Договор</description>
+      <code>000000001</code>
+      <type>
+        <types>CatalogRef.Договоры_ат</types>
+      </type>
+    </items>
+    <items id="990249de-c504-4798-a793-8ab25a00e4b3">
+      <name>Документ</name>
+      <description>Документ</description>
+      <code>000000002</code>
+      <type>
+        <types>DocumentRef.СчетНаОплату_ат</types>
+        <types>DocumentRef.Согласование_ат</types>
+        <types>DocumentRef.ФиксацияРабот_ат</types>
+        <types>DocumentRef.Реализация_ат</types>
+      </type>
+    </items>
+    <items id="5b32f059-4cc8-4220-bbda-c04902e88a77">
+      <name>Объект</name>
+      <description>Объект</description>
+      <code>000000003</code>
+      <type>
+        <types>CatalogRef.СодержанияРабот_ат</types>
+      </type>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:ChartOfCharacteristicTypes>

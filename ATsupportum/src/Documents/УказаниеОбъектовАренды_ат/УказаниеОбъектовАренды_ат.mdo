@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f635542f-95d6-4bda-87dc-321a4f5880e6">
+  <producedTypes>
+    <objectType typeId="47704676-40d0-4a52-9d45-3963644b4d23" valueTypeId="03856755-4478-418d-a9be-396312bc6e06"/>
+    <refType typeId="55a1cd54-12b5-4d88-8eb7-c05225c6e48f" valueTypeId="6f3eb2f7-411d-4f9c-8172-5a5a4e269f9a"/>
+    <selectionType typeId="7783a209-46e4-4008-807f-249b3a493728" valueTypeId="09bbabb4-06f4-43f5-a034-bfca44d0f5d2"/>
+    <listType typeId="5dae0793-a523-4e2f-aa93-9379876ef650" valueTypeId="b01d3926-505f-465d-8e64-a4dc6cd0dbc5"/>
+    <managerType typeId="641a90ca-8aee-4f91-abdd-ebf4f28c88e5" valueTypeId="a23e81a0-0ee1-4585-84f0-4e93d0069bdf"/>
+  </producedTypes>
+  <name>УказаниеОбъектовАренды_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Указание объектов аренды</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.УказаниеОбъектовАренды_ат.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Указания объектов аренды</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.УказаниеОбъектовАренды_ат.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.УказаниеОбъектовАренды_ат.Form.ФормаСпискаИВыбора</defaultListForm>
+  <defaultChoiceForm>Document.УказаниеОбъектовАренды_ат.Form.ФормаСпискаИВыбора</defaultChoiceForm>
+  <registerRecords>InformationRegister.ДоступностьАренды_ат</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="5e8de850-0714-4259-936d-d229e5670f28">
+    <name>ОбъектАренды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект аренды</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОбъектыАренды_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c4355ac3-383b-44f0-9c56-db42805f50a4">
+    <name>ЗаблокироватьАренду</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заблокировать аренду</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d72ce839-7c38-4fb8-b505-52084f5660f2">
+    <name>ТипПередачиВАренду</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип передачи в аренду</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыПередачиВАренду_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="d2ac081c-3aaa-4818-a542-a46939877870">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8f1d2704-2c0b-4582-8959-fbb5006552ff">
+    <name>ФормаСпискаИВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка и выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="bad7b920-b13c-4aa2-a97d-b7077f7b068d">
+    <producedTypes>
+      <objectType typeId="9517cb79-9245-45a6-a1ed-940368439733" valueTypeId="3834e487-1287-4db9-b131-78c4cbde82e9"/>
+      <rowType typeId="afe91117-e181-48af-a491-f6632c6b9a51" valueTypeId="a4a8cc89-3aef-4b86-b683-30e84793eea5"/>
+    </producedTypes>
+    <name>Серверы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Серверы</value>
+    </synonym>
+    <attributes uuid="b33bc229-0588-4c96-ba48-f81a15cdb5b0">
+      <name>Сервер</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сервер</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Серверы_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="a89b4a6e-cda3-414a-8b5e-d3ac50b97a69">
+    <producedTypes>
+      <objectType typeId="bb66774e-afdb-49c4-ac48-b0b07b779b20" valueTypeId="bbf10e25-4cef-4cb8-ae6f-154cba4b1f53"/>
+      <rowType typeId="8f250cd7-8f5a-4873-abdf-e910c68bdd5d" valueTypeId="848fba10-bf8d-40b3-a69d-14048208fe06"/>
+    </producedTypes>
+    <name>РолиСерверов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Роли серверов</value>
+    </synonym>
+    <attributes uuid="1037805a-25ab-4ddf-9289-3281a776c8f6">
+      <name>РольСервера</name>
+      <synonym>
+        <key>ru</key>
+        <value>Роль сервера</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.РолиСерверов_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="28e5eb5a-155d-40a6-a434-fdc176d7d304">
+    <producedTypes>
+      <objectType typeId="c022aa33-5f0a-4b6e-bb62-364c46e6e313" valueTypeId="560e7515-52b1-44e9-a4fd-bf00c313e229"/>
+      <rowType typeId="59afade7-e2c8-4357-9017-3a838d4ad4fb" valueTypeId="db143e21-c751-48dd-adfd-6252cb1f3b56"/>
+    </producedTypes>
+    <name>ПоставкиПродуктов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поставки продуктов</value>
+    </synonym>
+    <attributes uuid="9b4f4a40-2d1f-46a4-8f40-56fa590bca65">
+      <name>ПоставкаПродукта</name>
+      <synonym>
+        <key>ru</key>
+        <value>Поставка продукта</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПоставкиПродуктов_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="702a1140-d910-4ff0-9b55-529f405cdab7">
+    <producedTypes>
+      <objectType typeId="26d1826d-b628-4d04-b049-e0045812b630" valueTypeId="d18b57fa-f74e-42e3-8a7a-96d390e7ce9c"/>
+      <rowType typeId="e2097082-db85-42e3-9534-57178087343a" valueTypeId="54dd3762-5910-4a31-aa40-92b3f7fe9580"/>
+    </producedTypes>
+    <name>ОграниченныйСписокКлиентов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ограниченный список клиентов</value>
+    </synonym>
+    <attributes uuid="f5886bda-d7b9-4ec6-b548-1cfa08f73538">
+      <name>Клиент</name>
+      <synonym>
+        <key>ru</key>
+        <value>Клиент</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Контрагенты_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameters>
+        <name>Отбор.Клиент</name>
+        <value xsi:type="core:BooleanValue">
+          <value>true</value>
+        </value>
+      </choiceParameters>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

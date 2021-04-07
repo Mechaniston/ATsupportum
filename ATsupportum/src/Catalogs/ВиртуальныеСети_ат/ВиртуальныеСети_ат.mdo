@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ce42f5c1-3d13-480d-b331-d3a4c4259fdd">
+  <producedTypes>
+    <objectType typeId="4b15c809-9166-4dfe-86fa-97762cd34e92" valueTypeId="528496b6-1d1f-4fa6-8159-b3d85d5d1561"/>
+    <refType typeId="6ea024f1-0e70-495a-b9e3-c7bd762b0263" valueTypeId="ba2d372b-1914-4d35-8bab-a866d9c20bb7"/>
+    <selectionType typeId="079cee49-2c62-44a3-95eb-ab3774bf2900" valueTypeId="3a24d69c-416c-4d87-a3d7-3fb4114c5ce1"/>
+    <listType typeId="f209e8b2-5321-4204-8df9-3419ebcdd745" valueTypeId="056c1009-123b-4cd2-815d-dea7daa25e14"/>
+    <managerType typeId="8764c9eb-2dd4-4b7a-b9f8-79fee4d409e4" valueTypeId="4e7161ea-ffd3-4778-865e-446c4f153f8e"/>
+  </producedTypes>
+  <name>ВиртуальныеСети_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виртуальные сети</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВиртуальныеСети_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВиртуальныеСети_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Виртуальная сеть</value>
+  </objectPresentation>
+  <extendedObjectPresentation>
+    <key>ru</key>
+    <value>Виртуальная сеть (VLAN)</value>
+  </extendedObjectPresentation>
+  <extendedListPresentation>
+    <key>ru</key>
+    <value>Виртуальные сети (VLANs)</value>
+  </extendedListPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="d68d3952-daef-4b5e-a503-ebe481a530fc">
+      <name>Отсутствует</name>
+      <description>Отсутствует</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ВиртуальныеСети_ат.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="bad78253-db1f-4509-9fa9-b3c39da4ba41">
+    <name>ID</name>
+    <synonym>
+      <key>ru</key>
+      <value>ID</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2dd14ce1-df2e-4590-a4af-e15022a75d88">
+    <name>Описание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Описание</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>300</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="eb0ea48d-ecf8-4029-ba6c-4515bf8ddeff">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

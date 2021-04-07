@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d3afa432-92f8-4bc9-9398-a912f6cf5ca5">
+  <producedTypes>
+    <selectionType typeId="384621a7-5b1e-4d53-b314-6282cd22e665" valueTypeId="33be3a92-7343-4d52-9e94-3c8139e8090d"/>
+    <listType typeId="3679998d-5dd5-421d-8ea5-44855e936d99" valueTypeId="745fbd71-b301-443c-83af-7523066ac257"/>
+    <managerType typeId="773a4be7-582a-49e5-9d6e-0f260ba19c42" valueTypeId="db98cc5d-f292-4202-aeca-ba4bbed39d2f"/>
+    <recordSetType typeId="e0ff8757-f03e-4d16-b3e0-d21dd027d160" valueTypeId="f9090bf8-fe69-45c4-8b7b-d24e15443c95"/>
+    <recordKeyType typeId="ddfedaab-0d2f-4581-820a-13dd683d2c59" valueTypeId="f2445261-2a54-408e-850e-48403648edfa"/>
+    <recordType typeId="0039737c-a543-4f68-8ff4-935228ea6780" valueTypeId="8d3facfa-f4cf-4204-aac2-60c3b1935b07"/>
+    <recordManagerType typeId="46b4b6bb-a385-4185-8bed-173bc4f88a34" valueTypeId="37a21e05-5568-4618-9516-cde2a943717a"/>
+  </producedTypes>
+  <name>ПолитикаКраткосрочныхЗаданий_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Политика краткосрочных заданий</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="59f1eb73-d7d4-45b3-830f-1e24dfaa40e7">
+    <name>КраткосрочноеВремя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Краткосрочное время</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="3d5514a8-d769-4ff1-9868-642743dbe85a">
+    <name>АвтосодержаниеРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автосодержание работ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СодержанияРабот_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="01b5716e-c054-4a5e-9bbb-5ed8295920f9">
+    <name>СогласовыватьКраткосрочное</name>
+    <synonym>
+      <key>ru</key>
+      <value>Согласовывать краткосрочное</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="0795a34f-3dde-4819-971a-e8ce8df30de0">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8b94e60d-2d63-4264-bbc4-9049da748600">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Договоры_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

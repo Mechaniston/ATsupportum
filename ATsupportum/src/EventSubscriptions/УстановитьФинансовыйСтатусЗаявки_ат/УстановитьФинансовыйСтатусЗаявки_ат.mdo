@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2a5d9b73-b495-4785-b151-2a14c9fe02f7">
+  <name>УстановитьФинансовыйСтатусЗаявки_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Установить финансовый статус заявки</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.Задание_ат</types>
+    <types>DocumentObject.ПоступлениеНаСчетКлиента_ат</types>
+    <types>DocumentObject.Заявка_ат</types>
+    <types>DocumentObject.СчетНаОплату_ат</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.Финансы_ат.УстановитьФинансовыйСтатусЗаявкиПриЗаписи</handler>
+</mdclass:EventSubscription>

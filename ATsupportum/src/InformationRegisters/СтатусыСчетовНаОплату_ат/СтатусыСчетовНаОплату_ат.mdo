@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a4e5c238-ba0b-4345-8f58-720dcf6ccab8">
+  <producedTypes>
+    <selectionType typeId="c1253aa8-b8d6-44c7-9a51-a625e22dbda9" valueTypeId="5c68453a-91fc-4832-8047-c00d92f3a6b7"/>
+    <listType typeId="6f5f6b85-b7ed-4d0e-90e9-6560b12f513b" valueTypeId="90642d51-7e8e-42ff-baaa-e09e328a98d2"/>
+    <managerType typeId="e7fa259e-76ec-475b-b709-ee119bb4c75c" valueTypeId="83a52c40-d5ea-4dd3-b222-24785cc1f4d3"/>
+    <recordSetType typeId="a72d30f9-c7d4-44f7-b396-890a9f3e30cd" valueTypeId="bb2ff6b7-a535-46c9-ab26-7fac60b016a5"/>
+    <recordKeyType typeId="4629b86a-bc9a-482f-a66c-3e2b0f205db4" valueTypeId="03a7c886-f4e2-486e-b2ad-4a049eb53cc1"/>
+    <recordType typeId="8542503b-76cd-4ad3-89e2-c0a853092d4f" valueTypeId="c9fe5499-e785-4508-ad21-85b69125e9e0"/>
+    <recordManagerType typeId="59dfe151-dc78-4e50-82f8-7266c951ce7d" valueTypeId="72741b1c-fa4c-48a5-a32d-7eb736f8a370"/>
+  </producedTypes>
+  <name>СтатусыСчетовНаОплату_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>История статусов оплаты счетов</value>
+  </synonym>
+  <comment>!!!!!HOTFIX + переименовать + сделать периодическим!</comment>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="eb27d53c-36e7-4f91-baec-a4e241ca6a13">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыОплатыСчетов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="ff55399d-6d4b-4ba0-a1e3-09308384a78a">
+    <name>Счет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.СчетНаОплату_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

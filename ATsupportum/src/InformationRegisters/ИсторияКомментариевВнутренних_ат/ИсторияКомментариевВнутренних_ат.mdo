@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f124e687-ea2e-4185-94f0-bb16fa2d6cf7">
+  <producedTypes>
+    <selectionType typeId="0db031db-c751-4788-9471-b7f055ddf1bd" valueTypeId="13788e65-acc1-488f-8766-6601932436d5"/>
+    <listType typeId="9d3ea4dc-2bfc-42c3-b0f5-43ebef695c48" valueTypeId="34d03c71-6e96-490d-aba8-b76977bd584d"/>
+    <managerType typeId="47c8fa7b-fe56-45ec-9fa5-bdaef0d91d38" valueTypeId="2b4baaf8-cdef-4994-81d0-11a15856f9e6"/>
+    <recordSetType typeId="e6f61829-2a86-49fe-80ff-facf26b31777" valueTypeId="69f55c76-877b-4374-9046-a520f4d08768"/>
+    <recordKeyType typeId="7a5515b7-1abf-4a66-a475-986f6495d881" valueTypeId="246f8bef-2dbe-44f8-ab1e-c482021e386b"/>
+    <recordType typeId="5894e3b3-03a6-4b8d-9311-0a763234bea7" valueTypeId="0ed90c61-aaab-4d77-b639-9a9f5c684681"/>
+    <recordManagerType typeId="acd8afdc-1bdc-453d-b290-614b969a50a9" valueTypeId="eee754e9-a9c6-4610-a03d-690824faf76e"/>
+  </producedTypes>
+  <name>ИсторияКомментариевВнутренних_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>История комментариев внутренних</value>
+  </synonym>
+  <comment>!!!!!HOTFIX</comment>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="0cd64d74-3947-4cf1-a73c-99a737fe1afc">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d2cbebc1-504d-436a-b551-efcd7a490490">
+    <name>КомментарийВHTML</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий в HTML</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="14c609fb-206e-4b0c-b673-4ce023fa7bf3">
+    <name>ТекстКомментария</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст комментария</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="4945dc42-9e4b-4dcb-89db-3688f870b2b6">
+    <name>Удалить_Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>(Не используется) Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="7db8df63-f025-4d6a-8b67-f4914a236bb9">
+    <name>Ссылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ОплатаПоставщику_ат</types>
+      <types>DocumentRef.СчетНаОплату_ат</types>
+      <types>CatalogRef.Продукты_ат</types>
+      <types>CatalogRef.Договоры_ат</types>
+      <types>DocumentRef.Релиз_ат</types>
+      <types>DocumentRef.Заявка_ат</types>
+      <types>CatalogRef.ПоставкиПродуктов_ат</types>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+      <types>DocumentRef.ПоступлениеНаСчетКлиента_ат</types>
+      <types>CatalogRef.ВидыФайловогоКаталога_ат</types>
+      <types>CatalogRef.РолиСерверов_ат</types>
+      <types>CatalogRef.Серверы_ат</types>
+      <types>DocumentRef.Согласование_ат</types>
+      <types>DocumentRef.ФиксацияРабот_ат</types>
+      <types>CatalogRef.Проекты_ат</types>
+      <types>CatalogRef.Доступы_ат</types>
+      <types>CatalogRef.ВерсииПродуктов_ат</types>
+      <types>DocumentRef.ВводТарифов_ат</types>
+      <types>CatalogRef.Контрагенты_ат</types>
+      <types>DocumentRef.Реализация_ат</types>
+      <types>CatalogRef.Метки_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

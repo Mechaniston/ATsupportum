@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="58ce7555-0772-4e41-8b58-f0e9d35a7a22">
+  <producedTypes>
+    <selectionType typeId="e4639fb3-997b-4c19-a52b-b0931fda8e51" valueTypeId="352c7cf7-0b27-462e-a8d7-98172e0c220a"/>
+    <listType typeId="cf2416ab-0faf-4851-8b2c-d2176e174b31" valueTypeId="0878df11-6389-4b64-9236-0c09e3a4b17b"/>
+    <managerType typeId="fd247b2f-d98b-4081-92c0-470cb5dbd8c1" valueTypeId="0a92aa58-09e7-4305-870a-a5377d4c01d6"/>
+    <recordSetType typeId="d099cfdb-7a86-4c62-9a59-9e74e772231e" valueTypeId="f5e5fa71-9f52-4f4e-b24a-1425b17f75c1"/>
+    <recordKeyType typeId="b3f69b5d-e9f8-4268-87b2-f817a46f5c34" valueTypeId="d31ea8bf-fd82-41c4-9a27-e94fb5c7948a"/>
+    <recordType typeId="f529c614-171b-4a6f-aef6-25aef6dc43c6" valueTypeId="ee586096-2d27-4c03-be7f-680d06c5d35a"/>
+    <recordManagerType typeId="3cc711da-34a7-4fde-9c3b-a9fddceb28d5" valueTypeId="aebbb5f0-0f6a-47c1-bc4c-b43406fa8d42"/>
+  </producedTypes>
+  <name>УведомлятьИСогласовывать_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Уведомлять и согласовывать</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.УведомлятьИСогласовывать_ат.Form.ФормаЗаписи</defaultRecordForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="057c8323-435d-49a9-a014-a508c51d2f5d">
+    <name>Уведомления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Уведомления</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0a3f2266-b89f-416a-bba0-d696072ef9c7">
+    <name>ФинансовыеУведомления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Финансовые уведомления</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="31027ce7-feec-49b4-ae8e-0f1c13c041b8">
+    <name>Согласования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Согласования</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1c84e2d8-e918-46b5-91a2-ac5180211f19">
+    <name>ФинансовыеСогласования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Финансовые согласования</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="b7c4c5b8-2fb1-410b-bb4d-24db595a99b4">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a723128b-c3b4-4a56-83fe-c55e07fb5377">
+    <name>Клиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клиент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="1bdae0c1-aac9-43fc-879b-d0512793f0a6">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияКлиентов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>InformationRegister.УведомлятьИСогласовывать_ат.Dimension.Клиент</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="258c89d3-5b19-4f99-a1ee-09bdc3be85af">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>InformationRegister.УведомлятьИСогласовывать_ат.Dimension.Клиент</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="295e771f-51bf-4762-b0d7-873769c3b546">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

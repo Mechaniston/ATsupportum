@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b098368c-181a-40b5-bf52-2669c8904504">
+  <producedTypes>
+    <selectionType typeId="dad87f1f-ed99-46fa-a891-d784239e053c" valueTypeId="0f5ead9e-301f-49cc-939a-2b06945c389e"/>
+    <listType typeId="7e59f3c8-bb35-479a-97c0-e2d682cd5164" valueTypeId="1b0a5b34-270d-477e-b48b-aa38a6044c6c"/>
+    <managerType typeId="2886e6bb-2655-4b56-910b-286d1eb68b8c" valueTypeId="c60551f3-a394-484b-89f6-0a5fddbd69b7"/>
+    <recordSetType typeId="bec508b9-4620-4e49-b4cf-1de58d34a2ed" valueTypeId="1bbd8ef3-ef18-40eb-aa83-bd7f2fd9bdc9"/>
+    <recordKeyType typeId="10f00559-c218-4ef4-b9e4-7bea5ceeb6d5" valueTypeId="d2edbb61-0aeb-4610-8495-e433e60d5370"/>
+    <recordType typeId="f6306dd1-e4c6-4399-b7f0-fef9f153bc96" valueTypeId="3974ee62-e4b7-4330-8318-dfa2e9340cc3"/>
+    <recordManagerType typeId="c91332b4-85d7-4396-bf6d-3a73eb39ac6d" valueTypeId="de1b3260-e83f-40f3-812c-cc4f5b415ce7"/>
+  </producedTypes>
+  <name>ОбъёмФайловыхКаталогов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Объём файловых каталогов</value>
+  </synonym>
+  <comment>!!!!!HOTFIX + переименовать в История..</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="a0ea0049-70a7-4b1e-8e5e-efece2b419ae">
+    <name>размер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Размер</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="a58dc1a6-080b-4e31-859b-88289a891114">
+    <name>Ошибка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ошибка</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="ada1e8c3-8bd7-4337-827b-d45044175d47">
+    <name>Сервер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Серверы_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="487eeed1-cce2-49e5-a1a8-73f6601e274b">
+    <name>СетевойКаталог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сетевой каталог</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФайловыеКаталоги_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

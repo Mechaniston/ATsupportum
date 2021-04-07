@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b22ed6b6-5c06-4494-8914-65d41fec1ad6">
+  <producedTypes>
+    <selectionType typeId="0b6c669e-66d5-4063-9e56-a9c5efeb1be4" valueTypeId="71592a96-a1d1-4bd7-b5cf-2744b0ea95a4"/>
+    <listType typeId="84f40878-1470-4508-9ed0-dad89da65440" valueTypeId="55832422-a7cf-465e-83f0-2a6d4e51c711"/>
+    <managerType typeId="24261a65-8bf6-4ad1-a569-e8e3be1b598d" valueTypeId="eacb3607-d56c-4ac0-a24d-da4e4e1d9a81"/>
+    <recordSetType typeId="f51c89f5-cdb3-47d8-9bdb-a66696e393b9" valueTypeId="bf921b96-38ae-4687-825e-5c2e10f13cd2"/>
+    <recordKeyType typeId="bb525117-7b18-4774-ae35-2b97fbbde89c" valueTypeId="e34f5451-e3ec-48b2-ad8d-e9a3e90ed51d"/>
+    <recordType typeId="76679167-1177-41e4-9f73-44a16823ade9" valueTypeId="50b236b3-8377-4f85-9da0-9911e4ce2b79"/>
+    <recordManagerType typeId="66d78a48-700f-4365-8874-c24d390603c6" valueTypeId="366b820f-fd5b-4bd7-a039-31094ca029c0"/>
+  </producedTypes>
+  <name>СпецификацияЭП_КлючUSB1С_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Спецификация ЭП ключ USB 1С</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="0282b024-7703-48c9-bfae-452d31f5935d">
+    <name>Компьютер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Компьютер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="f5b076f5-0054-4b72-8f34-a93afaf0fc77">
+    <name>ЭкземплярПродукта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Экземпляр продукта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

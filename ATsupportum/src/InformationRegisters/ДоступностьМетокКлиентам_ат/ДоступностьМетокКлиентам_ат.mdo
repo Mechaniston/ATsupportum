@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d5d50e28-2fcc-4c9d-a459-5715338b0373">
+  <producedTypes>
+    <selectionType typeId="15d409ba-e824-400e-8f55-a2b57f51f339" valueTypeId="cce45bea-e9a8-40ff-b324-c7f3a568091b"/>
+    <listType typeId="a8f3f915-38d8-41d6-b416-57eff761babc" valueTypeId="652a8b87-5f04-4721-98f0-7783c497c4bd"/>
+    <managerType typeId="c3923e71-4b96-4eb6-9220-f42d45587822" valueTypeId="09aacf7a-c749-45dd-be79-5bd81314889f"/>
+    <recordSetType typeId="46139f9f-8043-4a31-afae-f8d190251279" valueTypeId="a1600c24-0fc2-4753-8b96-c204a24dee0d"/>
+    <recordKeyType typeId="e21be85d-0322-492a-919a-ab7dec24d384" valueTypeId="34c5673d-23bf-4723-af26-1c2976e0fa87"/>
+    <recordType typeId="f8198aa1-5931-4f6d-ae40-b7c80ad2094e" valueTypeId="4be88d8e-dc2d-4d5e-b560-932bbc3c367a"/>
+    <recordManagerType typeId="c4ece3fa-4a83-4e2c-a507-fd91001a1839" valueTypeId="321cd494-e112-474e-9456-cebd142bc43a"/>
+  </producedTypes>
+  <name>ДоступностьМетокКлиентам_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Доступность меток клиентам</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.ДоступностьМетокКлиентам_ат.Form.ФормаЗаписи</defaultRecordForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="78438d6e-8ff7-4d9b-81b6-549dda3146f7">
+    <name>Просмотр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Просмотр</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f756a728-4a29-4d55-a33f-6a4e547b8436">
+    <name>Редактирование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Редактирование</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="429ac7fc-6907-4630-a9cf-d06b72fe4897">
+    <name>Клиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клиент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="26b6100a-5571-4214-8e58-d11f42e5dab1">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="986b6eef-889a-42f3-b119-9c36170ecad0">
+    <name>ГруппаМеток</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа меток</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Метки_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <choiceFoldersAndItems>Folders</choiceFoldersAndItems>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="e21a50c5-e066-4d7b-8e0b-b0e45214d5dd">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="fe01ea4b-7c6a-454d-97c3-b9a3fda051e3">
+    <name>НастройкиДоступаКМеткам</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки доступа к меткам</value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

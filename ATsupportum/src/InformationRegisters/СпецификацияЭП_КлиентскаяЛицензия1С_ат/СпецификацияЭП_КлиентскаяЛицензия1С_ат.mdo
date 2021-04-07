@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6afd409c-a00f-4604-9bcf-0d5cbe1d71d5">
+  <producedTypes>
+    <selectionType typeId="3a826967-f63a-451c-b876-6273070b8c04" valueTypeId="ef416098-6e2e-40c0-86fd-60c283fc1c14"/>
+    <listType typeId="e77a4b60-b1ee-4087-9c6a-231f560f0768" valueTypeId="84b9d310-43b3-4dee-833c-bb686190a532"/>
+    <managerType typeId="0e09cc21-5a70-45ce-8c67-960c57ecc922" valueTypeId="64870b94-0d1a-48b6-9904-461fb925b647"/>
+    <recordSetType typeId="d0d56e20-503d-4ce8-9ee8-7919127127b5" valueTypeId="ff72d4dc-c152-4415-96d5-5b79d1e89576"/>
+    <recordKeyType typeId="f43c98b3-5c32-4790-b210-b0553a00f16a" valueTypeId="b5db722d-a470-4692-b7d9-58e6086d4f6f"/>
+    <recordType typeId="d961c7eb-2b98-4c09-ba3e-f38ce67827da" valueTypeId="9f005c9e-24e9-4739-a93a-d2046b3698a3"/>
+    <recordManagerType typeId="225d18bf-2333-4495-94b7-73678574d420" valueTypeId="b0a3535c-2f9a-474d-8078-839a96988d3c"/>
+  </producedTypes>
+  <name>СпецификацияЭП_КлиентскаяЛицензия1С_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Спецификация ЭП лицензии 1С</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="8cc30871-feb3-4edc-8735-19fd13c89daf">
+    <name>ТипЛицензии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип лицензии</value>
+    </synonym>
+    <comment>Истина - однопользовательская, ложь - многопользовательская</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <editFormat>
+      <key>ru</key>
+      <value>БЛ=Многопользовательская; БИ=Однопользовательская</value>
+    </editFormat>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="3c855f16-edb6-4ce4-af4a-98d2f3a7acdf">
+    <name>Размещение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Размещение</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <editFormat>
+      <key>ru</key>
+      <value>БЛ='Сервер 1С'; БИ=Компьютер</value>
+    </editFormat>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="07598db9-8fde-4641-8fcf-23ef58eed720">
+    <name>Сервер1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервер 1С</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4a96ce94-a7ae-479a-bd4d-ee1ea1ed88b6">
+    <name>Компьютер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Компьютер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="65f53935-af2a-4502-a98c-879075faefe2">
+    <name>Каталог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Каталог</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="fc90759f-df70-4f25-a70d-33d57625286f">
+    <name>ВебСервер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Веб-сервер</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="9cac456f-fe70-4f75-87de-dd0a0ccb8fe4">
+    <name>ЭкземплярПродукта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Экземпляр продукта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

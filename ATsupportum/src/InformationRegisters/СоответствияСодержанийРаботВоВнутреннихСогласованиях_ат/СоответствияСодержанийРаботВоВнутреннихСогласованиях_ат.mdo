@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="11414dc0-a859-4b06-a75c-f956305e54c8">
+  <producedTypes>
+    <selectionType typeId="f778264b-f873-42b1-b923-8a3deb4bc0e3" valueTypeId="1d135914-c16d-47b0-b8a6-289bc093fed4"/>
+    <listType typeId="d92f80f6-d4ea-4d9f-bd18-23f0453a8c17" valueTypeId="09235c9a-e300-4ff4-92c0-c43d4610805e"/>
+    <managerType typeId="951cd270-e0db-4c49-b263-449834225772" valueTypeId="cd7929a1-0c18-424d-b021-ae99ef71f07f"/>
+    <recordSetType typeId="2bba1ed7-582f-4fbe-96ca-33b5f57caeeb" valueTypeId="9065179b-8801-4dd2-aab9-88b99a06bac4"/>
+    <recordKeyType typeId="087b818c-72f7-481a-a998-1156f19f2a4a" valueTypeId="b7d5b81c-5849-4cd4-ae2b-553e94777ef1"/>
+    <recordType typeId="14ac795b-2447-41c3-a69b-4741bca49f03" valueTypeId="ab49dbd8-b3c7-4bdc-b580-b74570188fe9"/>
+    <recordManagerType typeId="7cf95826-e222-4a06-96ae-88f80a2f2e64" valueTypeId="ee6038bd-89ff-42e1-807e-5beb2fda16eb"/>
+  </producedTypes>
+  <name>СоответствияСодержанийРаботВоВнутреннихСогласованиях_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Соответствия содержаний работ во внутренних согласованиях</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="d5fecdb2-f5a8-463f-851d-b583db956ea6">
+    <name>СодержаниеРаботДляЗамены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид деятельности для замены</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СодержанияРабот_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="c0527536-2afc-4dbf-9389-77d176d547d6">
+    <name>Заявка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заявка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Заявка_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="a3d269f5-1b6c-403d-97e7-c301d8addaf5">
+    <name>СодержаниеРаботВСогласовании</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид деятельности в согласовании</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СодержанияРабот_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

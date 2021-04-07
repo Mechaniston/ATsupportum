@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c35621e3-0c2f-4535-b963-3822de8c6a1a">
+  <producedTypes>
+    <objectType typeId="3e0394de-fc6a-452b-9b43-ff040dad85fb" valueTypeId="29e88ae3-bd84-4d2e-8ac2-d2aebdff1976"/>
+    <managerType typeId="0100217d-7245-4f10-b9e8-8d1a6b3ef5b6" valueTypeId="cd14c8bb-07ce-45f8-bd70-ee73cf32fbfc"/>
+  </producedTypes>
+  <name>ОбработкаВосстановленияПисемИзФайла_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обработка восстановления писем из файла</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ОбработкаВосстановленияПисемИзФайла_ат.Form.Форма</defaultForm>
+  <attributes uuid="cff54048-384b-4996-a342-80bab9aefd6c">
+    <name>СсылкаНаПисьмо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка на письмо</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЭлектронноеПисьмоВходящее</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="5838db0e-2bd7-411b-8abc-0768e5fc88b3">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДокумента</dataPath>
+			<field>СуммаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заявка</dataPath>
+			<field>Заявка</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Заявка_ат.Ссылка КАК Заявка,
+	Заявка_ат.Ссылка КАК Ссылка,
+	СУММА(ЕСТЬNULL(СвойстваЗаявок_ат.СтоимостьТарифКлиента, 0)) КАК СуммаДокумента,
+	"Заявка" КАК Документ
+ПОМЕСТИТЬ ДокументыПоЗаявке
+ИЗ
+	Документ.Заявка_ат КАК Заявка_ат
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.КосвенныеСвязиЗаданий_ат КАК КосвенныеСвязиЗаданий_ат
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.СчетНаОплату_ат КАК СчетНаОплату_ат
+			ПО КосвенныеСвязиЗаданий_ат.Счет = СчетНаОплату_ат.Ссылка
+			ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПоступлениеНаСчетКлиента_ат КАК ПоступлениеНаСчетКлиента_ат
+			ПО КосвенныеСвязиЗаданий_ат.Поступление = ПоступлениеНаСчетКлиента_ат.Ссылка
+		ПО (КосвенныеСвязиЗаданий_ат.Заявка = Заявка_ат.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СвойстваЗаявок_ат КАК СвойстваЗаявок_ат
+		ПО СвойстваЗаявок_ат.Ссылка = Заявка_ат.Ссылка
+{ГДЕ
+	(Заявка_ат.Ссылка = &amp;Заявка)}
+
+СГРУППИРОВАТЬ ПО
+	Заявка_ат.Ссылка,
+	Заявка_ат.Ссылка
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	КосвенныеСвязиЗаданий_ат.Заявка,
+	Согласование_ат.Ссылка,
+	Согласование_ат.СуммаДокумента,
+	"Согласование"
+ИЗ
+	РегистрСведений.КосвенныеСвязиЗаданий_ат КАК КосвенныеСвязиЗаданий_ат
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.Согласование_ат КАК Согласование_ат
+		ПО КосвенныеСвязиЗаданий_ат.Согласование = Согласование_ат.Ссылка
+{ГДЕ
+	(КосвенныеСвязиЗаданий_ат.Заявка = &amp;Заявка)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	КосвенныеСвязиЗаданий_ат.Заявка,
+	СчетНаОплату_ат.Ссылка,
+	СчетНаОплату_ат.СуммаДокумента,
+	"СчетНаОплату"
+ИЗ
+	РегистрСведений.КосвенныеСвязиЗаданий_ат КАК КосвенныеСвязиЗаданий_ат
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.СчетНаОплату_ат КАК СчетНаОплату_ат
+		ПО КосвенныеСвязиЗаданий_ат.Счет = СчетНаОплату_ат.Ссылка
+{ГДЕ
+	(КосвенныеСвязиЗаданий_ат.Заявка = &amp;Заявка)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	КосвенныеСвязиЗаданий_ат.Заявка,
+	ПоступлениеНаСчетКлиента_ат.Ссылка,
+	ПоступлениеНаСчетКлиента_ат.СуммаДокумента,
+	"Поступление"
+ИЗ
+	РегистрСведений.КосвенныеСвязиЗаданий_ат КАК КосвенныеСвязиЗаданий_ат
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПоступлениеНаСчетКлиента_ат КАК ПоступлениеНаСчетКлиента_ат
+		ПО КосвенныеСвязиЗаданий_ат.Поступление = ПоступлениеНаСчетКлиента_ат.Ссылка
+{ГДЕ
+	(КосвенныеСвязиЗаданий_ат.Заявка = &amp;Заявка)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	КосвенныеСвязиЗаданий_ат.Заявка,
+	Реализация_ат.Ссылка,
+	Реализация_ат.СуммаДокумента,
+	"Реализация"
+ИЗ
+	РегистрСведений.КосвенныеСвязиЗаданий_ат КАК КосвенныеСвязиЗаданий_ат
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.Реализация_ат КАК Реализация_ат
+		ПО КосвенныеСвязиЗаданий_ат.Реализация = Реализация_ат.Ссылка
+{ГДЕ
+	(КосвенныеСвязиЗаданий_ат.Заявка = &amp;Заявка)}
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	КосвенныеСвязиЗаданий_ат.Заявка,
+	СписаниеСоСчетаКлиента_ат.Ссылка,
+	СписаниеСоСчетаКлиента_ат.СуммаДокумента,
+	"Списание"
+ИЗ
+	РегистрСведений.КосвенныеСвязиЗаданий_ат КАК КосвенныеСвязиЗаданий_ат
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.СписаниеСоСчетаКлиента_ат КАК СписаниеСоСчетаКлиента_ат
+		ПО КосвенныеСвязиЗаданий_ат.Списание = СписаниеСоСчетаКлиента_ат.Ссылка
+{ГДЕ
+	(КосвенныеСвязиЗаданий_ат.Заявка = &amp;Заявка)}
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДокументыПоЗаявке.Ссылка,
+	ДокументыПоЗаявке.СуммаДокумента,
+	ДокументыПоЗаявке.Документ,
+	ДокументыПоЗаявке.Заявка
+ИЗ
+	ДокументыПоЗаявке КАК ДокументыПоЗаявке</query>
+	</dataSet>
+	<parameter>
+		<name>Заявка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Заявка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.Заявка_ат</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СуммаДокумента</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Ссылка</dcsset:left>
+					<dcsset:comparisonType>Filled</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Документ</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">Begin</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:outputParameters>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+				</dcsset:outputParameters>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

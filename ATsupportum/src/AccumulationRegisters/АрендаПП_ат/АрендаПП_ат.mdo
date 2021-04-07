@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="42693520-ecb4-4ab5-a88e-4c53a0d87937">
+  <producedTypes>
+    <selectionType typeId="d789efc8-0003-4e61-97d2-db977121fcac" valueTypeId="73f34069-f061-4ffe-8a77-7b28cb5a7497"/>
+    <listType typeId="b589ce85-9b10-49b4-97d3-ba7902e4a09b" valueTypeId="34ebd7e9-7f4c-4405-b10b-d05edc57d1c5"/>
+    <managerType typeId="60baf940-c1f3-4fb1-9e0d-4f121e9ccb4b" valueTypeId="ac4385a1-f7ca-4772-8c5e-6a42b0ac88a9"/>
+    <recordSetType typeId="4a76e120-1fa0-4148-a255-a485c2538832" valueTypeId="68fc6c83-3b14-424a-a87f-a777d8704eaf"/>
+    <recordKeyType typeId="3b89b235-a48a-4398-9dac-612888156c21" valueTypeId="f978e1a2-0df0-4d22-bce8-e650934e1118"/>
+    <recordType typeId="3b6c668c-8cb2-4290-9a61-c887e5ac1086" valueTypeId="f52821d1-025e-4add-b562-e16654d50867"/>
+  </producedTypes>
+  <name>АрендаПП_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Аренда ПП</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="09ce6979-f8ad-474d-9a5c-bab8aa0aeba4">
+    <name>Ресурс</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ресурс</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="34855ea9-8c52-4b88-a175-b61c8a1af60e">
+    <name>ПоставкаПродукта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поставка продукта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПоставкиПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="e49bc4a9-b691-4ed1-be20-74b44ffcd874">
+    <name>Клиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клиент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="41cc36ac-8b27-4a34-9bf3-60a5cf2b0ee8">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="22751ced-ea46-43f1-9151-71bdaea17fb4">
+    <name>ПродуктДляАренды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продукт для аренды</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПродуктыДляАренды_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ada8cccf-4f5f-47ec-8a5b-0349c79c1002">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Договоры_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

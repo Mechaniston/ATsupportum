@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2bf7dbc9-2c2e-4e16-b047-d5bb258198a2">
+  <producedTypes>
+    <objectType typeId="f53b9f07-6e6d-45d0-8d64-d337bdb977f5" valueTypeId="1fa85045-2aaa-4480-ac6a-ffb7a2ea6c21"/>
+    <refType typeId="584f7085-8756-4486-9036-41828264be5c" valueTypeId="fb2d6177-7bd0-400d-bf1c-36c368c46110"/>
+    <selectionType typeId="6808cdfa-ed8c-41e0-8543-3d30ed5f43cc" valueTypeId="bb9ad474-cca6-48e7-ae8e-e55796f23104"/>
+    <listType typeId="7931caa6-42e9-4528-8944-5ba9faf69b6b" valueTypeId="1586f028-911d-408d-8536-bf1917e09a3d"/>
+    <managerType typeId="4082493b-4a9e-442b-b78a-49a68a17a84f" valueTypeId="bf153251-bf32-4edf-a57f-4328be49c19e"/>
+  </producedTypes>
+  <name>ВидыФайловогоКаталога_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды файлового каталога</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВидыФайловогоКаталога_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВидыФайловогоКаталога_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Вид файлового каталога</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ВидыФайловогоКаталога_ат.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="fdc685c9-29f1-490c-b3ca-28414ad87c25">
+    <name>ТипФайловогоКаталога</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип файлового каталога</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыФайловогоКаталога_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="4e897e58-f4b0-47b9-951a-0a2ce93af069">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:ns1="http://v8.1c.ru/8.1/data/core" xmlns:ns2="http://v8.1c.ru/8.1/data/enterprise" xmlns:v8="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <xsl:output method="xml" version="1.0" indent="yes"/>
+
+  <xsl:template match="/">
+    <Data xmlns:ns1="http://v8.1c.ru/8.1/data/core" xmlns:ns2="http://v8.1c.ru/8.1/data/enterprise" xmlns:v8="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:ValueTable>
+        <ns1:column>
+          <ns1:Name xsi:type="xs:string">Ссылка</ns1:Name>
+          <ns1:ValueType>
+            <ns1:TypeSet>v8:CatalogRef</ns1:TypeSet>
+          </ns1:ValueType>
+        </ns1:column>
+        <ns1:column>
+          <ns1:Name xsi:type="xs:string">Код</ns1:Name>
+          <ns1:ValueType>
+            <ns1:Type>xs:string</ns1:Type>
+            <ns1:Type>xs:decimal</ns1:Type>
+            <ns1:NumberQualifiers>
+              <ns1:Digits>20</ns1:Digits>
+              <ns1:FractionDigits>0</ns1:FractionDigits>
+              <ns1:AllowedSign>Nonnegative</ns1:AllowedSign>
+            </ns1:NumberQualifiers>
+            <ns1:StringQualifiers>
+              <ns1:Length>50</ns1:Length>
+              <ns1:AllowedLength>Variable</ns1:AllowedLength>
+            </ns1:StringQualifiers>
+          </ns1:ValueType>
+        </ns1:column>
+        <ns1:column>
+          <ns1:Name xsi:type="xs:string">ЭтоГруппа</ns1:Name>
+          <ns1:ValueType>
+            <ns1:TypeSet>xs:boolean</ns1:TypeSet>
+          </ns1:ValueType>
+        </ns1:column>
+        <xsl:for-each select="DataDumpPart/Data/*">
+          <xsl:if test="v8:Code">
+            <ns1:row>
+              <ns1:Value>
+                <xsl:attribute name="xsi:type">
+                  <xsl:value-of select="v8:Ref/@xsi:type"/>
+                </xsl:attribute>
+                <xsl:value-of select="v8:Ref"/>
+              </ns1:Value>
+              <ns1:Value>
+                <xsl:attribute name="xsi:type">
+                  <xsl:value-of select="v8:Code/@xsi:type"/>
+                </xsl:attribute>
+                <xsl:value-of select="v8:Code"/>
+              </ns1:Value>
+              <ns1:Value>
+                <xsl:if test="not(v8:IsFolder)">
+                  <xsl:attribute name="xsi:nil">
+                    <xsl:text>true</xsl:text>
+                  </xsl:attribute>
+                </xsl:if>
+                <xsl:value-of select="v8:IsFolder"/>
+              </ns1:Value>
+            </ns1:row>
+          </xsl:if>
+        </xsl:for-each>
+      </ns1:ValueTable>
+    </Data>
+  </xsl:template>
+</xsl:stylesheet>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0c811248-100e-4da1-be3a-f5678d0f074f">
+  <producedTypes>
+    <selectionType typeId="062599f3-8e89-4636-8563-af2f808f2e9e" valueTypeId="a40ccfef-48ed-4d21-ba1c-e2846741f4f0"/>
+    <listType typeId="db6e85fb-d707-48cf-ada0-e8227f79bd27" valueTypeId="d0419ba7-a83c-4fc4-9177-4fe83ed96608"/>
+    <managerType typeId="4afc9e09-160a-42b1-911b-b1568aa19883" valueTypeId="e16e0c3d-bf0d-433e-ba10-33820809ce89"/>
+    <recordSetType typeId="c5ac86d5-51ea-422e-a8f3-40bdc5a87f15" valueTypeId="31a7b6e7-4995-4003-bb91-8c74f94d7e4b"/>
+    <recordKeyType typeId="d7651638-52b1-4982-b025-9b39d0374f80" valueTypeId="b62bedd3-12a5-4f41-a87c-20ee8191f214"/>
+    <recordType typeId="968e5310-d4d3-4450-b82a-82a37e468973" valueTypeId="57a00063-00c0-4c27-813b-0e67cc407113"/>
+    <recordManagerType typeId="d5ceb49e-bd95-4557-a9f7-9fd6cd11ab8b" valueTypeId="5f3307b9-24ff-4228-83d3-eab07a36a135"/>
+  </producedTypes>
+  <name>СпецификацияДоговоров_Интернет_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Спецификация договоров (Интернет)</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="249724d5-adfc-42ab-b6ab-574b0e015338">
+    <name>ПараметрыПодключения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры подключения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d3152d52-e767-45d3-9676-92e847ef00a1">
+    <name>МестонахождениеТочкиПодключения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Местонахождение точки подключения (адрес)</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="bcd881d3-d87b-4cef-82f7-8c2d9130ae0c">
+    <name>РазмерТрафикаЗаПериод</name>
+    <synonym>
+      <key>ru</key>
+      <value>Размер трафика за период (Мб)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b464acbb-618b-4a43-ad57-333d29fb138d">
+    <name>ШиринаКаналаВМБитЗаСекунду</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ширина канала в Мбит за секунду</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0d791040-238b-49ed-aae3-2c9eed34b2b7">
+    <name>ПредоставлениеВнешнихIPАдресов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предоставление внешних IP адресов</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="e19eb764-2b8c-4f0f-aa54-829be55695f2">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Договоры_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

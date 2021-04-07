@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ChartOfAccounts xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0fc35b8e-e7ac-472e-8eef-43c9e5c0da76">
+  <producedTypes>
+    <objectType typeId="6b3a9ec0-7f5f-4c26-a35a-38a61ba193b2" valueTypeId="611782a8-9338-4332-9eb9-1ed1a8430811"/>
+    <refType typeId="c176cea3-3d77-4d58-8b9c-fa9f5e74e934" valueTypeId="03976127-cfe9-4d53-80d4-14a4a10aaae6"/>
+    <selectionType typeId="55fad291-e50a-434d-8c2b-b5e438185983" valueTypeId="79025a64-e3de-49b9-9bf9-5daee34d7baf"/>
+    <listType typeId="cd024844-330a-4388-8b4c-6d9a2fba908c" valueTypeId="ef208d21-1381-4f1b-8803-ebff3a7fc878"/>
+    <managerType typeId="95558111-bcce-47d1-96db-6858c122f944" valueTypeId="2430360d-3924-4790-8beb-b10e0b88c893"/>
+    <extDimensionTypes typeId="455ea8a6-20df-44e2-88d8-8d923222f108" valueTypeId="a36d6847-138a-4d0a-adec-904573af68e4"/>
+    <extDimensionTypesRow typeId="3c8af801-0690-48a2-aaf1-c93a226f2c09" valueTypeId="1bf8f1cc-164d-448f-b882-a3a88423d4dd"/>
+  </producedTypes>
+  <name>Клиентский_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Клиентский баланс</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ChartOfAccounts.Клиентский_ат.StandardAttribute.Description</inputByString>
+  <inputByString>ChartOfAccounts.Клиентский_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <extDimensionTypes>ChartOfCharacteristicTypes.ВидыСубконто_ат</extDimensionTypes>
+  <maxExtDimensionCount>3</maxExtDimensionCount>
+  <codeLength>5</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <checkUnique>true</checkUnique>
+  <predefined>
+    <items id="d36d8a8e-6759-4748-9aab-9165a461519e">
+      <name>Оперативный</name>
+      <description>Оперативный</description>
+      <code>Опер</code>
+      <offBalance>true</offBalance>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконто_ат.Договор</characteristicType>
+      </extDimensionTypes>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконто_ат.Документ</characteristicType>
+      </extDimensionTypes>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконто_ат.Объект</characteristicType>
+      </extDimensionTypes>
+    </items>
+    <items id="b6264cca-f56a-47c6-9738-c96ee9b2feb2">
+      <name>Фактический</name>
+      <description>Фактический</description>
+      <code>Факт</code>
+      <offBalance>true</offBalance>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконто_ат.Договор</characteristicType>
+      </extDimensionTypes>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконто_ат.Документ</characteristicType>
+      </extDimensionTypes>
+      <extDimensionTypes>
+        <characteristicType>ChartOfCharacteristicTypes.ВидыСубконто_ат.Объект</characteristicType>
+      </extDimensionTypes>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:ChartOfAccounts>

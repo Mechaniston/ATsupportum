@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4c5ea2a6-c4b5-4330-aef4-c4afdf8cc590">
+  <producedTypes>
+    <selectionType typeId="3f03e11f-b138-48b7-8926-29f665d3229e" valueTypeId="be23c9ba-2827-45e9-b54d-655860977a9e"/>
+    <listType typeId="9518c94a-4ddb-47d8-a345-061ca3ceec6f" valueTypeId="115f1365-e101-4792-bfe0-3fda417f6507"/>
+    <managerType typeId="49960282-8136-4e45-a726-b6a630841092" valueTypeId="2e7b5dc4-6f87-46bd-ad01-d084d06e29c3"/>
+    <recordSetType typeId="4f954cde-62b4-474b-b1fe-8d0721091c94" valueTypeId="51861495-e492-44de-8951-804eec51cef9"/>
+    <recordKeyType typeId="74d7d947-193f-47a8-b9a2-9762a618ecc3" valueTypeId="c0c784e7-72de-45c7-b62d-6af4bd7aa31a"/>
+    <recordType typeId="7b2cd8c9-e704-4c8e-8675-c3dafe50f6a9" valueTypeId="a6b3c731-3cf0-4b4f-a58c-f1026fc98fd4"/>
+    <recordManagerType typeId="64ff4c33-9088-4b41-92c1-da75c121e852" valueTypeId="046341ae-5efe-4a0e-9bed-e470d0eb976e"/>
+  </producedTypes>
+  <name>СтатусыЗаявокНаАренду_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>История статусов заявок на аренду</value>
+  </synonym>
+  <comment>!!!!!HOTFIX + переименовать</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="58876df4-81de-4f95-aef4-c03d26a48fc2">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыСтатусовЗаявокНаАренду_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1f8ee496-5c82-4f72-a8e1-b5c91526e390">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="7fe22bad-79be-4675-8cb9-8d7c1b0c1f75">
+    <name>Заявка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заявка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаявкаНаАрендуОборудования_ат</types>
+      <types>DocumentRef.ЗаявкаНаАрендуПП_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

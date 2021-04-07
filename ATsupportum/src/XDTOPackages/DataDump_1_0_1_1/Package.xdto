@@ -1,0 +1,43 @@
+<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://v8.1c.ru/misc/datadump/1.0.1.1">
+	<import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<valueType name="ClientRunMode" base="xs:string" variety="Atomic">
+		<enumeration>Auto</enumeration>
+		<enumeration>OrdinaryApplication</enumeration>
+		<enumeration>ManagedApplication</enumeration>
+	</valueType>
+	<valueType name="DumpType" base="xs:string" variety="Atomic">
+		<enumeration>Split</enumeration>
+		<enumeration>Solid</enumeration>
+	</valueType>
+	<objectType name="ConfigurationInfo">
+		<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Version" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Presentation" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="Vendor" type="xs:string" lowerBound="1" form="Attribute"/>
+	</objectType>
+	<objectType name="DumpInfo">
+		<property xmlns:d3p1="http://v8.1c.ru/misc/datadump/1.0.1.1" name="Type" type="d3p1:DumpType" lowerBound="1" form="Attribute"/>
+		<property name="Created" type="xs:dateTime" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="http://v8.1c.ru/misc/datadump/1.0.1.1" name="Configuration" type="d3p1:ConfigurationInfo"/>
+	</objectType>
+	<objectType name="InfoBaseUser">
+		<property name="OSAuthentication" type="xs:boolean" lowerBound="1" form="Attribute"/>
+		<property name="StandardAuthentication" type="xs:boolean" lowerBound="1" form="Attribute"/>
+		<property name="CannotChangePassword" type="xs:boolean" lowerBound="1" form="Attribute"/>
+		<property name="Name" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="DefaultInterface" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="PasswordIsSet" type="xs:boolean" lowerBound="1" form="Attribute"/>
+		<property name="ShowInList" type="xs:boolean" lowerBound="1" form="Attribute"/>
+		<property name="FullName" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property name="OSUser" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="http://v8.1c.ru/misc/datadump/1.0.1.1" name="RunMode" type="d3p1:ClientRunMode" lowerBound="1" form="Attribute"/>
+		<property name="StoredPasswordValue" type="xs:string" lowerBound="0" nillable="true" form="Attribute"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="UUID" type="d3p1:UUID" lowerBound="1" form="Attribute"/>
+		<property name="Language" type="xs:string" lowerBound="1" form="Attribute"/>
+		<property xmlns:d3p1="http://v8.1c.ru/8.1/data/core" name="DataSeparation" type="d3p1:Structure" nillable="true"/>
+		<property xmlns:d3p1="http://v8.1c.ru/misc/datadump/1.0.1.1" name="Roles" type="d3p1:UserRoles"/>
+	</objectType>
+	<objectType name="UserRoles">
+		<property name="Role" type="xs:string" lowerBound="0" upperBound="-1"/>
+	</objectType>
+</package>

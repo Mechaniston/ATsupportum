@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2e414632-55bc-48c6-b34b-5d8b7f44781a">
+  <producedTypes>
+    <objectType typeId="c05a3017-dae7-4d40-8797-c1d8951bcdfd" valueTypeId="b88934f8-34e5-4bb1-bdb0-ae30a08d22b6"/>
+    <refType typeId="32a4f019-e738-4d52-b48a-5d12be533c27" valueTypeId="c7d01e22-bbc3-4cae-8b5c-d856c9c13950"/>
+    <selectionType typeId="4f7ad0b4-4b78-4ebe-baaf-8214bfb90861" valueTypeId="9ff564a2-f4f2-41a0-9236-49fa7e605e75"/>
+    <listType typeId="db1eb321-79c0-4a0d-a7c4-c1d4578da8a3" valueTypeId="28192b43-99e0-4446-aad6-eecce9e605ba"/>
+    <managerType typeId="328dbaa4-b7ff-4b7e-92e3-5cfa689d6238" valueTypeId="edd2a5c5-e3a7-434d-8001-18387c62ebfa"/>
+  </producedTypes>
+  <name>ИспользованиеПоставкиДляАренды_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Использование поставки для аренды</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ИспользованиеПоставкиДляАренды_ат.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Использования поставок для аренды</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ИспользованиеПоставкиДляАренды_ат.Form.ФормаДокумента</defaultObjectForm>
+  <registerRecords>AccumulationRegister.АрендаПП_ат</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="14e10458-c189-4b1b-896d-bb9760d282ab">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="91a621d5-14fd-4cd8-8e9a-6eaeeac2cbed">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="36df0438-dc60-4bcb-ba5c-67e6c01e1352">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="2a84e66e-09c8-47fe-9158-e59563138f18">
+    <producedTypes>
+      <objectType typeId="6b8fa3b1-8883-490f-a665-e58c2db6a4a9" valueTypeId="fddab216-60c1-4835-ae4d-06c575db2279"/>
+      <rowType typeId="fff036ab-b6b2-45d4-945f-e839c223be77" valueTypeId="a4545243-7d6e-424e-8c4e-45436fa06af7"/>
+    </producedTypes>
+    <name>ТаблицаПоставокДляАренды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поставки и Продукты для аренды</value>
+    </synonym>
+    <attributes uuid="aea49934-3436-4c20-b970-8408b53a7611">
+      <name>Поставка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Поставка</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПоставкиПродуктов_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <quickChoice>DontUse</quickChoice>
+      <createOnInput>DontUse</createOnInput>
+      <dataHistory>Use</dataHistory>
+      <choiceHistoryOnInput>DontUse</choiceHistoryOnInput>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

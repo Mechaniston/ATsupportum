@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="00d70998-8f4b-4208-88c2-835331376e6e">
+  <producedTypes>
+    <selectionType typeId="780cef28-bf08-4558-b8e7-38f7abdb5d73" valueTypeId="7be25aad-7ff4-4181-9e6f-a7dead8f7a6c"/>
+    <listType typeId="99828787-251f-4a05-872d-57e84f605b00" valueTypeId="c918ec4b-18de-495c-967c-5e4fb1623994"/>
+    <managerType typeId="03616a01-1547-4c3b-8a54-d644769464ca" valueTypeId="8d46d67b-2594-416d-9105-f155d9f8e0ff"/>
+    <recordSetType typeId="64986a84-98bd-4ee6-a34a-205a4d57249d" valueTypeId="3db58946-29ca-43f3-b1e3-5df3c8d2c92f"/>
+    <recordKeyType typeId="6de8bb21-d516-4374-ae03-149ae9905583" valueTypeId="24460bec-dbe9-4ad3-8559-c6e75f99a4ed"/>
+    <recordType typeId="9bb63da4-572f-465d-b5fd-c277412bf3f8" valueTypeId="b3441785-9963-44d1-9841-5dccb3424db8"/>
+    <recordManagerType typeId="163ebe97-5be7-4a0a-88c3-4ae4f4ca1751" valueTypeId="a7353906-f528-4bd4-97af-b3f653472215"/>
+  </producedTypes>
+  <name>СведенияОСерверахПоZabbix_at</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сведения о серверах по Zabbix</value>
+  </synonym>
+  <comment>!!!!!HOTFIX + переименовать в ИсториюСведений..</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="bc5519fb-8f66-4163-bcb9-dfd75e5a6bfa">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+      <stringQualifiers>
+        <length>80</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="cd34f8b9-de71-4d52-ae30-c53ec1c094c4">
+    <name>ДатаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата записи</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="30253408-cd7a-4b7d-9509-eb5ac07954c2">
+    <name>Сервер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Серверы_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="ca362f1d-ea0e-4322-9e4d-143b7ff4d8e7">
+    <name>Параметр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметр</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыРесурсовZabbix_at</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="109dc05d-6356-458d-a642-c3332bedf702">
+    <name>Ключ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ключ</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>80</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

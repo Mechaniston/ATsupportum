@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="de4be652-e4dc-4a13-9259-b172b76de8d0">
+  <producedTypes>
+    <selectionType typeId="93408d2f-47eb-41fd-88fe-9b5008d013ab" valueTypeId="1e8a102a-e720-4e31-89d1-5b534a0a5330"/>
+    <listType typeId="b86d4256-4a9d-4dee-90eb-f5e220b89dd3" valueTypeId="1c7e83ca-f018-45d0-92fa-d776b77e3669"/>
+    <managerType typeId="54ae9ac5-2b22-4c4b-a2be-dedfb53c54df" valueTypeId="ca9a3b61-9d9d-428a-ab7c-e26d52648893"/>
+    <recordSetType typeId="dc8792ca-f044-46dd-9089-56f3f625ddec" valueTypeId="b08fb2b0-55e5-49f9-9463-326021c02527"/>
+    <recordKeyType typeId="b499079a-f562-4843-9a61-2d49eecefc3d" valueTypeId="4bc081ef-30a6-4bad-9ab0-ce790f021ca0"/>
+    <recordType typeId="3a0fe604-3c35-43fe-8a23-7f40e9279b3c" valueTypeId="8e65450a-0af6-471b-a515-a317acd1f60f"/>
+    <recordManagerType typeId="bb885768-0d2f-42f7-b54f-d3d4e58d0436" valueTypeId="a9e3b0e8-586c-44b8-8950-4dd19e4563e8"/>
+  </producedTypes>
+  <name>СписокУведомляемыхОСтатусахСерверов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Список уведомляемых о статусах серверах</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.СписокУведомляемыхОСтатусахСерверов_ат.Form.ФормаЗаписи</defaultRecordForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="326c7def-d520-4ef9-b9cf-b31741a38d30">
+    <name>Сервер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Серверы_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="7e2560aa-fd62-4ac8-a44e-1d210c629bd2">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e3ad677d-54eb-45d6-a8f5-9c1cb4d60ce4">
+    <name>Параметр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметр</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПараметрыСерверов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="b4869e3b-a133-4ee8-8f9d-856bd158baf2">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

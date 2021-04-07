@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="52155c60-d463-45b2-910d-90569e4900e2">
+  <producedTypes>
+    <objectType typeId="7489b6d7-4b85-4f64-a717-d4f91cf6ee3c" valueTypeId="b08f9f36-7bc8-4713-b45e-7ac566d56f73"/>
+    <refType typeId="c9cae4d0-b157-4425-93dc-353c1793b568" valueTypeId="56d65d5e-5f34-4d5e-9e7c-c931cf9ffc0a"/>
+    <selectionType typeId="2269e96f-440c-4851-b811-f91aeae3c18f" valueTypeId="c76c4e99-1189-47c2-8c33-ec9f5ce2ab21"/>
+    <listType typeId="8abe569f-f44e-4641-a22d-0edcab9a3163" valueTypeId="686e847b-6d08-4a6e-97a2-f4c96065f2d6"/>
+    <managerType typeId="3190a9bb-7114-47cd-8f4f-b6117d457f6e" valueTypeId="370c8781-a96c-4fd3-93ca-8fb5477dd513"/>
+  </producedTypes>
+  <name>ВидыРолейСерверов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды ролей серверов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВидыРолейСерверов_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВидыРолейСерверов_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Вид роли сервера</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ВидыРолейСерверов_ат.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ВидыРолейСерверов_ат.Form.ФормаСпискаИВыбора</defaultListForm>
+  <defaultChoiceForm>Catalog.ВидыРолейСерверов_ат.Form.ФормаСпискаИВыбора</defaultChoiceForm>
+  <attributes uuid="3f506e48-18b4-4738-b487-7ffb0d4ce6ca">
+    <name>ТипРолиСервера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип роли сервера</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыРолейСерверов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="463192c2-eb8a-4456-8cdb-66bd6cd43027">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="f6df4d55-1fb0-439a-8d93-704b35a912e0">
+    <producedTypes>
+      <objectType typeId="e63adb41-5a35-4e6a-8a0e-c5ed4e2596b2" valueTypeId="b8b20f4b-e158-49a8-b354-ed511bef1bbb"/>
+      <rowType typeId="bce700a0-87c7-4b3a-9c88-59dc47db2ed3" valueTypeId="8cecbc88-d346-4bc6-8c49-40817eedf5a7"/>
+    </producedTypes>
+    <name>МинимальныеРесурсы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Минимальные ресурсы</value>
+    </synonym>
+  </tabularSections>
+  <forms uuid="1c9492b0-387f-4076-a034-9ed2258b8100">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="345662da-c7e9-4060-bfb3-49266da05367">
+    <name>ФормаСпискаИВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка и выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

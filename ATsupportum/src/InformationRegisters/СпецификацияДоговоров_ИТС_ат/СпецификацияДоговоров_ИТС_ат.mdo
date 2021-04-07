@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f56d2699-8efb-42fc-9baa-e6b4437379f2">
+  <producedTypes>
+    <selectionType typeId="ad47ccec-107f-4ae3-a604-d828e54f7524" valueTypeId="da65a7a6-5efb-4743-b34f-3a0204373cae"/>
+    <listType typeId="4d773f8a-8af3-4ecc-91fc-26d4a82952ca" valueTypeId="72125e1b-44a2-424e-bca5-3eae10c7ff05"/>
+    <managerType typeId="90b39951-2aff-4afa-9cbd-e16383b3734f" valueTypeId="bf810911-ea57-4277-95a7-63e682349341"/>
+    <recordSetType typeId="2aa8a77d-766a-4203-a6cf-0523a5e9f09c" valueTypeId="41a978c3-5bdb-45b4-af23-36c030df8e77"/>
+    <recordKeyType typeId="bfa4becd-82a0-4259-a54c-aea4fd3a7b54" valueTypeId="9841f17f-a0ae-4274-bf6f-384ad9ffc459"/>
+    <recordType typeId="f40f881f-974d-48f3-af68-e646027c3038" valueTypeId="c6184e17-370a-4768-8870-6390ff0b0681"/>
+    <recordManagerType typeId="f87b1100-366a-4c7f-84df-dfd0fb8d43c8" valueTypeId="d845ad13-eebf-447d-8d10-73d70cec7348"/>
+  </producedTypes>
+  <name>СпецификацияДоговоров_ИТС_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Спецификация договоров (ИТС)</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="5b09bb71-20a0-4224-bcf5-2d6b3c7ac716">
+    <name>ТипИТС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип ИТС</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыИТС_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="3cfca958-c479-4c1a-aa45-ff389e4ee6b5">
+    <name>ДатаНачалаПодписки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала подписки</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e2489c9c-943c-410e-b5ee-a9ec8fa5112b">
+    <name>ДлительностьПодписки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Длительность подписки</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ДлительностиПодписокИТС_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ead89662-d0f1-49b4-abf7-8a86c3c3eff2">
+    <name>ДатаОкончанияПодписки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата окончания подписки</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ff411b1a-6f89-4f68-9cbb-2976a5a98bfb">
+    <name>Льготный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Льготный</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b0bce84e-dd1b-4ee4-bca9-7558a4fa84a6">
+    <name>ТарифИТС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тариф ИТС</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТарифыИТС_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b3706e6d-b0d0-4335-9498-df707c741262">
+    <name>ВремяНаПриемкуЗаявок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время на приемку заявок (в рабочих днях)</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="28883c10-1b4e-45e7-8d4a-6f9bfd17bf17">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Договоры_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dab52e84-7413-46d6-a313-071c32b762d9">
+  <producedTypes>
+    <objectType typeId="185c034e-dc22-4717-bada-66eaab2a7ff3" valueTypeId="90715ed1-4a11-4dab-b06e-c9c97e9d7a72"/>
+    <refType typeId="19b0aeaa-e6be-490f-bcab-c2ab1da0988c" valueTypeId="0f012d4c-86bd-4263-8e94-8e306a8505a4"/>
+    <selectionType typeId="ecedad96-01ea-47c0-a9da-395261e2bd11" valueTypeId="4f21a4c5-03e3-4ac6-92f1-ba78113cf161"/>
+    <listType typeId="e1e5a32d-4730-4083-852f-2e33ba38a9e9" valueTypeId="58552011-93af-4068-b8ba-a094808d80a6"/>
+    <managerType typeId="427c5bd0-4e3a-4765-a31d-a8d3274244e2" valueTypeId="26955ef3-407c-4a29-82d9-7b15d9718ddf"/>
+  </producedTypes>
+  <name>Задание_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Задание</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.Задание_ат.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>DontUse</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Задания</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.Задание_ат.Form.ФормаДокумента</defaultObjectForm>
+  <defaultListForm>Document.Задание_ат.Form.ФормаСпискаИВыбора</defaultListForm>
+  <defaultChoiceForm>Document.Задание_ат.Form.ФормаСпискаИВыбора</defaultChoiceForm>
+  <posting>Deny</posting>
+  <registerRecords>AccumulationRegister.ВременаРабот_ат</registerRecords>
+  <registerRecords>AccumulationRegister.КоличественноСуммовойУчетРабот_ат</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="c5d28f9d-6446-43fb-bd6a-52840e6f686f">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="dbb3df0b-0404-45cc-87e1-0f798d0a700d">
+    <name>ВерсияПродукта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия продукта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВерсииПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d3ec167f-2a0f-4dff-bd25-8057a4490233">
+    <name>ДатаСоздания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата создания</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="887b24d8-9796-401f-929f-b94ff27bd047">
+    <name>СодержаниеРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид деятельности</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СодержанияРабот_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="59f069cf-1b39-432c-87a6-60585bac6a66">
+    <name>Тезис</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тезис</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1ce134d1-7eba-4c68-b7ed-361c7ffe04af">
+    <name>ТекстЗадания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст задания</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="cafaf3f6-c3a4-4e83-9be0-c9e489772674">
+    <name>Удалить_Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>(Не используется) Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7bb1501f-7f13-4722-b756-405f86d7d200">
+    <name>Удалить_РезультатВыполнения</name>
+    <synonym>
+      <key>ru</key>
+      <value>(Не используется) Результат выполнения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="38c08dda-b102-4e8f-be77-5c421cb9a5d0">
+    <name>ЭкземплярПродукта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Экземпляр продукта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="663700e1-09b8-4a19-bb89-19617d364acd">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8fbd2c02-9843-431b-b724-f85c0f463928">
+    <name>ФормаСпискаИВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка и выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="bc2e8d6b-fa27-49e6-8ae2-10a7ca5ccc51">
+    <name>ПриступитьКЗаданию</name>
+    <synonym>
+      <key>ru</key>
+      <value>Приступить к заданию</value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType>
+      <types>DocumentRef.Задание_ат</types>
+    </commandParameterType>
+    <representation>Picture</representation>
+    <toolTip>
+      <key>ru</key>
+      <value>Приступить к заданию</value>
+    </toolTip>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.GenerateReport</picture>
+    </picture>
+    <shortcut></shortcut>
+  </commands>
+  <commands uuid="ad58e5ca-4aa2-4c6d-ae41-f0f72ee0fb83">
+    <name>ЗавершитьЗадание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Завершить задание</value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType>
+      <types>DocumentRef.Задание_ат</types>
+    </commandParameterType>
+    <representation>Picture</representation>
+    <toolTip>
+      <key>ru</key>
+      <value>Завершить задание</value>
+    </toolTip>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.ExecuteTask</picture>
+    </picture>
+    <shortcut></shortcut>
+  </commands>
+  <commands uuid="a2eea1ee-d8f4-43c4-a750-07e719988e7c">
+    <name>ПрерватьЗадание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Прервать задание</value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType>
+      <types>DocumentRef.Задание_ат</types>
+    </commandParameterType>
+    <representation>Picture</representation>
+    <toolTip>
+      <key>ru</key>
+      <value>Приостановить задание</value>
+    </toolTip>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.SwitchActivity</picture>
+    </picture>
+    <shortcut></shortcut>
+  </commands>
+  <commands uuid="9652f3d2-8567-48d2-b579-9b10bbee315d">
+    <name>ОтменитьЗадание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отменить задание</value>
+    </synonym>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType>
+      <types>DocumentRef.Задание_ат</types>
+    </commandParameterType>
+    <representation>Picture</representation>
+    <toolTip>
+      <key>ru</key>
+      <value>Отменить задание</value>
+    </toolTip>
+    <picture xsi:type="core:PictureRef">
+      <picture>StdPicture.Stop</picture>
+    </picture>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:Document>

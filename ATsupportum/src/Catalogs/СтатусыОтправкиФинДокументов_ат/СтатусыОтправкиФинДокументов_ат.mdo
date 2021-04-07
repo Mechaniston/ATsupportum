@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="37c54c47-ec63-4c9e-99f1-8627829e0bf4">
+  <producedTypes>
+    <objectType typeId="9f275868-8563-4b32-96e9-1ebce3658b41" valueTypeId="8058ae6a-1f78-434e-861b-715aeb571005"/>
+    <refType typeId="5247fcda-7abf-4dc8-8381-e7a5e114b2ef" valueTypeId="d52d8560-9c04-4915-b563-4400253365b9"/>
+    <selectionType typeId="c2423f70-df80-49c4-99c1-811632d824a5" valueTypeId="d12a4807-075f-464d-8537-e74f65f018b3"/>
+    <listType typeId="3db6030d-60df-4d1c-8457-860280cb6f79" valueTypeId="49a10804-95c9-40e1-a209-682e67acc9a5"/>
+    <managerType typeId="65a975e3-2f64-4a49-8116-088d42cb7738" valueTypeId="73299fa7-50c5-42f6-ab8a-63e54552ccc2"/>
+  </producedTypes>
+  <name>СтатусыОтправкиФинДокументов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы отправки фин.документов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.СтатусыОтправкиФинДокументов_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.СтатусыОтправкиФинДокументов_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Статус фин.документа</value>
+  </objectPresentation>
+  <explanation>
+    <key>ru</key>
+    <value>Статусы финансовых документов</value>
+  </explanation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.СтатусыОтправкиФинДокументов_ат.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.СтатусыОтправкиФинДокументов_ат.Form.ФормаСпискаИВыбора</defaultListForm>
+  <defaultChoiceForm>Catalog.СтатусыОтправкиФинДокументов_ат.Form.ФормаСпискаИВыбора</defaultChoiceForm>
+  <attributes uuid="de219ba1-9e5d-4e98-895f-8fe38fb1ae6b">
+    <name>ТипСтатуса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип статуса</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыСтатусовОтправкиФинДокументов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ТипыСтатусовОтправкиФинДокументов_ат.EnumValue.НеФинальный</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="8f08e967-0581-4ca5-b92f-23858a4c7536">
+    <name>ПредставлениеКомментария</name>
+    <synonym>
+      <key>ru</key>
+      <value>Представление комментария</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e9ee8e5a-7190-40f4-bb1d-ca8bb3710431">
+    <name>КомментарийОбязателен</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий обязателен</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="3681ab20-0e27-4648-9055-a5e5a6c68aff">
+    <name>ПереданКорреспонденту</name>
+    <synonym>
+      <key>ru</key>
+      <value>Передан корреспонденту</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="15e24a43-d5f4-4f70-b9c3-25f36655c03f">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="fcd6bc7e-c46b-4ca5-b425-b0460db326fc">
+    <name>ФормаСпискаИВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка и выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

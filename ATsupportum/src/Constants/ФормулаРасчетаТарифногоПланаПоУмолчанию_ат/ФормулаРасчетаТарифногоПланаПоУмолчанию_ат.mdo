@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d3956b1a-91dd-4b71-b70f-17b09f1ba3f5">
+  <producedTypes>
+    <managerType typeId="dad56447-f551-4136-a145-de3f69a94abc" valueTypeId="cf676374-bb57-4838-bd28-860c9a97e2cf"/>
+    <valueManagerType typeId="d7b9db6c-4198-4290-ba8c-88a072a24dcb" valueTypeId="5e4088c9-2525-4421-bf10-8ecfe240fbd3"/>
+    <valueKeyType typeId="ce953228-7403-4ec9-bf24-d23827571897" valueTypeId="15d39659-b0e2-4607-a89a-619f6145a522"/>
+  </producedTypes>
+  <name>ФормулаРасчетаТарифногоПланаПоУмолчанию_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Формула расчета тарифного плана по умолчанию</value>
+  </synonym>
+  <type>
+    <types>String</types>
+    <stringQualifiers/>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <toolTip>
+    <key>ru</key>
+    <value>Значение = ...любые операции с:
+	ОперативныйОстаток
+	ФактическийОстаток
+	ОперативныйОборот
+	ФактическийОборот
+	(Оперативные|Фактические|)Поступления
+	ОперативныеСписания
+	ФактическиеСписания
+</value>
+  </toolTip>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

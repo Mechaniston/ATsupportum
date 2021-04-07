@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2873a566-574c-42d9-ae05-c3018ba9cb2d">
+  <producedTypes>
+    <selectionType typeId="233f4907-c20e-40c9-9fdd-466276900286" valueTypeId="bb1ed4de-82f3-484b-a831-6f16ea9a7c41"/>
+    <listType typeId="635ce42a-e708-438a-8b6f-6247f31d092b" valueTypeId="c042aa3f-b90a-401e-85bc-47911411f6e1"/>
+    <managerType typeId="1f094878-e356-4338-8f55-41bbb903b77a" valueTypeId="244cc889-dec0-4951-99dd-f2afa8327cda"/>
+    <recordSetType typeId="5b74a6b6-8774-431c-92ad-5aff67bee951" valueTypeId="9dd7b7e0-c584-4c7a-9ad2-21f41987b2ea"/>
+    <recordKeyType typeId="9203d19a-7f82-4a9a-a5d0-ea086725d64e" valueTypeId="0859a601-fe66-4ea5-a65b-2268bf93c536"/>
+    <recordType typeId="988448b6-231a-4742-873f-687461f16b8b" valueTypeId="692ec70f-4447-45b0-847b-d6de4b919512"/>
+    <recordManagerType typeId="2ac85436-bcf1-4d7c-80e3-e291ced435b8" valueTypeId="8464a3b6-748d-4c4e-b56b-52bd7b78d950"/>
+  </producedTypes>
+  <name>НастройкаДоступаКБазеЗнаний_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройка доступа к базе знаний</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.НастройкаДоступаКБазеЗнаний_ат.Form.ФормаЗаписи</defaultRecordForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b4ca3bb3-a6d8-4e92-a619-70d7ee5fb9d2">
+    <name>ОбластьЗнаний</name>
+    <synonym>
+      <key>ru</key>
+      <value>Область знаний</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОбластиЗнаний_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="cedafbd9-d2d1-4c29-9dfd-c84bffe95050">
+    <name>Клиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клиент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6cae0250-0433-4522-a3b3-87d6847a6ee5">
+    <name>Подразделение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подразделение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПодразделенияКлиентов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="04e9f035-1ddb-487a-bbe9-85746bf68a53">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="0472acb1-9352-4eda-ac7c-5d050b829eaf">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="b3423421-8b12-4481-aa81-89e2ff357163">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

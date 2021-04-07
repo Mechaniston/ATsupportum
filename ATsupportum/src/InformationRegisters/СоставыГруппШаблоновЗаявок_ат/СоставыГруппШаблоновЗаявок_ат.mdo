@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c0777881-6066-4e4a-8ce8-ee4f7ecaf1ca">
+  <producedTypes>
+    <selectionType typeId="3af38227-913d-49e0-978f-3c568c4ffd28" valueTypeId="b554a479-3d62-4151-a3ba-361cbcc51a30"/>
+    <listType typeId="8f7633d5-b7d4-49ce-8236-7bca6eb2887f" valueTypeId="42ea10ca-c282-458f-aca6-681b481b6272"/>
+    <managerType typeId="c52af2ca-8140-47c8-9874-ba44c2febc3c" valueTypeId="d5dfb918-319f-4867-bd79-a0c801fd603a"/>
+    <recordSetType typeId="b1b14e2b-b99c-41ad-8659-88d69503b792" valueTypeId="449c6a86-6a88-49ac-82a0-0455546603f3"/>
+    <recordKeyType typeId="56bd12e6-89c8-45c7-8331-e27cdbd474c8" valueTypeId="16404ce5-4d62-40aa-9799-882204b6ccf6"/>
+    <recordType typeId="df6eebf5-0b41-483a-a9ac-42e6665567f3" valueTypeId="c052cfce-9d9e-4517-8a41-e468688887c0"/>
+    <recordManagerType typeId="8bd988e5-45b8-4cea-a71d-954b5b8e3954" valueTypeId="92bfd7f1-04a3-4721-9ed5-0db1d771acf8"/>
+  </producedTypes>
+  <name>СоставыГруппШаблоновЗаявок_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Составы групп шаблонов заявок</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="f5eee3d5-4580-4b44-9b24-5b4b197db1c9">
+    <name>ГруппаШаблонов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группа шаблонов</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ГруппыШаблоновЗаявок_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b80ff8fb-70dd-49a5-bbd3-a81b0eaeb4bd">
+    <name>Шаблон</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ШаблоныЗаявок_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

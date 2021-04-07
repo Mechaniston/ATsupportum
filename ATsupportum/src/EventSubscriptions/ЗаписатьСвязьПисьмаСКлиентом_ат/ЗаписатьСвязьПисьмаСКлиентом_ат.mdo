@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e4556019-9591-40bf-bcf8-6ba4461e0d2c">
+  <name>ЗаписатьСвязьПисьмаСКлиентом_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Записать связь письма с клиентом</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ЭлектронноеПисьмоВходящее</types>
+    <types>DocumentObject.ЭлектронноеПисьмоИсходящее</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.Уведомления_ат.ЗаписатьСвязьПисьмаСКлиентом_атПриЗаписи</handler>
+</mdclass:EventSubscription>

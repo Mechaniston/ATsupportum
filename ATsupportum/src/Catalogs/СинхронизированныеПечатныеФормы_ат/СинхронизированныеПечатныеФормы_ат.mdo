@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1bb848d8-fbbb-438d-b542-607a6ca56cc0">
+  <producedTypes>
+    <objectType typeId="a92c46d3-c02b-4fc1-a04a-0bb00b09a23f" valueTypeId="66d1d437-3a9b-46de-9b38-35968e03fdc6"/>
+    <refType typeId="cda8d38f-4bec-404d-8d57-6a5ed0e57292" valueTypeId="486b721c-5113-40a3-8b3c-e7da51e985b9"/>
+    <selectionType typeId="1d9dab43-7e88-48a4-985e-5b6458eed603" valueTypeId="38170d22-a51c-41a5-8a8f-fa59e8d47b20"/>
+    <listType typeId="6b34f1d3-895e-41c2-9b5f-dda9de143567" valueTypeId="7b3444a5-f579-42cf-a902-97d5b142d2a7"/>
+    <managerType typeId="7bdb16aa-a5d7-495a-8f85-077283786d49" valueTypeId="ff4532b4-b110-4852-8e39-ef9f7d5e3e23"/>
+  </producedTypes>
+  <name>СинхронизированныеПечатныеФормы_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Синхронизированные печатные формы</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.СинхронизированныеПечатныеФормы_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.СинхронизированныеПечатныеФормы_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Синхронизированная печатная форма</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.СинхронизированныеПечатныеФормы_ат.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="2af62283-a075-4b9a-ab14-f2d1f0a3b575">
+    <name>ВнешняяПечатнаяФорма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Внешняя печатная форма</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="23459241-34c6-4b38-9fab-c42e1cf25d22">
+    <name>ИмяМакета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя макета</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d58a7a9c-91d3-44f5-bfd0-65e2aa2b2856">
+    <name>Порядок</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порядок</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>75</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7e65c8f3-1aa0-430f-89d1-fa77beaf37fe">
+    <name>РегистрСинхронизации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Регистр синхронизации</value>
+    </synonym>
+    <type>
+      <types>EnumRef.РегистрыСинхронизацииДокументов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ffd36e66-a6fe-413d-8e9d-078df4fa99f2">
+    <name>ИспользоватьДляОтправки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Использовать для отправки</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5d607ce2-3b28-48eb-80e5-9a53fb332b78">
+    <name>ТипФайлаПоУмолчаниюСтрокой</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип файла по умолчанию строкой</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1d6bb75e-e7f5-444b-84c1-6953f760ba63">
+    <name>ШаблонТекстаПисьма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Шаблон текста письма</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <multiLine>true</multiLine>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7696a5ba-9be0-45fa-a323-e4d6bb9596d7">
+    <name>ОсновнойПоДокументу</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основной по документу</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="094e4651-ba7a-4bb2-aa79-f3a2d46653ad">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

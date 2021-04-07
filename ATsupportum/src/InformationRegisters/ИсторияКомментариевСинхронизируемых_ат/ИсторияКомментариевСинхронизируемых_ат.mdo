@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b4da9328-849f-43d4-b71f-a3cfdf007761">
+  <producedTypes>
+    <selectionType typeId="9f2dea71-7b4e-44e8-98d8-43d95085ba3a" valueTypeId="dfee7396-1438-4c99-8043-65d6232c7f5a"/>
+    <listType typeId="a66dac8a-159b-4c4d-8c64-012a58f9f9b4" valueTypeId="880898b5-812e-40c6-8199-3487498b5e89"/>
+    <managerType typeId="8d8d6dac-c380-4d52-8604-e7868fc9be0d" valueTypeId="e045aa43-feda-4561-b599-4fe74c0fa6bb"/>
+    <recordSetType typeId="445ff76e-e499-48b0-9811-a17c13eb5faa" valueTypeId="f8589731-a760-454d-8af7-016cb6925439"/>
+    <recordKeyType typeId="35f0233d-38e1-4990-a8d4-237a1630629d" valueTypeId="3e968992-407b-431c-9c1f-27bc09e2d4d3"/>
+    <recordType typeId="14f850e9-9af9-481d-8632-b031239b3bd4" valueTypeId="4216622d-924a-472a-86a8-ed32e5a3b609"/>
+    <recordManagerType typeId="c25d724a-2123-4aec-9d7f-ea79436fbc06" valueTypeId="07f87b03-f300-4fcb-8939-f47afdae0380"/>
+  </producedTypes>
+  <name>ИсторияКомментариевСинхронизируемых_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>История комментариев синхронизируемых</value>
+  </synonym>
+  <comment>!!!!!HOTFIX</comment>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="ad1e58e2-3b15-4b72-be66-63b1c4cd5ed1">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4c03fc91-62d0-4244-a9cd-72e730b3a503">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="b190c5fc-e6dd-4eff-a7dc-c3bc591cf870">
+    <name>Ссылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.СчетНаОплату_ат</types>
+      <types>CatalogRef.Договоры_ат</types>
+      <types>DocumentRef.Реализация_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

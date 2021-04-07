@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2da04b63-f0e4-477f-bf55-5c60d7f08543">
+  <producedTypes>
+    <selectionType typeId="4b034e6a-5d41-4188-81a2-5427ffebb567" valueTypeId="8400d999-d4f0-4fd3-bf1c-66976b205dc9"/>
+    <listType typeId="3e37334e-292b-40b8-8c46-7e18a69affb9" valueTypeId="cb53f4a7-9cc0-4b31-b793-dd8feb66f29e"/>
+    <managerType typeId="9a93519c-dfbb-440d-9315-847fd3ca6eb8" valueTypeId="3dfcdb33-aadd-4a00-a285-ebdc66ffffd0"/>
+    <recordSetType typeId="cf354219-b2a7-4456-af13-3192d63f7a5e" valueTypeId="003f0d4a-4b1e-449e-b056-049b4b318959"/>
+    <recordKeyType typeId="50e842ec-9c36-496c-b537-069b6e398869" valueTypeId="02b201fc-38cd-4122-87bf-1b1feb33c4d7"/>
+    <recordType typeId="ba833ec7-6fd8-4c93-b1c5-c4831ea8fb12" valueTypeId="d69dcef6-be14-498f-ab69-d8d53b4bb782"/>
+    <recordManagerType typeId="7a203b25-05d7-4d72-845f-9eca378cd292" valueTypeId="ec6441e6-faa5-4a14-b063-1be4e4e33ec6"/>
+  </producedTypes>
+  <name>ИсторияСтатусовЗаявок_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>История статусов заявок</value>
+  </synonym>
+  <comment>!!!!!HOTFIX</comment>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <listPresentation>
+    <key>ru</key>
+    <value>Статусы</value>
+  </listPresentation>
+  <extendedListPresentation>
+    <key>ru</key>
+    <value>История статусов заявок</value>
+  </extendedListPresentation>
+  <resources uuid="566c5998-a6b7-4b62-b114-5345f29ca710">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыЗаявок_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="fa9f78e6-451c-4cc2-bcf4-412654ca12cf">
+    <name>ДатаУстановкиСтатуса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата установки статуса</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5e16ca65-fbfa-4760-ba0f-4944ef73b101">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="f14a3492-ca13-431e-97dd-52d976ec7d82">
+    <name>Ссылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Заявка_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="c4fc7c94-5517-4ad1-a414-474523aee4e4">
+    <name>ТипСтатуса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип статуса</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыСтатусов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <commands uuid="b54313af-dffb-4ca8-b3d4-e30b2c526fe0">
+    <name>ИсторияСтатусовЗаявки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статусы</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>DocumentRef.Заявка_ат</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

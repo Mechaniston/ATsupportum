@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="83cdba03-6834-40df-bad4-82e591f22507">
+  <name>ПодпискаНаИзменениеКонстантыТГ_АдресВызоваWebhook</name>
+  <synonym>
+    <key>ru</key>
+    <value>Подписка на изменение константы ТГ_АдресВызоваWebhook</value>
+  </synonym>
+  <source>
+    <types>ConstantValueManager.ТГ_АдресВызоваWebhook</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ТГ_бот.ПодпискаНаИзменениеКонстантыТГ_АдресВызоваWebhook</handler>
+</mdclass:EventSubscription>

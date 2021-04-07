@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="38eb5a3d-ccdc-4e7b-8abd-18d44c60a380">
+  <producedTypes>
+    <selectionType typeId="0be3f15a-15eb-463a-8d65-05dc57905cb6" valueTypeId="d489c228-263f-4ecb-9901-76e072b36a3d"/>
+    <listType typeId="326623fb-93a1-46fd-b960-88185ea480f6" valueTypeId="4dcee580-3f49-4465-bbe5-f572b4cc97fd"/>
+    <managerType typeId="2d026681-c283-4603-8311-82143452f4f9" valueTypeId="c53b694c-0474-442e-8020-dfcb84f7baa0"/>
+    <recordSetType typeId="d2e59428-2486-4104-a593-724cba89ec07" valueTypeId="c07bfec3-ee57-4fee-b853-974d80c8581c"/>
+    <recordKeyType typeId="262c3595-5462-41ed-aa78-5b6b6460e304" valueTypeId="bc429e3e-c3a5-4c56-a8da-7ee98666249f"/>
+    <recordType typeId="1d0ac524-de46-4b04-a846-bc60463c5df5" valueTypeId="67717f78-3fe2-4cb9-8d50-1cf77d97b788"/>
+    <recordManagerType typeId="d5b54fb1-a089-4f36-82ef-51931ed06dd3" valueTypeId="edb25744-66c6-4301-a4b0-1c21d245515e"/>
+  </producedTypes>
+  <name>ИсторияОжидаемойДатыЗавершенияРабот_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>История ОДЗ</value>
+  </synonym>
+  <comment>!!!!!HOTFIX + переименовать (убрать Работ)</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <recordPresentation>
+    <key>ru</key>
+    <value>ОДЗ заявки</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>ОДЗ</value>
+  </listPresentation>
+  <extendedListPresentation>
+    <key>ru</key>
+    <value>История ОДЗ заявок</value>
+  </extendedListPresentation>
+  <resources uuid="745062ab-820f-4517-9eca-3ea51d475ce1">
+    <name>ОжидаемаяДатаЗавершения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ожидаемая дата завершения</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="42d7bd12-d455-439d-8f32-8e26d8c6091c">
+    <name>ПричинаПереноса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Причина переноса</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПричиныПереносаОжидаемойДатыЗавершенияРабот_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="665b882e-203c-4955-851f-51a6724e61c3">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="f86352b9-10d7-4bc1-8771-ffcd885c8042">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="b8938127-0a27-4320-adce-4c2885ede3a6">
+    <name>Заявка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заявка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Заявка_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

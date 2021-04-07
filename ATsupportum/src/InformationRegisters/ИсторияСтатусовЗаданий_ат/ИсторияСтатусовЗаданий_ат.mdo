@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3ece27ce-36d0-45c1-a529-ef6c4b772c8b">
+  <producedTypes>
+    <selectionType typeId="746ac307-4448-4425-a7f9-d990f1cd97f2" valueTypeId="d1fda739-cd14-4441-8c0e-f022d712d136"/>
+    <listType typeId="380efc72-78a5-43fe-b2f0-6072e7169c44" valueTypeId="5ba8cf5b-ead2-4720-9e08-101e290e06f7"/>
+    <managerType typeId="46ee98f5-4435-49f0-a89a-6f34bafcee51" valueTypeId="a70ef61b-c1f6-4372-a439-fbf439e3a1e4"/>
+    <recordSetType typeId="1266e911-d7a3-406f-a438-3c2f8b887b09" valueTypeId="bdad5376-924e-4f5e-a667-d04b3c462399"/>
+    <recordKeyType typeId="fa42dd4c-318c-4f87-8114-870d4d701919" valueTypeId="78f6a298-e61f-4115-9429-21ff36bc616d"/>
+    <recordType typeId="42b49f18-24b6-4b1c-ad2a-f7ee4971960b" valueTypeId="7cf85bf4-bf3e-4a81-8efc-d6598e8c5460"/>
+    <recordManagerType typeId="4f9499ca-0fb2-4fb1-9efe-c884d5584236" valueTypeId="e9f9ebbe-940e-45da-a9c0-3ff0628a7467"/>
+  </producedTypes>
+  <name>ИсторияСтатусовЗаданий_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>История статусов заданий</value>
+  </synonym>
+  <comment>!!!!!HOTFIX</comment>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceFirst>true</enableTotalsSliceFirst>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <listPresentation>
+    <key>ru</key>
+    <value>Статусы</value>
+  </listPresentation>
+  <extendedListPresentation>
+    <key>ru</key>
+    <value>История статусов заданий</value>
+  </extendedListPresentation>
+  <resources uuid="c2575e07-2625-4cdf-9494-241ac3489637">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыЗаданий_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d6056a9d-9b2f-4264-9fe4-09bd114584e1">
+    <name>ДатаУстановкиСтатуса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата установки статуса</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="73704cd6-cff6-4682-8049-bb09c873b2a8">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="405aff06-ec9c-41c2-9b8a-0ca3450e0430">
+    <name>Ссылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Задание_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="bf60e6cb-0d48-4235-af99-dda94467bc06">
+    <name>ТипСтатуса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип статуса</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыСтатусов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <commands uuid="3247d666-d172-489f-937b-8fe668dff4bd">
+    <name>ИсторияСтатусовЗадания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статусы</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>DocumentRef.Задание_ат</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

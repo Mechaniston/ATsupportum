@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6a40f72f-7070-409f-9b40-616d312fddbf">
+  <producedTypes>
+    <selectionType typeId="f13c2902-4ea6-4166-970c-065f79ea9a8a" valueTypeId="ea49558e-c0fb-463a-ab5e-fa181d8c7e27"/>
+    <listType typeId="f2253570-4cff-41c2-87f8-9854d03fe08e" valueTypeId="89bbf119-f1cc-4475-9886-22188a693839"/>
+    <managerType typeId="c314fc64-5c21-4ba7-bf60-f0156036cdf0" valueTypeId="1e9b6f69-83fb-4e25-93ad-01da39ca7076"/>
+    <recordSetType typeId="d9f954d5-45d5-4c02-b9de-231c99422e28" valueTypeId="ace33653-26bd-4ff7-a88d-98e5d30ce7f5"/>
+    <recordKeyType typeId="0e828089-f179-4e8e-8ea4-1f453d8883bd" valueTypeId="0169833f-9e9b-4fb5-9110-5368c40fe145"/>
+    <recordType typeId="da049632-96d4-4506-887f-87c81028e432" valueTypeId="4d3c591b-7f6c-4cf6-83f4-a332edc9330d"/>
+    <recordManagerType typeId="0fb668dd-b09e-4f37-8923-96d16f954695" valueTypeId="72bc3878-daa0-4555-9100-51f7d532e910"/>
+  </producedTypes>
+  <name>ПриоритетЗаявок_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Приоритет заявок</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultListForm>InformationRegister.ПриоритетЗаявок_ат.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="30fb39ec-b73b-4894-b2d1-fa94a1768fb0">
+    <name>Приоритет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Приоритет</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>32</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="608b0f84-86bd-4c8c-b4f0-0b4fa110a9df">
+    <name>Заявка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заявка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Заявка_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="1a0feeb3-1881-4428-b890-099ae95323b8">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

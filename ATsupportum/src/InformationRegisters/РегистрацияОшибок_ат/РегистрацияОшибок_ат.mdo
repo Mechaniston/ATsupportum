@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="825985ff-e4f7-4e9b-b024-a2320634f6ce">
+  <producedTypes>
+    <selectionType typeId="69e493b6-f0e4-4275-aae8-edd54a7814d1" valueTypeId="0471108d-1fb1-420f-88ab-af79f45d160b"/>
+    <listType typeId="0adf699f-f7de-4b01-998d-65e4a391252d" valueTypeId="38662218-4042-4ca1-85a9-69207798013b"/>
+    <managerType typeId="cefbfa26-703e-441f-ae0b-0f754925744e" valueTypeId="26651f51-036a-4c5e-96e3-2f32584a713c"/>
+    <recordSetType typeId="b9ab63f7-be6f-40f3-8308-f49eac9c212c" valueTypeId="80a40869-95bc-41a7-acea-161fcc7833be"/>
+    <recordKeyType typeId="8253168e-b100-404c-9495-22288b0a62d0" valueTypeId="9929b75b-96e2-4b76-86b6-bce7536b7deb"/>
+    <recordType typeId="e416abbd-d7dd-4fa3-a2f4-92717e1bc9dd" valueTypeId="bd99b6e3-a314-4a47-9e67-9d60162ef5ad"/>
+    <recordManagerType typeId="2b33fa9d-d6c1-4328-9aa2-c7c802ea379c" valueTypeId="df22379d-94f9-4a10-965f-f2e35e2426e6"/>
+  </producedTypes>
+  <name>РегистрацияОшибок_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Регистрация ошибок</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="50c7bb03-7f93-4de8-b45b-a23868b43dab">
+    <name>ДатаВремяПолучения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата/время получения</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="1d4f9a2e-55b0-4a3a-b48e-0e7e54e152ca">
+    <name>ПолученныеДанные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Полученные данные</value>
+    </synonym>
+    <type>
+      <types>ValueStorage</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="afd62382-14f6-4eb5-aa42-d45615ad9571">
+    <name>Распакован</name>
+    <synonym>
+      <key>ru</key>
+      <value>Распакован</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="af2602a5-93a4-4fb4-90b7-c27478705c8f">
+    <name>ОшибкаРаспаковки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ошибка распаковки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="80192bfa-7148-4e89-afaf-4cb52be4524a">
+    <name>ИдентификаторОшибки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор ошибки</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

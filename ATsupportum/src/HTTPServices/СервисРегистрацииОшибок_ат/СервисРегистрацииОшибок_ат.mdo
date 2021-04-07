@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:HTTPService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b33a4222-3b65-4f86-80c4-f5720e7d1fd5">
+  <name>СервисРегистрацииОшибок_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервис регистрации ошибок</value>
+  </synonym>
+  <rootURL>errorsregsvc</rootURL>
+  <reuseSessions>AutoUse</reuseSessions>
+  <sessionMaxAge>20</sessionMaxAge>
+  <urlTemplates uuid="9613d7fe-8eae-40a6-b152-c1ce9522509f">
+    <name>ОтправитьОтчетОбОшибке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправить отчет об ошибке</value>
+    </synonym>
+    <template>/pushReport</template>
+    <methods uuid="3e1e85cc-3b8f-40f6-8913-0fa62be8e230">
+      <name>ОтправитьОтчетОбОшибке_ОбработчикМетодаОтправить</name>
+      <synonym>
+        <key>ru</key>
+        <value>Отправить отчет об ошибке (обработчик метода &quot;отправить&quot;)</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>ОтправитьОтчетОбОшибке_ОбработчикМетодаОтправить</handler>
+    </methods>
+  </urlTemplates>
+  <urlTemplates uuid="ec7d1229-dd56-42f3-a8da-2850ba6dba19">
+    <name>ПолучениеИнформацииОбОшибке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получение информации об ошибке</value>
+    </synonym>
+    <template>/getInfo</template>
+    <methods uuid="c687ba0a-92cf-432b-8aba-bd94432fbe02">
+      <name>ПолучениеИнформацииОбОшибке_ОбработчикМетодаОтправить</name>
+      <synonym>
+        <key>ru</key>
+        <value>Получение информации об ошибке (обработчик метода &quot;отправить&quot;)</value>
+      </synonym>
+      <httpMethod>POST</httpMethod>
+      <handler>ПолучениеИнформацииОбОшибке_ОбработчикМетодаОтправить</handler>
+    </methods>
+  </urlTemplates>
+</mdclass:HTTPService>

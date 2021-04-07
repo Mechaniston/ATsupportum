@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1e63d7db-c61d-4437-b304-1a4bfb780437">
+  <producedTypes>
+    <selectionType typeId="4a4e0cb3-fc75-43dd-8db6-fe251eb15289" valueTypeId="c9fa0a89-bdb6-4528-bd53-b57436b49cf4"/>
+    <listType typeId="c27d4656-236b-426a-96ff-591e03a80592" valueTypeId="accf0250-6f43-4636-8be5-6997ec09c7c1"/>
+    <managerType typeId="ff3cbd90-2a13-42ca-8aff-f33ec1f7275e" valueTypeId="54e8d4ec-406a-4ce6-b64c-539d59f62ce2"/>
+    <recordSetType typeId="c14ddc8c-ec70-49c1-9e63-525ae439cdf6" valueTypeId="77bff15f-547e-472c-bb01-404782c559c8"/>
+    <recordKeyType typeId="56510d39-bd9c-4eaf-9fe5-4da809e1c470" valueTypeId="ef905178-8e53-4b61-9a5e-a4a25ab42216"/>
+    <recordType typeId="d98491d9-d95d-41e6-9076-0160c55f9d77" valueTypeId="ceafb081-ae35-40bd-b326-ac664e2c14b1"/>
+    <recordManagerType typeId="d72d064a-066b-414e-80da-27b1f492ccad" valueTypeId="180d105d-a3f7-4e19-aad9-9fd425e97a6f"/>
+  </producedTypes>
+  <name>АдресаIPиПорты_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Адреса IP и порты</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="171587b3-5024-426b-944d-80cf45d6b2fa">
+    <name>Ресурс1</name>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="af088468-d3bf-451e-8a2f-a571691e51e0">
+    <name>IP</name>
+    <synonym>
+      <key>ru</key>
+      <value>IP</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="06f9a488-b43d-4503-9418-249f74ac1bae">
+    <name>Порт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порт</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

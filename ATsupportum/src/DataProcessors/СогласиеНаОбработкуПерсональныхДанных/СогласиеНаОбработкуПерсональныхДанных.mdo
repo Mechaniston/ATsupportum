@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a388ed70-a68d-4713-a280-881315351f07">
+  <producedTypes>
+    <objectType typeId="0c5edcac-badc-4cbe-a235-57f64904af62" valueTypeId="053afc2a-ce10-4a5a-a09a-3ea21bd050e5"/>
+    <managerType typeId="93bf348e-938b-4143-91f5-441288b6c2f7" valueTypeId="d692d3e2-17ef-4b77-9113-b0745db0e5b7"/>
+  </producedTypes>
+  <name>СогласиеНаОбработкуПерсональныхДанных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Согласие на обработку персональных данных (в соответствии с требованиями 152-ФЗ)</value>
+  </synonym>
+  <defaultForm>DataProcessor.СогласиеНаОбработкуПерсональныхДанных.Form.Форма</defaultForm>
+  <forms uuid="fd9e84c9-2322-4aa7-b5fe-31d0c8f373c7">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="2c81edc8-02b9-42dd-be4d-e7ad595421a0">
+    <name>ПФ_MXL_СогласиеНаОбработкуПерсональныхДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет согласия на обработку персональных данных (табличный документ 1С:Предприятия)</value>
+    </synonym>
+  </templates>
+  <templates uuid="83cb38ff-1174-449f-b8ce-44d5e064f2df">
+    <name>ПФ_DOC_СогласиеНаОбработкуПерсональныхДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Cогласие на обработку персональных данных (документ Microsoft Word)</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <templates uuid="d11b51ac-708a-4ee1-b73e-ae62e162101e">
+    <name>ПФ_ODT_СогласиеНаОбработкуПерсональныхДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Cогласие на обработку персональных данных (документ OpenOffice.org Writer)</value>
+    </synonym>
+    <templateType>BinaryData</templateType>
+  </templates>
+  <commands uuid="17a50950-6091-4306-9f15-2a621a29c1a0">
+    <name>СогласиеНаОбработкуПерсональныхДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Согласие на обработку персональных данных...</value>
+    </synonym>
+    <comment>Печать формы согласия на обработку персональных данных</comment>
+    <group>CommandGroup.Печать</group>
+    <commandParameterType>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:DataProcessor>

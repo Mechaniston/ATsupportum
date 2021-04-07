@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7b33fb08-2bbc-4a53-8848-5b522b5ad299">
+  <producedTypes>
+    <selectionType typeId="6f5c5b02-58d1-4fcf-80dc-50ac1b9b7f50" valueTypeId="0a44f70d-bb39-487e-8549-dc1cd289756f"/>
+    <listType typeId="e169a045-eddd-4808-85c9-76ed56d29bbd" valueTypeId="d33c25ee-b913-4f92-bd74-c38bbf465605"/>
+    <managerType typeId="5ed25e33-b1ce-4f1b-9b2e-9d1faf8a8966" valueTypeId="82e3efc5-049b-42c0-9849-364e11ef3485"/>
+    <recordSetType typeId="a1535420-483d-4f95-b003-839e0bd1694b" valueTypeId="a3da71fd-b8dc-4fea-9f02-a2bd2775357a"/>
+    <recordKeyType typeId="414512ae-0462-4db1-a83f-77f7e59bcc0c" valueTypeId="2511a7da-20eb-491f-b7a5-7a1bacb9caa9"/>
+    <recordType typeId="3e2c8e68-c693-4024-a010-cb191e7ae71d" valueTypeId="2bd14d04-ffb7-4cfe-b8d4-81167a62e89f"/>
+    <recordManagerType typeId="c81cf92b-e05d-4bfd-9f20-dcafa13d09a2" valueTypeId="7d7eafb2-c83b-4f6e-b57c-58aa4c9878b6"/>
+  </producedTypes>
+  <name>СинхронизацияОрганизаций_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Синхронизация организаций</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.СинхронизацияОрганизаций_ат.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.СинхронизацияОрганизаций_ат.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="dc108ff8-aa21-4b60-bf5b-eefe5ab200d0">
+    <name>Идентификатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <attributes uuid="1c1704ea-a36c-4ca8-962c-43b06a276090">
+    <name>НавигационнаяСсылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Навигационная ссылка</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="5c3af850-b129-4081-8f28-0724ab3b8296">
+    <name>Ссылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="9e7509c2-593d-4385-8f9f-bbd56332089b">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="28f1cdc3-65b9-4361-9a52-add298fd4bba">
+    <name>ФормаВыбораОбъектаВнешнейИБ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора объекта внешней ИБ</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="6a01e791-c4bd-4506-8c8c-484815acbd8d">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

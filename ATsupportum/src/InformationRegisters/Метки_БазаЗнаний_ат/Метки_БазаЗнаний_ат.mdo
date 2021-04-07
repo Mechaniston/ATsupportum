@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="95023fcc-3bb9-46a0-9323-41f28a774de4">
+  <producedTypes>
+    <selectionType typeId="c169bb6d-f7b7-4e11-9602-5b2ae2cdf3a1" valueTypeId="82c02512-0631-46ec-85b5-f6ee730e1027"/>
+    <listType typeId="6f8a60be-e88b-44e8-a02c-4bc57c08ec66" valueTypeId="f1a14514-94d3-4186-925e-efdf395bf6f6"/>
+    <managerType typeId="f9f25248-5efd-4be7-bc4a-5d4c68b4e369" valueTypeId="581a3ad3-74f3-4e7a-89cd-64446cb7a4e4"/>
+    <recordSetType typeId="d16ecfb3-281f-48cb-8065-9c8ad7a6696d" valueTypeId="4baef737-ca39-4da2-bb7e-db13674370e9"/>
+    <recordKeyType typeId="2dd9c260-ee13-49c3-a407-625151d47767" valueTypeId="d8fd6b9e-5dd3-4483-b22c-6a2a1bcf175e"/>
+    <recordType typeId="16159fff-fa5e-47b5-bd36-c857d7db5ceb" valueTypeId="ab703d51-6a29-4868-acfd-191ea695bf77"/>
+    <recordManagerType typeId="f311542d-6cd1-4abf-86f9-c88c63e66a6b" valueTypeId="db2d1871-a5fd-467b-8859-56b6409d36fb"/>
+  </producedTypes>
+  <name>Метки_БазаЗнаний_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Метки Базы Знаний</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="6461c898-ac19-4030-92a4-7a3646af59b9">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.БазаЗнаний_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="0e9c3283-7ed9-4ec7-956b-e68beb090b78">
+    <name>ЗначениеМетки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение метки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Метки_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

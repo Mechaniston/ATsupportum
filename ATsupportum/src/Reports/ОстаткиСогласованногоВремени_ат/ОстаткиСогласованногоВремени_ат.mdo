@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="47679a20-631e-4ede-960b-462f3f5809b8">
+  <producedTypes>
+    <objectType typeId="024dd17b-05aa-4061-91f6-b5fa746b2f4f" valueTypeId="5f51ce85-799a-45f1-8b8f-54e55ffbb396"/>
+    <managerType typeId="3c0626df-e7e6-4005-b26e-014534f9763f" valueTypeId="12672c96-a1de-4471-b190-862b8ca52610"/>
+  </producedTypes>
+  <name>ОстаткиСогласованногоВремени_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Остатки согласованного времени</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ОстаткиСогласованногоВремени_ат.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.ОстаткиСогласованногоВремени_ат.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <attributes uuid="d8d9a6ee-77c7-45a4-a48f-fdf00797675a">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Задание_ат</types>
+      <types>DocumentRef.Заявка_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="175a822e-c117-4bd8-97dc-1dcc904375e0">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="9f88f6b8-a726-4a53-a953-f456118239a1">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="2c03bfdb-eb73-41bf-a0a3-7f41d3a150dd">
+    <name>ОстаткиСогласованногоВремени</name>
+    <synonym>
+      <key>ru</key>
+      <value>Остатки согласованного времени</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>DocumentRef.Задание_ат</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:Report>

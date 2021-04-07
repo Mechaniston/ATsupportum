@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="769ae32b-bcf3-4260-acfd-4db5a12043ec">
+  <producedTypes>
+    <selectionType typeId="ab9a5b40-712a-46aa-9575-33594474764d" valueTypeId="b2f00efc-a5ba-4fde-956d-cf7917f3073f"/>
+    <listType typeId="56e185c5-0cfb-4397-afa8-62ba20cc33f8" valueTypeId="d2bdd978-2bb1-4baa-a070-9aedb5c7b12d"/>
+    <managerType typeId="a529e2b2-c858-4261-bd66-3ca262b498ec" valueTypeId="643d730d-13b4-426d-b9a7-2c4faf93aab7"/>
+    <recordSetType typeId="10720b51-a0b3-4fa2-bf28-a22dbafe84a6" valueTypeId="fc7eb220-7b41-4b06-9693-45ab88a5de66"/>
+    <recordKeyType typeId="3dc1ffe0-1d2e-45d6-b353-1e41fea5ad68" valueTypeId="33e3387a-ad20-498d-bf31-6f1cd670a056"/>
+    <recordType typeId="3d311288-06cd-4e5a-ba91-12247a60fe83" valueTypeId="c5dbc30f-a328-402a-86a1-3abf8aac8fe1"/>
+    <recordManagerType typeId="4933dc39-7ddc-4a79-a8d9-29ed3bafd8cd" valueTypeId="4f29870e-2711-4ffe-b1c3-eb87887c84ad"/>
+  </producedTypes>
+  <name>СпецификацияЭП_Сервер1С_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Спецификация ЭП сервер 1С</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="37b906d8-ced8-4269-8f7a-e05c8cfccbc5">
+    <name>АгентПоддержки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Агент поддержки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5e6eb90d-6859-425e-a293-39665f738d1a">
+    <name>Платформа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Платформа</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.ТипПродукта</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыПродуктов_ат.EnumValue.Платформа1С</value>
+      </value>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="dfbba373-6fae-4035-8a06-5d653cb57b5f">
+    <name>ПортКластера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порт кластера</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+  </resources>
+  <resources uuid="a1d6cc52-40c5-4156-9c09-b685f49121f8">
+    <name>ПортСервера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порт сервера</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="69ea0f67-e7e0-4d76-8d80-0e2a81c24503">
+    <name>СсылкаНаЦентральныйСерверКластера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка на центральный сервер кластера</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.ТипПродукта</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыПродуктов_ат.EnumValue.Сервер1С</value>
+      </value>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="d707e69e-2703-4a3f-a0a8-5923c888800a">
+    <name>ЭкземплярПродукта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Экземпляр продукта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

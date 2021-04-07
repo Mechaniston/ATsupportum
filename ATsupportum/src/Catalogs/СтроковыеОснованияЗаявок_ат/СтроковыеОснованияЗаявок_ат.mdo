@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ed836a3d-fa95-4173-bcb0-7b23a285ad77">
+  <producedTypes>
+    <objectType typeId="edd7248e-1752-420e-8f1c-ddac0edef37f" valueTypeId="a3be86c4-59c7-4ca4-9054-140dfb196d7a"/>
+    <refType typeId="07f1d745-0f4d-49b5-ab71-e1b3f520e48e" valueTypeId="99678cf7-efc5-49de-b7bd-8a4bac4ce7cd"/>
+    <selectionType typeId="12995747-3651-4fb1-86d9-feabcd32e9b8" valueTypeId="9697d0e4-cf15-4c94-8c79-c38ce5e64c56"/>
+    <listType typeId="1724043f-fc37-40c9-b218-e9651f48c387" valueTypeId="f14e3a62-2df7-423d-9803-35cd44008432"/>
+    <managerType typeId="bef6793f-3bb0-4cdf-b6c2-262ec47ec96f" valueTypeId="535692d3-203a-4056-8190-306245473601"/>
+  </producedTypes>
+  <name>СтроковыеОснованияЗаявок_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Строковые основания Заявок</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.СтроковыеОснованияЗаявок_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.СтроковыеОснованияЗаявок_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="1387fc64-ad9b-4779-9d54-5070cb89bcb1">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>100</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ee5b8354-5265-4328-95a8-39992ef856eb">
+    <name>ДатаВремя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата/время</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c576d7fc-c1d8-4168-85e3-92175a42d766">
+    <name>СтрокаОснования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Строка основания</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d9afa320-68bb-4143-b347-c097eaa84566">
+    <name>ТипСтроковогоОснования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип строкового основания</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыОснованияЗаявок_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>

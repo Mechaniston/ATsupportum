@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7a16ed21-58c4-471f-be6d-1710c537e6e0">
+  <name>ВходящееЭлектронноеПисьмоПередУдалением_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Входящее электронное письмо перед удалением ат</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ЭлектронноеПисьмоВходящее</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.ОбработчикиСобытийДляПочтовыхДокументов_ат.ВходящееЭлектронноеПисьмоПередУдалением_ат</handler>
+</mdclass:EventSubscription>

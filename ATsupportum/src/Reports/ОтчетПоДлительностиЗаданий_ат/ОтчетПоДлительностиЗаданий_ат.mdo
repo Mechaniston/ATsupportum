@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="75082466-066a-4a02-8599-5fc5135824e9">
+  <producedTypes>
+    <objectType typeId="c51e5033-5e3b-4200-93e6-038a05240b4e" valueTypeId="1c59e2b0-8ce2-45ef-8624-835ceba0e15d"/>
+    <managerType typeId="3536d4c2-7820-4612-8382-001a72ed2609" valueTypeId="33a68e0b-9d68-48a6-b182-eb687f1b77d3"/>
+  </producedTypes>
+  <name>ОтчетПоДлительностиЗаданий_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отчет по длительности Заданий</value>
+  </synonym>
+  <defaultForm>Report.ОтчетПоДлительностиЗаданий_ат.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.ОтчетПоДлительностиЗаданий_ат.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <attributes uuid="eba958bf-5ae1-4a64-b701-886442a9e3f6">
+    <name>Группировки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Группировки</value>
+    </synonym>
+    <type>
+      <types>ValueList</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="fc9a76bf-f159-4bed-a519-e9ad3da7d9df">
+    <name>Поля</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поля</value>
+    </synonym>
+    <type>
+      <types>ValueList</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="165aa3d0-89ef-43d0-9c3f-1bc6b31909ae">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="24f0e987-c0ce-4274-aa2f-cec683dc2d3d">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

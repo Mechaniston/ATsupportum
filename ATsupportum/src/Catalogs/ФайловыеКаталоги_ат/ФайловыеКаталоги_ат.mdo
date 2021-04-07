@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c1ba668c-48bc-47d9-92e7-137a63226842">
+  <producedTypes>
+    <objectType typeId="a201a1f9-964a-4fd3-8132-5269a9536d33" valueTypeId="c6b85f6b-5b1c-4ecf-8bdb-cf671680c64b"/>
+    <refType typeId="63f95ed2-1e7a-4627-a334-d25052bda721" valueTypeId="7b6d00e3-c1d8-479c-aa6a-dcc833bfc6ee"/>
+    <selectionType typeId="e5e0f422-2346-4d8b-a854-19aff0e81d04" valueTypeId="eccfe5bf-9d2c-45f3-b4b9-d45641575186"/>
+    <listType typeId="0688ceef-f14e-4d35-9c4d-2d9b20623ee8" valueTypeId="09225e8a-f547-4f20-a497-4759fe31217e"/>
+    <managerType typeId="473cef2d-67f8-4d76-9b3f-8c3e3d116ebb" valueTypeId="57648b94-f0e2-453e-a4a6-ca1193fe0dd5"/>
+  </producedTypes>
+  <name>ФайловыеКаталоги_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Файловые каталоги</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ФайловыеКаталоги_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ФайловыеКаталоги_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Файловый каталог</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="53927365-771e-4a54-b2fd-05fed641c825">
+    <name>Сервер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Серверы_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="95b10035-6a4c-4b87-bbb9-4b97d6c8074f">
+    <name>СетеваяПапка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сетевая папка</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>25</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e4454012-7938-453a-901a-10e334bd2aae">
+    <name>ОтносительныйПуть</name>
+    <synonym>
+      <key>ru</key>
+      <value>Относительный путь</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7d4ffe24-8773-409b-bc1c-c098f68e4465">
+    <name>ВидФайловогоКаталога</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид файлового каталога</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыФайловогоКаталога_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>

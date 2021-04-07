@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="26dbc1c8-2777-46d8-b01c-e4188602496d">
+  <name>ОтправкаУведомленийОСтатусеСерверов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отправка уведомлений о статусе серверов</value>
+  </synonym>
+  <methodName>CommonModule.РаботаССерверами_ат.ПроверкаУведомленийWMI</methodName>
+  <description>Отправка уведомлений о статусе серверов</description>
+  <use>true</use>
+  <predefined>true</predefined>
+  <restartCountOnFailure>3</restartCountOnFailure>
+  <restartIntervalOnFailure>10</restartIntervalOnFailure>
+</mdclass:ScheduledJob>

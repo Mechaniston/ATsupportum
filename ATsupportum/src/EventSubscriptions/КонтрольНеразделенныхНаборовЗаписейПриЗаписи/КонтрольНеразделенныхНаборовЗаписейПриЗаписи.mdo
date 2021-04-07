@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="38ac9a13-665a-4201-b5cc-687fe4a01130">
+  <name>КонтрольНеразделенныхНаборовЗаписейПриЗаписи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Контроль неразделенных наборов записей при записи</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet.ДанныеПроизводственногоКалендаря</types>
+    <types>InformationRegisterRecordSet.ПодпискиПолучателей</types>
+    <types>InformationRegisterRecordSet.УдалитьОбластиДанных</types>
+    <types>InformationRegisterRecordSet.УдалитьБлокировкиСеансовОбластиДанных</types>
+    <types>InformationRegisterRecordSet.ПравилаДляОбменаДанными</types>
+    <types>InformationRegisterRecordSet.УдалитьСтраныМира</types>
+    <types>InformationRegisterRecordSet.ВерсииПодсистем</types>
+    <types>InformationRegisterRecordSet.СообщенияОбменаДанными</types>
+    <types>InformationRegisterRecordSet.АдресныйКлассификатор</types>
+    <types>InformationRegisterRecordSet.УдалитьОбластиКРезервномуКопированию</types>
+    <types>InformationRegisterRecordSet.РейтингАктивностиОбластейДанных</types>
+    <types>InformationRegisterRecordSet.ЗависимостиПравДоступа</types>
+    <types>InformationRegisterRecordSet.НастройкиОтправителя</types>
+    <types>InformationRegisterRecordSet.ОбластиТребующиеОбработкиПоставляемыхДанных</types>
+    <types>InformationRegisterRecordSet.НастройкиТранспортаОбменаОбластейДанных</types>
+    <types>InformationRegisterRecordSet.АдресныеСокращения</types>
+    <types>InformationRegisterRecordSet.УдалитьОчередьЗаданий</types>
+    <types>InformationRegisterRecordSet.УдалитьЗамерыВремени</types>
+    <types>InformationRegisterRecordSet.ВерсииОбъектовАдресногоКлассификатора</types>
+    <types>InformationRegisterRecordSet.ПраваРолей</types>
+    <types>InformationRegisterRecordSet.УдалитьВерсииПодсистем</types>
+    <types>InformationRegisterRecordSet.УдалитьОчередьИзвлеченияТекста</types>
+    <types>InformationRegisterRecordSet.ПоставляемыеДанныеТребующиеОбработки</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.РаботаВМоделиСервиса.КонтрольНеразделенныхНаборовЗаписейПриЗаписи</handler>
+</mdclass:EventSubscription>

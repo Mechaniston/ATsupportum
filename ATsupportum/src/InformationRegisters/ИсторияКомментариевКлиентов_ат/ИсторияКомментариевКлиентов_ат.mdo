@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8e2d04e2-328b-4da3-9588-dd34b8912997">
+  <producedTypes>
+    <selectionType typeId="e3d703c9-c197-47ce-9918-878fdd84fdb5" valueTypeId="ab251279-5c6e-45d9-8b31-9fb81a752e49"/>
+    <listType typeId="872e1ad6-77d8-4530-b19e-6c8e9081b77b" valueTypeId="c60e1cf0-1159-462c-9f41-acc514622efb"/>
+    <managerType typeId="12ed9312-0d24-4b72-8183-211ad06fdc98" valueTypeId="6338ebfb-f4df-49d7-9916-c91682b7e6f9"/>
+    <recordSetType typeId="22d86aa8-ef50-4062-bae1-8321e0b9b4af" valueTypeId="9b38c6bc-60ed-4955-8693-3e5f886b6b17"/>
+    <recordKeyType typeId="dd5f7788-89b3-4b1f-a4bc-8bd72fca835d" valueTypeId="3cc335c3-e781-4662-9434-ae7d64974999"/>
+    <recordType typeId="8ba3f12f-84f9-4263-b35a-16577c5092a9" valueTypeId="44951e77-17cd-430f-bc47-d313618053f0"/>
+    <recordManagerType typeId="cd5bac90-f22d-4a68-b5ca-2fcbe961749a" valueTypeId="725044d3-fb59-4869-9de8-8faf04ff0b21"/>
+  </producedTypes>
+  <name>ИсторияКомментариевКлиентов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>История комментариев клиентов</value>
+  </synonym>
+  <comment>!!!!!HOTFIX</comment>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="c32e0047-6524-4827-bc04-8b11d317a51c">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2a99e386-ba62-44ac-98f2-e3e876b6c53a">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="ac4334cb-1229-4907-a24f-755ea9600863">
+    <name>Ссылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.СчетНаОплату_ат</types>
+      <types>CatalogRef.Продукты_ат</types>
+      <types>CatalogRef.Договоры_ат</types>
+      <types>DocumentRef.Заявка_ат</types>
+      <types>CatalogRef.ПоставкиПродуктов_ат</types>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+      <types>DocumentRef.ПоступлениеНаСчетКлиента_ат</types>
+      <types>CatalogRef.ВидыФайловогоКаталога_ат</types>
+      <types>CatalogRef.РолиСерверов_ат</types>
+      <types>CatalogRef.Серверы_ат</types>
+      <types>DocumentRef.Согласование_ат</types>
+      <types>DocumentRef.ФиксацияРабот_ат</types>
+      <types>CatalogRef.Проекты_ат</types>
+      <types>CatalogRef.Доступы_ат</types>
+      <types>DocumentRef.СписаниеСоСчетаКлиента_ат</types>
+      <types>CatalogRef.ВерсииПродуктов_ат</types>
+      <types>CatalogRef.Контрагенты_ат</types>
+      <types>DocumentRef.Реализация_ат</types>
+      <types>CatalogRef.Метки_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ce87ec9e-8b5c-4bad-9b63-562c145de3b3">
+  <producedTypes>
+    <objectType typeId="71d20841-a784-4256-bc16-3f250d7f7518" valueTypeId="631a8b88-263a-4081-a238-252021404ffa"/>
+    <refType typeId="56f41d96-5512-4768-9d82-6627dbfb59f2" valueTypeId="9b7ab4ac-1a4d-40b7-8e6d-87add8291f29"/>
+    <selectionType typeId="2a754119-0539-44e0-b14f-b2e304056e0e" valueTypeId="05bbddee-6298-440e-bd09-ecdda073eed0"/>
+    <listType typeId="2c916939-6b24-4783-924c-e826608c7714" valueTypeId="9ad65e11-e1be-4106-ae04-ab614dd7ecc3"/>
+    <managerType typeId="2ffbf8c8-d39e-49ab-9932-d4ac23f98e8f" valueTypeId="ac40cb5f-ee74-435a-ac12-4fe0c50c425f"/>
+  </producedTypes>
+  <name>ВидыДоговоров_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды договоров</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВидыДоговоров_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВидыДоговоров_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Вид договора</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ВидыДоговоров_ат.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ВидыДоговоров_ат.Form.ФормаСпискаИВыбора</defaultListForm>
+  <defaultChoiceForm>Catalog.ВидыДоговоров_ат.Form.ФормаСпискаИВыбора</defaultChoiceForm>
+  <attributes uuid="3d9e98a4-f22f-42e6-a60f-00d749385fee">
+    <name>ПериодДанныхДляОпределенияТарифногоПлана</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период данных для определения тарифного плана</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПериодДанныхДляОпределенияТарифногоПлана_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ПериодДанныхДляОпределенияТарифногоПлана_ат.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="444af0cb-a70c-4336-8073-4b2a47f3a9b0">
+    <name>ПериодичностьРеализаций</name>
+    <synonym>
+      <key>ru</key>
+      <value>Периодичность реализаций</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПериодичностиРеализаций_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ПериодичностиРеализаций_ат.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fcccb3bb-5ec6-4e07-9734-cfc997d52b3c">
+    <name>ПериодичностьСчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Периодичность счетов</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПериодичностиСчетов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ПериодичностиСчетов_ат.EnumValue.Отсутствует</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a7753297-a85a-4dc2-b3ef-c29a2307f51a">
+    <name>ПостфиксНомера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Постфикс номера</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>15</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ae0a303f-8a5f-416a-bce1-d01303644f07">
+    <name>ПрефиксНомера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Префикс номера</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>15</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e00760e0-4eba-4802-9d75-f79437758ffc">
+    <name>СрокОплатыВДнях</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок оплаты в днях</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>2</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="6a1ba8aa-7e0d-4684-80cc-481ac12911c7">
+    <name>ТипДоговора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип договора</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыДоговоров_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2de50db7-169e-4d46-b617-c1c3fe386bc6">
+    <name>ФормулаРасчетаТарифногоПлана</name>
+    <synonym>
+      <key>ru</key>
+      <value>Формула расчета тарифного плана</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Значение = ...любые операции с:
+	ОперативныйОстаток
+	ФактическийОстаток
+	ОперативныйОборот
+	ФактическийОборот
+	(Оперативные|Фактические|)Поступления
+	ОперативныеСписания
+	ФактическиеСписания
+</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="b2422e6b-b479-4cf7-a90a-a5509d279805">
+    <producedTypes>
+      <objectType typeId="48f0808d-de10-46dd-aa5f-40cd89ec952d" valueTypeId="2471d1fb-83d2-4078-b0d4-6dba9a3e5ada"/>
+      <rowType typeId="380a50d9-8117-45d6-83a2-6d37103af062" valueTypeId="258fe29f-5f4b-41a0-9fa2-79d0851beccc"/>
+    </producedTypes>
+    <name>Услуги</name>
+    <synonym>
+      <key>ru</key>
+      <value>Услуги</value>
+    </synonym>
+    <attributes uuid="e5cbfa9a-3179-429d-b661-103a3cb7e2f8">
+      <name>Номенклатура</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номенклатура</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Номенклатура_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="de8d7275-4914-4ebf-9409-adf58f52f9ac">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="924847b8-896e-4c5b-b4fc-4c63637b94b7">
+    <name>ФормаСпискаИВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка и выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

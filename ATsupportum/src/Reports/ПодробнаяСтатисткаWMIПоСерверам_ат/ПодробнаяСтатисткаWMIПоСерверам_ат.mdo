@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="074380dd-a18d-49a0-bb09-8585e099191c">
+  <producedTypes>
+    <objectType typeId="a291b967-301e-4462-85cb-e689036ee36b" valueTypeId="c099b43f-0bad-49f8-a813-f8c53a829a49"/>
+    <managerType typeId="04334aed-9689-4575-855e-83eb8976d63a" valueTypeId="29e1fb20-235c-44e2-b762-0ad2e5d1f249"/>
+  </producedTypes>
+  <name>ПодробнаяСтатисткаWMIПоСерверам_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Подробная статистка WMI</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ПодробнаяСтатисткаWMIПоСерверам_ат.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.ПодробнаяСтатисткаWMIПоСерверам_ат.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <attributes uuid="0a660223-11ad-4745-893e-5bbbb931d39b">
+    <name>ДатаНачала</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата начала</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="d1cdfd76-1c33-428b-8d56-926a0b9e8ab0">
+    <name>ДатаКонца</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата конца</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="45566c5b-b0d8-406f-9c8a-8f1b54adbd65">
+    <name>Сервер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Серверы_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="88259828-5c5f-44eb-93e2-b37bee160738">
+    <name>ВремяДняИНочи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время дня и ночи</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ae0aa874-dafe-444a-bbd7-cc4cf24798e1">
+    <name>CPU</name>
+    <synonym>
+      <key>ru</key>
+      <value>CPU</value>
+    </synonym>
+    <type>
+      <types>SpreadsheetDocument</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="6b57be83-2ca5-4b01-9ad8-083815b90a8a">
+    <name>RAM</name>
+    <synonym>
+      <key>ru</key>
+      <value>RAM</value>
+    </synonym>
+    <type>
+      <types>SpreadsheetDocument</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="703391ec-117c-4a52-a80b-999835429751">
+    <name>HDD</name>
+    <synonym>
+      <key>ru</key>
+      <value>HDD</value>
+    </synonym>
+    <type>
+      <types>SpreadsheetDocument</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="021bc2b7-d3ca-4f13-bb9f-c1a7d97f1cb9">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="241a9597-2157-46a6-83af-7f4b1778fd4e">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

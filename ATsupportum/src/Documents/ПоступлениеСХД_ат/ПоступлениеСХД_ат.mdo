@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="433444ca-9e36-4bb9-a561-de1b97074a65">
+  <producedTypes>
+    <objectType typeId="374043f3-944b-4eb1-aad9-5740b94b078a" valueTypeId="cd15ddad-ca00-4435-a9cc-e6b5b7017d5d"/>
+    <refType typeId="2d762906-9dec-443a-ae71-c7b30306a13c" valueTypeId="41e6323f-fd61-4885-a24e-a23d6cc2f73a"/>
+    <selectionType typeId="d4bf2fda-960b-4c67-99a8-fd6be079e321" valueTypeId="4b35c6aa-5f86-48fb-ac35-187a979807af"/>
+    <listType typeId="0189383e-8c3d-49d2-a1a4-2a44ae87a4d0" valueTypeId="67935dce-a879-46f3-ac05-5a2e5841e8c6"/>
+    <managerType typeId="9838b92c-f2ba-436f-8354-333c4261ca05" valueTypeId="a6968941-279a-453f-a19d-dcb14b4b9b57"/>
+  </producedTypes>
+  <name>ПоступлениеСХД_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Поступление СХД</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ПоступлениеСХД_ат.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <registerRecords>AccumulationRegister.УчетРесурсовСерверов_ат</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <tabularSections uuid="611cd08f-6fb0-4965-811e-0532787b4d77">
+    <producedTypes>
+      <objectType typeId="4cd86d54-ceee-4f17-820c-58f5d62167f8" valueTypeId="2c452f19-0c76-4d0b-806c-4c2628e9d3a3"/>
+      <rowType typeId="014a2d63-d347-4485-a5f1-601778607f7c" valueTypeId="4655bc43-d4d1-4f6d-b9e4-e1b31f2216d5"/>
+    </producedTypes>
+    <name>ПоступившиеСХД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поступившие СХД_ат</value>
+    </synonym>
+    <fillChecking>ShowError</fillChecking>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="580ba0ae-4b67-41fd-973f-db46ed8a14ed">
+      <name>ТипСХД</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип СХД_ат</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СХД_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

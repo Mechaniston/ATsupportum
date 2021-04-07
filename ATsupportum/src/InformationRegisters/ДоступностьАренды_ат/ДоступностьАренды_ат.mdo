@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c232d66d-2dd0-4b2f-826a-76069e96c058">
+  <producedTypes>
+    <selectionType typeId="b2ba63c8-b82d-4f63-843d-2aad9d28d1a4" valueTypeId="a8586fea-bd79-4008-8049-fa4dae4ff5ed"/>
+    <listType typeId="bda7bcaa-e851-4bef-b4c3-ea17024b16b3" valueTypeId="c9fb6037-e730-4752-bfc1-0a416e478584"/>
+    <managerType typeId="fb189e24-d4f7-4057-a38b-e2e2ded18941" valueTypeId="f8e3a9cd-9b06-4f44-9a78-f02b1a3edcf4"/>
+    <recordSetType typeId="3f77b6c7-390f-493e-b725-486e62b12125" valueTypeId="8501a809-a2f5-40c3-a6b0-03783fe0f605"/>
+    <recordKeyType typeId="81df0914-e383-4d53-8dea-9ad00590bb37" valueTypeId="ca04b759-5b64-4228-bc77-93bd6a5624c1"/>
+    <recordType typeId="bd2bf919-f171-4dbe-9343-b8853c3f158a" valueTypeId="25c44bcb-0b77-4d88-89c3-307007206a82"/>
+    <recordManagerType typeId="67ad03d4-d3d5-41bd-bdb2-8f10e7c8f19d" valueTypeId="f2a0356d-fd11-4c50-8c3c-4bfd42860eb0"/>
+  </producedTypes>
+  <name>ДоступностьАренды_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Доступность аренды</value>
+  </synonym>
+  <comment>!!!!!HOTFIX + переименовать в История..</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <writeMode>RecorderSubordinate</writeMode>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="d7983a47-c85f-4ca3-a4b1-b679e7944d10">
+    <name>АрендаРазрешена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аренда разрешена</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="639f7cb9-20ca-405b-b988-d34389eeb7f4">
+    <name>ОбъектАренды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект аренды</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОбъектыАренды_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="a844fe3a-2964-4e8b-9990-226fe5abc59f">
+    <name>СубъектАренды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Субъект аренды</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ПоставкиПродуктов_ат</types>
+      <types>CatalogRef.РолиСерверов_ат</types>
+      <types>CatalogRef.Серверы_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="683fe38c-e8bd-4472-b52a-fb4c7c5d00ae">
+    <name>Клиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клиент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

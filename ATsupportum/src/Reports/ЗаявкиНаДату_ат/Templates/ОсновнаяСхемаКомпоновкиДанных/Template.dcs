@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Заявки</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заявка</dataPath>
+			<field>Заявка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявка</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>Представление(ОписаниеЗаявки)</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЗаявок</dataPath>
+			<field>КоличествоЗаявок</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол-во заявок</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Клиент</dataPath>
+			<field>Клиент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипЗаявки</dataPath>
+			<field>ТипЗаявки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОписаниеЗаявки</dataPath>
+			<field>ОписаниеЗаявки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание заявки</v8:content>
+				</v8:item>
+			</title>
+			<useRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</useRestriction>
+			<attributeUseRestriction>
+				<field>true</field>
+				<condition>true</condition>
+				<group>true</group>
+				<order>true</order>
+			</attributeUseRestriction>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответственный</dataPath>
+			<field>Ответственный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СодержаниеРабот</dataPath>
+			<field>СодержаниеРабот</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>УчетнаяДата</dataPath>
+			<field>УчетнаяДата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Проект</dataPath>
+			<field>Проект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаРегистрации</dataPath>
+			<field>ДатаРегистрации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата регистрации</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическаяДлительность</dataPath>
+			<field>ФактическаяДлительность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтчетнаяДлительность</dataPath>
+			<field>ОтчетнаяДлительность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическаяДатаОкончания</dataPath>
+			<field>ФактическаяДатаОкончания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтчетнаяДатаНачала</dataPath>
+			<field>ОтчетнаяДатаНачала</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланируемаяДатаНачала</dataPath>
+			<field>ПланируемаяДатаНачала</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланируемаяДатаОкончания</dataPath>
+			<field>ПланируемаяДатаОкончания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаСтатуса</dataPath>
+			<field>ДатаСтатуса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата статуса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОжидаемаяДатаЗавершения</dataPath>
+			<field>ОжидаемаяДатаЗавершения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтчетнаяДатаОкончания</dataPath>
+			<field>ОтчетнаяДатаОкончания</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическаяДатаНачала</dataPath>
+			<field>ФактическаяДатаНачала</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланируемаяДлительность</dataPath>
+			<field>ПланируемаяДлительность</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПланируемоеВремяВыполнения</dataPath>
+			<field>ПланируемоеВремяВыполнения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планируемое время выполнения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ФактическоеВремяВыполнения</dataPath>
+			<field>ФактическоеВремяВыполнения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фактическое время выполнения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статус</dataPath>
+			<field>Статус</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтчетноеВремяВыполнения</dataPath>
+			<field>ОтчетноеВремяВыполнения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчетное время выполнения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СогласованноеВремяВыполнения</dataPath>
+			<field>СогласованноеВремяВыполнения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласованное время выполнения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	1 КАК КоличествоЗаявок,
+	Заявка_ат.Ссылка КАК Заявка,
+	ВЫБОР
+		КОГДА Заявка_ат.Тезис = ""
+			ТОГДА Заявка_ат.Ссылка
+		ИНАЧЕ Заявка_ат.Тезис
+	КОНЕЦ КАК ОписаниеЗаявки,
+	Заявка_ат.Дата КАК ДатаРегистрации,
+	Заявка_ат.Клиент,
+	Заявка_ат.Подразделение,
+	Заявка_ат.Сотрудник,
+	Заявка_ат.ТипЗаявки,
+	Заявка_ат.Проект,
+	Заявка_ат.Ответственный,
+	ИсторияОжидаемойДатыЗавершенияРабот_атСрезПоследних.ОжидаемаяДатаЗавершения КАК ОжидаемаяДатаЗавершения,
+	ВЫБОР
+		КОГДА &amp;СотрудникОрганизации
+			ТОГДА ИсторияСтатусовЗаявок_атСрезПоследних.Статус
+		ИНАЧЕ ВЫБОР
+				КОГДА ИсторияСтатусовЗаявок_атСрезПоследних.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыЗаявок_ат.ВОчереди)
+					ТОГДА ЗНАЧЕНИЕ(Перечисление.СтатусыЗаявок_ат.Выполняется)
+				ИНАЧЕ ИсторияСтатусовЗаявок_атСрезПоследних.Статус
+			КОНЕЦ
+	КОНЕЦ КАК Статус,
+	ИсторияСтатусовЗаявок_атСрезПоследних.Период КАК ДатаСтатуса,
+	СвойстваЗаявок_ат.ПланируемаяДатаНачала КАК ПланируемаяДатаНачала,
+	СвойстваЗаявок_ат.ПланируемаяДатаОкончания КАК ПланируемаяДатаОкончания,
+	СвойстваЗаявок_ат.ПланируемаяДлительность КАК ПланируемаяДлительность,
+	ВременаРабот_атОбороты.ПланируемоеВремяОборот КАК ПланируемоеВремяВыполнения,
+	СвойстваЗаявок_ат.ФактическаяДатаНачала КАК ФактическаяДатаНачала,
+	СвойстваЗаявок_ат.ФактическаяДатаОкончания КАК ФактическаяДатаОкончания,
+	СвойстваЗаявок_ат.ФактическаяДлительность КАК ФактическаяДлительность,
+	ВременаРабот_атОбороты.ФактическоеВремяОборот КАК ФактическоеВремяВыполнения,
+	СвойстваЗаявок_ат.ОтчетнаяДатаНачала КАК ОтчетнаяДатаНачала,
+	СвойстваЗаявок_ат.ОтчетнаяДатаОкончания КАК ОтчетнаяДатаОкончания,
+	СвойстваЗаявок_ат.ОтчетнаяДлительность КАК ОтчетнаяДлительность,
+	ВременаРабот_атОбороты.ОтчетноеВремяОборот КАК ОтчетноеВремяВыполнения,
+	ВременаРабот_атОбороты.СогласованноеВремяОборот КАК СогласованноеВремяВыполнения,
+	ВременаРабот_атОбороты.СодержаниеРабот
+ИЗ
+	Документ.Заявка_ат КАК Заявка_ат
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СвойстваЗаявок_ат КАК СвойстваЗаявок_ат
+		ПО Заявка_ат.Ссылка = СвойстваЗаявок_ат.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИсторияСтатусовЗаявок_ат.СрезПоследних({(&amp;ДатаСрезаСтатуса)}, ) КАК ИсторияСтатусовЗаявок_атСрезПоследних
+		ПО Заявка_ат.Ссылка = ИсторияСтатусовЗаявок_атСрезПоследних.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ИсторияОжидаемойДатыЗавершенияРабот_ат.СрезПоследних({(&amp;ДатаСрезаСтатуса)}, ) КАК ИсторияОжидаемойДатыЗавершенияРабот_атСрезПоследних
+		ПО Заявка_ат.Ссылка = ИсторияОжидаемойДатыЗавершенияРабот_атСрезПоследних.Заявка
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ВременаРабот_ат.Обороты(, {(&amp;ДатаСрезаСтатуса)}, , ) КАК ВременаРабот_атОбороты
+		ПО Заявка_ат.Ссылка = ВременаРабот_атОбороты.Заявка
+ГДЕ
+	НЕ Заявка_ат.ПометкаУдаления
+{ГДЕ
+	(Заявка_ат.Дата &lt;= &amp;ДатаСрезаСтатуса)}
+</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ФактическоеВремяВыполнения</dataPath>
+		<expression>ПродолжительностьПроцессов_КлиентСервер_ат.ПолучитьВремяДляОтображения(ФактическоеВремяВыполнения)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Фактическое время выполнения</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2; ЧН=0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ОтчетноеВремяВыполнения</dataPath>
+		<expression>ПродолжительностьПроцессов_КлиентСервер_ат.ПолучитьВремяДляОтображения(ОтчетноеВремяВыполнения)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Время выполнения заявки</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2; ЧН=0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ПланируемоеВремяВыполнения</dataPath>
+		<expression>ПродолжительностьПроцессов_КлиентСервер_ат.ПолучитьВремяДляОтображения(ПланируемоеВремяВыполнения)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Планируемое время выполнения</v8:content>
+			</v8:item>
+		</title>
+		<useRestriction>
+			<group>true</group>
+		</useRestriction>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧДЦ=2; ЧН=0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</calculatedField>
+	<totalField>
+		<dataPath>КоличествоЗаявок</dataPath>
+		<expression>Сумма(КоличествоЗаявок)</expression>
+	</totalField>
+	<parameter>
+		<name>СотрудникОрганизации</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сотрудник организации</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДатаСрезаСтатуса</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата среза статуса</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основной</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЗаявок</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>СотрудникОрганизации</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДатаСрезаСтатуса</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>80619066-4519-4561-ae42-87afb59c3451</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Основной</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupPlacement">None</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:name>Группировка</dcsset:name>
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Статус</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

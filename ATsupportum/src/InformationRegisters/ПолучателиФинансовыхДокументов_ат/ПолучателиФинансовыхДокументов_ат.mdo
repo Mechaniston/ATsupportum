@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3745dc8f-956d-480e-a626-1e1efa6bdc9b">
+  <producedTypes>
+    <selectionType typeId="6e882c47-dacb-48d1-be3f-b845ae3138e8" valueTypeId="f9d183ac-18af-4d9a-afa1-1e5552b7dad6"/>
+    <listType typeId="ba4c0f40-de80-4098-b45e-edec63e65f20" valueTypeId="ae18f768-411c-429e-a91b-9e421c428bfc"/>
+    <managerType typeId="f0d93a47-648d-4528-b132-421806cac1a1" valueTypeId="88901552-4239-4c78-94fc-df4ee3aa1aae"/>
+    <recordSetType typeId="bf07054f-4bde-4f02-a99a-6d80b294f327" valueTypeId="89c46163-4b58-4c80-a778-d30ca0643d93"/>
+    <recordKeyType typeId="f2bb3f20-db83-411c-b665-546b488b58cb" valueTypeId="0f74737c-ba5a-4fdd-8ac3-b453d96cba4c"/>
+    <recordType typeId="d21b383b-3564-40c0-9c7a-3e31fcf32a78" valueTypeId="088170d8-f476-4ac5-aebf-7d203c7dc86c"/>
+    <recordManagerType typeId="7b0f0f5b-a4f7-451e-862b-bb63ff9ec0ee" valueTypeId="79251b3d-1f46-4dd4-ad4e-61618ba7ea79"/>
+  </producedTypes>
+  <name>ПолучателиФинансовыхДокументов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Получатели финансовых документов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="52cabd34-d58d-401e-a902-32ac4ee71cdb">
+    <name>ПолучательФинансовыхДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получатель финансовых документов</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="f8e13e4a-1c0c-4055-a39f-70d0df68f9a8">
+    <name>Получатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получатель</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <types>CatalogRef.Пользователи</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="d5ae56a9-299f-4931-9373-4fb4ce504531">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Договоры_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="8da6f531-32b3-4f65-84e4-a3dc66aae036">
+    <name>Клиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клиент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

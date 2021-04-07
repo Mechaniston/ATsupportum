@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="984fc9a5-c6f7-4b28-9e83-3d37d50383c8">
+  <producedTypes>
+    <objectType typeId="70a8bab9-6c4b-4d82-81b7-aa610a6c5ac5" valueTypeId="812c0dbe-11c6-4b80-9046-5e0dead807fa"/>
+    <managerType typeId="592837ee-9faa-426c-add4-0c90b1041daf" valueTypeId="7b6b45a0-555d-4a27-8478-003f04b8b953"/>
+  </producedTypes>
+  <name>ОтчетПоРесурсамСерверов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отчет по ресурсам серверов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ОтчетПоРесурсамСерверов_ат.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.ОтчетПоРесурсамСерверов_ат.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <attributes uuid="1e1bcb73-9549-446a-81a8-c3d4ca9cb6aa">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="a431f9d3-468f-4861-9448-7af1d006f92e">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="192c12df-f24a-4041-a126-b1066ac1bc54">
+    <name>ДинСп</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дин сп</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="9d1dad58-5c55-446b-9845-4803bae958da">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

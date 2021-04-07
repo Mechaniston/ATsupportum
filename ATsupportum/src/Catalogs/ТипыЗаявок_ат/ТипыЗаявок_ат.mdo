@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="85b78653-2d10-408b-8b69-8db6f5f26c81">
+  <producedTypes>
+    <objectType typeId="59e5c1b5-30de-4f96-a5ad-2a4a14c4c5a6" valueTypeId="c377f1b9-7b96-421e-b6ba-2e7753ce7201"/>
+    <refType typeId="4f370e86-2699-4965-b8d7-dd8c2697732b" valueTypeId="e5192752-f86d-46ba-805f-1668bb79e990"/>
+    <selectionType typeId="e405ec5a-c0b4-4aaa-8540-b865289ba9a6" valueTypeId="e3035dc6-9c4b-4dfd-b03f-05cdf8ca6ed5"/>
+    <listType typeId="0811c4f3-b0f2-4ff5-982e-e77d6d5d3a02" valueTypeId="23f90526-0016-4a5d-83d7-5a40bcd7f0ec"/>
+    <managerType typeId="638863f6-749f-4e22-b6d5-cb7d27b6a8d1" valueTypeId="1183dbba-be31-446e-b9af-605204806521"/>
+  </producedTypes>
+  <name>ТипыЗаявок_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды заявок</value>
+  </synonym>
+  <comment>TODO - переименовать в ВидыЗаявок</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ТипыЗаявок_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ТипыЗаявок_ат.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.ТипыЗаявок_ат.Attribute.НаименованиеВнутреннее</inputByString>
+  <searchStringModeOnInputByString>AnyPart</searchStringModeOnInputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Вид заявки</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ТипыЗаявок_ат.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ТипыЗаявок_ат.Form.ФормаСпискаИВыбора</defaultListForm>
+  <defaultChoiceForm>Catalog.ТипыЗаявок_ат.Form.ФормаСпискаИВыбора</defaultChoiceForm>
+  <attributes uuid="cfc25f75-d1ce-4e3c-8e57-0bdc95c54a19">
+    <name>Исправление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Исправление</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Исправление</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="93906fac-df72-47d3-989c-d5bfbc82c6f1">
+    <name>НаименованиеВнутреннее</name>
+    <synonym>
+      <key>ru</key>
+      <value>Внутреннее наименование</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e5b7711c-ed4d-4518-9b0a-c9de7f92b3a1">
+    <name>НеобходимЭкземплярПродукта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Необходим экземпляр продукта</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Требуется вводить экземпляр продукта при закрытии заявки</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2191342b-4591-4657-87fe-60423b502b87">
+    <name>Обновление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обновление</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c1d80442-26b8-42a0-a9a5-0edc1c03a8e5">
+    <name>ОтображениеКлиенту</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отображение клиенту</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ТипыЗаявок_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="42aa013a-7a26-4810-af18-1a2ed51406b5">
+    <name>Приоритет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Приоритет</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>3</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Приоритет</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9328b847-a19f-4319-8a9a-8fa653f5dc35">
+    <name>Срочное</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срочное</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Срочное</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="ca46ea56-62fb-4829-9fda-206b3a80306b">
+    <name>ФормаСпискаИВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка и выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f697cea5-5d29-4e05-a695-154e3918b99e">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7d5e679d-ba49-496b-855c-297845d6e0bc">
+  <producedTypes>
+    <selectionType typeId="cf478b6d-5e54-4a16-845b-f073cdbdac17" valueTypeId="f327e645-24ca-4c08-a2b7-cce943db926d"/>
+    <listType typeId="9851b2f2-75d4-4444-b31c-fd538d988bc1" valueTypeId="698be69b-b563-4a7c-8023-cdf5b49ab0e8"/>
+    <managerType typeId="04af05e5-4387-4165-926c-fae6c62ddc62" valueTypeId="fe504baf-5fe4-464c-8a81-4afd5d77406b"/>
+    <recordSetType typeId="c666bf94-d9f7-4df9-ba8e-8efbd008ca5c" valueTypeId="b2182696-0c06-4dbb-883f-3271330ba4ac"/>
+    <recordKeyType typeId="3a23ce33-b782-4bee-98e6-cf8d322aafe7" valueTypeId="9c0e32df-f3fd-433b-a6ea-4190f53c72ba"/>
+    <recordType typeId="58e37073-7256-47ce-885b-727a0c98051c" valueTypeId="10668b20-9dfd-419b-8651-6862fdc9d9a9"/>
+    <recordManagerType typeId="a40c652e-3d7c-438d-bf39-d66f5f034a73" valueTypeId="1f88def6-92e4-4fff-ad99-15c773437e1b"/>
+  </producedTypes>
+  <name>СпецификацияДоговоров_АрендаСерверов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Спецификация договоров (Аренда серверов)</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="8cc8b5f3-1ddc-4a57-b768-0e3038d8d4d2">
+    <name>ПараметрыПодключения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры подключения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c8fe4a2d-79b9-4236-922a-169a228cc02f">
+    <name>МестонахождениеТочкиПодключения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Местонахождение точки подключения (адрес)</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="968349da-f1cf-47b8-b75b-cf21b420fa4f">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Договоры_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

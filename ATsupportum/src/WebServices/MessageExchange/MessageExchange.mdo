@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:WebService xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="030c6a22-a3d5-4cf2-9f7b-dc4fe3732f83">
+  <name>MessageExchange</name>
+  <synonym>
+    <key>ru</key>
+    <value>Message exchange</value>
+  </synonym>
+  <namespace>http://www.1c.ru/SSL/MessageExchange</namespace>
+  <descriptorFileName>messageexchange.1cws</descriptorFileName>
+  <sessionMaxAge>20</sessionMaxAge>
+  <operations uuid="b19f1223-5ebe-4446-bacc-bc7d53486f2e">
+    <name>DeliverMessages</name>
+    <synonym>
+      <key>ru</key>
+      <value>Deliver messages</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ДоставитьСообщения</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="6ea7e8e9-0faa-43fd-b9c8-1a7b8f899d6d">
+      <name>Sender</name>
+      <synonym>
+        <key>ru</key>
+        <value>Sender</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="7be1decf-feb1-422b-a3f2-f60d08fdb0e6">
+      <name>Data</name>
+      <synonym>
+        <key>ru</key>
+        <value>Data</value>
+      </synonym>
+      <xdtoValueType>
+        <name>ValueStorage</name>
+        <nsUri>http://v8.1c.ru/8.1/data/core</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="bf3167d6-3047-482a-b280-184f446ae7a3">
+    <name>GetIBParameters</name>
+    <synonym>
+      <key>ru</key>
+      <value>Get IBParameters</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПолучитьПараметрыИнформационнойБазы</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="50c47c0a-a199-4020-9df4-91b17c159454">
+      <name>ThisEndPointName</name>
+      <synonym>
+        <key>ru</key>
+        <value>This end point name</value>
+      </synonym>
+      <comment>Наименование этой конечной точки</comment>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+      <nillable>true</nillable>
+    </parameters>
+  </operations>
+  <operations uuid="c1d449af-8a6e-4cb0-b2c9-50ea5405c44c">
+    <name>ConnectEndPoint</name>
+    <synonym>
+      <key>ru</key>
+      <value>Connect end point</value>
+    </synonym>
+    <comment>Метод выполняет операции на стороне получателя по подключению конечной точки</comment>
+    <xdtoReturningValueType>
+      <name>boolean</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <procedureName>ПодключитьКонечнуюТочку</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="faecdc33-fed8-4b44-96f4-4215c26959b6">
+      <name>Code</name>
+      <synonym>
+        <key>ru</key>
+        <value>Code</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="09c29992-47a8-4fca-bd95-e7dbc53e8c4c">
+      <name>Name</name>
+      <synonym>
+        <key>ru</key>
+        <value>Name</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="f07cf7bd-6f3f-426a-8b71-ba1dcb827654">
+      <name>Settings</name>
+      <synonym>
+        <key>ru</key>
+        <value>Settings</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="9df3792e-a4ee-4a2c-9296-c1384925521e">
+    <name>UpdateConnectionSettings</name>
+    <synonym>
+      <key>ru</key>
+      <value>Update connection settings</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ОбновитьНастройкиПодключения</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="03d423db-f98a-468f-9040-5b76454e5a98">
+      <name>Code</name>
+      <synonym>
+        <key>ru</key>
+        <value>Code</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="08f394f9-d254-4fe5-8651-a69c96de7a62">
+      <name>Settings</name>
+      <synonym>
+        <key>ru</key>
+        <value>Settings</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="e90ec54b-8b86-43df-8c3c-18c6676bf3f1">
+    <name>SetLeadingEndPoint</name>
+    <synonym>
+      <key>ru</key>
+      <value>Set leading end point</value>
+    </synonym>
+    <comment>Устанавливает ведущую конечную точку в текущей ИБ</comment>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>УстановитьВедущуюКонечнуюТочку</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="6aff6b2f-660b-4d75-9064-fed7a6b0feac">
+      <name>ThisEndPointCode</name>
+      <synonym>
+        <key>ru</key>
+        <value>This end point code</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="53502127-9f47-4e2e-b3ed-eb3c3aae1c50">
+      <name>LeadingEndPointCode</name>
+      <synonym>
+        <key>ru</key>
+        <value>Leading end point code</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="2fcdd0b5-b738-4e19-8bbf-13a72d7014ec">
+    <name>TestConnectionRecipient</name>
+    <synonym>
+      <key>ru</key>
+      <value>Test connection recipient</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ПроверитьПодключениеНаСторонеПолучателя</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="59dc7e8d-6f5c-4e1b-816e-5fc15c0e96e0">
+      <name>Settings</name>
+      <synonym>
+        <key>ru</key>
+        <value>Settings</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+    <parameters uuid="e60a9221-7676-456f-8a01-b317b03a278b">
+      <name>Sender</name>
+      <synonym>
+        <key>ru</key>
+        <value>Sender</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+  <operations uuid="4e81ec90-f668-49ca-9193-22337bafb01b">
+    <name>TestConnectionSender</name>
+    <synonym>
+      <key>ru</key>
+      <value>Test connection sender</value>
+    </synonym>
+    <xdtoReturningValueType>
+      <name>string</name>
+      <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+    </xdtoReturningValueType>
+    <nillable>true</nillable>
+    <procedureName>ПроверитьПодключениеНаСторонеОтправителя</procedureName>
+    <dataLockControlMode>Managed</dataLockControlMode>
+    <parameters uuid="104c7c31-5bbd-4242-b29a-2c0d8b69a1b9">
+      <name>Sender</name>
+      <synonym>
+        <key>ru</key>
+        <value>Sender</value>
+      </synonym>
+      <xdtoValueType>
+        <name>string</name>
+        <nsUri>http://www.w3.org/2001/XMLSchema</nsUri>
+      </xdtoValueType>
+    </parameters>
+  </operations>
+</mdclass:WebService>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="97c7ac0f-e8ff-47bb-a2f4-38539a452ede">
+  <producedTypes>
+    <selectionType typeId="52bd117d-14c0-4f98-b32f-5796bc901da7" valueTypeId="dbb327c6-3801-49e8-b728-ea32549446e9"/>
+    <listType typeId="6875772c-e144-429f-b4fd-576491ca6204" valueTypeId="eb9675cf-3ee8-49a8-88ec-72d9690ad565"/>
+    <managerType typeId="bb7d92e2-183c-4cd4-bdaa-fc59bb67f0eb" valueTypeId="44509e15-a4de-4594-af63-5eebf68a4aff"/>
+    <recordSetType typeId="ae8ca9ca-8508-4ecb-8721-d22fdce656e0" valueTypeId="18d39dc5-317c-4fc5-9819-6940b1764968"/>
+    <recordKeyType typeId="0ec633e1-9e67-4047-adca-54259e8e6553" valueTypeId="a7e0c286-d58a-4b78-9962-46ef99a31d87"/>
+    <recordType typeId="93f91a9b-e85e-4c56-91b5-518665f94659" valueTypeId="0a6fa326-ccf5-470f-a074-e612769ab0a3"/>
+    <recordManagerType typeId="6044f58c-ad5c-4112-a97c-723a251fb617" valueTypeId="a040e755-dc85-4d6e-abd0-a8b06fc5e11d"/>
+  </producedTypes>
+  <name>КосвенныеСвязиЗаданий_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Деятельность по документам</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.КосвенныеСвязиЗаданий_ат.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.КосвенныеСвязиЗаданий_ат.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="b2cb96aa-ba94-4c2c-bc1d-99b511d63740">
+    <name>Согласование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Согласование</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Согласование_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="9096c439-dddd-4e3a-94e3-184d4d68baad">
+    <name>ФиксацияРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Закрытие</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ФиксацияРабот_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="80eebf95-c680-480f-84ac-dbdcc4873d54">
+    <name>Счет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Счет</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.СчетНаОплату_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="a174f058-0b5c-45c0-bc80-9b99cf8a628d">
+    <name>Реализация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Реализация</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Реализация_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="4b715196-55d4-4e92-87ac-f39716d10334">
+    <name>Поступление</name>
+    <synonym>
+      <key>ru</key>
+      <value>Поступление</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПоступлениеНаСчетКлиента_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="3ae465b1-7f34-4ceb-9f1a-b436ab6997dc">
+    <name>Списание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Списание</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.СписаниеСоСчетаКлиента_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="8bbed67a-2112-4e7d-9cd7-58482b7a4491">
+    <name>Клиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клиент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f7763344-bff6-4486-bc6a-4a674bca5a13">
+    <name>СодержаниеРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид деятельности</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СодержанияРабот_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <dimensions uuid="f1061079-a2c2-4d9b-8820-7243a214d849">
+    <name>Заявка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заявка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Заявка_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="e7ca5422-56eb-4dee-b7be-c4e187ce0389">
+    <name>Задание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Задание</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Задание_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="1a8b9be9-5cbb-4d4c-b4a1-6fc073adc29e">
+    <name>ВидДеятельности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид деятельности</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СодержанияРабот_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="15e5f4d1-2c6e-45a1-a36f-402360945b06">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="9fb154bb-2c02-4f16-876b-81c07cf88a8a">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="6ac42064-4f91-42b0-9490-5d1d3e8144af">
+    <name>ДеятельностьПоДокументам</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документы</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>DocumentRef.СчетНаОплату_ат</types>
+      <types>DocumentRef.Задание_ат</types>
+      <types>DocumentRef.Заявка_ат</types>
+      <types>DocumentRef.ПоступлениеНаСчетКлиента_ат</types>
+      <types>DocumentRef.Согласование_ат</types>
+      <types>DocumentRef.ФиксацияРабот_ат</types>
+      <types>DocumentRef.СписаниеСоСчетаКлиента_ат</types>
+      <types>DocumentRef.Реализация_ат</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

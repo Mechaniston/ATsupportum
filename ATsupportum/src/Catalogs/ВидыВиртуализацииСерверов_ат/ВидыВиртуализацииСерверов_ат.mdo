@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="951ffe6f-dac6-4640-a3e6-64b9b4a8da5f">
+  <producedTypes>
+    <objectType typeId="295b41a5-be3c-4fb5-bf8c-03953217bd65" valueTypeId="ee305056-b294-43c7-806d-e5ac8cf2337b"/>
+    <refType typeId="f72bfb82-931f-42ce-ad4e-703b353ef43d" valueTypeId="734dd61e-456d-4348-9910-f1f78f14fc51"/>
+    <selectionType typeId="2a04d1c4-c0b7-4e75-8933-6d4345d17d08" valueTypeId="aa22c0fb-154d-419b-b0cf-700989b1f61b"/>
+    <listType typeId="df883228-7cba-4e78-a62f-b50f35339d82" valueTypeId="ff94615c-122b-473d-a433-23e54c7ff0cb"/>
+    <managerType typeId="9cc5ee7f-0161-4d21-9e58-5bd95068e69d" valueTypeId="e35ce19f-5bd8-4b67-805b-bc342ccef8a6"/>
+  </producedTypes>
+  <name>ВидыВиртуализацииСерверов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Виды виртуализации серверов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВидыВиртуализацииСерверов_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ВидыВиртуализацииСерверов_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Виртуализация серверов</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="3baa7667-1a60-480d-9443-ea3d0304c42a">
+      <name>VirtuozzoParallels</name>
+      <description>Virtuozzo Рarallels</description>
+      <code xsi:type="core:StringValue">
+        <value>000000002</value>
+      </code>
+    </items>
+    <items id="f0789561-9eb5-4ea9-8fc2-d4ef4e97c1be">
+      <name>БезВиртуализации</name>
+      <description>Без виртуализации</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>

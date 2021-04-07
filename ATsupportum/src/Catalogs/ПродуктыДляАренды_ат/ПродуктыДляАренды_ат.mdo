@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1d548b5c-8ff0-4036-86eb-4ef6a77be86d">
+  <producedTypes>
+    <objectType typeId="f566fff1-58fc-4fc3-b668-5d4864b8ac53" valueTypeId="6fd98875-1eaf-483b-9d21-fe1a5ecb1848"/>
+    <refType typeId="f45e477b-3bbf-4220-b4a4-efb9f09c6087" valueTypeId="cfedb1ad-9991-4b6a-b06b-8884ac7abfd0"/>
+    <selectionType typeId="b97bd503-81f8-45b4-997f-0788bc0f3b7a" valueTypeId="69bd84a6-f757-4cd9-92e0-b03812a8a314"/>
+    <listType typeId="4c5f26b2-2a47-4340-8115-fea379c02271" valueTypeId="b4f4cef2-d376-4d31-93ac-ba0dad18416e"/>
+    <managerType typeId="22c2b5e7-b86e-418d-a6c5-40873c5a26af" valueTypeId="2d019b4a-8672-4585-930c-51ea5681ccc6"/>
+  </producedTypes>
+  <name>ПродуктыДляАренды_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Продукты для аренды</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ПродуктыДляАренды_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ПродуктыДляАренды_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Продукт для аренды</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="7ed8b0e9-367e-424b-a2c5-3d044a8f6fca">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="bee2a296-af22-4f66-813f-3dd9230da556">
+    <producedTypes>
+      <objectType typeId="96f42196-66fb-48c0-a9a2-e3d06c5b3680" valueTypeId="3fcf640f-f8f8-4a7f-9141-ed7cc3a96f3d"/>
+      <rowType typeId="a8a150cd-7f28-4999-81d5-35a786f3d712" valueTypeId="f8939595-653b-4ee9-8a3c-e9e441ce61bb"/>
+    </producedTypes>
+    <name>ТаблицаТиповПродуктов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица типов продуктов</value>
+    </synonym>
+    <attributes uuid="614ad114-7e12-43ed-865b-0412661b51be">
+      <name>Поставка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Поставка</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ПоставкиПродуктов_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>

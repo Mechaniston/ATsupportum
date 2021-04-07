@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1fd609a1-264d-406d-9b42-ab02d6c3f91a">
+  <producedTypes>
+    <selectionType typeId="b6bdbe9a-6e04-4459-a42d-0c4d47261054" valueTypeId="7d7c0211-7a6a-4bb3-94f9-ee25c1b8063c"/>
+    <listType typeId="2d6eebb0-1c23-4102-aff9-ff3432f75231" valueTypeId="013c0458-9d5d-4418-8c93-6d0ccef8e02d"/>
+    <managerType typeId="671130c7-8014-4450-a3d3-aee0c2954d14" valueTypeId="f93dee82-aa62-42df-b7f6-754d05257074"/>
+    <recordSetType typeId="dac98ab6-c672-47f6-8909-d796f87561e3" valueTypeId="c21a7edd-a658-418b-b693-267074304706"/>
+    <recordKeyType typeId="79910d14-874a-46ed-847c-36dfc714d7c8" valueTypeId="a3830b04-ee02-43f7-86e4-babc3a5d7834"/>
+    <recordType typeId="51730e0a-eb3a-4904-9a8b-4b6e454a4585" valueTypeId="c0171fcf-9b0e-441a-95b9-63aba588e8c3"/>
+    <recordManagerType typeId="43437488-82a0-4f46-b5b7-904954786e6b" valueTypeId="d9debe97-44b8-4049-bf1a-ab3ee73320ab"/>
+  </producedTypes>
+  <name>СтатистикаНагрузкиСерверов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сведения о нагрузке VZ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="bfd778ae-efb5-4663-9288-2388db310087">
+    <name>ЗначениеРесурса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение ресурса</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="0ee7295d-dcd0-482a-81c1-0932c4cfa9a1">
+    <name>Сервер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Серверы_ат</types>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b1f25dc3-7341-4723-a4bf-a5559bb5b6f1">
+    <name>VZКонтейнер</name>
+    <synonym>
+      <key>ru</key>
+      <value>VZКонтейнер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b10b5598-83f6-459f-8200-057514e800be">
+    <name>НаименованиеРесурса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наименование ресурса</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыРесурсов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

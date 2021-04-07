@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="83647b44-638d-4d8b-a3a5-a7b5fb6e77d0">
+  <producedTypes>
+    <selectionType typeId="c9bd035b-68d6-4e6d-8003-20ec38cd6597" valueTypeId="3f361a80-7270-425f-8623-8a26c0405d1a"/>
+    <listType typeId="e8cddb13-2fca-4ef0-b3a7-88580c05eb51" valueTypeId="79921e9f-288c-4398-b563-bf1814633e35"/>
+    <managerType typeId="1dee4363-9855-4e7e-a0db-5ccd8ec3398e" valueTypeId="068e06d6-1a93-43c4-b588-df754966e84b"/>
+    <recordSetType typeId="172c68c4-fd7f-42df-94ad-056a698dc8b4" valueTypeId="fd5a7403-534f-4b31-8237-bb46c99126ea"/>
+    <recordKeyType typeId="c253a781-3728-4e71-adb9-012bb3ca3ef6" valueTypeId="b35a74aa-1c5e-4673-a681-f1efa7c8d6fe"/>
+    <recordType typeId="e7eeb97a-e0d9-41d4-9bf8-fa065790020a" valueTypeId="a1a41ff5-7f20-41a8-a5ae-0de149861bee"/>
+    <recordManagerType typeId="e7fd2cb0-bb5d-481b-9caf-3ed9b5c4c8b2" valueTypeId="4f00190d-0991-4dd0-bb39-eecff1b5b0ac"/>
+  </producedTypes>
+  <name>СинхронизацияКонтрагентов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Синхронизация контрагентов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.СинхронизацияКонтрагентов_ат.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.СинхронизацияКонтрагентов_ат.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="cb37543f-7924-410f-92d3-8a664edc5405">
+    <name>Идентификатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="db14a27b-ea53-4b01-ae4f-b19f6e3b5bff">
+    <name>НавигационнаяСсылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Навигационная ссылка</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="26c5c08c-6e5f-46f5-8f4d-e349a3771051">
+    <name>Ссылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="28ab6c02-fa15-47a6-aab4-ae6fe8862e74">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="ff40b964-267f-4e33-a844-6b1415b917e7">
+    <name>ФормаВыбораОбъектаВнешнейИБ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора объекта внешней ИБ</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="27d15cf0-5423-41d0-b884-232bebb141cd">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

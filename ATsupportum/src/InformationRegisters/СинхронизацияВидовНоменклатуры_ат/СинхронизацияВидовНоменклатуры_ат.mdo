@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3d816b00-9a3f-4735-9736-2647bbb32944">
+  <producedTypes>
+    <selectionType typeId="3de69b33-1ebc-498e-975d-d42b4f904318" valueTypeId="b1a6063d-3b5d-43ae-be69-3c5e77da38e5"/>
+    <listType typeId="b00b2351-62f5-4237-80b5-c9016bbc78f6" valueTypeId="32e037a0-b6d9-4ad1-b060-898f1f72a3c3"/>
+    <managerType typeId="4037d09b-d091-478e-8dda-1e48c086dcf9" valueTypeId="c9a60749-9ccb-4df3-aea5-c581594e2aeb"/>
+    <recordSetType typeId="eda40979-8039-4a7a-9d59-a7e79fe4c6f8" valueTypeId="89d0a2dc-4bdd-4b7a-b839-2c1d79380001"/>
+    <recordKeyType typeId="cff9ce47-8d96-4a76-a7ca-12db8ed1a45e" valueTypeId="ef2320eb-2d65-47fb-afbd-ae5645a8bd25"/>
+    <recordType typeId="15e55cc5-f9c7-4ed7-bc1d-4321b46a2ae2" valueTypeId="9ec86816-12e6-4a13-ae88-d03cd5abea41"/>
+    <recordManagerType typeId="fb56de41-ad6f-45f7-81d7-1cc5ddb38fc6" valueTypeId="dda5eabe-9ade-4ba8-8868-9db8e3baad24"/>
+  </producedTypes>
+  <name>СинхронизацияВидовНоменклатуры_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Синхронизация видов номенклатуры</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.СинхронизацияВидовНоменклатуры_ат.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.СинхронизацияВидовНоменклатуры_ат.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Синхронизация вида номенклатуры</value>
+  </recordPresentation>
+  <resources uuid="9ea30d29-d2b4-45ff-abf1-44c82d29e18c">
+    <name>Идентификатор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>36</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <attributes uuid="b2c9a3ed-ee9d-42d7-a7dc-3fa82c6b7528">
+    <name>НавигационнаяСсылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Навигационная ссылка</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="db1b9784-0d21-4fb5-834b-c19c5accf543">
+    <name>Ссылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид номенклатуры</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыНоменклатуры_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="12e5268c-4fd6-4054-a148-4198f6469667">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="38f4e4ab-f419-42d9-99ae-a114b2de2ba8">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>

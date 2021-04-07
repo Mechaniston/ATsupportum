@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e0e5c2c2-887d-44bc-863d-7ab677ae215b">
+  <producedTypes>
+    <selectionType typeId="9aeafe27-d223-4db9-93e3-491205c301b1" valueTypeId="096837d8-c8b8-4f58-874b-b7f5ca51930e"/>
+    <listType typeId="1457f346-dda0-4d76-b0b1-bb6a98f54eeb" valueTypeId="a45dff1f-e4d1-485a-ba3a-e83237d4a4a8"/>
+    <managerType typeId="d66b9742-550f-4ab9-aaef-a168686ac8d8" valueTypeId="fc4ef63c-0c55-45cf-b9e0-816585ef6dff"/>
+    <recordSetType typeId="012f490b-91c3-4026-8559-5db1e2617a39" valueTypeId="8895180c-099c-4a0c-83af-52d3b8e4f38b"/>
+    <recordKeyType typeId="996cb888-e205-4882-8a30-84c4ff5543c5" valueTypeId="ad0b6e85-ed4f-4a18-a6f1-07b4807edba5"/>
+    <recordType typeId="3729b07b-f30c-40cc-9d72-58f8ed572b0d" valueTypeId="f3f03aae-e8c8-4d4c-beb4-88e8289fe2d3"/>
+    <recordManagerType typeId="09be2eb0-dac5-4016-bec6-24f3c3a64874" valueTypeId="989840fd-478d-4d61-ab05-6643664d74e9"/>
+  </producedTypes>
+  <name>ФинансовыеСтатусыРабот_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Фин. статусы</value>
+  </synonym>
+  <comment>!!!!!HOTFIX + переимновать в ИсториюФинСтатусовЗаявок_ат</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Финансовый статус заявки</value>
+  </recordPresentation>
+  <listPresentation>
+    <key>ru</key>
+    <value>Фин. статусы</value>
+  </listPresentation>
+  <extendedListPresentation>
+    <key>ru</key>
+    <value>История финансовых статусов заявок</value>
+  </extendedListPresentation>
+  <resources uuid="0f8db1a2-d547-4984-99d4-f57ce119a92c">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ФинансовыеСтатусыЗаявок_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="ac425a3f-abb1-43e1-8c6f-af349c8748a3">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="36f5776b-997a-494d-8513-8ae9af94f964">
+    <name>Ссылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </synonym>
+    <comment>TODO - переименовать в Заявка</comment>
+    <type>
+      <types>DocumentRef.Заявка_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

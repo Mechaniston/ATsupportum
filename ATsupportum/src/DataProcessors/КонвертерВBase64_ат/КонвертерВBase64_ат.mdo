@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6b3333fb-b74f-4dcb-a3ae-f2e6f6fc45c3">
+  <producedTypes>
+    <objectType typeId="bdb904ed-c189-4584-9d83-8a463e1cea80" valueTypeId="066729cf-6896-40d8-a51f-d95ad2cd71c2"/>
+    <managerType typeId="3a3a09f7-432c-4b0e-a597-59c77027c7ff" valueTypeId="d9c46b3b-ae86-4e1e-a004-929c5ee29296"/>
+  </producedTypes>
+  <name>КонвертерВBase64_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Конвертер в base64</value>
+  </synonym>
+  <comment>требует установленный Perl на сервере!!!</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.КонвертерВBase64_ат.Form.Форма</defaultForm>
+  <explanation>
+    <key>ru</key>
+    <value>требует установленный Perl на сервере!!!
+
+требуется для генерации пароля virtuozzo!</value>
+  </explanation>
+  <attributes uuid="13220ef0-1aa9-4b06-bfe9-0140a6ada290">
+    <name>Данные</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="fb5e1439-5c0d-419e-9d38-e434cf251320">
+    <name>ДанныеВBase64</name>
+    <synonym>
+      <key>ru</key>
+      <value>Данные в base64</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="7e08e65f-1c8d-4ac0-86a9-b984e80042bc">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bc0de727-c936-42b6-bcd1-bf17f72798f4">
+  <name>ОтправкаУведомленийОЗадолженностяхКлиентов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отправка уведомлений о задолженностях клиентов ат</value>
+  </synonym>
+  <methodName>CommonModule.Уведомления_ат.УведомитьОНеоплаченныхСчетахИЗадолжностях</methodName>
+  <use>true</use>
+  <restartCountOnFailure>3</restartCountOnFailure>
+  <restartIntervalOnFailure>10</restartIntervalOnFailure>
+</mdclass:ScheduledJob>

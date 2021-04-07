@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d6aed0fd-686c-430d-b884-74494177422e">
+  <producedTypes>
+    <selectionType typeId="60380b06-dcf1-45d2-8b41-304636b7d3d1" valueTypeId="db5e8d93-8135-43ae-95ba-3227f0be33fe"/>
+    <listType typeId="40084129-5429-4909-b8b4-611fb1f11823" valueTypeId="477fba83-5bdf-41a0-b711-4ee1dab8d4f3"/>
+    <managerType typeId="9112b6ff-1685-4db3-9afd-391cc46a5422" valueTypeId="0a1c83c5-9c2a-4f9d-be72-bdaee8f8d889"/>
+    <recordSetType typeId="878aeafe-76a5-4602-8506-30162e261fb7" valueTypeId="2b7477a5-33c4-447b-817b-363e8db9498f"/>
+    <recordKeyType typeId="7e0923f4-4202-47c3-a7ec-939e71590b2a" valueTypeId="27054491-74ea-4b09-851d-cb05f6a59893"/>
+    <recordType typeId="591a9842-0832-43e1-b64e-4b1b956ad2b5" valueTypeId="cce4cf93-e2e7-4329-8efd-96a5ea928055"/>
+    <recordManagerType typeId="0cd141c0-8a55-446f-86f1-a3dc5e807be0" valueTypeId="6505d0ab-d2cf-4d76-bab6-817dc0d48e22"/>
+  </producedTypes>
+  <name>РейтингАктивностиОбластейДанных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Рейтинг активности областей данных</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="245ec4aa-ed65-41f7-b0f0-f8085cfc5bef">
+    <name>Рейтинг</name>
+    <synonym>
+      <key>ru</key>
+      <value>Рейтинг</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Рейтинг активности области данных</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="3ed64288-8bf0-4049-8d44-1b424f31d40f">
+    <name>ОбластьДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Область данных</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Область данных</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

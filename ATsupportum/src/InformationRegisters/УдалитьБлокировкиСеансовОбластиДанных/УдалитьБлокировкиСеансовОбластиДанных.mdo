@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4ec242e0-75d1-4bf7-be18-783e7aa4f236">
+  <producedTypes>
+    <selectionType typeId="8ea23c3e-da65-4338-8a85-f571243127fb" valueTypeId="4e32f725-e43a-4950-a7b9-e5990bcce3b9"/>
+    <listType typeId="28ddd127-92d5-4e88-a85b-4935f23c5be2" valueTypeId="7b694c5e-06f1-4fa7-a56e-b08c2dc0d4f7"/>
+    <managerType typeId="b2b8f269-e25b-47ea-bc9b-de1f9f3b0f2a" valueTypeId="42f72a8f-103c-4854-9338-1fde2059c355"/>
+    <recordSetType typeId="0f818e38-04bf-4cd5-b580-bc68984f7784" valueTypeId="314f6d4b-eada-4137-b540-5eba43f7c170"/>
+    <recordKeyType typeId="533312ac-3ba8-4803-b52c-4903bd9c248a" valueTypeId="cb3614dd-ebd2-432c-8fcc-083369f58765"/>
+    <recordType typeId="f42e350d-125c-4c32-9bc2-d0b99be04f0d" valueTypeId="785490d0-b2a2-4f3b-961a-c3125f71d413"/>
+    <recordManagerType typeId="05f1ff0d-562a-4fef-bcaa-e85a9802f215" valueTypeId="4c4c4c85-49ff-4396-9fcf-845691d6ad36"/>
+  </producedTypes>
+  <name>УдалитьБлокировкиСеансовОбластиДанных</name>
+  <synonym>
+    <key>ru</key>
+    <value>(Не используется) Блокировки сеансов области данных</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <recordPresentation>
+    <key>ru</key>
+    <value>Блокировка сеансов области данных</value>
+  </recordPresentation>
+  <resources uuid="e02b1366-9d7a-462f-86a1-436bbf4532ff">
+    <name>НачалоБлокировки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Начало блокировки</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Время начала действия блокировки работы пользователей области данных</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="40ee729c-c317-4a1c-b985-5f7e4e1e20fb">
+    <name>КонецБлокировки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Конец блокировки</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Время окончания действия блокировки работы пользователей области данных</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+  </resources>
+  <resources uuid="2feb35c0-b046-4086-a2ce-ccc462fc6e9c">
+    <name>СообщениеБлокировки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сообщение блокировки</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>300</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Причина блокировки для вывода пользователю, который пытается войти в заблокированную область данных</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="8811cc64-99d9-4f13-8309-c29965783f5a">
+    <name>Эксклюзивная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Эксклюзивная</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Эксклюзивная блокировка сеансов области данных не может быть отменена администратором приложения</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="7c737071-e850-4a3f-8942-697ef52a8ecc">
+    <name>ОбластьДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Область данных</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>7</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Область данных информационной базы</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="52eedbb9-36c2-4c44-bd25-ab486f17b51e">
+  <producedTypes>
+    <selectionType typeId="83cd4b45-71b1-4a91-82bf-6d64ccc9582d" valueTypeId="c4f27963-7fac-4623-b84a-da038abfe131"/>
+    <listType typeId="48eb7d7b-a902-40aa-bbd3-f0ad71c1dfdd" valueTypeId="fd141eaf-8640-4c97-aaf0-c38fc4f6695a"/>
+    <managerType typeId="763536a9-ac50-4f38-af17-c9d7ee886c65" valueTypeId="9aca6bf7-3843-4789-9a29-9f1f874a507c"/>
+    <recordSetType typeId="6be37293-031a-46e2-914c-4f89e5d9c86c" valueTypeId="ee6b0ce7-2b96-4f47-b9f7-2961697126f8"/>
+    <recordKeyType typeId="b21d7b71-a0fc-4060-b7a9-27d467c45874" valueTypeId="ca446e2c-1376-438d-b920-dfe2a54ae666"/>
+    <recordType typeId="0e343717-5fc5-45e9-8cec-4370efdc7dcb" valueTypeId="78664d88-a8dd-4b48-aeba-76cbbe7f31eb"/>
+  </producedTypes>
+  <name>ВременаРабот_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Затраты времени</value>
+  </synonym>
+  <comment>!!!!!TODO - rename</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="f37af90e-f46a-46f7-8e15-c57772119b15">
+    <name>ПланируемоеВремя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Планируемое время</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="c2539c72-4745-401b-a7d3-f100bc8c200f">
+    <name>ФактическоеВремя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фактическое время</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="462184d0-c312-4040-9b09-63fadf67f3ae">
+    <name>СогласованноеВремя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Согласованное время</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="9c3ea042-82d8-4c42-b429-08647f18efab">
+    <name>ОтчетноеВремя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчетное время</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <attributes uuid="d04b4fb8-8e91-4d5e-aa8c-d8ba8f6fda5b">
+    <name>ДатаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата записи</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <attributes uuid="23e91054-5d95-482b-ab53-ee95c6b0163e">
+    <name>АвторЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор записи</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </attributes>
+  <dimensions uuid="a97d1257-2e15-444b-8e41-7cb0cfb90df3">
+    <name>СодержаниеРабот</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид деятельности</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СодержанияРабот_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="efbd1fe9-29f6-4f31-b469-085dbb2fdc2b">
+    <name>Заявка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заявка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Заявка_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="8b372f8c-9dde-4296-bbbc-2ae1b192c773">
+    <name>УчетнаяДата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Учетная дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <commands uuid="867db8f2-bbc0-444a-bcba-9afd8266d03f">
+    <name>ВременаЗаявки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Времена Заявки</value>
+    </synonym>
+    <group>FormNavigationPanelSeeAlso</group>
+    <commandParameterType>
+      <types>DocumentRef.Заявка_ат</types>
+      <types>DocumentRef.Согласование_ат</types>
+      <types>DocumentRef.ФиксацияРабот_ат</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:AccumulationRegister>

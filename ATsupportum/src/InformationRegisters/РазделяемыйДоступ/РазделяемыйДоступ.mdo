@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="653ebec0-9b44-43b0-ae21-9c2598319707">
+  <producedTypes>
+    <selectionType typeId="82da708c-86e0-4cca-b0a1-412bb22781a0" valueTypeId="df9b5873-1ac5-401e-926b-ed13e8156604"/>
+    <listType typeId="4b5166f2-a98a-47df-b666-1bad978bc814" valueTypeId="e26dd243-aff0-4058-89d1-7fef6569a21f"/>
+    <managerType typeId="016f6289-e356-4fba-a51d-a8bc831a28e9" valueTypeId="34e357f7-0481-44d6-a30a-af3ed2f072ad"/>
+    <recordSetType typeId="54e9aa43-20b6-439b-b188-0082949dabe7" valueTypeId="18dcef98-88ec-42b1-b312-dd8fd42e4f27"/>
+    <recordKeyType typeId="e509d123-b468-4e3c-83c0-09c40011ff29" valueTypeId="e1969eb0-354b-4885-bfb7-af78bc416b66"/>
+    <recordType typeId="fbfe92ae-fde8-4e68-babd-56bb273945f0" valueTypeId="7027b058-cf08-4b81-a430-f73d27aa318e"/>
+    <recordManagerType typeId="77cbe11c-dc44-4eb7-92de-ca9fd2065748" valueTypeId="beac88a0-051c-4966-a271-e31b76d07e8b"/>
+  </producedTypes>
+  <name>РазделяемыйДоступ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Разделяемый доступ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="c218c814-912f-4107-b17e-c6a50ba1c323">
+    <name>НастройкиРазделяемогоДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки разделяемого доступа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="93deef16-397d-4314-97db-c62aac4178e9">
+    <name>ЭкземплярПродукта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Экземпляр продукта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="b2656537-dcb0-479c-87e4-a656fd7809bb">
+    <name>Клиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клиент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

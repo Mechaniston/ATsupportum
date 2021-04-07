@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b8619139-122f-440e-af63-6e5f3677bb5b">
+  <producedTypes>
+    <selectionType typeId="cd2ce233-4a57-4ce5-8055-3075b0b333a7" valueTypeId="d11d220c-3d4a-48c6-a04b-043bde87c6ec"/>
+    <listType typeId="c6a83140-f972-4b6a-a7c7-a7ee75425fc8" valueTypeId="fa8a5c74-3632-4ca1-a0b0-5c2ed5790fad"/>
+    <managerType typeId="7f5909d5-9835-4eb6-a0e6-279e1e9a93d2" valueTypeId="7e217336-dc08-434c-b225-3522a0d6ca6e"/>
+    <recordSetType typeId="e93657fa-b385-42e4-ae0c-8a0d76cf520e" valueTypeId="144adaad-b5ef-488b-9eab-19c2f56d043b"/>
+    <recordKeyType typeId="7d64a16c-ff32-4389-b6e8-27a51b3df79e" valueTypeId="317e72ff-c8ed-42e0-a5da-eff768e9506b"/>
+    <recordType typeId="74d9abc6-c6f3-4d25-a31c-39b47699e1e5" valueTypeId="d50f0813-2b1b-4b6d-9a51-45257faa0144"/>
+    <recordManagerType typeId="f42c0cf2-2164-4bbe-a99d-c2cd5ec36781" valueTypeId="a30dc8c6-7dce-4f73-8162-f1a27a91b84a"/>
+  </producedTypes>
+  <name>СпецификацияЭП_Конфигурация1С_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Спецификация ЭП конфигурация 1С</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="8c2a68f8-c3e5-4fc2-9b4e-6e4658acdc68">
+    <name>ИмяИБВСписке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя ИБ в списке</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>255</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="bd81e4e7-5564-40e9-9a89-9a4873dacf3a">
+    <name>ИмяИБНа1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя ИБ на 1С</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="47c86fb6-bc00-4024-8d08-92886796bc84">
+    <name>ИмяИБНаSQL</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя ИБ на SQL</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="b5ffefb0-2cbe-4e08-88ba-f20f925b8815">
+    <name>СтатусИБ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус ИБ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СостоянияИБ_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="91146829-6fe2-463c-be0a-e3dcdaca0689">
+    <name>СостояниеПоддержки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние поддержки</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостояниеПоддержки_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e85b9479-ac1e-41fa-84a6-f6e629b49391">
+    <name>ФайловыйКаталог</name>
+    <synonym>
+      <key>ru</key>
+      <value>Файловый каталог</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ФайловыеКаталоги_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f078935b-e620-4fa9-acd7-61f2e3a63098">
+    <name>СерверБД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервер БД</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>ТипРолиСервера</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыРолейСерверов_ат.EnumValue.СерверБД</value>
+      </value>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="2b419230-ffd0-4636-8a54-a0afd3c3163f">
+    <name>ДоступКСерверуБД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доступ к серверу БД</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Доступы_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>InformationRegister.СпецификацияЭП_Конфигурация1С_ат.Resource.СерверБД</field>
+    </choiceParameterLinks>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="3241b003-d86a-4636-8f9b-d89d97936bc9">
+    <name>Сервер1С</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервер 1С</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>ТипРолиСервера</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыРолейСерверов_ат.EnumValue.Сервер1С</value>
+      </value>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="d9cdf736-cb50-4697-82aa-ca7a9414c328">
+    <name>ВебСервер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Веб-Сервер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>ТипРолиСервера</name>
+      <value xsi:type="core:ReferenceValue">
+        <value>Enum.ТипыРолейСерверов_ат.EnumValue.СерверВеб</value>
+      </value>
+    </choiceParameters>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="91108e49-91a0-4458-be4d-b7d40a86557e">
+    <name>ВнешнийURLВебДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Внешний URL веб-доступа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="1e111a4a-1112-42ea-b86b-488237e94f2d">
+    <name>ВнутреннийURLВебДоступа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Внутренний URL веб-доступа</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="abfb1f34-398a-41f2-939b-90ae75769c56">
+    <name>ЭкземплярПродукта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Экземпляр продукта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

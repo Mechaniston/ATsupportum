@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ce3422b4-5c7c-43e6-a5ff-cc57edbb05ae">
+  <producedTypes>
+    <objectType typeId="ac6b2cb4-78a5-4e38-a3a4-b8c6fe055fb6" valueTypeId="b3e1cb3d-73ec-4aba-bf7c-c51d9c8a2ffe"/>
+    <refType typeId="7a6a56bc-4828-45ca-b14c-993d97ae46f0" valueTypeId="36f3e093-3f44-436b-ac7b-4901f70534b3"/>
+    <selectionType typeId="8d043ed3-6bd0-43fc-a408-50f57e588882" valueTypeId="985a1f26-c337-4bc9-9e20-5e7ea7b2d0c4"/>
+    <listType typeId="7c0ad4b4-05a0-4b16-becd-9e21b28ce0f5" valueTypeId="a0cc2663-07c7-4b53-bdc0-e032b5e64cee"/>
+    <managerType typeId="ce6f4701-28a4-4620-a0cf-22d6035bd4dc" valueTypeId="a45ae297-a82b-40a9-8990-2e83aa1c4cf1"/>
+  </producedTypes>
+  <name>СостоянияИБ_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Состояния ИБ</value>
+  </synonym>
+  <inputByString>Catalog.СостоянияИБ_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.СостоянияИБ_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Состояние ИБ</value>
+  </objectPresentation>
+  <extendedObjectPresentation>
+    <key>ru</key>
+    <value>Состояние Информационной Базы 1С</value>
+  </extendedObjectPresentation>
+  <extendedListPresentation>
+    <key>ru</key>
+    <value>Состояния Информационных Баз 1С</value>
+  </extendedListPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="b00ea3a2-d2dc-4f8c-aa16-8ac5c421b456">
+      <name>РабочаяИБ</name>
+      <description>Рабочая ИБ</description>
+      <code xsi:type="core:StringValue">
+        <value>000000001</value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>

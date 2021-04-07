@@ -1,0 +1,572 @@
+#Область ОбластьПараметров
+// Параметры процедуры обновления
+var now = new Date();
+var outFileName = "log" + now.valueOf() + ".txt"; // Путь к log-файлу
+var cfgFileNames = [ИменаФайловОбновления]; // Пути к .cf/.cfu-файлам с обновлениями
+var v8conf = [ИмяИсполняемогоФайлаКонфигуратора] // Путь к исполняемому файлу 1С:Предприятия 8
+var v8client = [ИмяИсполняемогоФайлаКлиента] // Путь к исполняемому файлу 1С:Предприятия 8
+var infoBasePath = [ПараметрПутиКИнформационнойБазе]; 
+var BaseFileName = [СтрокаПутиКФайлуИнформационнойБазы]; 
+var connectionString = [СтрокаСоединенияИнформационнойБазы] + ';UC=ПакетноеОбновлениеКонфигурацииИБ'; 
+var infoBaseAuthorization = [ПараметрыАутентификацииПользователя]; 
+var backupFileName = [КаталогРезервнойКопии] + '1Cv8' + now.valueOf() + '.1CD';  // Файл резервной копии
+var UseRestore = [ВосстанавливатьИнформационнуюБазу];  // Использовать восстановление ИБ в случае падения
+var createBackup = [СоздаватьРезервнуюКопию]; // создавать резервную копию
+var eventLogID = [СобытиеЖурналаРегистрации];
+var emailAddress = [АдресЭлектроннойПочты];	// адрес электронной почты для отправки уведомления
+var adminName = [ИмяАдминистратораОбновления];	// имя администратора, инициировавшего обновление
+var doBlockUsers = [БлокироватьСоединенияИБ];  // устанавливать блокировку соединений перед обновлением
+var comConnectorName = [ИмяCOMСоединителя];  // имя COM-класса для работы с 1С:Предприятием 8 через COM-соединение
+var useComConnector = [ИспользоватьCOMСоединитель];  // флаг использования COM-соединения для работы с 1С:Предприятием 8
+var startEnterprise = [ЗапускСеансаПослеОбновления]; // выполнять запуск предприятия после обновления
+var tempLogFileName = "templog.txt";
+#КонецОбласти
+
+#Область ОбластьОбновленияКонфигурации
+// Инициализация
+var oFileSystemObject = new ActiveXObject("Scripting.FileSystemObject");
+
+var thisFileName;
+var thisFileDir;
+
+if (oHTA != null) {
+    thisFileName = eval("oHTA.commandLine");
+    thisFileDir = thisFileName.substr(1, thisFileName.lastIndexOf("\\") - 1);
+}
+else {
+    thisFileName = eval("WScript.ScriptFullName");
+    thisFileDir = thisFileName.substr(0, thisFileName.lastIndexOf("\\") + 1);
+}
+var oShell = new ActiveXObject("WScript.Shell");
+oShell.CurrentDirectory = thisFileDir;
+
+var errorMarker = "{ERR}";
+var successMarker = "{OK }";
+
+// Переменные состояния
+var backupCreated = false;
+var connectionsDenied = false;
+var logging1C = false;
+
+// Глобальная переменная com-соединения
+var ComConnection = null;
+
+// Переменные состояния функции doDisconnectAndBlockUsersHTA()
+var disconnectionStep = 0;
+var disconnectionInterval;
+var disconnectionStartDateTime;
+
+// Открыть файл sFilePath.
+function runApp(sFilePath, sFileArgs, show, bWaitOnReturn) {
+    if (bWaitOnReturn == undefined)
+        bWaitOnReturn = false;
+    if (show == undefined)
+        show = SW_SHOW;
+    if (sFileArgs == undefined)
+        sFileArgs = "";
+    var ret = 1;
+    log(format("Запускается: {0}; параметры: {1}; окно: {2}; ожидание: {3}",
+	    sFilePath, sFileArgs, SWtoString(show), bWaitOnReturn));
+    if (oFileSystemObject.FileExists(sFilePath)) {
+        try {
+            ret = oShell.Run(format('"{0}" {1}', sFilePath, sFileArgs), show, bWaitOnReturn);
+        }
+        catch (e) {
+            log(format("Исключение в runApp: {0}, {1}.", e.name, e.message), true);
+            return 1;
+        }
+        log(format("Код возврата: {0}", ret), ret != 0);
+        return ret;
+    }
+    else
+        log(format("Запускаемый файл не существует: {0}", sFilePath), true);
+    return ret;
+}
+
+function clearLogFile() {
+    var outFile = oFileSystemObject.OpenTextFile(outFileName, ForWriting, true, TristateTrue);
+    outFile.Close();
+}
+
+// Записать текст в лог
+function log(text, failed) {
+    if (failed == undefined)
+        failed = false;
+
+    logFile(text, failed);
+}
+
+// Записать текст в лог-файл
+function logFile(text, failed) {
+    var now = new Date();
+    var f;
+    try {
+        f = oFileSystemObject.OpenTextFile(outFileName, ForAppending, true, TristateTrue);
+    }
+    catch (e) { return; }
+    try {
+        var status = (failed == false ? successMarker : errorMarker);
+        f.WriteLine(format("{0} {1} {2}", now, status, text));
+    }
+    finally {
+        try {
+            f.Close();
+        }
+        catch (e) { return; }
+    }
+}
+
+// Записать текст из временного лог-файла
+function appendLog() {
+    var f;
+    var outf;
+    var text;
+    try {
+        f = oFileSystemObject.OpenTextFile(tempLogFileName, ForReading, false, TristateFalse);
+        outf = oFileSystemObject.OpenTextFile(outFileName, ForAppending, true, TristateTrue);
+    }
+    catch (e) { return; }
+    try {
+        if (!f.AtEndOfStream) {
+            text = f.ReadAll();
+            outf.WriteLine(text);
+        }
+    }
+    finally {
+        try {
+            f.Close();
+            outf.Close();
+        }
+        catch (e) { return; }
+    }
+}
+
+// Записать текст в журнал регистрации
+function log1C(text, failed) {
+    if (logging1C)
+        return;
+    var connection = createConnection();
+    if (connection == null)
+        return;
+    try {
+        log1CInternal(connection, text, failed);
+    } finally { };
+}
+
+// Записать текст в журнал регистрации
+function log1CInternal(connection, text, failed) {
+    if (logging1C)
+        return;
+    logging1C = true;
+    try {
+        try {
+            var eventLogLevel = failed ? connection.EventLogLevel.Error : connection.EventLogLevel.Information;
+            connection.WriteLogEvent(eventLogID, eventLogLevel, null, null, text,
+                connection.EventLogEntryTransactionMode.Independent);
+        }
+        catch (e) {
+            log(format("Исключение в log1CInternal: {0}, {1}.", e.name, e.message), true);
+            return;
+        }
+    }
+    finally {
+        logging1C = false;
+    }
+}
+
+// Инициализация
+function initialize() {
+    clearLogFile();
+    log(format("Файл скрипта: {0}", thisFileName));
+    log(format("Количество файлов обновления: {0}", cfgFileNames.length));
+    for (var i = 0; i < cfgFileNames.length; i++)
+        log(format("{0}. {1}", i + 1, cfgFileNames[i]));
+
+    return 0;
+}
+
+// Финализация
+function finalize(success) {
+    if (success == undefined)
+        success = false;
+
+    // Запись результата обновления в Event Log
+    writeEventLog(success);
+
+    if (!success) {
+        if (UseRestore) {
+            restoreDB();            // Восстановление ИБ из временного архива
+        }
+        allowConnections(false); // Разрешение подключений
+    }
+
+    write1CEventLog();      // Запись всей информации из log-файла в журнал регистрации
+    setResult(success);
+
+    // очистка глобального COM-соединения
+    ComConnection = null;
+
+}
+
+function createConnection() {
+    if (!useComConnector)
+        return null;
+
+    if (ComConnection != null)
+        return ComConnection;
+
+
+    try {
+        log("Начат сеанс внешнего соединения с ИБ", false);
+        var ComConnector = new ActiveXObject(comConnectorName);
+        ComConnection = ComConnector.Connect(connectionString);
+        return ComConnection;
+    }
+    catch (e) {
+        log(format("Исключение в createConnection: {0}, {1}", e.name, e.message), true);
+        return null;
+    }
+}
+
+// Записать весь log-файл в журнал регистрации
+function write1CEventLog() {
+    if (!oFileSystemObject.FileExists(outFileName))
+        return;
+
+    var connection = createConnection();
+    if (connection == null)
+        return;
+    try {
+        var f = oFileSystemObject.OpenTextFile(outFileName, ForReading, false, TristateTrue);
+
+        var text;
+        while (!f.AtEndOfStream) {
+            text = f.ReadLine();
+            while ((text.indexOf(successMarker) < 0) && (text.indexOf(errorMarker) < 0) && !f.AtEndOfStream)
+                text += "\n" + f.ReadLine();
+
+            var failed = text.indexOf(errorMarker) > 0;
+            log1CInternal(connection, text, failed);
+        }
+    }
+    catch (e) {
+        log(format("Исключение в write1CEventLog: {0}, {1}.", e.name, e.message), true);
+        return;
+    }
+}
+
+function doSetResult(success) {
+    var connection = createConnection();
+    if (connection == null)
+        return (useComConnector ? 1 : 0);
+    var res = 0;
+    try {
+        connection.ОбновлениеКонфигурации.ЗавершитьОбновление(success, emailAddress, adminName);
+    }
+    catch (e) {
+        log(format("Исключение при вызове ОбновлениеКонфигурации.ЗавершитьОбновление: {0}, {1}.", e.name, e.message), true);
+        res = 2;
+    }
+    return res;
+}
+
+
+// Передать в приложение результат выполнения 
+function setResult(success) {
+    var result = doSetResult(success);
+    CollectGarbage();   // освобождает соединения с COM-объектом
+    return result;
+}
+
+// Записать результат выполнения процедуры обновления в Event Log
+function writeEventLog(success) {
+    try {
+        var eventKind = success ? EVENT_SUCCESS : EVENT_CRITICAL;
+        var message;
+        if (success)
+            message = "Обновление информационной базы завершилась успешно.";
+        else
+            message = "Ошибка при обновлении информационной базы.";
+        message += format(" Параметры информационной базы: {0}.", infoBasePath);
+        if (!success)
+            message += " Протокол обновления сохранен в журнал регистрации.";
+        oShell.LogEvent(eventKind, message);
+    }
+    catch (e) {
+        log(format("Исключение в writeEventLog: {0}, {1}.", e.name, e.message), true);
+    }
+}
+
+// Cоздание резервной копии информационной базы
+function backupDB() {
+    if (!createBackup)
+        return 0;
+    try {
+        var newpath = oFileSystemObject.CopyFile(BaseFileName, backupFileName, true);
+        ret = 0;
+        log(format("Резервной копия базы создана", ret), ret != 0);
+    }
+    catch (e) {
+        CollectGarbage();   // предотвращает исключение out of memory
+        log(format("Исключение при создании резервной копии базы", e.name, e.message), true);
+        ret = -1;
+    }
+    if (ret == 0)
+        backupCreated = true;
+    return ret;
+}
+
+// Восстановление информационной базы из резервной копии
+function restoreDB() {
+    if (!backupCreated)
+        return 0;
+    try {
+        oFileSystemObject.CopyFile(backupFileName, BaseFileName, true);
+        ret = 0;
+        log(format("База данных восстановлена из резервной копии", ret), ret != 0);
+    }
+    catch (e) {
+        CollectGarbage();   // предотвращает исключение out of memory
+        log(format("Исключение при восстановлении базы из резервной копии", e.name, e.message), true);
+        ret = -1;
+    }
+    return ret;
+}
+
+function doAllowConnections(updateAndFillDB) {
+    if (updateAndFillDB == undefined)
+        updateAndFillDB = true;
+
+    var connection = createConnection();
+    if (connection == null)
+        return (useComConnector ? 1 : 0);
+
+    if (updateAndFillDB)
+        try {
+            connection.ОбновлениеИнформационнойБазыВызовСервера.ВыполнитьОбновлениеИнформационнойБазы();
+        }
+        catch (e) {
+            CollectGarbage();   // предотвращает исключение out of memory
+            log(format("Исключение при вызове ОбновлениеИнформационнойБазыВызовСервера.ВыполнитьОбновлениеИнформационнойБазы: {0}, {1}.", e.name, e.message), true);
+            return 2;
+        }
+    if (connectionsDenied)
+        try {
+            connection.СоединенияИБ.РазрешитьРаботуПользователей();
+            connectionsDenied = false;
+        }
+        catch (e) {
+            CollectGarbage();   // предотвращает исключение out of memory
+            log(format("Исключение при вызове СоединенияИБ.РазрешитьРаботуПользователей: {0}, {1}.", e.name, e.message), true);
+            return 3;
+        }
+    return 0;
+}
+
+// Первоначальное заполнение информационной базы, разрешение подключений новых соединений, 
+// и оповещение о результате обновления
+function allowConnections(updateAndFillDB) {
+    var result = doAllowConnections(updateAndFillDB);
+    CollectGarbage();   // освобождает соединения с COM-объектом
+    return result;
+}
+
+function doDisconnectAndBlockUsersHTA(connection) {
+    if (connection == null)
+        return 1;
+    var result = 0;
+    try {
+        while (true) {
+            switch (disconnectionStep) {
+                case 0:
+                    {
+                        connection.СоединенияИБ.УстановитьБлокировкуСоединений("в связи с необходимостью обновления конфигурации.",
+	                               														"ПакетноеОбновлениеКонфигурацииИБ");
+                        disconnectionInterval = connection.СоединенияИБ.ПараметрыБлокировкиСеансов().ИнтервалОжиданияЗавершенияРаботыПользователей * 1000;
+                        disconnectionStartDateTime = connection.СоединенияИБ.ПараметрыБлокировкиСеансов().Начало;
+                        if (connection.ЗначениеЗаполнено(disconnectionStartDateTime))
+                            disconnectionStep++;
+                        else
+                            disconnectionStep += 2;
+                        break;
+                    }
+                case 1:
+                    {
+                        if (!connection.СоединенияИБ.УстановленаБлокировкаСоединений() ||
+                        connection.СоединенияИБ.КоличествоСеансовИнформационнойБазы(false) <= 1) {
+                            disconnectionStep++;
+                            break;
+                        }
+
+                        var now = new Date();
+                        if (now - disconnectionInterval <= disconnectionStartDateTime) // если интервал ожидания еще не истек, то ждем еще раз
+                            return -1;
+                        disconnectionStep++;
+                        break;
+                    }
+                case 2:
+                    {
+                        if (!connection.СоединенияИБ.УстановленаБлокировкаСоединений()) {
+                            log("Попытка завершения работы пользователей завершилась безуспешно: отменена блокировка ИБ.", true);
+                            return 3;
+                        }
+
+                        if (connection.СоединенияИБ.КоличествоСеансовИнформационнойБазы(false) <= 1)
+                            return 0;
+
+                        // после начала блокировки сеансы всех пользователей должны быть отключены	
+                        // если этого не произошло пробуем принудительно прервать соединение.
+                        doDisconnectConnections(connection);
+                        if (connection.СоединенияИБ.КоличествоСеансовИнформационнойБазы(false) > 1) {
+                            connection.СоединенияИБ.РазрешитьРаботуПользователей();
+                            var message = connection.СоединенияИБ.ПолучитьНазванияСоединенийИБ("Не удалось отключить соединения:");
+                            log(message, true);
+                            return 3;
+                        }
+                        return 0;
+                    }
+            }
+        }
+    }
+    catch (e) {
+        CollectGarbage();   // предотвращает исключение out of memory
+        log(format("Исключение при вызове doDisconnectAndBlockUsersHTA: {0}, {1}.", e.name, e.message), true);
+        result = 2;
+    }
+    return result;
+}
+
+// Завершение работы пользователей и запрет на подключение новых соединений 
+// Возвращает:
+//   -1           - выполнение отложено, необходимо повторить вызов функции через 18 секунд
+//   0            - функция выполнена успешно
+//   другое число - код ошибки
+//  
+function disconnectAndBlockUsersHTA() {
+    if (!doBlockUsers) {
+        connectionsDenied = true;
+        return 0;
+    }
+    var connection = createConnection();
+    if (connection == null && useComConnector)
+        return 1;
+    var result = -1;
+    if (useComConnector)
+        try {
+            result = doDisconnectAndBlockUsersHTA(connection);
+        }
+        finally {
+            if (result != -1) {
+                connection = null;
+                ComConnection = null;
+                CollectGarbage();   // освобождает соединения с COM-объектом
+                log("Завершен сеанс внешнего соединения с ИБ", false);
+            }
+        }
+    else
+        result = 0;
+    if (result == 0)
+        connectionsDenied = true;
+    return result;
+}
+
+function doDisconnectAndBlockUsers() {
+    var connection = createConnection();
+    if (connection == null)
+        return (useComConnector ? 1 : 0);
+    try {
+        connection.СоединенияИБ.УстановитьБлокировкуСоединений("в связи с необходимостью обновления конфигурации.",
+	                               								"ПакетноеОбновлениеКонфигурацииИБ");
+
+        var interval = connection.СоединенияИБ.ПараметрыБлокировкиСеансов().ИнтервалОжиданияЗавершенияРаботыПользователей * 1000;
+        var startDateTime = connection.ПолучитьБлокировкуУстановкиСоединений().Начало;
+        var now = new Date();
+
+        if (connection.ЗначениеЗаполнено(startDateTime))
+            while (now - interval <= startDateTime) {
+                if (!connection.ПолучитьБлокировкуУстановкиСоединений().Установлена)
+                    break;
+                if (connection.СоединенияИБ.КоличествоСеансовИнформационнойБазы(false) <= 1)
+                    break;
+                WScript.Sleep(18 * 1000); // Ждем 18 секунд до следующей проверки.
+                now = new Date();
+            }
+
+        if (!connection.ПолучитьБлокировкуУстановкиСоединений().Установлена) {
+            log("Попытка завершения работы пользователей завершилась безуспешно: отменена блокировка ИБ.", true);
+            return 3;
+        }
+
+        // после начала блокировки сеансы всех пользователей должны быть отключены
+        // если этого не произошло, пробуем принудительно прервать соединения.
+        doDisconnectConnections(connection);
+        if (connection.СоединенияИБ.КоличествоСеансовИнформационнойБазы(false) > 1) {
+            connection.СоединенияИБ.РазрешитьРаботуПользователей();
+            var message = connection.СоединенияИБ.ПолучитьНазванияСоединенийИБ("Не удалось отключить соединения:");
+            log(message, true);
+            return 3;
+        }
+    }
+    catch (e) {
+        CollectGarbage();   // предотвращает исключение out of memory
+        log(format("Исключение при вызове doDisconnectAndBlockUsers: {0}, {1}.", e.name, e.message), true);
+        return 2;
+    }
+    return 0;
+}
+
+function doDisconnectConnections(connection) {
+    var adminParams = connection.СоединенияИБ.ПолучитьПараметрыАдминистрированияИБ();
+    connection.СоединенияИБКлиентСервер.ОтключитьСоединенияИБ(adminParams);
+}
+
+// Завершение работы пользователей и запрет на подключение новых соединений 
+function disconnectAndBlockUsers() {
+    var result = 0;
+    if (doBlockUsers)
+        result = doDisconnectAndBlockUsers();
+
+    ComConnection = null;
+    CollectGarbage();   // освобождает соединения с COM-объектом
+    WScript.Sleep(1000); // ждем 1 секунду (достаточно для завершения COM-соединения).
+    
+    if (result == 0 && doBlockUsers)
+        connectionsDenied = true;
+    return result;
+}
+
+// Загрузка файла обновления в основную базу
+function loadCfg(fileName) {
+    // /LoadCfg<имя cf файла> (для базовых версий не используется) загрузка конфигурации из файла
+    var ret = runApp(v8conf, format('CONFIG {0} {1} /LoadCfg "{2}" /Out "{3}" /UCПакетноеОбновлениеКонфигурацииИБ /DisableStartupMessages',
+	    infoBasePath, infoBaseAuthorization, fileName, tempLogFileName), SW_SHOW, true);
+    appendLog();
+    return ret;
+}
+
+// Загрузка файла обновления в основную базу
+function updateCfg(fileName) {
+    // /UpdateCfg<имя cf | cfu файла> обновление конфигурации, находящейся на поддержке
+    var ret = runApp(v8conf, format('CONFIG {0} {1} /UpdateCfg "{2}" /Out "{3}" /UCПакетноеОбновлениеКонфигурацииИБ /DisableStartupMessages',
+	    infoBasePath, infoBaseAuthorization, fileName, tempLogFileName), SW_SHOW, true);
+    appendLog();
+    return ret;
+}
+
+// Обновление конфигурации информационной базы
+function updateDbCfg() {
+    // /UpdateDBCfg - обновление конфигурации базы данных
+    var ret = runApp(v8conf, format('CONFIG {0} {1} /UpdateDBCfg /Out "{2}" /UCПакетноеОбновлениеКонфигурацииИБ /DisableStartupMessages',
+	    infoBasePath, infoBaseAuthorization, tempLogFileName), SW_SHOW, true);
+    appendLog();
+    return ret;
+}
+
+// Интерактивный запуск "1С:Предприятие"
+function runEnterprise() {
+    if (startEnterprise)
+        return runApp(v8client, format('ENTERPRISE {0} {1}', infoBasePath, infoBaseAuthorization), SW_SHOW, false);
+    return 0;
+}
+#КонецОбласти
+

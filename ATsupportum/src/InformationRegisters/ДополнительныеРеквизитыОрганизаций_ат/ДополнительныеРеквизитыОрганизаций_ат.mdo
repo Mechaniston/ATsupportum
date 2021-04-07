@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b0b5e9ec-59c1-42ad-90d5-2c10832b6789">
+  <producedTypes>
+    <selectionType typeId="58e88895-ae12-45b1-863f-7d61b5fa4f85" valueTypeId="ad58a306-2d4b-4708-8644-83197c47ed5e"/>
+    <listType typeId="c3f7fbcc-dca3-4afa-af5b-4897ca690438" valueTypeId="4c887d64-37f9-4735-a8ee-bd534db71341"/>
+    <managerType typeId="e15676c8-4579-4475-a283-e9d859df950a" valueTypeId="9f2e4362-9302-4e41-92ff-849333ed0b4f"/>
+    <recordSetType typeId="3c6c5f97-82d1-4f5d-a567-18808258b085" valueTypeId="9ff72198-14c4-4c3e-abbe-bb0bf97443c1"/>
+    <recordKeyType typeId="22a55eee-9666-46bf-9dfd-a8017d72d2ab" valueTypeId="5e637da6-52a9-4a30-8c85-eefb09ff5659"/>
+    <recordType typeId="ad5a5508-9226-4b7b-93cb-dfd6e9b96090" valueTypeId="14039cbc-ed12-4b70-842c-8dae1fefe39d"/>
+    <recordManagerType typeId="aa3b742f-3598-4d0b-ac03-0b354787c1d7" valueTypeId="eefc0bfa-2f9c-4948-bedc-d7f6bf760e20"/>
+  </producedTypes>
+  <name>ДополнительныеРеквизитыОрганизаций_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Дополнительные реквизиты организаций</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="ddef5108-10fe-496d-aba8-f4545e6ce42b">
+    <name>НаименованиеПолное</name>
+    <synonym>
+      <key>ru</key>
+      <value>Полное наименование</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="7b23b8bb-46c2-4fea-b67e-231fb7c15430">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="510864a6-5e09-4550-9b56-6b3423b853fe">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4296b694-1135-4f52-be53-a5f767c81593">
+  <producedTypes>
+    <selectionType typeId="2ec702bd-3f68-471c-8bf1-ebd56cccf5a5" valueTypeId="60118afb-65b9-4112-9f50-eada4fa5ac9b"/>
+    <listType typeId="d20f5321-e018-41ab-b4cc-08d5a5ab3c38" valueTypeId="a056b5e8-f37c-4e64-9d31-367aba01d02e"/>
+    <managerType typeId="abbf3a3a-d2e0-4985-92dc-f384117b44a3" valueTypeId="299a8b36-d356-4540-a0bf-5ba9b866b27f"/>
+    <recordSetType typeId="554a3788-691e-49fd-a213-264f9c354639" valueTypeId="3f8d3c00-09fc-4999-87d1-fd59baa1e773"/>
+    <recordKeyType typeId="316477c5-56f1-4c26-a8e0-59572bf16cdf" valueTypeId="a408948b-64f1-414f-8658-85b28c10bb52"/>
+    <recordType typeId="bd513072-3e0a-4db3-8cc1-2c06080155d5" valueTypeId="801ec431-4c78-44cb-b7dc-93e561755036"/>
+    <recordManagerType typeId="89459da5-8b6c-4fd7-9181-4faad5910475" valueTypeId="3489a502-ab13-4625-a40b-00211a8d4e51"/>
+  </producedTypes>
+  <name>СодержаниеЭлектронныхПисемИсходящих_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Содержание электронных писем исходящих</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="922066e4-912a-4427-9f2a-ef3e82c06181">
+    <name>ТекстПисьма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст письма</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <resources uuid="a57f810c-f1d8-4421-ad51-5e823befc13e">
+    <name>HTMLТекстПисьма</name>
+    <synonym>
+      <key>ru</key>
+      <value>HTMLТекст письма</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="643d0396-e8fe-4d4d-b070-64044d0e661c">
+    <name>ЭПИ</name>
+    <synonym>
+      <key>ru</key>
+      <value>ЭПИ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЭлектронноеПисьмоИсходящее</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

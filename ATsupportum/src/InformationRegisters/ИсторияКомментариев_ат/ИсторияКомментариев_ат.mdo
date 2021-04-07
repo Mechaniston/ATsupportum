@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1914126b-677f-4a9d-bf11-a6d7be93b2ab">
+  <producedTypes>
+    <selectionType typeId="53772361-f708-47f2-afed-56a8f3ba7cf3" valueTypeId="c13b631d-6a1f-4c85-80a5-2700b460a91a"/>
+    <listType typeId="98c94466-ab46-4790-a790-1bb830152438" valueTypeId="68a8619c-ea36-4168-9842-298aee22f181"/>
+    <managerType typeId="f3f68d30-bdf5-48c6-9af4-51a5bfc79606" valueTypeId="b8ad7aa5-8763-4878-ba88-78977336f35d"/>
+    <recordSetType typeId="966d143a-7618-48a3-ac92-8b0af08afaa3" valueTypeId="4d541775-9334-4568-9afc-c811ea6665eb"/>
+    <recordKeyType typeId="3b578595-8eae-4ea3-a707-b64059dafc3a" valueTypeId="561102c8-433a-47bc-b781-80bb493ee944"/>
+    <recordType typeId="06f99064-8c80-404c-99f0-04d182a9809a" valueTypeId="cb115a2d-4c7c-433b-8603-7d0ef2502116"/>
+    <recordManagerType typeId="93e55033-6165-432c-b814-08372b3050f1" valueTypeId="350664cd-1084-4a14-9857-69a6e82a9349"/>
+  </producedTypes>
+  <name>ИсторияКомментариев_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>История комментариев</value>
+  </synonym>
+  <comment>!!!!!HOTFIX</comment>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="dce9d060-80d8-43f4-91f8-f7f753dabe60">
+    <name>Автор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="b92af90a-3760-4af8-9b7a-0f8ac6dea9c5">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="3f05a432-904f-4aee-8fff-ba91651057dd">
+    <name>Ссылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ОплатаПоставщику_ат</types>
+      <types>DocumentRef.СчетНаОплату_ат</types>
+      <types>CatalogRef.Продукты_ат</types>
+      <types>CatalogRef.Договоры_ат</types>
+      <types>DocumentRef.Задание_ат</types>
+      <types>DocumentRef.Релиз_ат</types>
+      <types>DocumentRef.Заявка_ат</types>
+      <types>CatalogRef.ПоставкиПродуктов_ат</types>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+      <types>CatalogRef.ВидыФайловогоКаталога_ат</types>
+      <types>CatalogRef.РолиСерверов_ат</types>
+      <types>CatalogRef.Серверы_ат</types>
+      <types>DocumentRef.Согласование_ат</types>
+      <types>DocumentRef.ФиксацияРабот_ат</types>
+      <types>CatalogRef.Проекты_ат</types>
+      <types>CatalogRef.Доступы_ат</types>
+      <types>DocumentRef.СписаниеСоСчетаКлиента_ат</types>
+      <types>CatalogRef.ВерсииПродуктов_ат</types>
+      <types>DocumentRef.ВводТарифов_ат</types>
+      <types>CatalogRef.Контрагенты_ат</types>
+      <types>DocumentRef.Реализация_ат</types>
+      <types>CatalogRef.Метки_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

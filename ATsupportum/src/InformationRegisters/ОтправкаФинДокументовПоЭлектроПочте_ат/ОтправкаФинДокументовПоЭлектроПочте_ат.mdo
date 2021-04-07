@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fb1c8b7a-2572-4c10-a62c-661b66f09286">
+  <producedTypes>
+    <selectionType typeId="67e28697-b83c-45a8-9127-677379cbfc76" valueTypeId="0b358bd5-978b-4ec1-b0a0-1febabc2c685"/>
+    <listType typeId="0f80d74e-a533-463e-97dc-ff23b078b37e" valueTypeId="9990a45d-e4e1-4480-94ea-6d8e01b08a9b"/>
+    <managerType typeId="b3228e21-e7d8-415e-9f09-d06b84eee898" valueTypeId="ec77aee9-1898-4230-b89f-412809649faa"/>
+    <recordSetType typeId="049c302c-f80b-4563-86f2-249d8f858d63" valueTypeId="e7887903-429b-4db4-898c-3aee81d4de62"/>
+    <recordKeyType typeId="4fdc2cb3-a72d-42e0-adb6-d1fe2a4440c4" valueTypeId="d1c24e0c-deea-474b-b915-35b5697598a1"/>
+    <recordType typeId="45a70593-05a3-43b0-9823-bbac9ab026ab" valueTypeId="5319d1e4-f83c-4f58-98d8-2d25552a229c"/>
+    <recordManagerType typeId="db34729c-7bc2-41ed-af3c-25fc0e3b5ee5" valueTypeId="3e8a64da-c159-49eb-a12d-cc999c437bd6"/>
+  </producedTypes>
+  <name>ОтправкаФинДокументовПоЭлектроПочте_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отправка фин.документов по эл.почте</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="c8be9299-8bbd-457f-945d-1c93a6fdfcb6">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0f4a1368-07ef-45bc-8497-5dbeea5f81d8">
+    <name>Письмо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Письмо</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЭлектронноеПисьмоИсходящее</types>
+      <types>DocumentRef.ЭлектронноеПисьмоВходящее</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="c0c16df5-de25-4594-a9bf-e234db05c40b">
+    <name>Документ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.СчетНаОплату_ат</types>
+      <types>DocumentRef.Реализация_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="f63ef759-0add-4bdc-b5c0-38ee5fbaa6ba">
+    <name>Статус</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статус</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СтатусыОтправкиФинансовыхДокументовПоЭлектроннойПочте_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

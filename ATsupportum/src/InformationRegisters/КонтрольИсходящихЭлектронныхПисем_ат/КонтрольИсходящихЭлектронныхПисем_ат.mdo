@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="33261399-f383-45cf-ac0d-f4f83a97c16b">
+  <producedTypes>
+    <selectionType typeId="ad7c1c2b-3786-4dc3-96b3-cca240217eca" valueTypeId="3c7842a9-606c-4282-b633-558122ca182e"/>
+    <listType typeId="ece46c83-99b4-4d32-8250-078ed3618f30" valueTypeId="9b4378ed-dc03-4608-92df-85a55e9f63c7"/>
+    <managerType typeId="891f8b5d-04e3-4e62-acd1-2e85504d2140" valueTypeId="adfb1c3a-6f03-4c37-b900-1dd133718e30"/>
+    <recordSetType typeId="9921433c-93e5-4c95-8391-a342896799a3" valueTypeId="38f4506e-10b7-4352-870a-d4aead821cff"/>
+    <recordKeyType typeId="d8225c08-9316-4234-9e9c-61e87c9ace1d" valueTypeId="a088a533-12bd-4815-aa49-1635b82bb6f6"/>
+    <recordType typeId="a4d9f8d8-d4bf-4635-aac4-da6d2db38f88" valueTypeId="6cce0391-e6e5-4ea3-9e7b-63bf0c630e3a"/>
+    <recordManagerType typeId="098ffe68-48da-4a56-9470-cd9b452abd87" valueTypeId="604feb42-66cc-4b71-8080-9b433bde131d"/>
+  </producedTypes>
+  <name>КонтрольИсходящихЭлектронныхПисем_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Контроль исходящих электронных писем</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="21c5f949-45d6-43b5-aee6-627c72d3071d">
+    <name>ПисьмоНаКонтроле</name>
+    <synonym>
+      <key>ru</key>
+      <value>Письмо на контроле</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="c5536b13-3b44-494e-8a06-de2551c130bd">
+    <name>Основание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основание</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЭлектронноеПисьмоИсходящее</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="e6c2ee5d-1f6f-4530-a62b-c7bae34f8339">
+    <name>ТребуетАвтоматическогоОтвета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Требует автоматического ответа</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="69b5011e-a72f-4253-ad64-361568ba7814">
+    <name>ИдентификаторПисьма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор письма</value>
+    </synonym>
+    <type>
+      <types>UUID</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="0fc9c948-446b-4ca2-a275-ce8028d0c0a9">
+    <name>ЭлектронноеПисьмо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Электронное письмо</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЭлектронноеПисьмоИсходящее</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="db0dcba6-b42c-4d1e-8f1b-1485bd4046fe">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="f30bff55-428f-4a44-a1b9-4198d49f21c8">
+    <name>ПисьмаНаКонтроле</name>
+    <synonym>
+      <key>ru</key>
+      <value>Письма на контроле</value>
+    </synonym>
+    <group>NavigationPanelSeeAlso</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

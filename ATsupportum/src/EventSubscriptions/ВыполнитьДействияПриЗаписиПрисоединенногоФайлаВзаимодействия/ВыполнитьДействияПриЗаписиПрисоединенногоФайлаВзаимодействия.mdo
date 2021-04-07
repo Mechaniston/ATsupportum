@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="79cb147c-8c6b-4f6e-8d5d-dfa29a6e6e53">
+  <name>ВыполнитьДействияПриЗаписиПрисоединенногоФайлаВзаимодействия</name>
+  <synonym>
+    <key>ru</key>
+    <value>Выполнить действия при записи присоединенного файла (Взаимодействия)</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.СообщениеSMSПрисоединенныеФайлы</types>
+    <types>CatalogObject.ВстречаПрисоединенныеФайлы</types>
+    <types>CatalogObject.ТелефонныйЗвонокПрисоединенныеФайлы</types>
+    <types>CatalogObject.ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы</types>
+    <types>CatalogObject.ЗапланированноеВзаимодействиеПрисоединенныеФайлы</types>
+    <types>CatalogObject.ЭлектронноеПисьмоВходящееПрисоединенныеФайлы</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ПрисоединенныеФайлы.ВыполнитьДействияПриЗаписиПрисоединенногоФайла</handler>
+</mdclass:EventSubscription>

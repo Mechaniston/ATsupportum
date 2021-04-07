@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ab347e15-57bb-47d5-8d60-498182a44785">
+  <producedTypes>
+    <objectType typeId="cb0b7c3a-e94d-464f-af85-fb68fb8a185f" valueTypeId="4446c07d-0102-43fe-a0e7-8f51bd8eac96"/>
+    <refType typeId="300636a8-0450-422d-b301-f4d7c767f335" valueTypeId="50dd50b3-fb5c-4a8b-b163-57420854533a"/>
+    <selectionType typeId="d153228b-e4bf-4e28-9fbb-22bf9904bb55" valueTypeId="12006809-1940-48d9-a991-e02ad46e7ed1"/>
+    <listType typeId="57357ed3-ac7b-4960-8043-0ab547098813" valueTypeId="231bff15-f96f-4d6c-9be1-b4a92458a830"/>
+    <managerType typeId="d683fdea-a249-48b5-b7cc-b6d42ee10dd9" valueTypeId="8c8e2eff-2404-4280-b293-f6dd522e7b3e"/>
+  </producedTypes>
+  <name>ОбъектыАренды_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Объекты аренды</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ОбъектыАренды_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ОбъектыАренды_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Объект аренды</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="105e8e8b-e2cb-4e25-9f62-36f3fd94cb37">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="a8a64294-1743-4012-ba90-3e569d6961ab">
+    <name>Проект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проект</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Проекты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="a58ef4cc-10ee-442a-9c63-218869a5a092">
+    <producedTypes>
+      <objectType typeId="247c1cd9-2c58-4dbf-a379-5d88349042bf" valueTypeId="8388f48e-73b6-4f70-8de9-fb9ae5fee1d2"/>
+      <rowType typeId="81a11568-4c73-4ede-9568-b984036a0260" valueTypeId="4828e4fb-3a56-4137-ba45-51e29445283b"/>
+    </producedTypes>
+    <name>ВключенныеОбъектыАренды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Включенные объекты аренды</value>
+    </synonym>
+    <attributes uuid="e8f39f95-e255-42ff-947c-f5ca51f529de">
+      <name>ОбъектАренды</name>
+      <synonym>
+        <key>ru</key>
+        <value>Объект аренды</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ОбъектыАренды_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>

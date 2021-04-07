@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1c5da09a-9609-468f-beae-665f97335bf1">
+  <producedTypes>
+    <objectType typeId="ceff7db4-2366-405d-9e5a-1e006d261bc0" valueTypeId="842e8d4d-da8a-4c6b-8e84-e58dd3bcd02c"/>
+    <refType typeId="3775f33f-b7f9-4e16-abd2-dc202f36b80b" valueTypeId="52cbc306-5a3e-43dd-a976-9aeffac55299"/>
+    <selectionType typeId="d5988cc3-e166-4306-92a3-1dbb2e3d983e" valueTypeId="fd81106f-7fa1-464d-8ed8-27cf31d9388c"/>
+    <listType typeId="86ded325-4c24-42eb-be88-46d75c867c57" valueTypeId="c553ccfd-03ce-4a7a-9638-7d57133c1fca"/>
+    <managerType typeId="2a037dea-17e9-473c-895e-28ac4f477bee" valueTypeId="49363a8b-8446-4c47-b145-69f8adc98624"/>
+  </producedTypes>
+  <name>ГруппыПродуктов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Группы продуктов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ГруппыПродуктов_ат.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ГруппыПродуктов_ат.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Группа продуктов</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="0bd5c379-fe1e-43b6-ba4d-44d0da966c51">
+    <name>НаименованиеПолное</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наименование полное</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>250</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="cd88aef2-9c74-40d0-9c2e-9200d0bf5fbd">
+    <name>ТипПродукта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип продукта</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыПродуктов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="2f209f21-0944-49fc-ae9a-5d3e019418c9">
+    <producedTypes>
+      <objectType typeId="a51f5876-f563-4fb0-b3ea-d6ba130248b6" valueTypeId="afccff27-9af6-423e-b20e-f325d5f598b4"/>
+      <rowType typeId="a47f67bb-4556-44e3-b0a7-b7507376bc32" valueTypeId="5b607743-6d42-43c3-9adf-cae0643944ba"/>
+    </producedTypes>
+    <name>Продукты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продукты</value>
+    </synonym>
+    <attributes uuid="bc460385-8785-40a8-b53b-742425884d0f">
+      <name>Продукт</name>
+      <synonym>
+        <key>ru</key>
+        <value>Продукт</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Продукты_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.ТипПродукта</name>
+        <field>Catalog.ГруппыПродуктов_ат.Attribute.ТипПродукта</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="67000443-bd5d-47b9-adbb-d30b14611bfc">
+    <producedTypes>
+      <objectType typeId="3d46172d-9626-4606-89cd-0446c40317ec" valueTypeId="9b7da40d-ee9e-4fa4-ba80-290f0f431b1a"/>
+      <rowType typeId="b1343ca5-e95b-4650-a43c-63d932c9cd86" valueTypeId="77268a25-0822-4a89-be43-97a6e13320ef"/>
+    </producedTypes>
+    <name>ДоступныеМетки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доступные метки</value>
+    </synonym>
+    <attributes uuid="85ef5c03-3c89-413c-b939-d72b2dc401de">
+      <name>Метка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Метка</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Метки_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceFoldersAndItems>Folders</choiceFoldersAndItems>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>

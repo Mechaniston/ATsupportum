@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="77bd95d6-3cd5-4b67-a0b6-72d24243fbc2">
+  <producedTypes>
+    <selectionType typeId="759e65d2-512d-4d81-aa02-d6b6d35bfeaf" valueTypeId="18abeb89-cacc-4ca8-b1bc-1b25e150f9d0"/>
+    <listType typeId="6917b6f7-be89-4f76-8f4d-3e7b15534ff5" valueTypeId="4b1cf03c-aece-4f65-b49a-a91fa7c89ea7"/>
+    <managerType typeId="a14aec99-d553-4cb0-a4ab-4d2ebe5e3c22" valueTypeId="a74fee8b-99a5-49ba-8d97-34d8a430712e"/>
+    <recordSetType typeId="6ee4059c-c575-4955-bef0-3b3d53d312ea" valueTypeId="cd297072-1ee1-462d-be03-89c529118106"/>
+    <recordKeyType typeId="39aa47f2-9196-4312-a5f4-09e50d073ba3" valueTypeId="496770ae-0f4b-40e1-aca9-576223448d9a"/>
+    <recordType typeId="22d5d8ef-507d-4da6-97d1-a7097b4102f8" valueTypeId="1db88830-e1aa-4cdd-8e19-ac226c0f8828"/>
+    <recordManagerType typeId="c205c306-3ae8-437b-a6ea-65b708b03d4d" valueTypeId="05dee048-8c58-4ca2-aa2f-a90724df8e42"/>
+  </producedTypes>
+  <name>АктивныеПредметыВзаимодействий</name>
+  <synonym>
+    <key>ru</key>
+    <value>Активные предметы взаимодействий</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="0be7f905-53b8-4bb1-8e37-dcc142e508c5">
+    <name>Предмет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предмет</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Предмет, для которого храниться признак того что он активен</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

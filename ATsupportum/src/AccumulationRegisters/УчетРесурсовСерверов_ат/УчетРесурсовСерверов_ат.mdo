@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="75692b99-c015-480a-a103-0bad6ba1ae4f">
+  <producedTypes>
+    <selectionType typeId="32dd5981-e60c-4976-b7b6-a1b5b2958442" valueTypeId="2f8b6f1d-3d9f-43bc-a9cf-fbf9c3a206c7"/>
+    <listType typeId="0411999a-6bd9-48c0-b314-c58a05cbe9fd" valueTypeId="99d6cb08-2e9e-4fac-9cec-3861a052ae54"/>
+    <managerType typeId="dd421739-c63c-4fae-95f3-4a31bcf8fb7d" valueTypeId="ce8d3667-e714-4c9b-b8f6-57e6e9523196"/>
+    <recordSetType typeId="8a379855-f534-4dff-ba8f-9140cd383608" valueTypeId="74df6a62-755d-425b-9dc5-18b50366c44e"/>
+    <recordKeyType typeId="9e81b3fd-75d1-40fb-994c-1a7dfe4118d9" valueTypeId="e9a2427a-8227-4d2a-b517-60dc66c91d39"/>
+    <recordType typeId="f05c6cd4-2842-4912-bb2b-ecb0c36936d3" valueTypeId="9ca3c7da-2e59-4fd1-b416-2bda7bbbc69f"/>
+  </producedTypes>
+  <name>УчетРесурсовСерверов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учет ресурсов серверов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>RecordType</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="65f7aa27-44d6-45aa-82a0-85a5d73fa5ef">
+    <name>ЗначениеРесурса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение ресурса</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="2e04d412-2e1a-43c0-b9ee-8a5ab2514643">
+    <name>Сервер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Серверы_ат</types>
+      <types>CatalogRef.СХД_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="c837cbc6-48de-43e1-815c-b5aeee19c53c">
+    <name>ВыделенныйСервер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выделенный сервер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="fb728179-8591-459a-8130-38a28eeadf28">
+    <name>НаименованиеРесурса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Наименование ресурса</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыРесурсов_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="95e38f08-18dc-447a-a555-c33786de4713">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Договоры_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>

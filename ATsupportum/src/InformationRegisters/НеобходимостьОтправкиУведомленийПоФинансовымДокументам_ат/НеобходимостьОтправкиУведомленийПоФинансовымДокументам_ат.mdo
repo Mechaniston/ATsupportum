@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="22214a59-9edf-4016-b23d-9cb6f1353ee6">
+  <producedTypes>
+    <selectionType typeId="d6084b9a-e424-4db7-a1f7-b6224122e54d" valueTypeId="121df3cf-aae0-423e-882e-15df5ae4d2dd"/>
+    <listType typeId="76a5ac8f-41d6-4686-8601-5005a729db6f" valueTypeId="8a8612ac-215f-4e7b-9c2f-c09c0e8b63f7"/>
+    <managerType typeId="dd663255-b075-4d10-8134-72608c53cd57" valueTypeId="aab5b2b9-6931-4da3-9059-2e632aaa02d1"/>
+    <recordSetType typeId="d5ed876b-958b-43f6-b544-7ad21af39fdd" valueTypeId="494d1e19-ff43-4999-845e-f3d25f1369aa"/>
+    <recordKeyType typeId="e9c4d3ad-7f3a-424c-8f94-dc7666d78900" valueTypeId="805cdad4-7b8c-4caf-ab69-7b543a837a8c"/>
+    <recordType typeId="ce8e8025-3058-4509-9f61-18459b129ad6" valueTypeId="fc03d803-d74c-45fd-8b5d-4b9c530a121d"/>
+    <recordManagerType typeId="e54d7877-d1a2-4eb4-92b7-bf0eeaee5fbb" valueTypeId="95188992-0ac8-47d1-8ab8-5240518345b8"/>
+  </producedTypes>
+  <name>НеобходимостьОтправкиУведомленийПоФинансовымДокументам_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Необходимость отправки уведомлений по финансовым документам</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.НеобходимостьОтправкиУведомленийПоФинансовымДокументам_ат.Form.ФормаЗаписи</defaultRecordForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="603f5ed1-c588-4431-aeb5-23e87bbbcf44">
+    <name>Отправлять</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправлять</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:BooleanValue"/>
+  </resources>
+  <dimensions uuid="a9dee2db-600f-46e9-8729-9d9ee008ae6c">
+    <name>Ссылка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ссылка</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПоступлениеНаСчетКлиента_ат</types>
+      <types>DocumentRef.Согласование_ат</types>
+      <types>DocumentRef.ФиксацияРабот_ат</types>
+      <types>DocumentRef.СписаниеСоСчетаКлиента_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="cccabeca-4ca9-44a2-9b5c-3f1ed284eab1">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="b80a142c-9472-43b7-ae2a-b0662450b4f2">
+    <name>НеобходимостьОтправки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Необходимость отправки</value>
+    </synonym>
+    <group>FormNavigationPanelGoTo</group>
+    <commandParameterType>
+      <types>DocumentRef.Согласование_ат</types>
+    </commandParameterType>
+    <representation>Auto</representation>
+    <shortcut></shortcut>
+  </commands>
+</mdclass:InformationRegister>

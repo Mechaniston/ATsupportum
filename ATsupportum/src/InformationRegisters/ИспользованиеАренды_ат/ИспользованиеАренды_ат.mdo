@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ee8a7317-f794-4758-ace2-c77023b045db">
+  <producedTypes>
+    <selectionType typeId="48daa8d8-35f1-421f-8290-177410dcc0a7" valueTypeId="a33ca9b0-5e2d-4659-b43f-e089701dd172"/>
+    <listType typeId="f3b6c275-782d-45b2-aa75-bd475e1539c2" valueTypeId="86456b8d-8b37-4791-b26c-ba5cfec7bd78"/>
+    <managerType typeId="d9742c98-8849-4c7f-9603-61e6d584a7a4" valueTypeId="7dc0d2b3-c260-4e6a-9b6e-e7acbaac4d8b"/>
+    <recordSetType typeId="30aa2803-6baa-4a7d-8afb-92cd65c79c06" valueTypeId="2f93850e-02b5-458f-8bb7-9bafe73c9c5c"/>
+    <recordKeyType typeId="c596b627-d462-404a-b773-1b6f6ff400ff" valueTypeId="5670d7b9-abb6-4e37-a40b-9469f7cb8676"/>
+    <recordType typeId="96994395-d1d7-48ba-ba73-993e33ea409b" valueTypeId="10e9fbe3-3408-4359-ac7d-c70a4fa364f5"/>
+    <recordManagerType typeId="efcfed35-b9a4-4b2a-a89e-55c0bea4f7f6" valueTypeId="d09aa97b-c8e5-4f18-8767-b7532ec28374"/>
+  </producedTypes>
+  <name>ИспользованиеАренды_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Использование аренды</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="06d495da-68e3-4a3f-ba2e-d6ace285d5ac">
+    <name>ОбъектАренды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект аренды</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ОбъектыАренды_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="80ed3af8-4af3-46fa-a918-47b28611c4a4">
+    <name>РегистрационныйНомер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Регистрационный номер</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </resources>
+  <dimensions uuid="ef142107-0a9f-4aae-a19e-02e534ae90f3">
+    <name>ЭкземплярСубъектаАренды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Экземпляр субъекта аренды</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ЭкземплярыПродуктов_ат</types>
+      <types>CatalogRef.РолиСерверов_ат</types>
+      <types>CatalogRef.Серверы_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4252e442-475d-4350-ada0-f31fac817fa4">
+    <name>Клиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клиент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="6da44319-5890-4c09-a51a-d1f774669e2f">
+    <name>Доступ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Доступ</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Доступы_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

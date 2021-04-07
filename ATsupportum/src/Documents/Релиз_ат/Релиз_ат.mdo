@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="54ff7ad2-23b5-455c-a700-3511f3e42bb8">
+  <producedTypes>
+    <objectType typeId="b3796449-15ce-4c2c-b327-9aebb2a34788" valueTypeId="7201d0a6-36cc-428b-8557-cd460f0de664"/>
+    <refType typeId="1b9039d5-29d3-445a-a037-3293fa01188e" valueTypeId="9f69cf37-4420-4bc7-b604-8fc4fec41266"/>
+    <selectionType typeId="144d4f59-2037-457e-9f2b-fd1b96cde33b" valueTypeId="a8209aba-4a4f-4a62-8dee-da39124dd13e"/>
+    <listType typeId="61739600-32ba-498f-b780-cbb914c87cbc" valueTypeId="661294e1-004f-4b59-98a3-89d6cf03461f"/>
+    <managerType typeId="6f8b69ae-8b7c-4edb-91bd-c8b5026fd72d" valueTypeId="a69166c8-6a96-4088-9264-47f49f14508d"/>
+  </producedTypes>
+  <name>Релиз_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Релиз</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.Релиз_ат.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <listPresentation>
+    <key>ru</key>
+    <value>Релизы</value>
+  </listPresentation>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.Релиз_ат.Form.ФормаДокумента</defaultObjectForm>
+  <posting>Deny</posting>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="749a3614-1f6e-46d9-9362-3923610976b9">
+    <name>Продукт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продукт</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Продукты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="9970b6cb-fd2e-4b8b-80b4-5125b5cbe49d">
+    <name>Версия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2d6af476-93ed-4c3f-871b-0cd7b9a950bd">
+    <name>ОбщееОписание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Общее описание</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="e61e6aaf-18b4-409b-a034-9f3d00771c39">
+    <name>ПланируемаяДата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Планируемая дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="7e4a37be-30c2-4214-9324-99ef30e459be">
+    <name>ФактическаяДата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фактическая дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <forms uuid="9c38799c-fd09-4e59-816b-fed183487086">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <tabularSections uuid="d5fd7cec-5608-4512-86e6-5e5dcaaedd0e">
+    <producedTypes>
+      <objectType typeId="15f5b077-aa1d-4ede-ac77-0b508f7a2d26" valueTypeId="7f575e3a-0d35-42f6-9101-1c12ce63c184"/>
+      <rowType typeId="061645c2-bc1f-48b8-928b-c631fe07e0f6" valueTypeId="9d847aba-f41e-4bf8-b7b5-915b8308f834"/>
+    </producedTypes>
+    <name>ПланРелиза</name>
+    <synonym>
+      <key>ru</key>
+      <value>План релиза</value>
+    </synonym>
+    <attributes uuid="e1cc967f-3995-4f50-a66e-291d2f275e56">
+      <name>Активность</name>
+      <synonym>
+        <key>ru</key>
+        <value>Активность</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="bcc0b82c-0f2b-4a6c-9fea-e5c2bd8e980c">
+      <name>Заявка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Заявка</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.Заявка_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <tabularSections uuid="75215b24-9f39-462b-b9d8-11f01d00d20d">
+    <producedTypes>
+      <objectType typeId="0ebcb95f-7920-4f3a-95d2-776d495f02a2" valueTypeId="a8d4ccbf-6863-4fc4-8c12-0de3286830bf"/>
+      <rowType typeId="4ce6b1d7-5d6f-4db0-a11b-08d53c8cb701" valueTypeId="fa32b65c-fcad-47bc-914a-a22c7f5d83e9"/>
+    </producedTypes>
+    <name>ФактическийРелиз</name>
+    <synonym>
+      <key>ru</key>
+      <value>Фактический релиз</value>
+    </synonym>
+    <attributes uuid="c681e1e4-dc93-4102-8c62-265edfc0a6e1">
+      <name>Заявка</name>
+      <synonym>
+        <key>ru</key>
+        <value>Заявка</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.Заявка_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

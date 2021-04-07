@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e3e3eb38-1801-42a9-9459-50edcd294fad">
+  <producedTypes>
+    <selectionType typeId="7281fd25-b59d-4a3c-ad9c-930bff1ff212" valueTypeId="eed2a649-0e20-4dfd-add9-bf307069c6d5"/>
+    <listType typeId="f11d21c5-c7fe-42ba-918c-66df4d72f84c" valueTypeId="5d910ea4-a358-4844-98d1-1153fed1f8ed"/>
+    <managerType typeId="ea0ae946-412b-49c6-b9bb-03befd7486d7" valueTypeId="18dcd164-c59f-41a0-b8d5-1581460af1f7"/>
+    <recordSetType typeId="28e46988-4f22-4948-ba44-16a009e29155" valueTypeId="f6b6b074-3468-439b-b529-ca95c1525baa"/>
+    <recordKeyType typeId="fef8961a-94e2-4929-82b4-9bc0598c7890" valueTypeId="b75724af-8282-4771-9f13-f56d65cfd606"/>
+    <recordType typeId="9783eada-d8ed-4835-86c5-09c32e4ea14e" valueTypeId="0fee38e8-ad5d-48fb-b36e-498f441f39b8"/>
+    <recordManagerType typeId="89a8b396-c09c-4963-9e3a-de654be002f5" valueTypeId="38332efd-2207-4323-9f02-6224d7213268"/>
+  </producedTypes>
+  <name>СведенияОСерверахПоWMI_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сведения о серверах по WMI</value>
+  </synonym>
+  <comment>!!!!!HOTFIX + переименовать в ИсториюСведений..</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSliceLast>true</enableTotalsSliceLast>
+  <resources uuid="bae5a998-d219-4e72-814c-5e8ecd95c153">
+    <name>Значение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>20</precision>
+        <scale>6</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="f79e1b4d-d105-4974-9ecc-78acbdc05d26">
+    <name>Сервер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервер</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Серверы_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9397f64b-a496-46f4-9223-488bd7ba9fcb">
+    <name>ТипРесурса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип ресурса</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыРесурсовWMI_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

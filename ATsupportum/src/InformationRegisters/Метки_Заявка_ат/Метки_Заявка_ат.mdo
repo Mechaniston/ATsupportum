@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9e4a156b-3246-4054-9975-730df5aba029">
+  <producedTypes>
+    <selectionType typeId="eb57317e-c70a-42b2-8d12-1f3e9f5cb082" valueTypeId="9d48b6ae-6853-48a3-99cb-be78b5e2e036"/>
+    <listType typeId="9c1ed5d6-655b-4887-81a8-51054b3f8f98" valueTypeId="94fea141-5a14-443c-b6d1-d29f8954aa8e"/>
+    <managerType typeId="fddae2a1-93be-4dc0-b49e-032d4f478f68" valueTypeId="d61c0c53-1d62-4afa-9fcf-f61aa3870f7e"/>
+    <recordSetType typeId="83dd14f7-d22e-487e-8f06-89223f8cc921" valueTypeId="c58e3e8e-4688-42e5-adaa-2bd23cdb4b4a"/>
+    <recordKeyType typeId="e2519ddb-59b6-4e40-8cb0-1b99f35687b9" valueTypeId="39365bf2-e25f-49b7-b12e-42745f7c109a"/>
+    <recordType typeId="cbbf666a-1858-4fa0-9c70-d516eb80ceb2" valueTypeId="aca9d089-85b5-452d-8cfd-b1f6ef47772a"/>
+    <recordManagerType typeId="086133bb-b133-4637-b165-161fe959d155" valueTypeId="6c5e2e50-8c0c-46c6-a151-72e6a37e23e2"/>
+  </producedTypes>
+  <name>Метки_Заявка_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Метки Заявок</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="d2ec430c-3fb8-4f0c-acbf-e9a67d729d88">
+    <name>Объект</name>
+    <synonym>
+      <key>ru</key>
+      <value>Объект</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.Заявка_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="4b2712a3-e250-4136-954d-caea8755da67">
+    <name>ЗначениеМетки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значение метки</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Метки_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

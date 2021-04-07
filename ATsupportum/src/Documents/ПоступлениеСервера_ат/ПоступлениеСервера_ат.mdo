@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="31bab9dd-a0f6-4d54-b7e8-4ff68d445940">
+  <producedTypes>
+    <objectType typeId="bb292fef-27d0-4e69-9cb9-187a93f7e42f" valueTypeId="813e7054-34f6-4d7f-a2c4-7a430f75b1b2"/>
+    <refType typeId="cb7830cf-d2e5-43dc-8418-9cb98fc4695b" valueTypeId="b62e284b-d8a7-4325-8ee3-a7516d85718c"/>
+    <selectionType typeId="be912525-6384-4b49-ab53-23ca7b654a2b" valueTypeId="cee47e29-48de-4e0d-a69b-f8970df6a032"/>
+    <listType typeId="47bac7a5-f2f2-4d3a-ac54-621e089e97f3" valueTypeId="ee7016b0-8d13-4cfc-a491-4656a0ce7e9d"/>
+    <managerType typeId="cbfe1554-5899-4c5c-94a3-30dd4ede73ee" valueTypeId="dffdcbe7-03f0-480c-a280-9d5749957d18"/>
+  </producedTypes>
+  <name>ПоступлениеСервера_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Поступление сервера</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ПоступлениеСервера_ат.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Posted</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Date</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Number</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <registerRecords>AccumulationRegister.УчетРесурсовСерверов_ат</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <tabularSections uuid="9f7f91c2-d055-466e-92f2-77a75bea2cf8">
+    <producedTypes>
+      <objectType typeId="fbbb77d2-37e1-4393-81e8-adf40264e16f" valueTypeId="4b870d97-0ef8-4d4a-98e6-4a7f7b9ad25e"/>
+      <rowType typeId="f0a53558-5c2c-4ffa-9cca-6e15e7f8d569" valueTypeId="946c537b-a79c-4d15-a0d7-cb2e5bec293c"/>
+    </producedTypes>
+    <name>Сервера</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сервера</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="bbc2933e-7bd7-44ae-a857-26d41fc62278">
+      <name>ТипСервера</name>
+      <synonym>
+        <key>ru</key>
+        <value>Тип сервера</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Серверы_ат</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

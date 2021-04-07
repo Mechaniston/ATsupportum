@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e9b8071d-aa4d-4ed5-b1db-04e81e32e69b">
+  <producedTypes>
+    <selectionType typeId="dd6a425f-6601-43fb-b260-5d19fa40db27" valueTypeId="cba220b4-fc6f-4c0d-ba10-d1ae6600b43b"/>
+    <listType typeId="c542e890-3dba-4574-b7eb-d32e6349cfe9" valueTypeId="f902866c-cf19-40ac-aba7-9b1f8f4d4b17"/>
+    <managerType typeId="b1ee969d-c207-4488-ac67-7a5ae211543d" valueTypeId="4a75bddf-7d02-4131-b380-3e6256071705"/>
+    <recordSetType typeId="03aba1c5-cb76-4983-b4f0-4e8d2dfdfdd7" valueTypeId="ef6f6b6d-7cbf-42ab-b246-752a049c306d"/>
+    <recordKeyType typeId="bdf91e2e-fd74-4c55-8ae1-4abe88d84745" valueTypeId="ed24dbbc-0142-4594-b56d-30c278272f6a"/>
+    <recordType typeId="e7f838ac-ce03-49ef-8234-878f243fae00" valueTypeId="9f574858-f5d7-433f-a3b6-bcb0b2dc1bed"/>
+    <recordManagerType typeId="bf219426-763d-4af8-a17d-0fc67e4d9f09" valueTypeId="a45e0983-a013-4e16-b717-79e8c96a92b6"/>
+  </producedTypes>
+  <name>НоменклатураДеятельностиПоДоговорам_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Номенклатура деятельности по договорам</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="bc2238bf-6ec8-4304-838b-f4458c1347ac">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="194b6f53-ebf9-4fad-b3f1-3750d99e1909">
+    <name>ВидДеятельности</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид деятельности</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СодержанияРабот_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="216cb1e7-ea43-4af7-9108-f15e921c997e">
+    <name>ВидДоговора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид договора</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыДоговоров_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="9dc589a7-0ad1-4bb7-8869-447434804996">
+    <name>СпецификаПоддержкиКонфигурации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Специфика поддержки конфигурации</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостояниеПоддержки_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

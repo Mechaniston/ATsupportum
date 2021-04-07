@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="85369dbd-bfc2-478b-ac1d-0cb57fe5a2be">
+  <producedTypes>
+    <selectionType typeId="a27fddb4-c005-4bc9-a712-a4b41fbabe1e" valueTypeId="463c946c-a565-4da2-8b42-8c347f48f6e4"/>
+    <listType typeId="fbe4e97c-ed95-466c-aa78-ada475a39463" valueTypeId="ad67323a-0866-4a60-957f-174fd606bdb0"/>
+    <managerType typeId="0e9e5611-197f-4673-b671-b5afe3a749ef" valueTypeId="5b4a565f-ea32-40a1-b435-f5ad30a0d8f6"/>
+    <recordSetType typeId="99e5d359-08bd-40b0-a688-82a2850d4126" valueTypeId="f8cb9736-e708-41f8-8dcf-d168add7388e"/>
+    <recordKeyType typeId="3fa99b65-87c3-4261-954e-364cbebc8d06" valueTypeId="10df3a2b-2b12-417c-8b6f-9c048dd0eec4"/>
+    <recordType typeId="031d2d91-1a46-4ad9-87ac-ca4485fe07dd" valueTypeId="4d3d71e2-5588-4906-8c62-a8edce5b9f3c"/>
+    <recordManagerType typeId="c9cb8a42-8250-41ac-b2d2-1e59b4809d29" valueTypeId="b287b6e9-89db-4706-8cfb-c4554a1f30f4"/>
+  </producedTypes>
+  <name>ЭлектронныеПисьмаПоКлиентам_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Электронные письма по клиентам</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="4744d2bb-a51a-4ec0-bb55-4d62595eacd4">
+    <name>Клиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клиент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="2916ace2-a906-438f-915a-2d1f5ab416d5">
+    <name>ЭлектронноеПисьмо</name>
+    <synonym>
+      <key>ru</key>
+      <value>Электронное письмо</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЭлектронноеПисьмоИсходящее</types>
+      <types>DocumentRef.ЭлектронноеПисьмоВходящее</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

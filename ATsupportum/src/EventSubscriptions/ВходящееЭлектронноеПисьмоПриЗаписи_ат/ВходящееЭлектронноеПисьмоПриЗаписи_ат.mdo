@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e0020e1b-d01c-4a96-b9f1-32f57788efa2">
+  <name>ВходящееЭлектронноеПисьмоПриЗаписи_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Входящее электронное письмо при записи ат</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ЭлектронноеПисьмоВходящее</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.ОбработчикиСобытийДляПочтовыхДокументов_ат.ВходящееПисьмоПриЗаписи_ат</handler>
+</mdclass:EventSubscription>

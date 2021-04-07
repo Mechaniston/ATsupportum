@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="162137ef-dea2-4ace-9e67-897dad0e7c3d">
+  <producedTypes>
+    <objectType typeId="16bd6afd-7c7f-4046-b105-e8c1dc0a5d95" valueTypeId="957b056d-a99d-4d79-bdd1-d73c69f8057e"/>
+    <managerType typeId="4d53eb23-51be-4c81-9b59-8d2c13817752" valueTypeId="4a312e26-bf68-4026-9398-d58537cfb1ea"/>
+  </producedTypes>
+  <name>НастройкаРезервногоКопированияИБ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройка резервного копирования ИБ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.НастройкаРезервногоКопированияИБ.Form.РезервноеКопированиеИнформационнойБазы</defaultForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <attributes uuid="012fb2f1-1c15-4800-8968-78a90c2a1348">
+    <name>ВариантРасписанияРезервногоКопирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вариант расписания резервного копирования</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="436162a0-263f-4126-aa3a-7508505cc4a8">
+    <name>ВыполнитьРезервноеКопированиеСейчас</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выполнить резервное копирование сейчас</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="9e4fbc61-8736-435d-bdd4-eb3bbaa14b92">
+    <name>ЕдиницаИзмеренияПериодаОповещения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Единица измерения периода оповещения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <quickChoice>Use</quickChoice>
+    <createOnInput>DontUse</createOnInput>
+  </attributes>
+  <attributes uuid="0b750d40-1ee5-414c-b8a5-244c666787ae">
+    <name>ЕдиницаИзмеренияПериодаОтложенногоОповещения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Единица измерения периода отложенного оповещения</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <quickChoice>Use</quickChoice>
+    <createOnInput>DontUse</createOnInput>
+  </attributes>
+  <attributes uuid="aec8f9e6-d177-45f5-ba55-2d662428c2ae">
+    <name>ЕдиницаИзмеренияПериодаХраненияРезервныхКопий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Единица измерения периода хранения резервных копий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="7dfdd08b-7cd9-480c-829d-97f5e7152eec">
+    <name>КаталогСРезервнымиКопиями</name>
+    <synonym>
+      <key>ru</key>
+      <value>Каталог с резервными копиями</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="0ff797f5-007d-4379-aa14-5d3f5babeb84">
+    <name>КодТипаИнтерактивногоРезервногоКопирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код типа интерактивного резервного копирования</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="767176d4-4fe9-4de5-9246-59b7fec09c53">
+    <name>КодТипаРезервногоКопирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код типа резервного копирования</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="64752b64-80ae-4537-986a-d61423dc546b">
+    <name>КоличествоКопийВКаталоге</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество копий в каталоге</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8e587969-0263-4789-a501-a6c2e102f88e">
+    <name>ВыполнитьПриЗавершенииРаботы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выполнить при завершении работы</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f26bfc01-7d8a-43a7-b869-c2deb18218e5">
+    <name>ОчисткаКаталогаСРезервнымиКопиямиПриПереполнении</name>
+    <synonym>
+      <key>ru</key>
+      <value>Очистка каталога с резервными копиями при переполнении</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="8c72a0b2-20cb-43ff-b010-25256aa8011d">
+    <name>ПериодОповещения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период оповещения</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a913b023-0ec5-4c60-880d-2f8ddad2d5ce">
+    <name>ПериодОтложенногоОповещения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период отложенного оповещения</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b0bf8af5-d824-459c-bc40-17495406af3c">
+    <name>ПериодХраненияРезервныхКопий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период хранения резервных копий</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2c37e123-ea35-4501-93e1-2fa295444bec">
+    <name>ПроводитьРезервноеКопированиеПриВосстановленииДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проводить резервное копирование при восстановлении данных</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="afe96dc2-7840-4010-a7d4-1eeac36f0fd3">
+    <name>ПродолжатьНапоминания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Продолжать напоминания</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="02ec2b85-3cc8-45bb-911f-c5f7c8668fd5">
+    <name>СтрокаРасписания</name>
+    <synonym>
+      <key>ru</key>
+      <value>Строка расписания</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>200</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a997a430-3ea8-4fde-9f53-7b507a04c215">
+    <name>ТипОграниченияКаталогаСРезервнымиКопиями</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип ограничения каталога с резервными копиями</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f648e19d-026b-4fa7-8e70-1866b27b94f8">
+    <name>ФайлЗагрузкиРезервнойКопии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Файл загрузки резервной копии</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a3b47ee8-b7b9-4bdf-afa8-025447ea9d5b">
+    <name>НажатиеГиперссылки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Нажатие гиперссылки</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="36475bf5-5da6-48ad-8077-4de4426f7e10">
+    <name>ВариантПроведенияРезервногоКопирования</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вариант проведения резервного копирования</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="d32081fc-47d3-4e66-837e-705c94ba8ca8">
+    <name>РезервноеКопированиеИнформационнойБазы</name>
+    <synonym>
+      <key>ru</key>
+      <value>Резервное копирование информационной базы</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

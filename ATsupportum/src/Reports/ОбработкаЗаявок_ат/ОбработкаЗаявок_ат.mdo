@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1c643c84-1b3f-466f-bc4a-3fcdcadcd15e">
+  <producedTypes>
+    <objectType typeId="f5246c54-103f-4dc9-9063-4785e79c70d8" valueTypeId="8781919f-e0b3-4f80-a5f6-05b1dad1d692"/>
+    <managerType typeId="38555235-c8db-4a7e-9ecc-75840a319ef7" valueTypeId="b0e64e64-f9ac-4775-a0c7-e4c0335cfc3d"/>
+  </producedTypes>
+  <name>ОбработкаЗаявок_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обработка заявок</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ОбработкаЗаявок_ат.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.ОбработкаЗаявок_ат.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <attributes uuid="0140551f-96e0-4335-9b52-ff885691535b">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Договоры_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.Владелец</name>
+      <field>Report.ОбработкаЗаявок_ат.Attribute.Клиент</field>
+    </choiceParameterLinks>
+    <choiceParameterLinks>
+      <name>Отбор.Организация</name>
+      <field>Report.ОбработкаЗаявок_ат.Attribute.Организация</field>
+    </choiceParameterLinks>
+  </attributes>
+  <attributes uuid="abd176f2-ea3b-4126-ae56-d79b442ff152">
+    <name>Клиент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Клиент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.Клиент</name>
+      <value xsi:type="core:BooleanValue">
+        <value>true</value>
+      </value>
+    </choiceParameters>
+  </attributes>
+  <attributes uuid="ca986709-1cbe-4ea2-826d-793bd3ea0266">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="5554df46-138c-423b-93a0-00d74f434f8d">
+    <name>ВыводитьОтмененныеЗаявки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выводить отменённые заявки</value>
+    </synonym>
+    <comment>//!!!!!HOTFIX</comment>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="d580d055-1e8d-4be7-aa36-8e77913a1287">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <comment>//!!!!!HOTFIX</comment>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="87d7a9ab-99fe-49db-8480-1b4c29a79f7c">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <comment>//!!!!!HOTFIX</comment>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

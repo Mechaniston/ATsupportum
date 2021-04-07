@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="027c5057-a80a-4845-88c5-ac37965a0c22">
+  <producedTypes>
+    <selectionType typeId="84f4a258-9a52-401c-8d6e-7314fcf5031f" valueTypeId="3c0e88df-ff28-40f2-b35e-627c87ad897a"/>
+    <listType typeId="14599dc5-2fa9-4b40-847a-e01cfc99b24d" valueTypeId="ac8f5ea2-0e09-41bb-b474-dd4a3e39b1c1"/>
+    <managerType typeId="20976531-a854-417c-a84e-624eda3b34cf" valueTypeId="73c1543b-030e-4635-801c-895c3050c332"/>
+    <recordSetType typeId="c8347d2d-1121-410b-926a-7424eaa15571" valueTypeId="ece329e8-b00e-4a5e-85ce-c35d24aba87a"/>
+    <recordKeyType typeId="d3d25429-68a7-4d3c-bbf9-e048a98d713e" valueTypeId="39402dad-0e85-46cc-8d2a-1b2a40959111"/>
+    <recordType typeId="228e8d9d-34bb-475b-8fab-0d60d78de8c0" valueTypeId="d9b82389-0b7c-4ead-883d-d6bb3efa65d5"/>
+    <recordManagerType typeId="4b25103a-792c-4d50-87a7-ec334a6b0b14" valueTypeId="389cb6ff-62f4-471e-b35c-fd116528fce1"/>
+  </producedTypes>
+  <name>СвязиПродуктов_ат</name>
+  <synonym>
+    <key>ru</key>
+    <value>Связи продуктов</value>
+  </synonym>
+  <editType>InDialog</editType>
+  <defaultRecordForm>InformationRegister.СвязиПродуктов_ат.Form.ФормаЗаписи</defaultRecordForm>
+  <defaultListForm>InformationRegister.СвязиПродуктов_ат.Form.ФормаСписка</defaultListForm>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <dimensions uuid="c7eda314-e0cd-40c4-bbde-baa965fe1b8e">
+    <name>ОсновнойПродукт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основной продукт</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Продукты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <dimensions uuid="35be4d80-15f8-4a9b-953e-b0c19aa1b77e">
+    <name>ПодчиненныйПродукт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Подчиненный продукт</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Продукты_ат</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+  <forms uuid="8934ee1d-289e-4121-8f22-e8b7b8c8e0d2">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="f6985d5e-afee-437f-9dc8-001329f190c6">
+    <name>ФормаЗаписи</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма записи</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:InformationRegister>
